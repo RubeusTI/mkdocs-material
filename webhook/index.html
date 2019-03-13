@@ -1,0 +1,1190 @@
+
+
+
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="manifest" href="/assets/json/manifest.json">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Página de documentações da Rubeus">
+      
+      
+        <link rel="canonical" href="https://homologacaodocs.rubeus.com.br/webhook/">
+      
+      
+        <meta name="author" content="Rubeus">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar para área de transferência">
+      
+        <meta name="lang:clipboard.copied" content="Copiado para área de transferência">
+      
+        <meta name="lang:search.language" content="pt">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Nenhum resultado encontrado">
+      
+        <meta name="lang:search.result.one" content="1 resultado encontrado">
+      
+        <meta name="lang:search.result.other" content="# resultados encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>Webhook - Rubeus Developers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.11e41852.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#webhook-integracao-customizavel-com-sistema-proprio" tabindex="1" class="md-skip">
+        Ir para o conteúdo
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://homologacaodocs.rubeus.com.br/" title="Rubeus Developers" class="md-header-nav__button md-logo">
+          
+            <img src="../assets/images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Rubeus Developers
+              </span>
+              <span class="md-header-nav__topic">
+                Webhook
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Digite para iniciar a busca
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        <!-- 
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../api_crm/apresentacao/" title="API CRM" class="md-tabs__link">
+          API CRM
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../lead_tracking/apresentacao/" title="Lead tracking" class="md-tabs__link">
+          Lead tracking
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav> -->
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://homologacaodocs.rubeus.com.br/" title="Rubeus Developers" class="md-nav__button md-logo">
+      
+        <img src="../assets/images/logo.png" width="48" height="48">
+      
+    </a>
+    Rubeus Developers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      API CRM
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        API CRM
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_crm/apresentacao/" title="Apresentação" class="md-nav__link">
+      Apresentação
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_crm/contato/" title="Contato" class="md-nav__link">
+      Contato
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_crm/evento/" title="Evento" class="md-nav__link">
+      Evento
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_crm/campopersonalizados/" title="Campos personalizados" class="md-nav__link">
+      Campos personalizados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_crm/processoseletivo/" title="Processo seletivo" class="md-nav__link">
+      Processo seletivo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_crm/curso/" title="Curso" class="md-nav__link">
+      Curso
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_crm/locaisdeoferta/" title="Locais de oferta" class="md-nav__link">
+      Locais de oferta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_crm/registrodeprocesso/" title="Registro de processo" class="md-nav__link">
+      Registro de processo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_crm/unidade/" title="Unidade" class="md-nav__link">
+      Unidade
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_crm/metodosdelistagem/" title="Métodos de listagem" class="md-nav__link">
+      Métodos de listagem
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Webhook
+      </label>
+    
+    <a href="./" title="Webhook" class="md-nav__link md-nav__link--active">
+      Webhook
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-esta-integracao-faz" title="O que esta integração faz?" class="md-nav__link">
+    O que esta integração faz?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observacoes-e-requisitos" title="Observações e requisitos" class="md-nav__link">
+    Observações e requisitos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observacoes-importantes" title="Observações importantes" class="md-nav__link">
+    Observações importantes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplos" title="Exemplos" class="md-nav__link">
+    Exemplos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testando" title="Testando" class="md-nav__link">
+    Testando
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-adicionais" title="Informações adicionais" class="md-nav__link">
+    Informações adicionais
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../endpoint/" title="Endpoint" class="md-nav__link">
+      Endpoint
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Lead tracking
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Lead tracking
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lead_tracking/apresentacao/" title="Apresentação" class="md-nav__link">
+      Apresentação
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lead_tracking/instalacao/" title="Instalação" class="md-nav__link">
+      Instalação
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lead_tracking/enviando-eventos/" title="Enviando eventos" class="md-nav__link">
+      Enviando eventos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lead_tracking/recuperando-informacoes/" title="Recuperando informações" class="md-nav__link">
+      Recuperando informações
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lead_tracking/tracking-multidominio/" title="Tracking multidomínio" class="md-nav__link">
+      Tracking multidomínio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tabelasauxiliares/" title="Tabelas Auxiliares" class="md-nav__link">
+      Tabelas Auxiliares
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../methodstest/" title="Testar API's" class="md-nav__link">
+      Testar API's
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-esta-integracao-faz" title="O que esta integração faz?" class="md-nav__link">
+    O que esta integração faz?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observacoes-e-requisitos" title="Observações e requisitos" class="md-nav__link">
+    Observações e requisitos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observacoes-importantes" title="Observações importantes" class="md-nav__link">
+    Observações importantes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplos" title="Exemplos" class="md-nav__link">
+    Exemplos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testando" title="Testando" class="md-nav__link">
+    Testando
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-adicionais" title="Informações adicionais" class="md-nav__link">
+    Informações adicionais
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                <div id="modalImage" class="modal">
+                  <span class="close">
+                    <img src="/assets/images/baseline_clear_white_48dp.png" style="width: 32px">
+                  </span>
+                  <img class="modal-content" id="image">
+                  <div id="caption"></div>
+                </div>
+                
+                
+                <h1 id="webhook-integracao-customizavel-com-sistema-proprio">Webhook - Integração customizável com sistema próprio<a class="headerlink" href="#webhook-integracao-customizavel-com-sistema-proprio" title="Permanent link">&para;</a></h1>
+<p><strong>Como funciona:</strong> esta integração possibilita o envio de dados em tempo real do CRM Rubeus para uma aplicação de destino.</p>
+<h2 id="o-que-esta-integracao-faz">O que esta integração faz?<a class="headerlink" href="#o-que-esta-integracao-faz" title="Permanent link">&para;</a></h2>
+<p>Essa configuração permite enviar dados do CRM Rubeus para outras aplicações que disponham de uma URL de entrada de dados. Para isso, essa URL precisa conseguir ler e consumir dados enviados em formato JSON.</p>
+<h2 id="observacoes-e-requisitos">Observações e requisitos<a class="headerlink" href="#observacoes-e-requisitos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Possuir a URL do outro sistema, que vai receber dados em formato JSON;</li>
+<li>A URL deve ser fixa, não é possível parametrizar URLs na parametrização dos <em>Webhooks</em>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se a integração estiver funcionando corretamente, você vai receber uma resposta positiva. Caso contrário, você vai receber uma mensagem de erro com indicação do que você deve fazer em seguida para corrigir o problema.</p>
+</div>
+<h2 id="observacoes-importantes">Observações importantes<a class="headerlink" href="#observacoes-importantes" title="Permanent link">&para;</a></h2>
+<p>A resposta negativa abaixo é a mais comum, indica que a URL destino não representa um servidor disponível (está incorreta). Em ambos os casos, o ideal é validar esses pontos com o seu desenvolvedor ou suporte da ferramenta que lhe forneceu a URL.</p>
+<p><img class="image"
+     id="webhook"
+     alt="Tela do CRM Rubeus - retorno do webhook" 
+     title="Tela do CRM Rubeus - retorno do webhook"
+     src="/assets/images/webhook.jpg" 
+     onclick="modalImg('webhook')"></p>
+<p>Exemplo de dados enviados pelo CRM Rubeus</p>
+<p>Os dados serão enviados via <strong>POST</strong> seguindo a estrutura abaixo, que é a de um JSON padrão:</p>
+<h3 id="exemplos">Exemplos<a class="headerlink" href="#exemplos" title="Permanent link">&para;</a></h3>
+<div class="admonition done">
+<p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> <em>URL_de_envio</em></p>
+</div>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Contato</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">[{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;341&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;COD156&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Matheus de Almeida Amaral&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;nomeSocial&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;imagem&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;cpf&quot;</span><span class="p">:</span> <span class="s2">&quot;12547854577&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;dataNascimento&quot;</span><span class="p">:</span> <span class="s2">&quot;1997-10-22&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;endereco&quot;</span><span class="p">:</span> <span class="s2">&quot;Rua Teste&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;numero&quot;</span><span class="p">:</span> <span class="s2">&quot;535&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bairro&quot;</span><span class="p">:</span> <span class="s2">&quot;Jardim das Ruas&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cidade&quot;</span><span class="p">:</span> <span class="s2">&quot;São Paulo&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;uf&quot;</span><span class="p">:</span> <span class="s2">&quot;SP&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;genero&quot;</span><span class="p">:</span> <span class="s2">&quot;Masculino&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;canhoto&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;profissao&quot;</span><span class="p">:</span> <span class="s2">&quot;Auxiliar Administrativo&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;aluno&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;exaluno&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;anoFormacao&quot;</span><span class="p">:</span> <span class="s2">&quot;2015&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;estadoCivil&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Solteiro&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;cor&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Branca&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;grauInstrucao&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Educação superior completo&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;outrasDeficiencias&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;deficiencias&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Deficiente Físico&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipos&quot;</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Paraplegia&quot;</span>
+        <span class="p">}]</span>
+    <span class="p">}],</span>
+    <span class="nt">&quot;origens&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;CRM&quot;</span>
+    <span class="p">}],</span>
+    <span class="nt">&quot;emails&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;principal&quot;</span><span class="p">:</span> <span class="s2">&quot;matheusamaral@rubeus.com.br&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;secundarios&quot;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;telefones&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;principal&quot;</span><span class="p">:</span> <span class="s2">&quot;2323342342&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;secundarios&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;2323342341&quot;</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;tagsRDStation&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;camposPersonalizados&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;perfil&quot;</span><span class="p">:</span> <span class="s2">&quot;Administrador&quot;</span>
+    <span class="p">}</span>
+<span class="p">}]</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_1" type="radio" id="__tab_1_1" />
+<label for="__tab_1_1">Registro de Processo</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">[{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;150&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;processo&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Captação&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;contatos&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;635&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;COD156&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;principal&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;Aluno&quot;</span>
+    <span class="p">},</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;636&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;COD157&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;principal&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;Responsável&quot;</span>
+    <span class="p">}],</span>
+    <span class="nt">&quot;cursos&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;21&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codCurso&quot;</span><span class="p">:</span> <span class="s2">&quot;ADM&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codOferta&quot;</span><span class="p">:</span> <span class="s2">&quot;ADM_2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;principal&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+    <span class="p">}],</span>
+    <span class="nt">&quot;responsavel&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Marcos Aurélio&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;marcosaurelio@vivalle.com.br&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;criacao&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-06 11:06&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;origem&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Portal de inscrição&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;modalidade&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Presencial&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;dataAtividade&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-06 23:06&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;compareceuAtividade&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;notaEnem&quot;</span><span class="p">:</span> <span class="s2">&quot;760&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;formaIngresso&quot;</span><span class="p">:</span> <span class="s2">&quot;Processo seletivo presencial&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;resumoAtual&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Não contactado&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;localOferta&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Local de oferta 1&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;unidade&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Unidade 1&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Perdida&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ultimaAlteracaoStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-06 15:06&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;objecao&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Ingressou em outra universidade&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;observacaoPerda&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;concorrente&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Uniexemplo&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;camposPersonalizados&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;perfil&quot;</span><span class="p">:</span> <span class="s2">&quot;Administrador&quot;</span>
+    <span class="p">}</span>
+<span class="p">}]</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_1" type="radio" id="__tab_1_2" />
+<label for="__tab_1_2">Atividade</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">[{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;108&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;contato&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;635&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;COD156&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;vencimento&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-01 00:25&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;duracao&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;descricao&quot;</span><span class="p">:</span> <span class="s2">&quot;Ligação&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;registroProcesso&quot;</span><span class="p">:</span> <span class="s2">&quot;150&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;curso&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;21&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codOferta&quot;</span><span class="p">:</span> <span class="s2">&quot;ADM_2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codCurso&quot;</span><span class="p">:</span> <span class="s2">&quot;ADM&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;responsavel&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;15&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Marcos Souza&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;marcossouza@rubeus.com.br&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;resumoAtual&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Não contactado&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;concluido&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;formaContato&quot;</span><span class="p">:</span> <span class="s2">&quot;Ativo&quot;</span>
+<span class="p">}]</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_1" type="radio" id="__tab_1_3" />
+<label for="__tab_1_3">Evento</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">[{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;934&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;36&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Entrou na etapa Convocado - Captação&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;descricao&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;p&gt;Iniciou a inscrição&lt;\/p&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;contato&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;635&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;COD156&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;curso&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;21&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codCurso&quot;</span><span class="p">:</span> <span class="s2">&quot;ADM&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codOferta&quot;</span><span class="p">:</span> <span class="s2">&quot;ADM_2&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;dataAgendamento&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-01 06:27&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;PROVA&quot;</span>
+    <span class="p">}</span>
+<span class="p">}]</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<h3 id="testando">Testando<a class="headerlink" href="#testando" title="Permanent link">&para;</a></h3>
+<p>Para testar o serviço de envio de dados, uma boa opção é usar algum serviço gerador de URLs temporárias receptoras de dados, como exemplo: <a href="https://beeceptor.com/" target="_blank">Beeceptor</a>.</p>
+<p>Estes serviços podem gerar URLs temporárias, que você pode usar em seu Webhook no lugar da URL final para disparar o teste e, então, observar o resultado no site do serviço gerador da URL.</p>
+<h2 id="informacoes-adicionais">Informações adicionais<a class="headerlink" href="#informacoes-adicionais" title="Permanent link">&para;</a></h2>
+<p>Todas as informações serão enviadas no padrão JSON o que inclui todos os campos personalizados que foram preenchidos.
+Quando alguma informação na estrutura não estiver disponível, o retorno padrão será <em>NULL</em>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../api_crm/metodosdelistagem/" title="Métodos de listagem" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Métodos de listagem
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../endpoint/" title="Endpoint" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Próximo
+                </span>
+                Endpoint
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2019 Rubeus todos os direitos reservados
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://rubeus.com.br/" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://www.instagram.com/canalrubeus/" class="md-footer-social__link fa fa-instagram"></a>
+    
+      <a href="https://www.facebook.com/CanalRubeus/" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://www.linkedin.com/company/rubeus/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://twitter.com/CanalRubeus" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.905597d0.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.pt.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="../assets/javascripts/extra.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
