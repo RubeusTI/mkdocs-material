@@ -22,7 +22,7 @@
 site_name: Rubeus Developers
 site_description: Página de documentações da Rubeus 
 site_author: Rubeus
-site_url: https://rubeusti.github.io/
+site_url: https://docs.rubeus.com.br/
 
 # Repository
 # repo_name: squidfunk/mkdocs-material
@@ -123,14 +123,7 @@ nav:
     - Métodos de listagem: api_crm/metodosdelistagem.md
   - Webhook: webhook.md
   - Endpoint: endpoint.md
-  - Lead tracking:
-    - Apresentação: lead_tracking/apresentacao.md
-    - Instalação: lead_tracking/instalacao.md
-    - Enviando eventos: lead_tracking/enviando-eventos.md
-    - Recuperando informações: lead_tracking/recuperando-informacoes.md
-    - Tracking multidomínio: lead_tracking/tracking-multidominio.md
   - Tabelas Auxiliares: tabelasauxiliares.md
-  - Testar API's: methodstest.md
     
   
 # Google Analytics
