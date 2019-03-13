@@ -1,45 +1,13 @@
-# Material <small>for MkDocs</small>
+# Rubeus Developers
 
-## Create beautiful project documentation
+Bem-vindo à documentação da Rubeus para os desenvolvedores. Nosso objetivo é auxiliar sua equipe de tecnologia de informação no processo de integração com o CRM Rubeus e os outros produtos para que vocês possam tiram o máximo das possibilidades que esses sistemas oferecem.
 
-Material is a theme for [MkDocs][1], an excellent static site generator geared
-towards project documentation. It is built using Google's [Material Design][2]
-guidelines.
+Atualmente dispomos de integração via:
+    
+* [API](api_crm/apresentacao.md) - Permite o envio de diversas informações para o CRM Rubeus como: cursos, processos seletivo, contatos e eventos.
 
-[![Material for MkDocs](assets/images/material.png)](assets/images/material.png)
+* [Webhook](webhook.md) - Permite o envio de dados em tempo real do CRM rubeus para aplicações de terceiros.
 
-  [1]: https://www.mkdocs.org
-  [2]: https://material.io/guidelines/material-design/
+* [Endpoint](endpoint.md) - Permite que sua equipe configure endpoints que retornando dados em formato JSON que serão consumidos pelo CRM Rubeus podendo ser utilizados para cadastrar contatos e eventos. 
 
-## Quick start
-
-Install the latest version of Material with `pip`:
-
-``` sh
-pip install mkdocs-material
-```
-
-Append the following line to your project's `mkdocs.yml`:
-
-``` yaml
-theme:
-  name: 'material'
-```
-
-## What to expect
-
-* Responsive design and fluid layout for all kinds of screens and devices,
-  designed to serve your project documentation in a user-friendly way in 35
-  languages with optimal readability.
-
-* Easily customizable primary and accent color, fonts, favicon and logo;
-  straight forward localization through theme extension; integrated with Google
-  Analytics, Disqus and GitHub.
-
-* Well-designed search interface accessible through hotkeys (<kbd>F</kbd> or
-  <kbd>S</kbd>), intelligent grouping of search results, search term
-  highlighting and lazy loading.
-
-For detailed instructions see the [getting started guide][3].
-
-  [3]: getting-started.md
+Algumas funcionalidades requerem o uso de valores fixos, tal como o campo de "Estado civil", esses valores podem ser conferidos usando a página [Tabelas Auxiliares](tabelasauxiliares.md).

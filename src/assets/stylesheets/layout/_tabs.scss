@@ -1,5 +1,5 @@
 ////
-/// Copyright (c) 2016-2019 Martin Donath <martin.donath@squidfunk.com>
+/// Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a
 /// copy of this software and associated documentation files (the "Software"),
@@ -45,7 +45,7 @@
   // List of items
   &__list {
     margin: 0;
-    margin-left: px2rem(4px);
+    margin-left: 0.4rem;
     padding: 0;
     list-style: none;
     white-space: nowrap;
@@ -54,20 +54,20 @@
   // List item
   &__item {
     display: inline-block;
-    height: px2rem(48px);
-    padding-right: px2rem(12px);
-    padding-left: px2rem(12px);
+    height: 4.8rem;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
   }
 
   // Link inside item - could be defined as block elements and aligned via
   // line height, but this would imply more repaints when scrolling
   &__link {
     display: block;
-    margin-top: px2rem(16px);
+    margin-top: 1.6rem;
     transition:
       transform 0.4s cubic-bezier(0.1, 0.7, 0.1, 1),
       opacity   0.25s;
-    font-size: px2rem(14px);
+    font-size: 1.4rem;
     opacity: 0.7;
 
     // Active or hovered link
@@ -141,7 +141,7 @@
           // Reset font-size for nested items and induce margin collapse
           &--nested {
             display: none;
-            font-size: px2rem(14px);
+            font-size: 1.4rem;
             overflow: auto;
             visibility: visible;
 

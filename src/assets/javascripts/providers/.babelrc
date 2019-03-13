@@ -1,8 +1,13 @@
 {
   "presets": [
-    ["@babel/preset-env", {
+    ["env", {
       "loose": true,
-      "targets": " > 1%, last 2 versions"
+      "target": {
+        "browsers": [
+          "> 1%",
+          "last 2 versions"
+        ]
+      }
     }]
   ],
   "plugins": [

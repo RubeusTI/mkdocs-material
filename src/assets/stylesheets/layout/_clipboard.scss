@@ -1,5 +1,5 @@
 ////
-/// Copyright (c) 2016-2019 Martin Donath <martin.donath@squidfunk.com>
+/// Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a
 /// copy of this software and associated documentation files (the "Software"),
@@ -27,12 +27,12 @@
 // Copy to clipboard
 .md-clipboard {
   position: absolute;
-  top: px2rem(6px);
-  right: px2rem(6px);
-  width: px2rem(28px);
-  height: px2rem(28px);
-  border-radius: px2rem(2px);
-  font-size: px2rem(16px);
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 0.2rem;
+  font-size: 1.6rem;
   cursor: pointer;
   z-index: 1;
   // Hack: put everything on the GPU to omit flickering
@@ -71,13 +71,13 @@
     display: block;
     position: absolute;
     top: 0;
-    right: px2rem(34px);
-    padding: px2rem(6px) px2rem(10px);
-    transform: translateX(px2rem(8px));
+    right: 3.4rem;
+    padding: 0.6rem 1rem;
+    transform: translateX(0.8rem);
     transition:
       transform 0.25s cubic-bezier(0.9, 0.1, 0.9, 0),
       opacity   0.175s;
-    border-radius: px2rem(2px);
+    border-radius: 0.2rem;
     background-color: $md-color-black--light;
     color: $md-color-white;
     font-size: ms(-1);
@@ -105,10 +105,10 @@
       display: block;
       position: absolute;
       top: 50%;
-      right: px2rem(-4px);
+      right: -0.4rem;
       width: 0;
-      margin-top: px2rem(-4px);
-      border-width: px2rem(4px) 0 px2rem(4px) px2rem(4px);
+      margin-top: -0.4rem;
+      border-width: 0.4rem 0 0.4rem 0.4rem;
       border-style: solid;
       border-color: transparent $md-color-black--light;
       content: "";

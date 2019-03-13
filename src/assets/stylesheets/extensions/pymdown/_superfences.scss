@@ -1,5 +1,5 @@
 ////
-/// Copyright (c) 2016-2019 Martin Donath <martin.donath@squidfunk.com>
+/// Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a
 /// copy of this software and associated documentation files (the "Software"),
@@ -47,7 +47,7 @@
     position: relative;
     flex-wrap: wrap;
     margin: 1em 0;
-    border: px2rem(1px) solid $md-color-black--lightest;
+    border: 0.1rem solid $md-color-black--lightest;
     border-radius: 0.2em;
 
     // Hide radio buttons
@@ -68,7 +68,7 @@
     // Tab label
     > label {
       width: auto;
-      padding: px2rem(12px);
+      padding: 1.2rem 1.2rem;
       transition: color 0.125s;
       font-size: ms(-1);
       cursor: pointer;
@@ -85,15 +85,15 @@
 
     // [mobile -]: Stretch to whole width
     @include break-to-device(mobile) {
-      margin: 1em px2rem(-16px);
+      margin: 1em -1.6rem;
       border: 0;
-      border-top: px2rem(1px) solid $md-color-black--lightest;
+      border-top: 0.1rem solid $md-color-black--lightest;
       border-radius: 0;
 
       // Actual container with code, overflowing
       pre,
       code {
-        padding: px2rem(10.5px) px2rem(16px);
+        padding: 1.05rem 1.6rem;
       }
     }
   }

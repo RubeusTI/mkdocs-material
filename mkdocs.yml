@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2019 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -19,18 +19,18 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: Material for MkDocs
-site_description: A Material Design theme for MkDocs
-site_author: Martin Donath
-site_url: https://squidfunk.github.io/mkdocs-material/
+site_name: Rubeus Developers
+site_description: Página de documentações da Rubeus 
+site_author: Rubeus
+site_url: https://homologacaodocs.rubeus.com.br/
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
-edit_uri: ""
+# repo_name: squidfunk/mkdocs-material
+# repo_url: https://github.com/squidfunk/mkdocs-material
+# edit_uri: ""
 
 # Copyright
-copyright: 'Copyright &copy; 2016 - 2019 Martin Donath'
+copyright: '&copy; 2019 Rubeus todos os direitos reservados'
 
 # Configuration
 theme:
@@ -43,39 +43,48 @@ theme:
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
-  search_index_only: true
+  search_index_only: false
 
   # Default values, taken from mkdocs_theme.yml
-  language: en
+  language: pt
   feature:
     tabs: true
   palette:
-    primary: indigo
-    accent: indigo
+    primary: Teal
+    accent: Teal
   font:
     text: Roboto
     code: Roboto Mono
   favicon: assets/images/favicon.png
-  logo:
-    icon: "\uE80C"
+  logo: "assets/images/logo.png"
 
 # Customization
+
+extra_css:
+  - 'assets/stylesheets/extra.css'
+
+extra_javascript:
+  - 'assets/javascripts/extra.js'
+  
 extra:
   social:
     - type: globe
-      link: http://struct.cc
-    - type: github-alt
-      link: https://github.com/squidfunk
-    - type: twitter
-      link: https://twitter.com/squidfunk
+      link: https://rubeus.com.br/
+    - type: instagram
+      link: https://www.instagram.com/canalrubeus/
+    - type: facebook
+      link: https://www.facebook.com/CanalRubeus/
     - type: linkedin
-      link: https://linkedin.com/in/squidfunk
+      link: https://www.linkedin.com/company/rubeus/
+    - type: twitter
+      link: https://twitter.com/CanalRubeus
 
 # Extensions
 markdown_extensions:
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
-      guess_lang: false
+      guess_lang: true
+      linenums: true
   - markdown.extensions.def_list
   - markdown.extensions.footnotes
   - markdown.extensions.meta
@@ -91,10 +100,7 @@ markdown_extensions:
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.keys
-  - pymdownx.magiclink:
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
+  - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences
@@ -104,23 +110,29 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Material: index.md
-  - Getting started: getting-started.md
-  - Extensions:
-    - Admonition: extensions/admonition.md
-    - CodeHilite: extensions/codehilite.md
-    - Footnotes: extensions/footnotes.md
-    - Metadata: extensions/metadata.md
-    - Permalinks: extensions/permalinks.md
-    - PyMdown: extensions/pymdown.md
-  - Specimen: specimen.md
-  - Customization: customization.md
-  - Compliance with GDPR: compliance.md
-  - Release notes: release-notes.md
-  - Author's notes: authors-notes.md
-  - Contributing: contributing.md
-  - License: license.md
-
+  - API CRM: 
+    - Apresentação: api_crm/apresentacao.md
+    - Contato: api_crm/contato.md
+    - Evento: api_crm/evento.md
+    - Campos personalizados: api_crm/campopersonalizados.md
+    - Processo seletivo: api_crm/processoseletivo.md
+    - Curso: api_crm/curso.md
+    - Locais de oferta: api_crm/locaisdeoferta.md
+    - Registro de processo: api_crm/registrodeprocesso.md
+    - Unidade: api_crm/unidade.md
+    - Métodos de listagem: api_crm/metodosdelistagem.md
+  - Webhook: webhook.md
+  - Endpoint: endpoint.md
+  - Lead tracking:
+    - Apresentação: lead_tracking/apresentacao.md
+    - Instalação: lead_tracking/instalacao.md
+    - Enviando eventos: lead_tracking/enviando-eventos.md
+    - Recuperando informações: lead_tracking/recuperando-informacoes.md
+    - Tracking multidomínio: lead_tracking/tracking-multidominio.md
+  - Tabelas Auxiliares: tabelasauxiliares.md
+  - Testar API's: methodstest.md
+    
+  
 # Google Analytics
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]

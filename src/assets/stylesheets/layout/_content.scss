@@ -1,5 +1,5 @@
 ////
-/// Copyright (c) 2016-2019 Martin Donath <martin.donath@squidfunk.com>
+/// Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a
 /// copy of this software and associated documentation files (the "Software"),
@@ -29,41 +29,41 @@
 
   // [tablet landscape +]: Add space for table of contents
   @include break-from-device(tablet landscape) {
-    margin-right: px2rem(242px);
+    margin-right: 24.2rem;
 
     // Adjust for RTL languages
     [dir="rtl"] & {
       margin-right: initial;
-      margin-left: px2rem(242px);
+      margin-left: 24.2rem;
     }
   }
 
   // [screen +]: Add space for table of contents
   @include break-from-device(screen) {
-    margin-left: px2rem(242px);
+    margin-left: 24.2rem;
 
     // Adjust for RTL languages
     [dir="rtl"] & {
-      margin-right: px2rem(242px);
+      margin-right: 24.2rem;
     }
   }
 
   // Define spacing
   &__inner {
-    margin: 0 px2rem(16px) px2rem(24px);
-    padding-top: px2rem(12px);
+    margin: 0 1.6rem 2.4rem;
+    padding-top: 1.2rem;
 
     // [screen +]: Increase horizontal spacing
     @include break-from-device(screen) {
-      margin-right: px2rem(24px);
-      margin-left: px2rem(24px);
+      margin-right: 2.4rem;
+      margin-left: 2.4rem;
     }
 
     // Hack: add pseudo element for spacing, as the overflow of the content
     // container may not be hidden due to an imminent offset error on targets
     &::before {
       display: block;
-      height: px2rem(8px);
+      height: 0.8rem;
       content: "";
     }
 
@@ -78,7 +78,7 @@
     @extend %md-icon__button;
 
     position: relative;
-    margin: px2rem(8px) 0;
+    margin: 0.8rem 0;
     padding: 0;
     float: right;
 

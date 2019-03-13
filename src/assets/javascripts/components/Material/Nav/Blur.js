@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2019 Martin Donath <martin.donath@squidfunk.com>
+ * Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -53,9 +53,8 @@ export default class Blur {
 
     /* Index anchor node offsets for fast lookup */
     this.anchors_ = [].reduce.call(this.els_, (anchors, el) => {
-      const hash = decodeURIComponent(el.hash)
       return anchors.concat(
-        document.getElementById(hash.substring(1)) || [])
+        document.getElementById(el.hash.substring(1)) || [])
     }, [])
   }
 

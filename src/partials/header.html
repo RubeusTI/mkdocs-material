@@ -1,5 +1,5 @@
 <!--
-  Copyright (c) 2016-2019 Martin Donath <martin.donath@squidfunk.com>
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to
@@ -50,28 +50,32 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title"
             data-md-component="title">
-          {% if config.site_name == page.title %}
-            {{ config.site_name }}
-          {% else %}
-            <span class="md-header-nav__topic">
+          {% block site_name %}
+            {% if config.site_name == page.title %}
               {{ config.site_name }}
-            </span>
-            <span class="md-header-nav__topic">
-              {{ page.title }}
-            </span>
-          {% endif %}
+            {% else %}
+              <span class="md-header-nav__topic">
+                {{ config.site_name }}
+              </span>
+              <span class="md-header-nav__topic">
+                {{ page.title }}
+              </span>
+            {% endif %}
+          {% endblock %}
         </div>
       </div>
 
       <!-- Button to open search dialogue -->
       <div class="md-flex__cell md-flex__cell--shrink">
-        {% if "search" in config["plugins"] %}
-          <label class="md-icon md-icon--search md-header-nav__button"
-              for="__search"></label>
+        {% block search_box %}
+          {% if "search" in config["plugins"] %}
+            <label class="md-icon md-icon--search md-header-nav__button"
+                for="__search"></label>
 
-          <!-- Search interface -->
-          {% include "partials/search.html" %}
-        {% endif %}
+            <!-- Search interface -->
+            {% include "partials/search.html" %}
+          {% endif %}
+        {% endblock %}
       </div>
 
       <!-- Repository containing source -->

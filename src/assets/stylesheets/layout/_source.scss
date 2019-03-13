@@ -1,5 +1,5 @@
 ////
-/// Copyright (c) 2016-2019 Martin Donath <martin.donath@squidfunk.com>
+/// Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a
 /// copy of this software and associated documentation files (the "Software"),
@@ -31,7 +31,7 @@
   }
 
   100% {
-    height: px2rem(13px);
+    height: 1.3rem;
   }
 }
 
@@ -59,16 +59,16 @@
 // Source container
 .md-source {
   display: block;
-  padding-right: px2rem(12px);
+  padding-right: 1.2rem;
   transition: opacity 0.25s;
-  font-size: px2rem(13px);
+  font-size: 1.3rem;
   line-height: 1.2;
   white-space: nowrap;
 
   // Adjust for RTL languages
   [dir="rtl"] & {
     padding-right: initial;
-    padding-left: px2rem(12px);
+    padding-left: 1.2rem;
   }
 
   // Hovered source container
@@ -79,7 +79,7 @@
   // Necessary for vertical alignment
   &::after {
     display: inline-block;
-    height: px2rem(48px);
+    height: 4.8rem;
     content: "";
     vertical-align: middle;
   }
@@ -87,36 +87,36 @@
   // Repository platform icon
   &__icon {
     display: inline-block;
-    width: px2rem(48px);
-    height: px2rem(48px);
+    width: 4.8rem;
+    height: 4.8rem;
     content: "";
     vertical-align: middle;
 
     // Align SVG, do not scale, as this will incur strange formatting bugs
     // in Internet Explorer and Edge
     svg {
-      width: px2rem(24px);
-      height: px2rem(24px);
-      margin-top: px2rem(12px);
-      margin-left: px2rem(12px);
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-top: 1.2rem;
+      margin-left: 1.2rem;
 
       // Adjust for RTL languages
       [dir="rtl"] & {
-        margin-right: px2rem(12px);
+        margin-right: 1.2rem;
         margin-left: initial;
       }
     }
 
     // Correct alignment, if icon is present
     + .md-source__repository {
-      margin-left: px2rem(-44px);
-      padding-left: px2rem(40px);
+      margin-left: -4.4rem;
+      padding-left: 4rem;
 
       // Adjust for RTL languages
       [dir="rtl"] & {
-        margin-right: px2rem(-44px);
+        margin-right: -4.4rem;
         margin-left: initial;
-        padding-right: px2rem(40px);
+        padding-right: 4rem;
         padding-left: initial;
       }
     }
@@ -126,7 +126,7 @@
   &__repository {
     display: inline-block;
     max-width: 100%;
-    margin-left: px2rem(12px);
+    margin-left: 1.2rem;
     font-weight: 700;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -137,7 +137,7 @@
   &__facts {
     margin: 0;
     padding: 0;
-    font-size: px2rem(11px);
+    font-size: 1.1rem;
     font-weight: 700;
     list-style-type: none;
     opacity: 0.75;
@@ -165,7 +165,7 @@
 
     // Middle dot before fact
     &::before {
-      margin: 0 px2rem(2px);
+      margin: 0 0.2rem;
       content: "\00B7";
     }
 
@@ -180,8 +180,8 @@
 .md-source-file {
   display: inline-block;
   margin: 1em 0.5em 1em 0;
-  padding-right: px2rem(5px);
-  border-radius: px2rem(2px);
+  padding-right: 0.5rem;
+  border-radius: 0.2rem;
   background-color: $md-color-black--lightest;
   font-size: ms(-1);
   list-style-type: none;
@@ -193,8 +193,8 @@
     @extend %md-icon;
 
     display: inline-block;
-    margin-right: px2rem(5px);
-    padding: px2rem(5px);
+    margin-right: 0.5rem;
+    padding: 0.5rem;
     background-color: $md-color-black--lighter;
     color: $md-color-white;
     font-size: ms(0);

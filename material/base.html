@@ -8,18 +8,14 @@
     {% block site_meta %}
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="manifest" href="/assets/json/manifest.json">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       {% if page and page.meta and page.meta.description %}
         <meta name="description" content="{{ page.meta.description }}">
       {% elif config.site_description %}
         <meta name="description" content="{{ config.site_description }}">
       {% endif %}
-      {% if page and page.meta and page.meta.redirect %}
-        <script>var anchor=window.location.hash.substr(1);location.href="{{ page.meta.redirect }}"+(anchor?"#"+anchor:"")</script>
-        <meta http-equiv="refresh" content="0; url={{ page.meta.redirect }}">
-        <meta name="robots" content="noindex">
-        <link rel="canonical" href="{{ page.meta.redirect }}">
-      {% elif page.canonical_url %}
+      {% if page.canonical_url %}
         <link rel="canonical" href="{{ page.canonical_url }}">
       {% endif %}
       {% if page and page.meta and page.meta.author %}
@@ -41,7 +37,7 @@
         <meta name="lang:{{ key }}" content="{{ lang.t(key) }}">
       {% endfor %}
       <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-4.0.2">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-3.1.0">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -53,9 +49,9 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/application.982221ab.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/application.11e41852.css' | url }}">
       {% if palette.primary or palette.accent %}
-        <link rel="stylesheet" href="{{ 'assets/stylesheets/application-palette.224b79ff.css' | url }}">
+        <link rel="stylesheet" href="{{ 'assets/stylesheets/application-palette.22915126.css' | url }}">
       {% endif %}
       {% if palette.primary %}
         {% import "partials/palette.html" as map %}
@@ -66,7 +62,7 @@
       {% endif %}
     {% endblock %}
     {% block libs %}
-      <script src="{{ 'assets/javascripts/modernizr.1f0bcf2b.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/modernizr.20ef595d.js' | url }}"></script>
     {% endblock %}
     {% block fonts %}
       {% if font != false %}
@@ -85,11 +81,6 @@
     {% for path in config["extra_css"] %}
       <link rel="stylesheet" href="{{ path | url }}">
     {% endfor %}
-    {% block analytics %}
-      {% if config.google_analytics %}
-        {% include "partials/integrations/analytics.html" %}
-      {% endif %}
-    {% endblock %}
     {% block extrahead %}{% endblock %}
   </head>
   {% if palette.primary or palette.accent %}
@@ -156,6 +147,13 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               {% block content %}
+                <div id="modalImage" class="modal">
+                  <span class="close">
+                    <img src="/assets/images/baseline_clear_white_48dp.png" style="width: 32px">
+                  </span>
+                  <img class="modal-content" id="image">
+                  <div id="caption"></div>
+                </div>
                 {% if page.edit_url %}
                   <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-icon md-content__icon">&#xE3C9;</a>
                 {% endif %}
@@ -190,7 +188,7 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/application.51c3f73e.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/application.905597d0.js' | url }}"></script>
       {% if lang.t("search.language") != "en" %}
         {% set languages = lang.t("search.language").split(",") %}
         {% if languages | length and languages[0] != "" %}
@@ -198,10 +196,10 @@
           <script src="{{ (path ~ 'lunr.stemmer.support.js') | url }}"></script>
           {% for language in languages | map("trim") %}
             {% if language != "en" %}
-              {% if language == "ja" %}
+              {% if language == "jp" %}
                 <script src="{{ (path ~ 'tinyseg.js') | url }}"></script>
               {% endif %}
-              {% if language in ("da", "de", "es", "fi", "fr", "hu", "it", "ja", "nl", "no", "pt", "ro", "ru", "sv", "th", "tr") %}
+              {% if language in ("da", "de", "du", "es", "fi", "fr", "hu", "it", "jp", "no", "pt", "ro", "ru", "sv", "tr") %}
                 <script src="{{ (path ~ 'lunr.' ~ language ~ '.js') | url }}"></script>
               {% endif %}
             {% endif %}
@@ -215,6 +213,11 @@
       {% for path in config["extra_javascript"] %}
         <script src="{{ path | url }}"></script>
       {% endfor %}
+    {% endblock %}
+    {% block analytics %}
+      {% if config.google_analytics %}
+        {% include "partials/integrations/analytics.html" %}
+      {% endif %}
     {% endblock %}
   </body>
 </html>

@@ -1,5 +1,5 @@
 ////
-/// Copyright (c) 2016-2019 Martin Donath <martin.donath@squidfunk.com>
+/// Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a
 /// copy of this software and associated documentation files (the "Software"),
@@ -30,8 +30,8 @@
   // Permalinks extension
   .headerlink {
     display: inline-block;
-    margin-left: px2rem(10px);
-    transform: translate(0, px2rem(5px));
+    margin-left: 1rem;
+    transform: translate(0, 0.5rem);
     transition:
       transform 0.25s  0.25s,
       color     0.25s,
@@ -40,7 +40,7 @@
 
     // Adjust for RTL languages
     [dir="rtl"] & {
-      margin-right: px2rem(10px);
+      margin-right: 1rem;
       margin-left: initial;
     }
 
@@ -57,12 +57,12 @@
 
   // Correct anchor offset for link blurring
   @each $level, $delta in (
-    h1: 9px,
-    h2: 8px,
-    h3: 9px,
-    h4: 9px,
-    h5: 11px,
-    h6: 11px
+    h1: 0.9rem,
+    h2: 0.8rem,
+    h3: 0.9rem,
+    h4: 0.9rem,
+    h5: 1.1rem,
+    h6: 1.1rem
   ) {
     #{$level}[id] {
 
@@ -76,8 +76,8 @@
 
       // Targeted anchor (48px from header, 12px from sidebar offset)
       &:target::before {
-        margin-top: -1 * px2rem(48px + 12px + $delta);
-        padding-top: px2rem(48px + 12px + $delta);
+        margin-top: -(4.8rem + 1.2rem + $delta);
+        padding-top: (4.8rem + 1.2rem + $delta);
       }
 
       // Make permalink visible on hover

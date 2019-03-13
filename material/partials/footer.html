@@ -50,7 +50,9 @@
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
-      {% include "partials/social.html" %}
+      {% block social %}
+        {% include "partials/social.html" %}
+      {% endblock %}
     </div>
   </div>
 </footer>
