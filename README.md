@@ -4,17 +4,17 @@ Bem-vindo à documentação da Rubeus para os desenvolvedores. Nosso objetivo é
 
 Atualmente dispomos de integração via:
     
-* [API](api_crm/apresentacao.md) - Permite o envio de diversas informações para o CRM Rubeus como: cursos, processos seletivo, contatos e eventos.
+* [API](https://docs.rubeus.com.br/api_crm/apresentacao/) - Permite o envio de diversas informações para o CRM Rubeus como: cursos, processos seletivo, contatos e eventos.
 
-* [Webhook](webhook.md) - Permite o envio de dados em tempo real do CRM rubeus para aplicações de terceiros.
+* [Webhook](https://docs.rubeus.com.br/webhook/) - Permite o envio de dados em tempo real do CRM rubeus para aplicações de terceiros.
 
-* [Endpoint](endpoint.md) - Permite que sua equipe configure endpoints que retornando dados em formato JSON que serão consumidos pelo CRM Rubeus podendo ser utilizados para cadastrar contatos e eventos. 
+* [Endpoint](https://docs.rubeus.com.br/endpoint/) - Permite que sua equipe configure endpoints que retornando dados em formato JSON que serão consumidos pelo CRM Rubeus podendo ser utilizados para cadastrar contatos e eventos. 
 
-Algumas funcionalidades requerem o uso de valores fixos, tal como o campo de "Estado civil", esses valores podem ser conferidos usando a página [Tabelas Auxiliares](tabelasauxiliares.md).
+Algumas funcionalidades requerem o uso de valores fixos, tal como o campo de "Estado civil", esses valores podem ser conferidos usando a página [Tabelas Auxiliares](https://docs.rubeus.com.br/tabelasauxiliares/).
 
 # Projetos utilizados
 
-A base do site foi utilizado o [MkDocs][https://www.mkdocs.org] com o [Material for MkDocs][https://squidfunk.github.io/mkdocs-material/].
+A base do site foi utilizado o [MkDocs](https://www.mkdocs.org) com o [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
 ## License
 
