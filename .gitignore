@@ -33,6 +33,7 @@ venv
 /build
 /material/manifest.json
 /MANIFEST
+/site
 
 # Distribution files
 /dist

@@ -80,6 +80,8 @@ extra:
       link: https://www.linkedin.com/company/rubeus/
     - type: twitter
       link: https://twitter.com/CanalRubeus
+    - type: github
+      link: https://github.com/RubeusTI
 
 # Extensions
 markdown_extensions:
