@@ -1,66 +1,26 @@
-[![Travis][travis-image]][travis-link]
-[![Downloads][downloads-image]][downloads-link]
-[![Gitter][gitter-image]][gitter-link]
-[![PyPI][pypi-image]][pypi-link]
-[![dependabot][dependabot-image]][dependabot-link]
+# Rubeus Developers
 
-  [travis-image]: https://travis-ci.org/squidfunk/mkdocs-material.svg?branch=master
-  [travis-link]: https://travis-ci.org/squidfunk/mkdocs-material
-  [downloads-image]: https://img.shields.io/pypi/dm/mkdocs-material.svg
-  [downloads-link]: https://pypistats.org/packages/mkdocs-material
-  [gitter-image]: https://badges.gitter.im/squidfunk/mkdocs-material.svg
-  [gitter-link]: https://gitter.im/squidfunk/mkdocs-material
-  [pypi-image]: https://img.shields.io/pypi/v/mkdocs-material.svg
-  [pypi-link]: https://pypi.python.org/pypi/mkdocs-material
-  [dependabot-image]: https://img.shields.io/badge/dependabot-enabled-06f.svg
-  [dependabot-link]: https://dependabot.com
+Bem-vindo à documentação da Rubeus para os desenvolvedores. Nosso objetivo é auxiliar sua equipe de tecnologia de informação no processo de integração com o CRM Rubeus e os outros produtos para que vocês possam tiram o máximo das possibilidades que esses sistemas oferecem.
 
-# Material for MkDocs
+Atualmente dispomos de integração via:
+    
+* [API](https://docs.rubeus.com.br/api_crm/apresentacao/) - Permite o envio de diversas informações para o CRM Rubeus como: cursos, processos seletivo, contatos e eventos.
 
-A Material Design theme for [MkDocs][1].
+* [Webhook](https://docs.rubeus.com.br/webhook/) - Permite o envio de dados em tempo real do CRM rubeus para aplicações de terceiros.
 
-[![Material for MkDocs](docs/assets/images/material.png)][2]
+* [Endpoint](https://docs.rubeus.com.br/endpoint/) - Permite que sua equipe configure endpoints que retornando dados em formato JSON que serão consumidos pelo CRM Rubeus podendo ser utilizados para cadastrar contatos e eventos. 
 
-  [1]: https://www.mkdocs.org
-  [2]: https://squidfunk.github.io/mkdocs-material/
+Algumas funcionalidades requerem o uso de valores fixos, tal como o campo de "Estado civil", esses valores podem ser conferidos usando a página [Tabelas Auxiliares](https://docs.rubeus.com.br/tabelasauxiliares/).
 
-## Quick start
+# Projetos utilizados
 
-Install the latest version of Material with `pip`:
-
-``` sh
-pip install mkdocs-material
-```
-
-Append the following line to your project's `mkdocs.yml`:
-
-``` yaml
-theme:
-  name: 'material'
-```
-
-## What to expect
-
-* Responsive design and fluid layout for all kinds of screens and devices,
-  designed to serve your project documentation in a user-friendly way in 35
-  languages with optimal readability.
-
-* Easily customizable primary and accent color, fonts, favicon and logo;
-  straight forward localization through theme extension; integrated with Google
-  Analytics, Disqus and GitHub.
-
-* Well-designed search interface accessible through hotkeys (<kbd>F</kbd> or
-  <kbd>S</kbd>), intelligent grouping of search results, search term
-  highlighting and lazy loading.
-
-For detailed installation instructions and a demo, visit
-https://squidfunk.github.io/mkdocs-material/
+A base do site foi utilizado o [MkDocs](https://www.mkdocs.org) com o [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
 ## License
 
 **MIT License**
 
-Copyright (c) 2016-2019 Martin Donath
+Copyright (c) 2018-2019 Rubeus Tecnologia e Inovação Ltda
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to

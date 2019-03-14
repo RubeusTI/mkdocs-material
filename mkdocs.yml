@@ -25,9 +25,9 @@ site_author: Rubeus
 site_url: https://docs.rubeus.com.br/
 
 # Repository
-# repo_name: squidfunk/mkdocs-material
-# repo_url: https://github.com/squidfunk/mkdocs-material
-# edit_uri: ""
+repo_name: RubeusTI/docs
+repo_url: https://github.com/RubeusTI/docs
+edit_uri: ""
 
 # Copyright
 copyright: '&copy; 2019 Rubeus todos os direitos reservados'
@@ -43,7 +43,7 @@ theme:
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
-  search_index_only: false
+  search_index_only: true
 
   # Default values, taken from mkdocs_theme.yml
   language: pt
@@ -67,6 +67,8 @@ extra_javascript:
   - 'assets/javascripts/extra.js'
   
 extra:
+  search:
+    language: 'pt'
   social:
     - type: globe
       link: https://rubeus.com.br/
