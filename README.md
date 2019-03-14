@@ -20,7 +20,7 @@ A base do site foi utilizado o [MkDocs](https://www.mkdocs.org) com o [Material 
 
 **MIT License**
 
-Copyright (c) 2016-2019 Martin Donath
+Copyright (c) 2018-2019 Rubeus Tecnologia e Inovação Ltda
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
