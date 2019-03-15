@@ -160,8 +160,8 @@ Método para cadastro de contatos no CRM Rubeus. Segue abaixo os dados necessár
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
-| `id` | `integer` | Condicional | Id do contato<hr>**Passar o se o** `codigoAntigo` **não for passado.** | 
-| `codigoAntigo` | `string` | Condicional | Código enviado no cadastro do contato.<hr>**Passar o se o** `id` **não for passado.**  | 
+| `id` | `integer` | Condicional | Id do contato<hr>**Passar se o** `codigoAntigo` **não for passado.** | 
+| `codigoAntigo` | `string` | Condicional | Código enviado no cadastro do contato.<hr>**Passar se o** `id` **não for passado.**  | 
 | `codigoNovo` | `string` | Sim | Código que será substituído com base no código antigo enviado. | 
 | `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
 | `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
