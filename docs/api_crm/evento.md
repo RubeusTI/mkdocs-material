@@ -16,8 +16,8 @@ Método para cadastro de eventos no CRM Rubeus.
 | `codigo` | `string` | Não | Chave única de identificação do evento enviado. <br>**Caso queira editar um evento criado basta informar o código do evento criado.** | 
 | `tipo` | `integer` | Condicional | Código de identificação do tipo do evento. <br><br>[Listar Tipos de Eventos](#listar-tipos-de-eventos)<br>*Enviar o campo* `id`<br><br>[Cadastrar Tipos de Eventos](#cadastro-de-tipos-de-evento) | 
 | `codTipo` | `string` | Condicional | Código externo enviado no cadastro do tipo de evento.<br><br>[Listar Tipos de Eventos](#listar-tipos-de-eventos)<br>*Enviar o campo* `codigo`<br><br>[Cadastrar Tipos de Eventos](#cadastro-de-tipos-de-evento) | 
-| `descricao` | `string` | Sim | A Descrição pode ser enviada no formato HTML para deixar a apresentação dos dados do evento na linha do tempo mais organizados.<br><i>**É opcional o envio com as tags HTML.**</i> | 
-| `pessoa` | `array[]` | Sim | Vincule o contato ao evento, esse código é o mesmo que foi enviado ao cadastrar o contato pela API. <hr>*Veja abaixo um exemplo do formato para envio.*<br>`#!json { "codigo": “1” }` | 
+| `descricao` | `string` | Não | A Descrição pode ser enviada no formato HTML para deixar a apresentação dos dados do evento na linha do tempo mais organizados.<br><i>**É opcional o envio com as tags HTML.**</i> | 
+| `pessoa` | `string` | Sim | Vincule o contato ao evento, esse código é o mesmo que foi enviado ao cadastrar o contato pela API. <hr>*Veja abaixo um exemplo do formato para envio.*<br>`#!json { "codigo": “1” }` | 
 | `codOferta` | `string` | Não | Código de identificação da oferta do curso.<br>**O código da oferta do curso e o código do curso são obrigatórios para vincular o evento ao um curso no CRM Rubeus.** | 
 | `codCurso` | `string` | Não | Código de identificação do curso. | 
 | `codLocalOferta` | `string` | Não | Código de identificação do local da oferta. | 
