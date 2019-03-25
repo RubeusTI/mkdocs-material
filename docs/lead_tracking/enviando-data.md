@@ -9,18 +9,23 @@ Utilizando a função `sendData()` para disparar os dados ao CRM Rubeus.
 
 | Parâmetros | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
-| `data` | `object` | Sim | Objeto que contém os dados à serem enviados ao CRM.<hr>A estrutura do parâmetro segue a mesma do método de [cadastrar contato](/api_crm/contato/#cadastro-de-contato). | 
+| `data` | `object` | Sim | Objeto que contém os dados à serem enviados ao CRM.<hr>A estrutura do parâmetro segue a mesma do método de [cadastrar contato](/api_crm/contato/#cadastro-de-contato).<br>**Obs.: o campo “codigo” deve ser ignorado já que é enviado automaticamente.** | 
 
 ### Retorno
-
-| Caso | Tipo de retorno | Descrição | 
-| --- | --- | --- |
-| `Sucesso` | `string` | Retorna uma string contendo o hash do usuário caso a operação seja efetuada com sucesso. | 
-| `Falha` | `string` | Retorna uma string vazia. | 
+``` JSON tab="Return"
+{
+	"status": "success!",
+	"data": {
+		"nome": "João da Silva",
+		"emailPrincipal": "joãosilva@rubeus.com",
+		"dataNascimento": "1998-12-31"
+	}
+}
+```
 
 ### Código Exemplo
 
-``` javascript tab="Enviar dados"
+``` javascript tab="JavaScript"
 data = {
     nome: "João da Silva",
     emailPrincipal: "joãosilva@rubeus.com",
@@ -28,3 +33,4 @@ data = {
 };
 RBTracking.sendData(data);
 ```
+

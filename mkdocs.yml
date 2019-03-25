@@ -131,7 +131,7 @@ nav:
     - Apresentação: lead_tracking/apresentacao.md
     - Instalação: lead_tracking/instalacao.md
     - Enviando eventos: lead_tracking/enviando-eventos.md
-    - Enviando Data: lead_tracking/enviando-data.md
+    - Enviando Dados ao CRM: lead_tracking/enviando-data.md
     - Recuperando informações: lead_tracking/recuperando-informacoes.md
     - Tracking multidomínio: lead_tracking/tracking-multidominio.md
   - Tabelas Auxiliares: tabelasauxiliares.md
