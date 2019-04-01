@@ -21,7 +21,7 @@ O método `sendEvent()` é utilizado para o envio de dados relevantes ao servido
 #### Função
 | Parâmetros | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
-| Dados do evento | `object` | Sim | Objeto que contém os dados do evento a ser enviado. | 
+| `eventParameters` | `object` | Sim | Objeto que contém os dados do evento a ser enviado. | 
 | `callback` | `function` | Não | Função que será executada após o retorno do evento.  | 
 
 #### Tipos de eventos
