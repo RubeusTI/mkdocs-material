@@ -23,6 +23,17 @@ function modalImg(imgId) {
         modal.className = 'modal';
       }, 580);
   }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.className = 'modal modal-off';
+      setTimeout(
+        function () {
+          modal.style.display = 'none';
+          modal.className = 'modal';
+        }, 580);
+    }
+  }
 }
 
 function send() {
