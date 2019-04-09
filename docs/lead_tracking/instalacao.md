@@ -17,7 +17,10 @@ Para a implementação é necessário obter o link da biblioteca junto com o có
     **Deve ser colocado na parte mais alta possível dentro da tag** `#!html <head>...</head>` **para o funcionamento da biblioteca não sofrer perda de dados durante a navegação do usuário.**
 
 ``` html tab="HTML/JavaScript"
-<script type="text/javascript" src="http://tracking.apprbs.com.br/b0qh8s207bqwd37cnswzrrxr4n5xl70mxhuw0mlyn3jrx"></script>
+<script 
+    type="text/javascript" 
+    src="https://tracking.apprubeus.com.br/libs/RBTracking.min.js?rbclicod=aSLhOBjZV5wD7YEpppb3">
+</script>
 ```
 
 ## Usar com o Google Tag Mananger
