@@ -94,14 +94,14 @@ markdown_extensions:
   - markdown.extensions.meta
   - markdown.extensions.toc:
       permalink: true
-  - pymdownx.arithmatex
+  # - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  # - pymdownx.emoji:
+  #     emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink
@@ -127,7 +127,15 @@ nav:
     - Métodos de listagem: api_crm/metodosdelistagem.md
   - Webhook: webhook.md
   - Endpoint: endpoint.md
+  - Lead tracking:
+    - Apresentação: lead_tracking/apresentacao.md
+    - Instalação: lead_tracking/instalacao.md
+    - Enviando eventos: lead_tracking/enviando-eventos.md
+    - Enviando Dados ao CRM: lead_tracking/enviando-data.md
+    - Recuperando informações: lead_tracking/recuperando-informacoes.md
+    - Tracking multidomínio: lead_tracking/tracking-multidominio.md
   - Tabelas Auxiliares: tabelasauxiliares.md
+  - Testar API's: methodstest.md
     
   
 # Google Analytics
