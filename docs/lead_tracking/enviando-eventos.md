@@ -1,7 +1,7 @@
 
 # Enviando eventos
 
-O método `sendEvent()` é utilizado para o envio de dados relevantes ao servidor por meio de eventos. Os dados que são passados, posteriormente, podem ser vistos nos relatórios do CRM Rubeus.
+O método `sendEvent()` é utilizado para o envio de dados relevantes ao servidor por meio de eventos.
 
 ## Estrutura
 
@@ -32,9 +32,6 @@ O método `sendEvent()` é utilizado para o envio de dados relevantes ao servido
 | 2 | Ações no site | `action` | Quando se deseja salvar ações que o usuário realizar no site. Exemplos: clique de botoẽs, rolagem de página, abertura de pop-ups e etc…  | 
 | 3 | Outros | `other` | Utilizado para qualquer informação que se deseja armazenar que não se enquadra nas outras opções. | 
 
-!!! info "Tipos de eventos"
-
-	Os tipos 2 e 3 não são retornados na função [getData()](recuperando-informacoes.md). Porém são recuperados na área de gerar relatórios no CRM Rubeus.
 
 ### Código Exemplo
 
