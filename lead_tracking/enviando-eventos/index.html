@@ -534,7 +534,7 @@
 <td><code class="codehilite">eventData</code></td>
 <td><code class="codehilite">object</code></td>
 <td>Sim</td>
-<td>Objeto que contenha os dados que é desejado armazenar.</td>
+<td>Objeto que contenha quaisquer dados que se é desejado armazenar.</td>
 </tr>
 <tr>
 <td><code class="codehilite">eventType</code></td>
@@ -546,7 +546,7 @@
 <td><code class="codehilite">identifier</code></td>
 <td><code class="codehilite">string</code></td>
 <td>Não</td>
-<td>Reservado para uma atribuição personalizada de identificador.</td>
+<td>Reservado para uma atribuição personalizada de identificador ao evento.<hr><strong>Por padrão os eventos enviados já tem um identificador gerado automaticamente.</strong></td>
 </tr>
 </tbody>
 </table>
@@ -576,36 +576,8 @@
 </tbody>
 </table>
 <h4 id="tipos-de-eventos">Tipos de eventos<a class="headerlink" href="#tipos-de-eventos" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Número</th>
-<th>Nome</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Coleta de dados</td>
-<td><code class="codehilite">data</code></td>
-<td>Usado para armazenar todos os dados vindo diretamente do usuário e dados destinados à ele (exemplo um código personalizado), tal como o preenchimento de um formulário.  (Esse tipo é o único retornado no método <a href="../recuperando-informacoes/">getData()</a>.</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Ações no site</td>
-<td><code class="codehilite">action</code></td>
-<td>Quando se deseja salvar ações que o usuário realizar no site. Exemplos: clique de botoẽs, rolagem de página, abertura de pop-ups e etc…</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Outros</td>
-<td><code class="codehilite">other</code></td>
-<td>Utilizado para qualquer informação que se deseja armazenar que não se enquadra nas outras opções.</td>
-</tr>
-</tbody>
-</table>
+<p>Os tipos de eventos que serão enviados, devem ser gerados pelo meio que o CRM disponibiliza, que é através do menu “Cadastros” e depois na opção “Tipos de eventos”, lá haverá um botão verde escrito “Adicionar tipo de evento” na parte superior esquerda da página. </p>
+<p>Logo após, será necessário recuperar o código do tipo de evento criado utilizando-se da API para a <a href="/api_crm/evento/#listar-tipos-de-eventos">listagem dos tipos de evento</a> do CRM, podendo-se utilizar a página de <a href="/methodstest">testes</a> disponível na própria documentação.</p>
 <h3 id="codigo-exemplo">Código Exemplo<a class="headerlink" href="#codigo-exemplo" title="Permanent link">&para;</a></h3>
 <h4 id="exemplo-1">Exemplo 1<a class="headerlink" href="#exemplo-1" title="Permanent link">&para;</a></h4>
 <div class="superfences-tabs">
@@ -623,7 +595,7 @@
         <span class="nx">codigoUser</span><span class="o">:</span> <span class="err">‘</span><span class="nx">codigo_gerado</span><span class="err">’</span>
     <span class="p">},</span>
     <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="nx">data</span><span class="err">‘</span>
-<span class="p">}</span>
+<span class="p">};</span>
 
 <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">);</span>
 </pre></div>
@@ -660,7 +632,7 @@
     <span class="p">},</span>
     <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="nx">data</span><span class="err">‘</span><span class="p">,</span>
     <span class="nx">identifier</span><span class="o">:</span> <span class="nx">identificador_gerado</span>
-<span class="p">}</span>
+<span class="p">};</span>
 
 <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">);</span>
 </pre></div>
@@ -687,11 +659,11 @@
         <span class="nx">cliqueBotaoId</span><span class="o">:</span> <span class="nx">id_botao</span> 
     <span class="p">},</span>
     <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="nx">action</span><span class="err">‘</span>
-<span class="p">}</span>
+<span class="p">};</span>
 
 <span class="nx">callback</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">resposta</span><span class="p">){</span>
     <span class="k">return</span> <span class="nx">resposta</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="p">};</span>
 
 <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
 </pre></div>
