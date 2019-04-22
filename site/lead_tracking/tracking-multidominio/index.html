@@ -14,7 +14,7 @@
         <meta name="description" content="Página de documentações da Rubeus">
       
       
-        <link rel="canonical" href="https://docs.rubeus.com.br/lead_tracking/enviando-eventos/">
+        <link rel="canonical" href="https://docs.rubeus.com.br/lead_tracking/tracking-multidominio/">
       
       
         <meta name="author" content="Rubeus">
@@ -43,7 +43,7 @@
     
     
       
-        <title>Enviando eventos - Rubeus Developers</title>
+        <title>Tracking multidomínio - Rubeus Developers</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#enviando-eventos" tabindex="1" class="md-skip">
+      <a href="#tracking-multidominio" tabindex="1" class="md-skip">
         Ir para o conteúdo
       </a>
     
@@ -115,7 +115,7 @@
                 Rubeus Developers
               </span>
               <span class="md-header-nav__topic">
-                Enviando eventos
+                Tracking multidomínio
               </span>
             
           
@@ -419,25 +419,31 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#objeto-do-evento" title="Objeto do evento" class="md-nav__link">
-    Objeto do evento
+  <a href="#parametros" title="Parâmetros" class="md-nav__link">
+    Parâmetros
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#funcao" title="Função" class="md-nav__link">
-    Função
+  <a href="#retorno" title="Retorno" class="md-nav__link">
+    Retorno
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#tipos-de-eventos" title="Tipos de eventos" class="md-nav__link">
-    Tipos de eventos
-  </a>
+      </ul>
+    </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicacao-no-uso" title="Aplicação no uso" class="md-nav__link">
+    Aplicação no uso
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#codigo-exemplo" title="Código Exemplo" class="md-nav__link">
@@ -461,10 +467,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#exemplo-3" title="Exemplo 3" class="md-nav__link">
-    Exemplo 3
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -472,16 +476,11 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#retorno" title="Retorno" class="md-nav__link">
-    Retorno
+      
+        <li class="md-nav__item">
+  <a href="#proximo-passo" title="Próximo passo" class="md-nav__link">
+    Próximo passo
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -509,48 +508,10 @@
                 </div>
                 
                 
-                <h1 id="enviando-eventos">Enviando eventos<a class="headerlink" href="#enviando-eventos" title="Permanent link">&para;</a></h1>
-<p>O método <code class="codehilite">sendEvent()</code> é utilizado para o envio de dados relevantes ao servidor por meio de eventos. Os dados que são passados, posteriormente, podem ser vistos nos relatórios do CRM Rubeus.</p>
+                <h1 id="tracking-multidominio">Tracking multidomínio<a class="headerlink" href="#tracking-multidominio" title="Permanent link">&para;</a></h1>
+<p>Utilizando a função <code class="codehilite">getHash()</code> é possível obter o <code class="codehilite">hash</code> armazenado no dispositivo, e posteriormente, usar para identificar o usuário em outro domínio, passando o hash obtido pela a url que irá para a próxima página e nela é necessário também ter instalado o script de tracking para se obter os dados passados e assim obter relatórios mais sólidos.</p>
 <h2 id="estrutura">Estrutura<a class="headerlink" href="#estrutura" title="Permanent link">&para;</a></h2>
-<h4 id="objeto-do-evento">Objeto do evento<a class="headerlink" href="#objeto-do-evento" title="Permanent link">&para;</a></h4>
-<div class="admonition info">
-<p class="admonition-title">Parâmetros</p>
-<ul>
-<li><strong>Os tipos aceitos no <code class="codehilite">eventType</code> são fixos.</strong></li>
-<li><strong>Deverá ser passado dentro de um <code class="codehilite">object</code> ou <code class="codehilite">array[]</code>.</strong></li>
-</ul>
-</div>
-<table>
-<thead>
-<tr>
-<th>Atributos</th>
-<th>Tipo</th>
-<th>Obrigatoriedade</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code class="codehilite">eventData</code></td>
-<td><code class="codehilite">object</code></td>
-<td>Sim</td>
-<td>Objeto que contenha os dados que é desejado armazenar.</td>
-</tr>
-<tr>
-<td><code class="codehilite">eventType</code></td>
-<td><code class="codehilite">integer</code></td>
-<td>Sim</td>
-<td>Utilizado para especificar o tipo para o qual se destina o evento.</td>
-</tr>
-<tr>
-<td><code class="codehilite">identifier</code></td>
-<td><code class="codehilite">string</code></td>
-<td>Não</td>
-<td>Reservado para uma atribuição personalizada de identificador.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="funcao">Função<a class="headerlink" href="#funcao" title="Permanent link">&para;</a></h4>
+<h3 id="parametros">Parâmetros<a class="headerlink" href="#parametros" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -562,59 +523,52 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite">eventParameters</code></td>
-<td><code class="codehilite">object</code></td>
-<td>Sim</td>
-<td>Objeto que contém os dados do evento a ser enviado.</td>
-</tr>
-<tr>
-<td><code class="codehilite">callback</code></td>
-<td><code class="codehilite">function</code></td>
+<td><code class="codehilite">link</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
-<td>Função que será executada após o retorno do evento.</td>
+<td>Passa o <code class="codehilite">hash</code> por GET utilizando o <code class="codehilite">link</code> e redirecionando logo em seguida.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="tipos-de-eventos">Tipos de eventos<a class="headerlink" href="#tipos-de-eventos" title="Permanent link">&para;</a></h4>
+<h3 id="retorno">Retorno<a class="headerlink" href="#retorno" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Número</th>
-<th>Nome</th>
-<th>Tipo</th>
+<th>Caso</th>
+<th>Tipo de retorno</th>
 <th>Descrição</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>Coleta de dados</td>
-<td><code class="codehilite">data</code></td>
-<td>Usado para armazenar todos os dados vindo diretamente do usuário e dados destinados à ele (exemplo um código personalizado), tal como o preenchimento de um formulário.  (Esse tipo é o único retornado no método <a href="../recuperando-informacoes/">getData()</a>.</td>
+<td><code class="codehilite">Sucesso</code></td>
+<td><code class="codehilite">string</code></td>
+<td>Retorna uma string contendo o hash do usuário caso a operação seja efetuada com sucesso.</td>
 </tr>
 <tr>
-<td>2</td>
-<td>Ações no site</td>
-<td><code class="codehilite">action</code></td>
-<td>Quando se deseja salvar ações que o usuário realizar no site. Exemplos: clique de botoẽs, rolagem de página, abertura de pop-ups e etc…</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Outros</td>
-<td><code class="codehilite">other</code></td>
-<td>Utilizado para qualquer informação que se deseja armazenar que não se enquadra nas outras opções.</td>
+<td><code class="codehilite">Falha</code></td>
+<td><code class="codehilite">string</code></td>
+<td>Retorna uma string vazia.</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
-<p class="admonition-title">Tipos de eventos</p>
-<p>Os tipos 2 e 3 não são retornados na função <a href="../recuperando-informacoes/">getData()</a>. Porém são recuperados na área de gerar relatórios no CRM Rubeus.</p>
-</div>
+<h2 id="aplicacao-no-uso">Aplicação no uso<a class="headerlink" href="#aplicacao-no-uso" title="Permanent link">&para;</a></h2>
+<p>Tendo como exemplo a situação de ter uma página para a captação de alunos, chamado de <em><a href="https://captacao.exemplounivesidade.com.br">https://captacao.exemplounivesidade.com.br</a></em>, e outra para a inscrição <em><a href="https://inscricao.uniexemplo.edu.br">https://inscricao.uniexemplo.edu.br</a></em> em domínios diferentes.</p>
+<p>Ná página de captação, o aluno escolhe um curso e preenche alguns dados e clica em um botão que irá direcioná-lo à página de inscrição, esses dados precisam ser enviados pelo método <a href="http://enviando-eventos.md">sendEvent()</a> primeiro, no envio dos dados terá que ser passado um segundo parâmetro, que nesse caso é um <code class="codehilite">callback</code> contendo o link para qual o usuário será redirecionado, nesse link carrega o hash atual da máquina para haver a comunicação da API com outro domínio.</p>
 <h3 id="codigo-exemplo">Código Exemplo<a class="headerlink" href="#codigo-exemplo" title="Permanent link">&para;</a></h3>
 <h4 id="exemplo-1">Exemplo 1<a class="headerlink" href="#exemplo-1" title="Permanent link">&para;</a></h4>
 <div class="superfences-tabs">
 <input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
-<label for="__tab_1_0">JavaScript</label>
+<label for="__tab_1_0">Pegar apenas o hash</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">RBTracking</span><span class="p">.</span><span class="nx">getHash</span><span class="p">();</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<hr />
+<h4 id="exemplo-2">Exemplo 2<a class="headerlink" href="#exemplo-2" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">HTML</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -622,22 +576,18 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">evento</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">eventData</span> <span class="o">:</span> <span class="p">{</span>
-        <span class="nx">codigoUser</span><span class="o">:</span> <span class="err">‘</span><span class="nx">codigo_gerado</span><span class="err">’</span>
-    <span class="p">},</span>
-    <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="nx">data</span><span class="err">‘</span>
-<span class="p">}</span>
-
-<span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">);</span>
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;curso&quot;</span> <span class="na">onchange</span><span class="o">=</span><span class="s">&quot;javascript:myFunction()&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>SELECIONAR<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1-123-001&quot;</span><span class="p">&gt;</span>ADMINISTRAÇÃO<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;2-321-032&quot;</span><span class="p">&gt;</span>AGRONOMIA<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1-123-003&quot;</span><span class="p">&gt;</span>DIREITO<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </pre></div>
 </td></tr></table></div>
-</div>
-<p>Nesse exemplo, temos o envio de um objeto com o código de usuário dentro do <code class="codehilite">eventData</code>, e no mesmo nível temos o <code class="codehilite">eventType</code> carregando o tipo correto do evento.</p>
-<h4 id="exemplo-2">Exemplo 2<a class="headerlink" href="#exemplo-2" title="Permanent link">&para;</a></h4>
-<div class="superfences-tabs">
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">JavaScript</label>
+<input name="__tabs_2" type="radio" id="__tab_2_1" />
+<label for="__tab_2_1">Função JavaScript</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -652,82 +602,34 @@
 12
 13
 14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">evento</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">eventData</span> <span class="o">:</span> <span class="p">{</span>
-        <span class="nx">curso</span><span class="o">:</span> <span class="p">{</span>
-            <span class="nx">nome</span><span class="o">:</span> <span class="err">‘</span><span class="nx">Administração</span><span class="err">’</span><span class="p">,</span>
-            <span class="nx">id</span><span class="o">-</span><span class="nx">curso</span><span class="o">:</span> <span class="err">‘</span><span class="mi">1</span><span class="o">-</span><span class="mi">123</span><span class="o">-</span><span class="mi">456</span><span class="err">’</span>
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">curso</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;curso&#39;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">eventData</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">curso</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">id</span><span class="o">:</span> <span class="nx">curso</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span>
+                <span class="nx">nome</span><span class="o">:</span> <span class="nx">curso</span><span class="p">.</span><span class="nx">options</span><span class="p">[</span><span class="nx">curso</span><span class="p">.</span><span class="nx">selectedIndex</span><span class="p">].</span><span class="nx">text</span>
+            <span class="p">}</span>
         <span class="p">},</span>
-        <span class="nx">user</span><span class="o">:</span><span class="p">{</span>
-            <span class="nx">codigoUser</span><span class="o">:</span> <span class="err">‘</span><span class="nx">codigo_gerado</span><span class="err">’</span>
+        <span class="nx">eventType</span><span class="o">:</span> <span class="mi">1</span>
+    <span class="p">};</span>
+    <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span>
+                <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">getHash</span><span class="p">(</span><span class="s1">&#39;https://inscricao.uniexemplo.edu.br&#39;</span><span class="p">)</span>
+            <span class="p">);</span>
+            <span class="k">return</span> <span class="s1">&#39;success!&#39;</span><span class="p">;</span>
         <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="nx">data</span><span class="err">‘</span><span class="p">,</span>
-    <span class="nx">identifier</span><span class="o">:</span> <span class="nx">identificador_gerado</span>
+    <span class="p">);</span>
 <span class="p">}</span>
-
-<span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>Esse exemplo apresenta dois objetos dentro do <code class="codehilite">eventData</code> com a intenção de obter uma organização ainda maior e melhor nos retornos do <a href="../recuperando-informacoes/">getData()</a>, apresenta também um <code class="codehilite">identifier</code> no mesmo nível de <code class="codehilite">eventType</code> e <code class="codehilite">eventData</code>.</p>
-<h4 id="exemplo-3">Exemplo 3<a class="headerlink" href="#exemplo-3" title="Permanent link">&para;</a></h4>
-<div class="superfences-tabs">
-<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
-<label for="__tab_3_0">JavaScript</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">evento</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">eventData</span> <span class="o">:</span> <span class="p">{</span>
-        <span class="nx">cliqueBotaoId</span><span class="o">:</span> <span class="nx">id_botao</span> 
-    <span class="p">},</span>
-    <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="nx">action</span><span class="err">‘</span>
-<span class="p">}</span>
-
-<span class="nx">callback</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">resposta</span><span class="p">){</span>
-    <span class="k">return</span> <span class="nx">resposta</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
-</pre></div>
-</td></tr></table></div>
-</div>
-<p>Aqui temos a presença de um <code class="codehilite">callback</code> que irá retornar a resposta do servidor em forma de texto, um <code class="codehilite">eventData</code> carregando uma ação do usuário no site e um <code class="codehilite">eventType</code> do tipo <code class="codehilite">action</code>.</p>
-<div class="admonition tip">
-<p class="admonition-title">Envios de eventos</p>
-<p>Quando tiver mais de 1 evento de tipos diferentes para serem enviados, devem ser alocados em um array.</p>
-</div>
-<h3 id="retorno">Retorno<a class="headerlink" href="#retorno" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Caso</th>
-<th>Tipo de retorno</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code class="codehilite">Sucesso</code></td>
-<td><code class="codehilite">array[]</code></td>
-<td>Retorna um JSON contendo os dados do <code class="codehilite">eventData</code> enviados caso a operação seja efetuada com sucesso.</td>
-</tr>
-<tr>
-<td><code class="codehilite">Falha</code></td>
-<td><code class="codehilite">string</code></td>
-<td>Retorna um JSON contendo o erro encontrado no processo.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="proximo-passo">Próximo passo<a class="headerlink" href="#proximo-passo" title="Permanent link">&para;</a></h2>
+<p>Já na página seguinte tendo o serviço de tracking já instalado e com a comunicação ter sido efetuada com sucesso, o algoritmo será iniciado com o hash que foi passado pela URL e assim identificando que é o mesmo usuário. Para fazer o reprocessamento dos dados que foram previamente passados, é necessário adicionar um <a href="../recuperando-informacoes/">getData()</a> para recuperar as informações e adicioná-las ao fluxo de sua aplicação.</p>
                 
                   
                 

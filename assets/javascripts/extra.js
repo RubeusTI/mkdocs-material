@@ -23,6 +23,17 @@ function modalImg(imgId) {
         modal.className = 'modal';
       }, 580);
   }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.className = 'modal modal-off';
+      setTimeout(
+        function () {
+          modal.style.display = 'none';
+          modal.className = 'modal';
+        }, 580);
+    }
+  }
 }
 
 function send() {
@@ -51,7 +62,7 @@ function requestAJAX(destiny, sendData, method, callbackSuccess, callbackError) 
   var http = new XMLHttpRequest();
 
   http.open(method, destiny, true);
-  if (method == 'GET') {
+  if (method != 'GET') {
     http.setRequestHeader('Content-Type', 'application/json');
   }
 
