@@ -14,9 +14,9 @@ O método `sendEvent()` é utilizado para o envio de dados relevantes ao servido
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
-| `eventData` | `object` | Sim | Objeto que contenha os dados que é desejado armazenar. | 
+| `eventData` | `object` | Sim | Objeto que contenha quaisquer dados que se é desejado armazenar. | 
 | `eventType` | `integer` | Sim | Utilizado para especificar o tipo para o qual se destina o evento. | 
-| `identifier` | `string` | Não | Reservado para uma atribuição personalizada de identificador. | 
+| `identifier` | `string` | Não | Reservado para uma atribuição personalizada de identificador ao evento.<hr>**Por padrão os eventos enviados já tem um identificador gerado automaticamente.** | 
 
 #### Função
 | Parâmetros | Tipo | Obrigatoriedade | Descrição | 
@@ -26,12 +26,9 @@ O método `sendEvent()` é utilizado para o envio de dados relevantes ao servido
 
 #### Tipos de eventos
 
-| Número | Nome | Tipo | Descrição | 
-| --- | --- | --- | --- |
-| 1 | Coleta de dados | `data` | Usado para armazenar todos os dados vindo diretamente do usuário e dados destinados à ele (exemplo um código personalizado), tal como o preenchimento de um formulário.  (Esse tipo é o único retornado no método [getData()](recuperando-informacoes.md). | 
-| 2 | Ações no site | `action` | Quando se deseja salvar ações que o usuário realizar no site. Exemplos: clique de botoẽs, rolagem de página, abertura de pop-ups e etc…  | 
-| 3 | Outros | `other` | Utilizado para qualquer informação que se deseja armazenar que não se enquadra nas outras opções. | 
+Os tipos de eventos que serão enviados, devem ser gerados pelo meio que o CRM disponibiliza, que é através do menu “Cadastros” e depois na opção “Tipos de eventos”, lá haverá um botão verde escrito “Adicionar tipo de evento” na parte superior esquerda da página. 
 
+Logo após, será necessário recuperar o código do tipo de evento criado utilizando-se da API para a [listagem dos tipos de evento](/api_crm/evento/#listar-tipos-de-eventos) do CRM, podendo-se utilizar a página de [testes](/methodstest) disponível na própria documentação.
 
 ### Código Exemplo
 
@@ -43,7 +40,7 @@ evento = {
         codigoUser: ‘codigo_gerado’
     },
     eventType: ‘data‘
-}
+};
 
 RBTracking.sendEvent(evento);
    
@@ -66,7 +63,7 @@ evento = {
     },
     eventType: ‘data‘,
     identifier: identificador_gerado
-}
+};
 
 RBTracking.sendEvent(evento);
    
@@ -83,11 +80,11 @@ evento = {
 	    cliqueBotaoId: id_botao 
     },
     eventType: ‘action‘
-}
+};
 
 callback = function(resposta){
 	return resposta.responseText;
-}
+};
 
 RBTracking.sendEvent(evento, callback);
    
