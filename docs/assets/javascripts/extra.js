@@ -62,7 +62,7 @@ function requestAJAX(destiny, sendData, method, callbackSuccess, callbackError) 
   var http = new XMLHttpRequest();
 
   http.open(method, destiny, true);
-  if (method == 'GET') {
+  if (method != 'GET') {
     http.setRequestHeader('Content-Type', 'application/json');
   }
 
