@@ -1,124 +1,105 @@
 
-# Evento
+# Enviando eventos
 
-Os eventos são exibidos na linha do tempo do contato e também são utilizados como gatilhos na persona.
+O método `sendEvent()` é utilizado para o envio de dados relevantes ao servidor por meio de eventos.
 
-## Cadastro de eventos
+## Estrutura
 
-Método para cadastro de eventos no CRM Rubeus.
+#### Objeto do evento
 
-!!! done ""
-    
-    <strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Evento/cadastro
+!!! info "Parâmetros"
 
-| Atributos | Tipo | Obrigatoriedade | Descrição | 
-| --- | --- | --- | --- |
-| `codigo` | `string` | Não | Chave única de identificação do evento enviado. <br>**Caso queira editar um evento criado basta informar o código do evento criado.** | 
-| `tipo` | `integer` | Condicional | Código de identificação do tipo do evento. <br><br>[Listar Tipos de Eventos](#listar-tipos-de-eventos)<br>*Enviar o campo* `id`<br><br>[Cadastrar Tipos de Eventos](#cadastro-de-tipos-de-evento) | 
-| `codTipo` | `string` | Condicional | Código externo enviado no cadastro do tipo de evento.<br><br>[Listar Tipos de Eventos](#listar-tipos-de-eventos)<br>*Enviar o campo* `codigo`<br><br>[Cadastrar Tipos de Eventos](#cadastro-de-tipos-de-evento) | 
-| `descricao` | `string` | Sim | A Descrição pode ser enviada no formato HTML para deixar a apresentação dos dados do evento na linha do tempo mais organizados.<br><i>**É opcional o envio com as tags HTML.**</i> | 
-| `pessoa` | `array[]` | Sim | Vincule o contato ao evento, esse código é o mesmo que foi enviado ao cadastrar o contato pela API. <hr>*Veja abaixo um exemplo do formato para envio.*<br>`#!json { "codigo": “1” }` | 
-| `codOferta` | `string` | Não | Código de identificação da oferta do curso.<br>**O código da oferta do curso e o código do curso são obrigatórios para vincular o evento ao um curso no CRM Rubeus.** | 
-| `codCurso` | `string` | Não | Código de identificação do curso. | 
-| `codLocalOferta` | `string` | Não | Código de identificação do local da oferta. | 
-| `data` | `dateTime` | Não | A data do evento é utilizada para configurar gatilhos na persona que são disparados X (tempo) antes da data enviada.<br>Essa data é muito utilizada para atividades como data da prova, entrevista e visitas dos candidatos.<br>**Padrão: YYYY-MM-DD hh\:mm\:ss** | 
-| `tipoData` | `string` | Não | O tipo da data tem o propósito de diferenciar os eventos com datas um do outro caso seja usado mais de uma atividade. Para a data da atividade funcionar corretamente este campo é necessário. | 
-| `momento` | `dateTime` | Não | Momento no qual o evento ocorreu. Caso não seja informado o sistema irá informar a data e hora atual.<br>**Padrão: YYYY-MM-DD hh\:mm\:ss** | 
-| `notaEnem` | `float` | Não | A nota do enem é usada para ser vinculada a um registro de processo caso o evento esteja vinculado a um curso. | 
-| `compareceuAtividade` | `integer` | Não | Campo para informar se o contato compareceu à atividade<br>**Padrão: 1 para** `sim` **ou 0 para** `não` | 
-| `formaIngresso` | `string` | Não | Forma de ingresso do registro de processo. | 
-| `dataVencimento` | `dateTime` | Não | Data de vencimento da atividade que será criada caso seja configurado no fluxo de automação. | 
-| `camposPersonalizados` | `object` | Não | Usado para atribuir algum campo específico que não está presente no escopo da API.<hr>**Os campos devem ser informados como no exemplo abaixo**:<br><br>`#!json camposPersonalizados : { coluna: "valor" }`<hr>Os nomes das colunas dos campos personalizados são informados no método [Instituicao/campoPersonalizado](/api_crm/campopersonalizados/#listar-campos-personalizados) | 
-| `dadosOportunidade` | `object` | Não | Serve para poder enviar os dados do registro de processo caso queira alterá-la. | 
-| ↳ `codOferta` | `string` | Não | - | 
-| ↳ `codCurso` | `string` | Não | - | 
-| ↳ `codPessoa` | `string` | Não | - | 
-| `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
-| `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
-
-``` JSON tab="Resposta"
-{
-	"success": true,
-	"dados": {
-		"id": "14",
-		"descricao": "<p><b style=\"padding-top:10px\">Descri\u00e7\u00e3o: <\/b>EXEMPLO<br><b style=\"padding-top:10px\">Respons\u00e1vel: <\/b>Matheus Amaral<\/p>",
-		"momento": "2019-02-22 11:12:28",
-		"pessoa": "9",
-		"tipo": "1",
-		"tipoNome": "Foi cadastrado",
-		"imagem": null,
-		"origem": "1",
-		"origemNome": "CRM"
-	}
-}
-```
-
-## Cadastro de tipos de evento
-
-Os tipos de eventos são utilizados para categorizar os eventos externos enviados por cada canal de captação.
-
-!!! done ""
-    
-    <strong  class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Evento/cadastroTipoEvento
+    * **Os tipos aceitos no `eventType` são fixos.**
+    * **Deverá ser passado dentro de um `object` ou `array[]`.**
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
-| `codigo` | `string` | Não | Código de identificação externa. | 
-| `titulo` | `string` | Sim | Título para o tipo do evento. Limite de caracteres: 255. | 
-| `fluxo` | `integer` | Não | Campo que identifica se o evento faz parte do fluxo de compra do cliente ou não. Caso faça, ele será respeitado na condição da persona que verifica a quanto tempo ele não avança no fluxo.<br><br><i>**1 para Sim, 0 para Não.**</i><br><br>**Padrão: 0.** | 
-| `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
-| `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
+| `eventData` | `object` | Sim | Objeto que contenha quaisquer dados que se é desejado armazenar. | 
+| `eventType` | `integer` | Sim | Utilizado para especificar o tipo para o qual se destina o evento. | 
+| `identifier` | `string` | Não | Reservado para uma atribuição personalizada de identificador ao evento.<hr>**Por padrão os eventos enviados já tem um identificador gerado automaticamente.** | 
 
-``` JSON tab="Resposta"
-{
-	"success": true,
-	"id": 57 
-}
-```
-
-## Verificar se o evento já foi cadastrado
-
-!!! done ""
-    
-    <strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Evento/verificarCadastro
-
-| Atributos | Tipo | Obrigatoriedade | Descrição | 
+#### Função
+| Parâmetros | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
-| `codPessoa` | `string` | Sim | Código de identificação externa do contato | 
-| `codOferta` | `string` | Não | Código de identificação externa da oferta de curso | 
-| `codCurso` | `string` | Não | Código de identificação externa do curso | 
-| `dataVerificacao` | `dateTime` | Não | Data enviada no cadastro de evento | 
-| `tipoData` | `string` | Não | Tipo da data enviada no cadastro de evento | 
-| `tipoEvento` | `integer` | Condicional | Identificação do tipo de evento<br><br>[Listar Tipos de Eventos](#listar-tipos-de-eventos)<br>*Enviar o campo* `id` | 
-| `codTipoEvento` | `string` | Condicional | Código de identificação externa do tipo de evento<br><br>[Listar Tipos de Eventos](#listar-tipos-de-eventos)<br>*Enviar o campo* `codigo` | 
-| `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
-| `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
+| `eventParameters` | `object` | Sim | Objeto que contém os dados do evento a ser enviado. | 
+| `callback` | `function` | Não | Função que será executada após o retorno do evento.  | 
 
-``` JSON tab="Resposta"
-{
-	"success": true,
-	"dados": 11 
-}
+#### Tipos de eventos
+
+Os tipos de eventos que serão enviados, devem ser gerados pelo meio que o CRM disponibiliza, que é através do menu “Cadastros” e depois na opção “Tipos de eventos”, lá haverá um botão verde escrito “Adicionar tipo de evento” na parte superior esquerda da página. 
+
+Logo após, será necessário recuperar o código do tipo de evento criado utilizando-se da API para a [listagem dos tipos de evento](/api_crm/evento/#listar-tipos-de-eventos) do CRM, podendo-se utilizar a página de [testes](/methodstest) disponível na própria documentação.
+
+### Código Exemplo
+
+#### Exemplo 1
+
+``` javascript tab="JavaScript"
+evento = {
+    eventData : {
+        codigoUser: ‘codigo_gerado’
+    },
+    eventType: ‘data‘
+};
+
+RBTracking.sendEvent(evento);
+   
 ```
 
-## Listar tipos de eventos
+Nesse exemplo, temos o envio de um objeto com o código de usuário dentro do `eventData`, e no mesmo nível temos o `eventType` carregando o tipo correto do evento.
 
-!!! done ""
-    
-    <strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Evento/listarTipoEvento
+#### Exemplo 2
 
-Método utilizado para listar os tipos de evento para posteriormente utilizar como parâmetro em outro método.
+``` javascript tab="JavaScript"
+evento = {
+	eventData : {
+        curso: {
+            nome: ‘Administração’,
+            id-curso: ‘1-123-456’
+        },
+        user:{
+	        codigoUser: ‘codigo_gerado’
+        }
+    },
+    eventType: ‘data‘,
+    identifier: identificador_gerado
+};
 
-``` JSON tab="Resposta"
-{
-    "success": true,
-    "dados": [{
-        "id": "1",
-        "titulo": "Cadastrou-se",
-        "codigo": "CADASTRO",
-        "origem": "1",
-        "origemNome": "CRM"
-    }]
-}
+RBTracking.sendEvent(evento);
+   
 ```
+
+Esse exemplo apresenta dois objetos dentro do `eventData` com a intenção de obter uma organização ainda maior e melhor nos retornos do [getData()](recuperando-informacoes.md), apresenta também um `identifier` no mesmo nível de `eventType` e `eventData`.
+
+#### Exemplo 3
+
+
+``` javascript tab="JavaScript"
+evento = {
+	eventData : {
+	    cliqueBotaoId: id_botao 
+    },
+    eventType: ‘action‘
+};
+
+callback = function(resposta){
+	return resposta.responseText;
+};
+
+RBTracking.sendEvent(evento, callback);
+   
+```
+
+Aqui temos a presença de um `callback` que irá retornar a resposta do servidor em forma de texto, um `eventData` carregando uma ação do usuário no site e um `eventType` do tipo `action`.
+
+!!! tip "Envios de eventos"
+
+	Quando tiver mais de 1 evento de tipos diferentes para serem enviados, devem ser alocados em um array.
+
+### Retorno
+
+| Caso | Tipo de retorno | Descrição | 
+| --- | --- | --- |
+| `Sucesso` | `array[]` | Retorna um JSON contendo os dados do `eventData` enviados caso a operação seja efetuada com sucesso. | 
+| `Falha` | `string` | Retorna um JSON contendo o erro encontrado no processo. | 
 
