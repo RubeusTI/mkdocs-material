@@ -36,4 +36,3 @@ data = {
 };
 RBTracking.sendData(data);
 ```
-
