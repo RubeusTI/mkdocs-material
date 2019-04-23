@@ -163,7 +163,9 @@
       
         <!-- 
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -183,6 +185,19 @@
         
       
         
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../apresentacao/" title="Lead tracking" class="md-tabs__link md-tabs__link--active">
+          Lead tracking
+        </a>
+      
+    </li>
+  
+
       
         
       
@@ -381,6 +396,186 @@
       
       
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Lead tracking
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Lead tracking
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apresentacao/" title="Apresentação" class="md-nav__link">
+      Apresentação
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../instalacao/" title="Instalação" class="md-nav__link">
+      Instalação
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Enviando eventos
+      </label>
+    
+    <a href="./" title="Enviando eventos" class="md-nav__link md-nav__link--active">
+      Enviando eventos
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura" title="Estrutura" class="md-nav__link">
+    Estrutura
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objeto-do-evento" title="Objeto do evento" class="md-nav__link">
+    Objeto do evento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcao" title="Função" class="md-nav__link">
+    Função
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-eventos" title="Tipos de eventos" class="md-nav__link">
+    Tipos de eventos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-exemplo" title="Código Exemplo" class="md-nav__link">
+    Código Exemplo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-1" title="Exemplo 1" class="md-nav__link">
+    Exemplo 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-2" title="Exemplo 2" class="md-nav__link">
+    Exemplo 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-3" title="Exemplo 3" class="md-nav__link">
+    Exemplo 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retorno" title="Retorno" class="md-nav__link">
+    Retorno
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../enviando-data/" title="Enviando Dados ao CRM" class="md-nav__link">
+      Enviando Dados ao CRM
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
 
   <li class="md-nav__item">
     <a href="../../tabelasauxiliares/" title="Tabelas Auxiliares" class="md-nav__link">
@@ -534,19 +729,13 @@
 <td><code class="codehilite">eventData</code></td>
 <td><code class="codehilite">object</code></td>
 <td>Sim</td>
-<td>Objeto que contenha quaisquer dados que se é desejado armazenar.</td>
+<td>Objeto que contenha quaisquer dados presentes na lista de dados que o método <a href="/api_crm/evento/#cadastro-de-eventos">cadastrar eventos</a> que se é desejado armazenar.</td>
 </tr>
 <tr>
 <td><code class="codehilite">eventType</code></td>
 <td><code class="codehilite">integer</code></td>
 <td>Sim</td>
-<td>Utilizado para especificar o tipo para o qual se destina o evento.</td>
-</tr>
-<tr>
-<td><code class="codehilite">identifier</code></td>
-<td><code class="codehilite">string</code></td>
-<td>Não</td>
-<td>Reservado para uma atribuição personalizada de identificador ao evento.<hr><strong>Por padrão os eventos enviados já tem um identificador gerado automaticamente.</strong></td>
+<td>Utilizado para especificar o id tipo de evento que irá para o CRM.</td>
 </tr>
 </tbody>
 </table>
@@ -568,10 +757,16 @@
 <td>Objeto que contém os dados do evento a ser enviado.</td>
 </tr>
 <tr>
-<td><code class="codehilite">callback</code></td>
+<td><code class="codehilite">callbackSuccess</code></td>
 <td><code class="codehilite">function</code></td>
 <td>Não</td>
 <td>Função que será executada após o retorno do evento.</td>
+</tr>
+<tr>
+<td><code class="codehilite">callbackError</code></td>
+<td><code class="codehilite">function</code></td>
+<td>Não</td>
+<td>Função que será executada após um retorno falho do evento.</td>
 </tr>
 </tbody>
 </table>
@@ -616,22 +811,14 @@
  8
  9
 10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">evento</span> <span class="o">=</span> <span class="p">{</span>
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">evento</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">eventData</span> <span class="o">:</span> <span class="p">{</span>
         <span class="nx">curso</span><span class="o">:</span> <span class="p">{</span>
             <span class="nx">nome</span><span class="o">:</span> <span class="err">‘</span><span class="nx">Administração</span><span class="err">’</span><span class="p">,</span>
             <span class="nx">id</span><span class="o">-</span><span class="nx">curso</span><span class="o">:</span> <span class="err">‘</span><span class="mi">1</span><span class="o">-</span><span class="mi">123</span><span class="o">-</span><span class="mi">456</span><span class="err">’</span>
         <span class="p">},</span>
-        <span class="nx">user</span><span class="o">:</span><span class="p">{</span>
-            <span class="nx">codigoUser</span><span class="o">:</span> <span class="err">‘</span><span class="nx">codigo_gerado</span><span class="err">’</span>
-        <span class="p">}</span>
     <span class="p">},</span>
-    <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="nx">data</span><span class="err">‘</span><span class="p">,</span>
-    <span class="nx">identifier</span><span class="o">:</span> <span class="nx">identificador_gerado</span>
+    <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="mi">123</span><span class="err">‘</span>
 <span class="p">};</span>
 
 <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">);</span>
@@ -669,7 +856,6 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>Aqui temos a presença de um <code class="codehilite">callback</code> que irá retornar a resposta do servidor em forma de texto, um <code class="codehilite">eventData</code> carregando uma ação do usuário no site e um <code class="codehilite">eventType</code> do tipo <code class="codehilite">action</code>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Envios de eventos</p>
 <p>Quando tiver mais de 1 evento de tipos diferentes para serem enviados, devem ser alocados em um array.</p>
@@ -712,6 +898,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../instalacao/" title="Instalação" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Instalação
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../enviando-data/" title="Enviando Dados ao CRM" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Próximo
+                </span>
+                Enviando Dados ao CRM
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
