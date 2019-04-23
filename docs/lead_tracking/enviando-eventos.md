@@ -14,7 +14,7 @@ O método `sendEvent()` é utilizado para o envio de dados relevantes ao servido
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
-| `eventData` | `object` | Sim | Objeto que contenha quaisquer dados que se é desejado armazenar. (dados dos eventos) | 
+| `eventData` | `object` | Sim | Objeto que contenha quaisquer dados presentes na lista de dados que o método [cadastrar eventos](/api_crm/evento/#cadastro-de-eventos) que se é desejado armazenar. | 
 | `eventType` | `integer` | Sim | Utilizado para especificar o id tipo de evento que irá para o CRM. | 
 
 #### Função
