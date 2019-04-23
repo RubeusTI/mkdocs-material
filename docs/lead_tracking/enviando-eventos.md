@@ -14,15 +14,15 @@ O método `sendEvent()` é utilizado para o envio de dados relevantes ao servido
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
-| `eventData` | `object` | Sim | Objeto que contenha quaisquer dados que se é desejado armazenar. | 
-| `eventType` | `integer` | Sim | Utilizado para especificar o tipo para o qual se destina o evento. | 
-| `identifier` | `string` | Não | Reservado para uma atribuição personalizada de identificador ao evento.<hr>**Por padrão os eventos enviados já tem um identificador gerado automaticamente.** | 
+| `eventData` | `object` | Sim | Objeto que contenha quaisquer dados que se é desejado armazenar. (dados dos eventos) | 
+| `eventType` | `integer` | Sim | Utilizado para especificar o id tipo de evento que irá para o CRM. | 
 
 #### Função
 | Parâmetros | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
 | `eventParameters` | `object` | Sim | Objeto que contém os dados do evento a ser enviado. | 
-| `callback` | `function` | Não | Função que será executada após o retorno do evento.  | 
+| `callbackSuccess` | `function` | Não | Função que será executada após o retorno do evento.  | 
+| `callbackError` | `function` | Não | Função que será executada após um retorno falho do evento.  | 
 
 #### Tipos de eventos
 
@@ -57,12 +57,8 @@ evento = {
             nome: ‘Administração’,
             id-curso: ‘1-123-456’
         },
-        user:{
-	        codigoUser: ‘codigo_gerado’
-        }
     },
-    eventType: ‘data‘,
-    identifier: identificador_gerado
+    eventType: ‘123‘
 };
 
 RBTracking.sendEvent(evento);
@@ -89,8 +85,6 @@ callback = function(resposta){
 RBTracking.sendEvent(evento, callback);
    
 ```
-
-Aqui temos a presença de um `callback` que irá retornar a resposta do servidor em forma de texto, um `eventData` carregando uma ação do usuário no site e um `eventType` do tipo `action`.
 
 !!! tip "Envios de eventos"
 

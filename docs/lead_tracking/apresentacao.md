@@ -15,8 +15,4 @@ Como padrão esta biblioteca tem a responsabilidade de armazenar vários dados d
 - URL de origem;
 - data e hora do momento de acesso;
 - eventos personalizados;
-- navegação interna do usuário (dentro do mesmo domínio, suportando navegação AJAX entre as páginas).¹
-
-!!! note "Nota"
-    ¹Caso queira monitorar o comportamento do usuário em domínios diferentes é necessário utilizar o conceito proposto pelo [Tracking Multidomínio](tracking-multidominio.md).
 
