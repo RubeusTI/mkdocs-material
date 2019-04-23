@@ -127,7 +127,7 @@ nav:
     - Métodos de listagem: api_crm/metodosdelistagem.md
   - Webhook: webhook.md
   - Endpoint: endpoint.md
-  - Lead tracking:
+  - Monitoramento de páginas:
     - Apresentação: lead_tracking/apresentacao.md
     - Instalação: lead_tracking/instalacao.md
     - Enviando eventos: lead_tracking/enviando-eventos.md
