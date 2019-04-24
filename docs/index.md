@@ -10,6 +10,6 @@ Atualmente dispomos de integração via:
 
 * [Endpoint](endpoint.md) - Permite que sua equipe configure endpoints que retornando dados em formato JSON que serão consumidos pelo CRM Rubeus podendo ser utilizados para cadastrar contatos e eventos.
 
-* [Monitoramento de Páginas](lead_tracking/apresentacao.md) - Biblioteca para o monitoramento de visitantes da página no qual fora instalado e gerando possíveis leads no CRM.
+* [Monitoramento de Páginas](monitoramento/apresentacao.md) - Biblioteca para o monitoramento de visitantes da página no qual fora instalado e gerando possíveis leads no CRM.
 
 Algumas funcionalidades requerem o uso de valores fixos, tal como o campo de "Estado civil", esses valores podem ser conferidos usando a página [Tabelas Auxiliares](tabelasauxiliares.md).
