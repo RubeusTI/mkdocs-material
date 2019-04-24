@@ -520,13 +520,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#exemplo-3" title="Exemplo 3" class="md-nav__link">
-    Exemplo 3
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -656,13 +649,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#exemplo-3" title="Exemplo 3" class="md-nav__link">
-    Exemplo 3
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -729,7 +715,7 @@
 <td><code class="codehilite">eventData</code></td>
 <td><code class="codehilite">object</code></td>
 <td>Sim</td>
-<td>Objeto que contenha quaisquer dados presentes na lista de dados que o método <a href="/api_crm/evento/#cadastro-de-eventos">cadastrar eventos</a> contenha e que se é desejado armazenar.</td>
+<td>Objeto que contenha quaisquer dados presentes na lista de dados que o método <a href="/api_crm/evento/#cadastro-de-eventos">cadastrar eventos</a> que se deseja enviar para o CRM Rubeus.<br><strong>Obs.: o campo</strong> <code class="codehilite">pessoa</code> <strong>deve ser ignorado já que é enviado automaticamente.</strong></td>
 </tr>
 <tr>
 <td><code class="codehilite">eventType</code></td>
@@ -789,7 +775,7 @@
     <span class="nx">eventData</span> <span class="o">:</span> <span class="p">{</span>
         <span class="nx">codigoUser</span><span class="o">:</span> <span class="err">‘</span><span class="nx">codigo_gerado</span><span class="err">’</span>
     <span class="p">},</span>
-    <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="nx">data</span><span class="err">‘</span>
+    <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="mi">123</span><span class="err">‘</span>
 <span class="p">};</span>
 
 <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">);</span>
@@ -811,41 +797,12 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">evento</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">eventData</span> <span class="o">:</span> <span class="p">{</span>
-        <span class="nx">curso</span><span class="o">:</span> <span class="p">{</span>
-            <span class="nx">nome</span><span class="o">:</span> <span class="err">‘</span><span class="nx">Administração</span><span class="err">’</span><span class="p">,</span>
-            <span class="nx">id</span><span class="o">-</span><span class="nx">curso</span><span class="o">:</span> <span class="err">‘</span><span class="mi">1</span><span class="o">-</span><span class="mi">123</span><span class="o">-</span><span class="mi">456</span><span class="err">’</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-    <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="mi">123</span><span class="err">‘</span>
-<span class="p">};</span>
-
-<span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">);</span>
-</pre></div>
-</td></tr></table></div>
-</div>
-<p>Esse exemplo apresenta dois objetos dentro do <code class="codehilite">eventData</code> com a intenção de obter uma organização ainda maior e melhor nos retornos do <a href="../recuperando-informacoes/">getData()</a>, apresenta também um <code class="codehilite">identifier</code> no mesmo nível de <code class="codehilite">eventType</code> e <code class="codehilite">eventData</code>.</p>
-<h4 id="exemplo-3">Exemplo 3<a class="headerlink" href="#exemplo-3" title="Permanent link">&para;</a></h4>
-<div class="superfences-tabs">
-<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
-<label for="__tab_3_0">JavaScript</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
 11
 12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">evento</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">eventData</span> <span class="o">:</span> <span class="p">{</span>
         <span class="nx">cliqueBotaoId</span><span class="o">:</span> <span class="nx">id_botao</span> 
     <span class="p">},</span>
-    <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="nx">action</span><span class="err">‘</span>
+    <span class="nx">eventType</span><span class="o">:</span> <span class="err">‘</span><span class="mi">312</span><span class="err">‘</span>
 <span class="p">};</span>
 
 <span class="nx">callback</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">resposta</span><span class="p">){</span>
