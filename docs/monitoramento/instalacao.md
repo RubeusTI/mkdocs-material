@@ -5,9 +5,9 @@ Para a implementação é necessário obter o link da biblioteca junto com o có
 
 <img class="image" 
      id="dashboard" 
-     alt="Tela do CRM Rubeus para adquirir o script de acesso ao Lead Tracking" 
-     title="Tela do CRM Rubeus para adquirir o script de acesso ao Lead Tracking" 
-     src="/assets/images/lead_tracking/instalacao/dashboard.png" 
+     alt="Tela do CRM Rubeus para adquirir o script de acesso ao monitoramento de páginas" 
+     title="Tela do CRM Rubeus para adquirir o script de acesso ao monitoramento de páginas" 
+     src="/assets/images/monitoramento/instalacao/dashboard.png" 
      onclick="modalImg('dashboard')">
 
 ## Código para instalação
@@ -29,7 +29,7 @@ Para utilizar a biblioteca com o Google Tag Mananger é só copiar o link adquir
 
 <img class="gif_crm image" 
      id="gtm"
-     alt="Como adicionar o Lead Tracking com o Google Tag Mananger" 
-     title="Como adicionar o Lead Tracking com o Google Tag Mananger"
-     src="/assets/images/lead_tracking/instalacao/gtm.gif" 
+     alt="Como adicionar o monitoramento de páginas com o Google Tag Mananger" 
+     title="Como adicionar o monitoramento de páginas com o Google Tag Mananger"
+     src="/assets/images/monitoramento/instalacao/gtm.gif" 
      onclick="modalImg('gtm')">

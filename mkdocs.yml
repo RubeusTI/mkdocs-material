@@ -127,14 +127,14 @@ nav:
     - Métodos de listagem: api_crm/metodosdelistagem.md
   - Webhook: webhook.md
   - Endpoint: endpoint.md
-  - Lead tracking:
-    - Apresentação: lead_tracking/apresentacao.md
-    - Instalação: lead_tracking/instalacao.md
-    - Enviando eventos: lead_tracking/enviando-eventos.md
-    - Enviando Dados ao CRM: lead_tracking/enviando-data.md
-    - Recuperando informações: lead_tracking/recuperando-informacoes.md
-    - Tracking multidomínio: lead_tracking/tracking-multidominio.md
-  - Tabelas Auxiliares: tabelasauxiliares.md
+  - Monitoramento de páginas:
+    - Apresentação: monitoramento/apresentacao.md
+    - Instalação: monitoramento/instalacao.md
+    - Enviando eventos: monitoramento/enviando-eventos.md
+    - Enviando dados ao CRM: monitoramento/enviando-data.md
+    - Recuperando informações: monitoramento/recuperando-informacoes.md
+    - Tracking multidomínio: monitoramento/tracking-multidominio.md
+  - Tabelas auxiliares: tabelasauxiliares.md
   - Testar API's: methodstest.md
     
   

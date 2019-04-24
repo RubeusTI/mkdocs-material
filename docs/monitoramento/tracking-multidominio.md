@@ -1,7 +1,7 @@
 
 # Tracking multidomínio
 
-Utilizando a função `getHash()` é possível obter o `hash` armazenado no dispositivo, e posteriormente, usar para identificar o usuário em outro domínio, passando o hash obtido pela a url que irá para a próxima página e nela é necessário também ter instalado o script de tracking para se obter os dados passados e assim obter relatórios mais sólidos.
+Utilizando a função `getHash()` é possível obter o `hash` armazenado no dispositivo, e posteriormente, usar para identificar o usuário em outro domínio, passando o hash obtido pela a url que irá para a próxima página e nela é necessário também ter instalado o script de monitoramento para se obter os dados passados e assim obter relatórios mais sólidos.
 
 ## Estrutura
 
@@ -70,4 +70,4 @@ function myFunction() {
 
 ## Próximo passo
 
-Já na página seguinte tendo o serviço de tracking já instalado e com a comunicação ter sido efetuada com sucesso, o algoritmo será iniciado com o hash que foi passado pela URL e assim identificando que é o mesmo usuário. Para fazer o reprocessamento dos dados que foram previamente passados, é necessário adicionar um [getData()](recuperando-informacoes.md) para recuperar as informações e adicioná-las ao fluxo de sua aplicação.
+Já na página seguinte tendo o serviço de monitoramento já instalado e com a comunicação ter sido efetuada com sucesso, o algoritmo será iniciado com o hash que foi passado pela URL e assim identificando que é o mesmo usuário. Para fazer o reprocessamento dos dados que foram previamente passados, é necessário adicionar um [getData()](recuperando-informacoes.md) para recuperar as informações e adicioná-las ao fluxo de sua aplicação.
