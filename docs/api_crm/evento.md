@@ -21,9 +21,9 @@ Método para cadastro de eventos no CRM Rubeus.
 | `codOferta` | `string` | Não | Código de identificação da oferta do curso.<br>**O código da oferta do curso e o código do curso são obrigatórios para vincular o evento ao um curso no CRM Rubeus.** | 
 | `codCurso` | `string` | Não | Código de identificação do curso. | 
 | `codLocalOferta` | `string` | Não | Código de identificação do local da oferta. | 
-| `data` | `dateTime` | Não | A data do evento é utilizada para configurar gatilhos na persona que são disparados X (tempo) antes da data enviada.<br>Essa data é muito utilizada para atividades como data da prova, entrevista e visitas dos candidatos.<br>**Padrão: YYYY-MM-DD hh\:mm\:ss** | 
+| `data` | `dateTime` | Não | A data do evento é utilizada para configurar gatilhos na persona que são disparados X (tempo) antes da data enviada.<br>Essa data é muito utilizada para atividades como data da prova, entrevista e visitas dos candidatos.<br>**Padrão: YYYY-MM-DD hh:mm:ss** | 
 | `tipoData` | `string` | Não | O tipo da data tem o propósito de diferenciar os eventos com datas um do outro caso seja usado mais de uma atividade. Para a data da atividade funcionar corretamente este campo é necessário. | 
-| `momento` | `dateTime` | Não | Momento no qual o evento ocorreu. Caso não seja informado o sistema irá informar a data e hora atual.<br>**Padrão: YYYY-MM-DD hh\:mm\:ss** | 
+| `momento` | `dateTime` | Não | Momento no qual o evento ocorreu. Caso não seja informado o sistema irá informar a data e hora atual.<br>**Padrão: YYYY-MM-DD hh:mm:ss** | 
 | `notaEnem` | `float` | Não | A nota do enem é usada para ser vinculada a um registro de processo caso o evento esteja vinculado a um curso. | 
 | `compareceuAtividade` | `integer` | Não | Campo para informar se o contato compareceu à atividade<br>**Padrão: 1 para** `sim` **ou 0 para** `não` | 
 | `formaIngresso` | `string` | Não | Forma de ingresso do registro de processo. | 

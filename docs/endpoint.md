@@ -115,7 +115,7 @@ Utilize essa estrutura quando quiser enviar informações relacionadas a um cont
 | **Atributo** | **Tipo** | **Obrigatoriedade** | **Descrição** |
 | --- | --- | --- | --- |
 | `descricao` | `string` | Não | Campo que contem um trecho HTML. |
-| `data` | `dateTime` | Não | Data é um campo do tipo data que espera uma data de referência do evento como por exemplo: data da prova, data da entrevista e data de vencimento do boleto.  <br>**Padrão: YYYY-MM-DD hh\:mm\:ss** |
+| `data` | `dateTime` | Não | Data é um campo do tipo data que espera uma data de referência do evento como por exemplo: data da prova, data da entrevista e data de vencimento do boleto.  <br>**Padrão: YYYY-MM-DD hh:mm:ss** |
 | `tipoData` | `string` | Não | Campo para se informar a qual conjunto de evento pertence. |
 | `compareceuAtividade` | `boolean` | Não |  Campo para informar o comparecimento do candidato à atividade. |
 | `notaEnem` | `inteiro` | Não | Campo para informar a nota do ENEM do candidato. |
