@@ -14,7 +14,7 @@ O método `sendEvent()` é utilizado para o envio de dados relevantes ao servido
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
-| `eventData` | `object` | Sim | Objeto que contenha quaisquer dados que se é desejado armazenar. (dados dos eventos) | 
+| `eventData` | `object` | Sim | Objeto que contenha quaisquer dados presentes na lista de dados que o método [cadastrar eventos](/api_crm/evento/#cadastro-de-eventos) que se deseja enviar para o CRM Rubeus.<br>**Obs.: o campo** `pessoa` **deve ser ignorado já que é enviado automaticamente.** | 
 | `eventType` | `integer` | Sim | Utilizado para especificar o id tipo de evento que irá para o CRM. | 
 
 #### Função
@@ -30,6 +30,7 @@ Os tipos de eventos que serão enviados, devem ser gerados pelo meio que o CRM d
 
 Logo após, será necessário recuperar o código do tipo de evento criado utilizando-se da API para a [listagem dos tipos de evento](/api_crm/evento/#listar-tipos-de-eventos) do CRM, podendo-se utilizar a página de [testes](/methodstest) disponível na própria documentação.
 
+
 ### Código Exemplo
 
 #### Exemplo 1
@@ -39,7 +40,7 @@ evento = {
     eventData : {
         codigoUser: ‘codigo_gerado’
     },
-    eventType: ‘data‘
+    eventType: ‘123‘
 };
 
 RBTracking.sendEvent(evento);
@@ -53,29 +54,9 @@ Nesse exemplo, temos o envio de um objeto com o código de usuário dentro do `e
 ``` javascript tab="JavaScript"
 evento = {
 	eventData : {
-        curso: {
-            nome: ‘Administração’,
-            id-curso: ‘1-123-456’
-        },
-    },
-    eventType: ‘123‘
-};
-
-RBTracking.sendEvent(evento);
-   
-```
-
-Esse exemplo apresenta dois objetos dentro do `eventData` com a intenção de obter uma organização ainda maior e melhor nos retornos do [getData()](recuperando-informacoes.md), apresenta também um `identifier` no mesmo nível de `eventType` e `eventData`.
-
-#### Exemplo 3
-
-
-``` javascript tab="JavaScript"
-evento = {
-	eventData : {
 	    cliqueBotaoId: id_botao 
     },
-    eventType: ‘action‘
+    eventType: ‘312‘
 };
 
 callback = function(resposta){
