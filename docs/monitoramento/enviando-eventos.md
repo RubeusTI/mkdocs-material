@@ -38,7 +38,7 @@ Logo após, será necessário recuperar o código do tipo de evento criado utili
 ``` javascript tab="JavaScript"
 evento = {
     eventData : {
-        codigoUser: ‘codigo_gerado’
+        descricao: '<p><b style="padding-top: 10px”>Exemplo: </b>AAA<br><b style=”padding-top: 10px”>Dispositivo: </b>Desktop<br></p>'
     },
     eventType: ‘123‘
 };
@@ -54,7 +54,7 @@ Nesse exemplo, temos o envio de um objeto com o código de usuário dentro do `e
 ``` javascript tab="JavaScript"
 evento = {
 	eventData : {
-	    cliqueBotaoId: id_botao 
+	    descricao: '<p><b style="padding-top: 10px”>Exemplo: </b>AAA<br><b style=”padding-top: 10px”>Dispositivo: </b>Desktop<br></p>' 
     },
     eventType: ‘312‘
 };
