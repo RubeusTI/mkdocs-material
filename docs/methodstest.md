@@ -20,6 +20,9 @@ Por padrão todas as requisições são feitas com o tipo MIME `application/json
             </select>
         </div>
     </div>
+    <!-- <div style="margin: 10px 0px;">
+        <textarea id="data" placeholder="Header"></textarea>
+    </div> -->
     <div style="margin: 10px 0px;">
         <textarea id="data" placeholder="JSON"></textarea>
     </div>
