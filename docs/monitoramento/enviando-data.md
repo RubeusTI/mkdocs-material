@@ -28,7 +28,7 @@ Utilizando a função `sendData()` para enviar os dados do contato ao CRM Rubeus
 ``` javascript tab="JavaScript"
 data = {
     nome: "João da Silva",
-    emailPrincipal: "joãosilva@rubeus.com",
+    emailPrincipal: "joaosilva@rubeus.com",
     dataNascimento: "1998-12-31"
 };
 RBTracking.sendData(data);
