@@ -670,6 +670,24 @@
 <td>Código de identificação do curso.</td>
 </tr>
 <tr>
+<td><code class="codehilite">cursosSecundarios</code></td>
+<td><code class="codehilite">array[]</code></td>
+<td>Não</td>
+<td>O campo serve para definir os cursos secundários do registro de processo.</td>
+</tr>
+<tr>
+<td>↳<code class="codehilite">codOferta</code></td>
+<td><code class="codehilite">string</code></td>
+<td>Não</td>
+<td>-</td>
+</tr>
+<tr>
+<td>↳<code class="codehilite">codCurso</code></td>
+<td><code class="codehilite">string</code></td>
+<td>Não</td>
+<td>-</td>
+</tr>
+<tr>
 <td><code class="codehilite">codLocalOferta</code></td>
 <td><code class="codehilite">string</code></td>
 <td>Não</td>
@@ -679,7 +697,7 @@
 <td><code class="codehilite">data</code></td>
 <td><code class="codehilite">dateTime</code></td>
 <td>Não</td>
-<td>A data do evento é utilizada para configurar gatilhos na persona que são disparados X (tempo) antes da data enviada.<br>Essa data é muito utilizada para atividades como data da prova, entrevista e visitas dos candidatos.<br><strong>Padrão: YYYY-MM-DD hh:mm:ss</strong></td>
+<td>A data do evento é utilizada para configurar gatilhos na persona que são disparados X (tempo) antes da data enviada.<br>Essa data é muito utilizada para atividades como data da prova, entrevista e visitas dos candidatos.<br><strong>Padrão: ****YYYY-MM-DD hh\:mm\:ss</strong></td>
 </tr>
 <tr>
 <td><code class="codehilite">tipoData</code></td>
@@ -691,7 +709,7 @@
 <td><code class="codehilite">momento</code></td>
 <td><code class="codehilite">dateTime</code></td>
 <td>Não</td>
-<td>Momento no qual o evento ocorreu. Caso não seja informado o sistema irá informar a data e hora atual.<br><strong>Padrão: YYYY-MM-DD hh:mm:ss</strong></td>
+<td>Momento no qual o evento ocorreu. Caso não seja informado o sistema irá informar a data e hora atual.<br><strong>Padrão: YYYY-MM-DD hh\:mm\:ss</strong></td>
 </tr>
 <tr>
 <td><code class="codehilite">notaEnem</code></td>
@@ -721,7 +739,7 @@
 <td><code class="codehilite">camposPersonalizados</code></td>
 <td><code class="codehilite">object</code></td>
 <td>Não</td>
-<td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="codehilite"><span class="err">camposPersonalizados</span> <span class="err">:</span> <span class="p">{</span> <span class="err">coluna:</span> <span class="nt">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">Instituicao/campoPersonalizado</a></td>
+<td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="codehilite"><span class="err">camposPersonalizados</span> <span class="err">:</span> <span class="p">{</span> <span class="err">coluna:</span> <span class="nt">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">cadastro de campo personalizado</a>, o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado.</td>
 </tr>
 <tr>
 <td><code class="codehilite">dadosOportunidade</code></td>
