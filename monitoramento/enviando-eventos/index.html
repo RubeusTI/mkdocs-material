@@ -482,7 +482,8 @@
     Objeto do evento
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#funcao" title="Função" class="md-nav__link">
@@ -492,9 +493,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#campo-eventparameters" title="Campo "eventParameters"" class="md-nav__link">
+    Campo "eventParameters"
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#tipos-de-eventos" title="Tipos de eventos" class="md-nav__link">
     Tipos de eventos
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -525,15 +544,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#retorno" title="Retorno" class="md-nav__link">
     Retorno
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -611,7 +630,8 @@
     Objeto do evento
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#funcao" title="Função" class="md-nav__link">
@@ -621,9 +641,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#campo-eventparameters" title="Campo "eventParameters"" class="md-nav__link">
+    Campo "eventParameters"
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#tipos-de-eventos" title="Tipos de eventos" class="md-nav__link">
     Tipos de eventos
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -654,15 +692,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#retorno" title="Retorno" class="md-nav__link">
     Retorno
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -693,38 +731,7 @@
                 <h1 id="enviando-eventos">Enviando eventos<a class="headerlink" href="#enviando-eventos" title="Permanent link">&para;</a></h1>
 <p>O método <code class="codehilite">sendEvent()</code> é utilizado para o envio de dados relevantes ao servidor por meio de eventos.</p>
 <h2 id="estrutura">Estrutura<a class="headerlink" href="#estrutura" title="Permanent link">&para;</a></h2>
-<h4 id="objeto-do-evento">Objeto do evento<a class="headerlink" href="#objeto-do-evento" title="Permanent link">&para;</a></h4>
-<div class="admonition info">
-<p class="admonition-title">Parâmetros</p>
-<ul>
-<li><strong>Os tipos aceitos no <code class="codehilite">eventType</code> são fixos.</strong></li>
-<li><strong>Deverá ser passado dentro de um <code class="codehilite">object</code> ou <code class="codehilite">array[]</code>.</strong></li>
-</ul>
-</div>
-<table>
-<thead>
-<tr>
-<th>Atributos</th>
-<th>Tipo</th>
-<th>Obrigatoriedade</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code class="codehilite">eventData</code></td>
-<td><code class="codehilite">object</code></td>
-<td>Sim</td>
-<td>Objeto que contenha quaisquer dados presentes na lista de dados que o método <a href="/api_crm/evento/#cadastro-de-eventos">cadastrar eventos</a> que se deseja enviar para o CRM Rubeus.<br><strong>Obs.: o campo</strong> <code class="codehilite">pessoa</code> <strong>deve ser ignorado já que é enviado automaticamente.</strong></td>
-</tr>
-<tr>
-<td><code class="codehilite">eventType</code></td>
-<td><code class="codehilite">integer</code></td>
-<td>Sim</td>
-<td>Utilizado para especificar o id tipo de evento que irá para o CRM.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="objeto-do-evento">Objeto do evento<a class="headerlink" href="#objeto-do-evento" title="Permanent link">&para;</a></h3>
 <h4 id="funcao">Função<a class="headerlink" href="#funcao" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -756,11 +763,47 @@
 </tr>
 </tbody>
 </table>
-<h4 id="tipos-de-eventos">Tipos de eventos<a class="headerlink" href="#tipos-de-eventos" title="Permanent link">&para;</a></h4>
+<h4 id="campo-eventparameters">Campo "eventParameters"<a class="headerlink" href="#campo-eventparameters" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Parâmetros</p>
+<ul>
+<li><strong>Os tipos aceitos no <code class="codehilite">eventType</code> e/ou <code class="codehilite">codEventType</code>são fixos.</strong></li>
+<li><strong>Deverá ser passado dentro de um <code class="codehilite">object</code> ou <code class="codehilite">array[]</code>.</strong></li>
+</ul>
+</div>
+<table>
+<thead>
+<tr>
+<th>Atributos</th>
+<th>Tipo</th>
+<th>Obrigatoriedade</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="codehilite">eventData</code></td>
+<td><code class="codehilite">object</code></td>
+<td>Sim</td>
+<td>Objeto que contenha quaisquer dados presentes na lista de dados que o método <a href="/api_crm/evento/#cadastro-de-eventos">cadastrar eventos</a> que se deseja enviar para o CRM Rubeus.<br><strong>Obs.: o campo</strong> <code class="codehilite">pessoa</code> <strong>pode ser ignorado já que é enviado automaticamente, porém, se enviado tem que se respeitar a mesma origem entre evento e contato caso seja passado o campo</strong> <code class="codehilite">codigo</code><strong>, caso seja o campo</strong> <code class="codehilite">id</code><strong>, o mesmo não ocorre podendo assim enviar eventos e contato com origem diferentes.</strong></td>
+</tr>
+<tr>
+<td><code class="codehilite">eventType</code></td>
+<td><code class="codehilite">string</code></td>
+<td>Condicional</td>
+<td>Utilizado para especificar o id <a href="/api_crm/evento/#listar-tipos-de-eventos">tipo de evento</a> que irá para o CRM.<strong><br>Obs.: O campo torna-se obrigatório perante a ausência do campo</strong> <code class="codehilite">codEventType</code></td>
+</tr>
+<tr>
+<td><code class="codehilite">codEventType</code></td>
+<td><code class="codehilite">string</code></td>
+<td>Condicional</td>
+<td>Utilizado para especificar o código do <a href="/api_crm/evento/#listar-tipos-de-eventos">tipo de evento</a> que irá para o CRM.<strong><br>Obs.: O campo torna-se obrigatório perante a ausência do campo</strong> <code class="codehilite">eventType</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="tipos-de-eventos">Tipos de eventos<a class="headerlink" href="#tipos-de-eventos" title="Permanent link">&para;</a></h5>
 <p>Os tipos de eventos que serão enviados, devem ser gerados pelo meio que o CRM disponibiliza, que é através do menu “Cadastros” e depois na opção “Tipos de eventos”, lá haverá um botão verde escrito “Adicionar tipo de evento” na parte superior esquerda da página. </p>
 <p>Logo após, será necessário recuperar o código do tipo de evento criado utilizando-se da API para a <a href="/api_crm/evento/#listar-tipos-de-eventos">listagem dos tipos de evento</a> do CRM.</p>
-<!-- , podendo-se utilizar a página de [testes](/methodstest) disponível na própria documentação. -->
-
 <h3 id="codigo-exemplo">Código Exemplo<a class="headerlink" href="#codigo-exemplo" title="Permanent link">&para;</a></h3>
 <h4 id="exemplo-1">Exemplo 1<a class="headerlink" href="#exemplo-1" title="Permanent link">&para;</a></h4>
 <div class="superfences-tabs">
@@ -819,7 +862,7 @@
 <p class="admonition-title">Envios de eventos</p>
 <p>Quando tiver mais de 1 evento de tipos diferentes para serem enviados, devem ser alocados em um array.</p>
 </div>
-<h3 id="retorno">Retorno<a class="headerlink" href="#retorno" title="Permanent link">&para;</a></h3>
+<h2 id="retorno">Retorno<a class="headerlink" href="#retorno" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
