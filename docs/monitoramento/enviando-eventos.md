@@ -5,17 +5,7 @@ O método `sendEvent()` é utilizado para o envio de dados relevantes ao servido
 
 ## Estrutura
 
-#### Objeto do evento
-
-!!! info "Parâmetros"
-
-    * **Os tipos aceitos no `eventType` são fixos.**
-    * **Deverá ser passado dentro de um `object` ou `array[]`.**
-
-| Atributos | Tipo | Obrigatoriedade | Descrição | 
-| --- | --- | --- | --- |
-| `eventData` | `object` | Sim | Objeto que contenha quaisquer dados presentes na lista de dados que o método [cadastrar eventos](/api_crm/evento/#cadastro-de-eventos) que se deseja enviar para o CRM Rubeus.<br>**Obs.: o campo** `pessoa` **deve ser ignorado já que é enviado automaticamente.** | 
-| `eventType` | `integer` | Sim | Utilizado para especificar o id tipo de evento que irá para o CRM. | 
+### Objeto do evento
 
 #### Função
 | Parâmetros | Tipo | Obrigatoriedade | Descrição | 
@@ -24,14 +14,24 @@ O método `sendEvent()` é utilizado para o envio de dados relevantes ao servido
 | `callbackSuccess` | `function` | Não | Função que será executada após o retorno do evento.  | 
 | `callbackError` | `function` | Não | Função que será executada após um retorno falho do evento.  | 
 
-#### Tipos de eventos
+#### Campo "eventParameters"
+
+!!! info "Parâmetros"
+
+    * **Os tipos aceitos no `eventType` e/ou `codEventType`são fixos.**
+    * **Deverá ser passado dentro de um `object` ou `array[]`.**
+
+| Atributos | Tipo | Obrigatoriedade | Descrição | 
+| --- | --- | --- | --- |
+| `eventData` | `object` | Sim | Objeto que contenha quaisquer dados presentes na lista de dados que o método [cadastrar eventos](/api_crm/evento/#cadastro-de-eventos) que se deseja enviar para o CRM Rubeus.<br>**Obs.: o campo** `pessoa` **pode ser ignorado já que é enviado automaticamente, porém, se enviado tem que se respeitar a mesma origem entre evento e contato caso seja passado o campo** `codigo`**, caso seja o campo** `id`**, o mesmo não ocorre podendo assim enviar eventos e contato com origem diferentes.** | 
+| `eventType` | `string` | Condicional | Utilizado para especificar o id [tipo de evento](/api_crm/evento/#listar-tipos-de-eventos) que irá para o CRM.**<br>Obs.: O campo torna-se obrigatório perante a ausência do campo** `codEventType` | 
+| `codEventType` | `string` | Condicional | Utilizado para especificar o código do [tipo de evento](/api_crm/evento/#listar-tipos-de-eventos) que irá para o CRM.**<br>Obs.: O campo torna-se obrigatório perante a ausência do campo** `eventType` | 
+
+##### Tipos de eventos
 
 Os tipos de eventos que serão enviados, devem ser gerados pelo meio que o CRM disponibiliza, que é através do menu “Cadastros” e depois na opção “Tipos de eventos”, lá haverá um botão verde escrito “Adicionar tipo de evento” na parte superior esquerda da página. 
 
 Logo após, será necessário recuperar o código do tipo de evento criado utilizando-se da API para a [listagem dos tipos de evento](/api_crm/evento/#listar-tipos-de-eventos) do CRM.
-
-<!-- , podendo-se utilizar a página de [testes](/methodstest) disponível na própria documentação. -->
-
 
 ### Código Exemplo
 
@@ -53,6 +53,7 @@ Nesse exemplo, temos o envio de um objeto com o código de usuário dentro do `e
 
 #### Exemplo 2
 
+
 ``` javascript tab="JavaScript"
 evento = {
 	eventData : {
@@ -73,7 +74,7 @@ RBTracking.sendEvent(evento, callback);
 
 	Quando tiver mais de 1 evento de tipos diferentes para serem enviados, devem ser alocados em um array.
 
-### Retorno
+## Retorno
 
 | Caso | Tipo de retorno | Descrição | 
 | --- | --- | --- |
