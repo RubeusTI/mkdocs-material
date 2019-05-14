@@ -38,15 +38,17 @@ Método para cadastro de contatos no CRM Rubeus. Segue abaixo os dados necessár
 | ↳ `id` | `integer` | Não | Identificação da deficiência. | 
 | ↳ `tipos` | `array[]` | Não | Usar o método listarDeficiencias para obter o campo `id` para a passagem de parâmetro. | 
 | `outrasDeficiencias` | `string` | Não | Campo destinado à descrição da deficiência do contato se ela não existir nas opções pré-definidas. | 
-| `estadoCivil` | `integer` | Não | utilizar os dados da tabela [estado civil](/tabelasauxiliares/#estado-civil) | 
-| `cor` | `integer` | Não | utilizar os dados da tabela [cor](/tabelasauxiliares/#cor) | 
-| `grauInstrucao` | `integer` | Não | utilizar os dados da tabela [grau de instrucao](/tabelasauxiliares/#grau-de-instrucao) | 
+| `estadoCivil` | `integer` | Não | Utilizar os dados da tabela [estado civil](/tabelasauxiliares/#estado-civil) | 
+| `cor` | `integer` | Não | Utilizar os dados da tabela [cor](/tabelasauxiliares/#cor) | 
+| `grauInstrucao` | `integer` | Não | Utilizar os dados da tabela [grau de instrucao](/tabelasauxiliares/#grau-de-instrucao) | 
+| `tags` | `array` | Não | Utilizado para enviar as tags do contato | 
+| `tagsRemovidas` | `array` | Não | Utilizado para remover as tags do contato | 
 | `evento` | `object` | Não | Utilizado para criar um evento ao realizar o cadastro do contato. | 
 | ↳ `tipo` | `integer` | Não | Id do tipo de evento. | 
 | ↳ `descricao` | `string` | Não | Texto HTML personalizado para agregar informações na exibição do evento. | 
 | ↳ `codOferta` | `integer` | Não | Para vincular o evento a uma oferta de curso informar este campo junto com o `codCurso` correspondente. | 
 | ↳ `codCurso` | `integer` | Não | Para vincular o evento a uma oferta de curso informar este campo junto com o codOferta correspondente. | 
-| `camposPersonalizados` | `object` | Não | Usado para atribuir algum campo específico que não está presente no escopo da API.<hr>**Os campos devem ser informados como no exemplo abaixo**:<br><br>`#!json camposPersonalizados : { coluna: "valor" }`<hr>Os nomes das colunas dos campos personalizados são informados no método [Instituicao/campoPersonalizado](/api_crm/campopersonalizados/#listar-campos-personalizados) | 
+| `camposPersonalizados` | `object` | Não | Usado para atribuir algum campo específico que não está presente no escopo da API.<hr>**Os campos devem ser informados como no exemplo abaixo**:<br><br>`#!json camposPersonalizados : { coluna: "valor" }`<hr>Os nomes das colunas dos campos personalizados são informados no método [Instituicao/campoPersonalizado](/api_crm/campopersonalizados/#listar-campos-personalizados), o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado | 
 | `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
 | `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
 
@@ -74,64 +76,61 @@ Método para cadastro de contatos no CRM Rubeus. Segue abaixo os dados necessár
 {
 	"success": true,
 	"dados": {
-		"id": "12",
-		"nome": "Jo\u00e3o Yuri Luiz Souza",
+		"id": "155",
+		"nome": "Nome Exemplo",
 		"nomeSocial": null,
-		"codigo": null,
-		"imagem": null,
-		"cpf": "366.548.353-01",
-		"datanascimento": "1997-07-25",
-		"endereco": "Rua Professora Edna Bonfim",
-		"cep": "47813-420",
-		"numero": "922",
-		"bairro": "Vila dos Funcion\u00e1rios",
-		"verificada": "0",
-		"desinscreveu": "0",
-		"cidade": "318",
-		"cidadeNome": "Barreiras - BA",
+		"codigo": "000",
+		"imagem": "null",
+		"cpf": "977.250.067-10",
+		"datanascimento": "1996-07-02",
+		"endereco": "Rua Heitor Tadeu",
+		"cep": "xxxxx-xxx",
+		"numero": "752",
+		"bairro": "Barra",
+		"cidade": "2354",
+		"cidadeNome": "Sete Lagoas - MG",
 		"sexo": "1",
 		"sexoNome": "Masculino",
 		"origemId": "1",
 		"origemNome": "CRM",
-		"mesclada": "0",
-		"urlPublicaRdStation": null,
-		"canhoto": "1",
-		"profissao": "Analista de Sistemas",
+		"urlPublicaRdStation": "null",
+		"canhoto": null,
+		"profissao": null,
 		"aluno": null,
-		"exaluno": "1",
-		"anoFormacao": "2018",
-		"estadoCivil": "7",
-		"estadoCivilNome": "Solteiro",
-		"cor": "2",
-		"corNome": "Branca",
-		"grauInstrucao": "9",
-		"grauInstrucaoNome": "Educa\u00e7\u00e3o superior completo",
+		"exaluno": null,
+		"anoFormacao": null,
+		"estadoCivil": null,
+		"estadoCivilNome": null,
+		"cor": null,
+		"corNome": null,
+		"grauInstrucao": null,
+		"grauInstrucaoNome": null,
 		"outrasDeficiencias": null,
+		"mesclada": "1",
+		"verificada": "0",
+		"desinscreveu": "0",
 		"camposPersonalizados": [{
-			"nome": "Exemplo",
-			"coluna": "exemplo_compl",
+			"nome": "Campo Personalizado",
+			"coluna": "campopersonalizado",
 			"tipo": "1",
-			"valor": null
+			"valor": "valor"
 		}],
 		"pessoasRelacionadas": false,
 		"telefones": {
 			"principal": {
-				"id": "11",
-				"telefone": "77993192939"
+				"id": "1534",
+				"telefone": "(31)154689835"
 			},
-			"secundarios": [{
-				"id": "12",
-				"telefone": "7727147879"
-			}]
+			"secundarios": [{}]
 		},
 		"emails": {
 			"principal": {
-				"id": "13",
-				"email": "joaoyuriluizsouza-87@msaengenharia.com.br"
+				"id": "1598",
+				"email": "email@email.com"
 			},
 			"secundarios": [{
-				"id": "14",
-				"email": "joaoyuriluizsouza87@gmail.com"
+				"id": "1600",
+				"email": "email2@email.com"
 			}]
 		},
 		"tags": false,
@@ -140,14 +139,7 @@ Método para cadastro de contatos no CRM Rubeus. Segue abaixo os dados necessár
 			"id": "1",
 			"titulo": "CRM"
 		}],
-		"deficiencias": [{
-			"id": "3",
-			"nome": "Deficiente Visual",
-			"tipos": [{
-				"id": "10",
-				"nome": "Baixa Vis\u00e3o"
-			}]
-		}]
+		"deficiencias": false
 	}
 }
 ```
