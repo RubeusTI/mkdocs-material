@@ -778,19 +778,31 @@
 <td><code class="codehilite">estadoCivil</code></td>
 <td><code class="codehilite">integer</code></td>
 <td>Não</td>
-<td>utilizar os dados da tabela <a href="/tabelasauxiliares/#estado-civil">estado civil</a></td>
+<td>Utilizar os dados da tabela <a href="/tabelasauxiliares/#estado-civil">estado civil</a></td>
 </tr>
 <tr>
 <td><code class="codehilite">cor</code></td>
 <td><code class="codehilite">integer</code></td>
 <td>Não</td>
-<td>utilizar os dados da tabela <a href="/tabelasauxiliares/#cor">cor</a></td>
+<td>Utilizar os dados da tabela <a href="/tabelasauxiliares/#cor">cor</a></td>
 </tr>
 <tr>
 <td><code class="codehilite">grauInstrucao</code></td>
 <td><code class="codehilite">integer</code></td>
 <td>Não</td>
-<td>utilizar os dados da tabela <a href="/tabelasauxiliares/#grau-de-instrucao">grau de instrucao</a></td>
+<td>Utilizar os dados da tabela <a href="/tabelasauxiliares/#grau-de-instrucao">grau de instrucao</a></td>
+</tr>
+<tr>
+<td><code class="codehilite">tags</code></td>
+<td><code class="codehilite">array</code></td>
+<td>Não</td>
+<td>Utilizado para enviar as tags do contato</td>
+</tr>
+<tr>
+<td><code class="codehilite">tagsRemovidas</code></td>
+<td><code class="codehilite">array</code></td>
+<td>Não</td>
+<td>Utilizado para remover as tags do contato</td>
 </tr>
 <tr>
 <td><code class="codehilite">evento</code></td>
@@ -826,7 +838,7 @@
 <td><code class="codehilite">camposPersonalizados</code></td>
 <td><code class="codehilite">object</code></td>
 <td>Não</td>
-<td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="codehilite"><span class="err">camposPersonalizados</span> <span class="err">:</span> <span class="p">{</span> <span class="err">coluna:</span> <span class="nt">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">Instituicao/campoPersonalizado</a></td>
+<td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="codehilite"><span class="err">camposPersonalizados</span> <span class="err">:</span> <span class="p">{</span> <span class="err">coluna:</span> <span class="nt">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">Instituicao/campoPersonalizado</a>, o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado</td>
 </tr>
 <tr>
 <td><code class="codehilite">origem</code></td>
@@ -966,77 +978,64 @@
 66
 67
 68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+69</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Jo\u00e3o Yuri Luiz Souza&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;155&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Nome Exemplo&quot;</span><span class="p">,</span>
         <span class="nt">&quot;nomeSocial&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;imagem&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;cpf&quot;</span><span class="p">:</span> <span class="s2">&quot;366.548.353-01&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;datanascimento&quot;</span><span class="p">:</span> <span class="s2">&quot;1997-07-25&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;endereco&quot;</span><span class="p">:</span> <span class="s2">&quot;Rua Professora Edna Bonfim&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;cep&quot;</span><span class="p">:</span> <span class="s2">&quot;47813-420&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;numero&quot;</span><span class="p">:</span> <span class="s2">&quot;922&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;bairro&quot;</span><span class="p">:</span> <span class="s2">&quot;Vila dos Funcion\u00e1rios&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;verificada&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;desinscreveu&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;cidade&quot;</span><span class="p">:</span> <span class="s2">&quot;318&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;cidadeNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Barreiras - BA&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;000&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;imagem&quot;</span><span class="p">:</span> <span class="s2">&quot;null&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cpf&quot;</span><span class="p">:</span> <span class="s2">&quot;977.250.067-10&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;datanascimento&quot;</span><span class="p">:</span> <span class="s2">&quot;1996-07-02&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;endereco&quot;</span><span class="p">:</span> <span class="s2">&quot;Rua Heitor Tadeu&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cep&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxx-xxx&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;numero&quot;</span><span class="p">:</span> <span class="s2">&quot;752&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;bairro&quot;</span><span class="p">:</span> <span class="s2">&quot;Barra&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cidade&quot;</span><span class="p">:</span> <span class="s2">&quot;2354&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cidadeNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Sete Lagoas - MG&quot;</span><span class="p">,</span>
         <span class="nt">&quot;sexo&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
         <span class="nt">&quot;sexoNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Masculino&quot;</span><span class="p">,</span>
         <span class="nt">&quot;origemId&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
         <span class="nt">&quot;origemNome&quot;</span><span class="p">:</span> <span class="s2">&quot;CRM&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;mesclada&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;urlPublicaRdStation&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;canhoto&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;profissao&quot;</span><span class="p">:</span> <span class="s2">&quot;Analista de Sistemas&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;urlPublicaRdStation&quot;</span><span class="p">:</span> <span class="s2">&quot;null&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;canhoto&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;profissao&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;aluno&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;exaluno&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;anoFormacao&quot;</span><span class="p">:</span> <span class="s2">&quot;2018&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;estadoCivil&quot;</span><span class="p">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;estadoCivilNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Solteiro&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;cor&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;corNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Branca&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;grauInstrucao&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;grauInstrucaoNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Educa\u00e7\u00e3o superior completo&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;exaluno&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;anoFormacao&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;estadoCivil&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;estadoCivilNome&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;cor&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;corNome&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;grauInstrucao&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;grauInstrucaoNome&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;outrasDeficiencias&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;mesclada&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;verificada&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;desinscreveu&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
         <span class="nt">&quot;camposPersonalizados&quot;</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Exemplo&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;coluna&quot;</span><span class="p">:</span> <span class="s2">&quot;exemplo_compl&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Campo Personalizado&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;coluna&quot;</span><span class="p">:</span> <span class="s2">&quot;campopersonalizado&quot;</span><span class="p">,</span>
             <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;valor&quot;</span><span class="p">:</span> <span class="kc">null</span>
+            <span class="nt">&quot;valor&quot;</span><span class="p">:</span> <span class="s2">&quot;valor&quot;</span>
         <span class="p">}],</span>
         <span class="nt">&quot;pessoasRelacionadas&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="nt">&quot;telefones&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;principal&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;telefone&quot;</span><span class="p">:</span> <span class="s2">&quot;77993192939&quot;</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1534&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;telefone&quot;</span><span class="p">:</span> <span class="s2">&quot;(31)154689835&quot;</span>
             <span class="p">},</span>
-            <span class="nt">&quot;secundarios&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;telefone&quot;</span><span class="p">:</span> <span class="s2">&quot;7727147879&quot;</span>
-            <span class="p">}]</span>
+            <span class="nt">&quot;secundarios&quot;</span><span class="p">:</span> <span class="p">[{}]</span>
         <span class="p">},</span>
         <span class="nt">&quot;emails&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;principal&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;joaoyuriluizsouza-87@msaengenharia.com.br&quot;</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1598&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email@email.com&quot;</span>
             <span class="p">},</span>
             <span class="nt">&quot;secundarios&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;14&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;joaoyuriluizsouza87@gmail.com&quot;</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1600&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email2@email.com&quot;</span>
             <span class="p">}]</span>
         <span class="p">},</span>
         <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -1045,14 +1044,7 @@
             <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
             <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;CRM&quot;</span>
         <span class="p">}],</span>
-        <span class="nt">&quot;deficiencias&quot;</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Deficiente Visual&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;tipos&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Baixa Vis\u00e3o&quot;</span>
-            <span class="p">}]</span>
-        <span class="p">}]</span>
+        <span class="nt">&quot;deficiencias&quot;</span><span class="p">:</span> <span class="kc">false</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
