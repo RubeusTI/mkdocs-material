@@ -41,8 +41,8 @@ Método para cadastro de contatos no CRM Rubeus. Segue abaixo os dados necessár
 | `estadoCivil` | `integer` | Não | Utilizar os dados da tabela [estado civil](/tabelasauxiliares/#estado-civil) | 
 | `cor` | `integer` | Não | Utilizar os dados da tabela [cor](/tabelasauxiliares/#cor) | 
 | `grauInstrucao` | `integer` | Não | Utilizar os dados da tabela [grau de instrucao](/tabelasauxiliares/#grau-de-instrucao) | 
-| `tags` | `array` | Não | Utilizado para enviar as tags do contato | 
-| `tagsRemovidas` | `array` | Não | Utilizado para remover as tags do contato | 
+| `tags` | `array[]` | Não | Utilizado para enviar as tags do contato | 
+| `tagsRemovidas` | `array[]` | Não | Utilizado para remover as tags do contato | 
 | `evento` | `object` | Não | Utilizado para criar um evento ao realizar o cadastro do contato. | 
 | ↳ `tipo` | `integer` | Não | Id do tipo de evento. | 
 | ↳ `descricao` | `string` | Não | Texto HTML personalizado para agregar informações na exibição do evento. | 
