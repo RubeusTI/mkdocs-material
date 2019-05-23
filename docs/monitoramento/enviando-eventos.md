@@ -14,7 +14,7 @@ O método `sendEvent()` é utilizado para o envio de dados relevantes ao servido
 | `callbackSuccess` | `function` | Não | Função que será executada após o retorno do evento.  | 
 | `callbackError` | `function` | Não | Função que será executada após um retorno falho do evento.  | 
 
-#### Campo "eventParameters"
+#### Campo “eventParameters”
 
 !!! info "Parâmetros"
 
@@ -31,7 +31,7 @@ O método `sendEvent()` é utilizado para o envio de dados relevantes ao servido
 
 Os tipos de eventos que serão enviados, devem ser gerados pelo meio que o CRM disponibiliza, que é através do menu “Cadastros” e depois na opção “Tipos de eventos”, lá haverá um botão verde escrito “Adicionar tipo de evento” na parte superior esquerda da página. 
 
-Logo após, será necessário recuperar o código do tipo de evento criado utilizando-se da API para a [listagem dos tipos de evento](/api_crm/evento/#listar-tipos-de-eventos) do CRM.
+Logo após, será necessário recuperar o código do tipo de evento criado utilizando-se da API para a [listagem dos tipos de evento](/api_crm/evento/#listar-tipos-de-eventos) do CRM, podendo-se utilizar a página de [testes](/methodstest) disponível na própria documentação.
 
 ### Código Exemplo
 
@@ -42,7 +42,7 @@ evento = {
     eventData : {
         descricao: '<p><b style="padding-top: 10px”>Exemplo: </b>AAA<br><b style=”padding-top: 10px”>Dispositivo: </b>Desktop<br></p>'
     },
-    eventType: ‘123‘
+    eventType: '123'
 };
 
 RBTracking.sendEvent(evento);
@@ -59,7 +59,7 @@ evento = {
 	eventData : {
 	    descricao: '<p><b style="padding-top: 10px”>Exemplo: </b>AAA<br><b style=”padding-top: 10px”>Dispositivo: </b>Desktop<br></p>' 
     },
-    eventType: ‘312‘
+    eventType: '312'
 };
 
 callback = function(resposta){
