@@ -63,7 +63,7 @@ Método para cadastro de contatos no CRM Rubeus. Segue abaixo os dados necessár
 
 !!! done ""
     
-    <strong  class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/dadosContato
+    <strong  class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/dadosPessoa
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
