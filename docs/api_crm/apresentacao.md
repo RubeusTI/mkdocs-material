@@ -7,7 +7,7 @@ Esta API permite o envio de novos contatos e eventos para o CRM Rubeus. É poss�
 
 ## Autenticação
 
-A autenticação de cada método é realizada com a passagem dos parâmetros `origem` e `token`. Para obter essas informações de autenticação vá no botão com forma de engrenagem(configurações) do CRM Rubeus e acesse o menu integrações, na parte Canais/API estará listado todos os canais juntamente com o token e a origem.
+A autenticação de cada método é realizada com a passagem dos parâmetros `origem` e `token`. Para obter essas informações de autenticação vá no botão com forma de engrenagem(configurações) do CRM Rubeus e acesse o menu integrações, na parte Canais/API, estarão todos os canais juntamente com o token e a origem.
 
 <img class="image" 
      id="canais-api" 
