@@ -52,6 +52,10 @@ Método para cadastro de contatos no CRM Rubeus. Segue abaixo os dados necessár
 | `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
 | `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
 
+!!! info "Informação"
+
+	O valor do campo `dados` no exemplo de retorno abaixo é o `id` da pessoa que foi criada no processo.
+
 ``` JSON tab="Resposta"
 {
 	"success": true,
