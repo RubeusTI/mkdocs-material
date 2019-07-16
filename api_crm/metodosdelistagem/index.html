@@ -639,7 +639,7 @@
                 
                 
                 <h1 id="metodos-de-listagem">Métodos de listagem<a class="headerlink" href="#metodos-de-listagem" title="Permanent link">&para;</a></h1>
-<p>Assim como descrito na seção de <a href="/api_crm/apresentacao/#autenticacao">autenticação</a>, os métodos de listagem também utilizam os atributos <code class="codehilite">origem</code> e <code class="codehilite">token</code> para a autenticação do usuário no sistema.</p>
+<p>Assim como descrito na seção de <a href="/api_crm/apresentacao/#autenticacao">autenticação</a>, os métodos de listagem também utilizam os atributos <code class="codehilite"><span class="n">origem</span></code> e <code class="codehilite"><span class="n">token</span></code> para a autenticação do usuário no sistema.</p>
 <table>
 <thead>
 <tr>
@@ -651,14 +651,14 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite">origem</code></td>
-<td><code class="codehilite">integer</code></td>
+<td><code class="codehilite"><span class="n">origem</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite">token</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">token</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
@@ -800,26 +800,26 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite">ids</code></td>
-<td><code class="codehilite">array[]</code></td>
+<td><code class="codehilite"><span class="n">ids</span></code></td>
+<td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
 <td>Não</td>
 <td>Filtrar por id para retornar somente os usuários enviados, se o campo for enviado vazio, todos serão considerados.</td>
 </tr>
 <tr>
-<td><code class="codehilite">retornarPermissoes</code></td>
-<td><code class="codehilite">integer</code></td>
+<td><code class="codehilite"><span class="n">retornarPermissoes</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
 <td>Campo passado para se ter o retorno das permissões detalhadas dos usuários.<hr><strong>Padrão: 0 ou 1</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite">origem</code></td>
-<td><code class="codehilite">integer</code></td>
+<td><code class="codehilite"><span class="n">origem</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite">token</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">token</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
@@ -868,38 +868,38 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite">metodo</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">metodo</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>Retornar os logs somente do método enviado, caso não seja enviado nenhum, todos serão considerados.<hr><strong>Exemplo:</strong> "Contato/cadastro"</td>
 </tr>
 <tr>
-<td><code class="codehilite">de</code></td>
-<td><code class="codehilite">date</code></td>
+<td><code class="codehilite"><span class="n">de</span></code></td>
+<td><code class="codehilite"><span class="nb">date</span></code></td>
 <td>Condicional</td>
 <td>Data inicial de retorno, deve ser enviado caso seja enviado o campo "ate"</td>
 </tr>
 <tr>
-<td><code class="codehilite">ate</code></td>
-<td><code class="codehilite">date</code></td>
+<td><code class="codehilite"><span class="n">ate</span></code></td>
+<td><code class="codehilite"><span class="nb">date</span></code></td>
 <td>Condicional</td>
 <td>Data final de retorno, deve ser enviado caso seja enviado o campo "de"</td>
 </tr>
 <tr>
-<td><code class="codehilite">origemFiltro</code></td>
-<td><code class="codehilite">integer</code></td>
+<td><code class="codehilite"><span class="n">origemFiltro</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
 <td>Retornar os logs somente da origem enviada, caso não seja enviado nenhuma, todas serão consideradas</td>
 </tr>
 <tr>
-<td><code class="codehilite">origem</code></td>
-<td><code class="codehilite">integer</code></td>
+<td><code class="codehilite"><span class="n">origem</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite">token</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">token</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>

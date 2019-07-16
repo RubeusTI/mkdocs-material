@@ -561,8 +561,8 @@
                 
                 
                 <h1 id="recuperando-informacoes">Recuperando informações<a class="headerlink" href="#recuperando-informacoes" title="Permanent link">&para;</a></h1>
-<p>Durante o fluxo do script foram coletadas diversas informações sobre o usuário, vide <a href="../apresentacao/">apresentação</a>, parte desses dados, tais como os dados base da campanha e dados passados por evento, podem ser retornados utilizando um método disponível denominado de <code class="codehilite">getData()</code>.<br />
-Para fazer o requerimento dos dados dos eventos atribuídos previamente à um usuário específico. utiliza-se a função <code class="codehilite">getData()</code>, ela espera 2 funções como parâmetros, uma para sucesso e outra para erro. Apenas são retornado eventos mais atuais que tenha o <code class="codehilite">eventType</code> definido como <code class="codehilite">data</code>, vide <a href="../enviando-eventos/">Enviando Eventos</a>, ou seja, apenas eventos relacionados à usuários, os dados originais da campanha serão retornados juntos no documento.</p>
+<p>Durante o fluxo do script foram coletadas diversas informações sobre o usuário, vide <a href="../apresentacao/">apresentação</a>, parte desses dados, tais como os dados base da campanha e dados passados por evento, podem ser retornados utilizando um método disponível denominado de <code class="codehilite"><span class="n">getData</span><span class="p">()</span></code>.<br />
+Para fazer o requerimento dos dados dos eventos atribuídos previamente à um usuário específico. utiliza-se a função <code class="codehilite"><span class="n">getData</span><span class="p">()</span></code>, ela espera 2 funções como parâmetros, uma para sucesso e outra para erro. Apenas são retornado eventos mais atuais que tenha o <code class="codehilite"><span class="n">eventType</span></code> definido como <code class="codehilite"><span class="k">data</span></code>, vide <a href="../enviando-eventos/">Enviando Eventos</a>, ou seja, apenas eventos relacionados à usuários, os dados originais da campanha serão retornados juntos no documento.</p>
 <h2 id="estrutura">Estrutura<a class="headerlink" href="#estrutura" title="Permanent link">&para;</a></h2>
 <h3 id="parametros">Parâmetros<a class="headerlink" href="#parametros" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
@@ -580,14 +580,14 @@ Para fazer o requerimento dos dados dos eventos atribuídos previamente à um us
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite">callbackSuccess</code></td>
-<td><code class="codehilite">function</code></td>
+<td><code class="codehilite"><span class="n">callbackSuccess</span></code></td>
+<td><code class="codehilite"><span class="k">function</span></code></td>
 <td>Não</td>
 <td>Callback que será responsável por entregar a resposta do servidor ao cliente</td>
 </tr>
 <tr>
-<td><code class="codehilite">callbackError</code></td>
-<td><code class="codehilite">function</code></td>
+<td><code class="codehilite"><span class="n">callbackError</span></code></td>
+<td><code class="codehilite"><span class="k">function</span></code></td>
 <td>Não</td>
 <td>Callback que será responsável por entregar a resposta contendo o erro do  servidor ao cliente</td>
 </tr>
@@ -626,13 +626,13 @@ Para fazer o requerimento dos dados dos eventos atribuídos previamente à um us
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite">Sucesso</code></td>
-<td><code class="codehilite">array[]</code></td>
+<td><code class="codehilite"><span class="n">Sucesso</span></code></td>
+<td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
 <td>Retorna um array contendo os dados de evento do usuário caso a operação seja efetuada com sucesso.</td>
 </tr>
 <tr>
-<td><code class="codehilite">Falha</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">Falha</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Retorna uma string contendo o erro encontrado no processo.</td>
 </tr>
 </tbody>

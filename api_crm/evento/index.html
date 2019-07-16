@@ -628,152 +628,152 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite">codigo</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">codigo</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>Chave única de identificação do evento enviado. <br><strong>Caso queira editar um evento criado basta informar o código do evento criado.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite">tipo</code></td>
-<td><code class="codehilite">integer</code></td>
+<td><code class="codehilite"><span class="n">tipo</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Condicional</td>
-<td>Código de identificação do tipo do evento. <br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code class="codehilite">id</code><br><br><a href="#cadastro-de-tipos-de-evento">Cadastrar Tipos de Eventos</a></td>
+<td>Código de identificação do tipo do evento. <br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code class="codehilite"><span class="n">id</span></code><br><br><a href="#cadastro-de-tipos-de-evento">Cadastrar Tipos de Eventos</a></td>
 </tr>
 <tr>
-<td><code class="codehilite">codTipo</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">codTipo</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Condicional</td>
-<td>Código externo enviado no cadastro do tipo de evento.<br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code class="codehilite">codigo</code><br><br><a href="#cadastro-de-tipos-de-evento">Cadastrar Tipos de Eventos</a></td>
+<td>Código externo enviado no cadastro do tipo de evento.<br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code class="codehilite"><span class="n">codigo</span></code><br><br><a href="#cadastro-de-tipos-de-evento">Cadastrar Tipos de Eventos</a></td>
 </tr>
 <tr>
-<td><code class="codehilite">descricao</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">descricao</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>A Descrição pode ser enviada no formato HTML para deixar a apresentação dos dados do evento na linha do tempo mais organizados.<br><i><strong>É opcional o envio com as tags HTML.</strong></i></td>
 </tr>
 <tr>
-<td><code class="codehilite">pessoa</code></td>
-<td><code class="codehilite">object</code></td>
+<td><code class="codehilite"><span class="n">pessoa</span></code></td>
+<td><code class="codehilite"><span class="k">object</span></code></td>
 <td>Sim</td>
 <td>Vincule o contato ao evento. <hr><em>Veja abaixo um exemplo do formato para envio.</em><br><code class="codehilite"><span class="p">{</span> <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="err">“</span><span class="mi">1</span><span class="err">”</span> <span class="p">}</span></code> (O mesmo código enviado no cadastro do contato) ou <code class="codehilite"><span class="p">{</span> <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span></code> (O id retornado no cadastro do contato.)</td>
 </tr>
 <tr>
-<td><code class="codehilite">codOferta</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">codOferta</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>Código de identificação da oferta do curso.<br><strong>O código da oferta do curso e o código do curso são obrigatórios para vincular o evento ao um curso no CRM Rubeus.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite">codCurso</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">codCurso</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>Código de identificação do curso.</td>
 </tr>
 <tr>
-<td><code class="codehilite">cursosSecundarios</code></td>
-<td><code class="codehilite">array[]</code></td>
+<td><code class="codehilite"><span class="n">cursosSecundarios</span></code></td>
+<td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
 <td>Não</td>
 <td>O campo serve para definir os cursos secundários do registro de processo.</td>
 </tr>
 <tr>
-<td>↳<code class="codehilite">codOferta</code></td>
-<td><code class="codehilite">string</code></td>
+<td>↳<code class="codehilite"><span class="n">codOferta</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>-</td>
 </tr>
 <tr>
-<td>↳<code class="codehilite">codCurso</code></td>
-<td><code class="codehilite">string</code></td>
+<td>↳<code class="codehilite"><span class="n">codCurso</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>-</td>
 </tr>
 <tr>
-<td><code class="codehilite">codLocalOferta</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">codLocalOferta</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>Código de identificação do local da oferta.</td>
 </tr>
 <tr>
-<td><code class="codehilite">data</code></td>
-<td><code class="codehilite">dateTime</code></td>
+<td><code class="codehilite"><span class="k">data</span></code></td>
+<td><code class="codehilite"><span class="n">dateTime</span></code></td>
 <td>Não</td>
 <td>A data do evento é utilizada para configurar gatilhos na persona que são disparados X (tempo) antes da data enviada.<br>Essa data é muito utilizada para atividades como data da prova, entrevista e visitas dos candidatos.<br><strong>Padrão: ****YYYY-MM-DD hh\:mm\:ss</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite">tipoData</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">tipoData</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>O tipo da data tem o propósito de diferenciar os eventos com datas um do outro caso seja usado mais de uma atividade. Para a data da atividade funcionar corretamente este campo é necessário.</td>
 </tr>
 <tr>
-<td><code class="codehilite">momento</code></td>
-<td><code class="codehilite">dateTime</code></td>
+<td><code class="codehilite"><span class="n">momento</span></code></td>
+<td><code class="codehilite"><span class="n">dateTime</span></code></td>
 <td>Não</td>
 <td>Momento no qual o evento ocorreu. Caso não seja informado o sistema irá informar a data e hora atual.<br><strong>Padrão: YYYY-MM-DD hh\:mm\:ss</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite">notaEnem</code></td>
-<td><code class="codehilite">float</code></td>
+<td><code class="codehilite"><span class="n">notaEnem</span></code></td>
+<td><code class="codehilite"><span class="nb">float</span></code></td>
 <td>Não</td>
 <td>A nota do enem é usada para ser vinculada a um registro de processo caso o evento esteja vinculado a um curso.</td>
 </tr>
 <tr>
-<td><code class="codehilite">compareceuAtividade</code></td>
-<td><code class="codehilite">integer</code></td>
+<td><code class="codehilite"><span class="n">compareceuAtividade</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
-<td>Campo para informar se o contato compareceu à atividade<br><strong>Padrão: 1 para</strong> <code class="codehilite">sim</code> <strong>ou 0 para</strong> <code class="codehilite">não</code></td>
+<td>Campo para informar se o contato compareceu à atividade<br><strong>Padrão: 1 para</strong> <code class="codehilite"><span class="n">sim</span></code> <strong>ou 0 para</strong> <code class="codehilite"><span class="n">n</span><span class="err">ã</span><span class="n">o</span></code></td>
 </tr>
 <tr>
-<td><code class="codehilite">formaIngresso</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">formaIngresso</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>Forma de ingresso do registro de processo.</td>
 </tr>
 <tr>
-<td><code class="codehilite">dataVencimento</code></td>
-<td><code class="codehilite">dateTime</code></td>
+<td><code class="codehilite"><span class="n">dataVencimento</span></code></td>
+<td><code class="codehilite"><span class="n">dateTime</span></code></td>
 <td>Não</td>
 <td>Data de vencimento da atividade que será criada caso seja configurado no fluxo de automação.</td>
 </tr>
 <tr>
-<td><code class="codehilite">camposPersonalizados</code></td>
-<td><code class="codehilite">object</code></td>
+<td><code class="codehilite"><span class="n">camposPersonalizados</span></code></td>
+<td><code class="codehilite"><span class="k">object</span></code></td>
 <td>Não</td>
 <td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="codehilite"><span class="err">camposPersonalizados</span> <span class="err">:</span> <span class="p">{</span> <span class="err">coluna:</span> <span class="nt">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">cadastro de campo personalizado</a>, o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado.</td>
 </tr>
 <tr>
-<td><code class="codehilite">dadosOportunidade</code></td>
-<td><code class="codehilite">object</code></td>
+<td><code class="codehilite"><span class="n">dadosOportunidade</span></code></td>
+<td><code class="codehilite"><span class="k">object</span></code></td>
 <td>Não</td>
 <td>Serve para poder enviar os dados do registro de processo caso queira alterá-la.</td>
 </tr>
 <tr>
-<td>↳ <code class="codehilite">codOferta</code></td>
-<td><code class="codehilite">string</code></td>
+<td>↳ <code class="codehilite"><span class="n">codOferta</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>-</td>
 </tr>
 <tr>
-<td>↳ <code class="codehilite">codCurso</code></td>
-<td><code class="codehilite">string</code></td>
+<td>↳ <code class="codehilite"><span class="n">codCurso</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>-</td>
 </tr>
 <tr>
-<td>↳ <code class="codehilite">codPessoa</code></td>
-<td><code class="codehilite">string</code></td>
+<td>↳ <code class="codehilite"><span class="n">codPessoa</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>-</td>
 </tr>
 <tr>
-<td><code class="codehilite">origem</code></td>
-<td><code class="codehilite">integer</code></td>
+<td><code class="codehilite"><span class="n">origem</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite">token</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">token</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
@@ -828,32 +828,32 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite">codigo</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">codigo</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>Código de identificação externa.</td>
 </tr>
 <tr>
-<td><code class="codehilite">titulo</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">titulo</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Sim</td>
 <td>Título para o tipo do evento. Limite de caracteres: 255.</td>
 </tr>
 <tr>
-<td><code class="codehilite">fluxo</code></td>
-<td><code class="codehilite">integer</code></td>
+<td><code class="codehilite"><span class="n">fluxo</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
 <td>Campo que identifica se o evento faz parte do fluxo de compra do cliente ou não. Caso faça, ele será respeitado na condição da persona que verifica a quanto tempo ele não avança no fluxo.<br><br><i><strong>1 para Sim, 0 para Não.</strong></i><br><br><strong>Padrão: 0.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite">origem</code></td>
-<td><code class="codehilite">integer</code></td>
+<td><code class="codehilite"><span class="n">origem</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite">token</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">token</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
@@ -887,56 +887,56 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite">codPessoa</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">codPessoa</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Sim</td>
 <td>Código de identificação externa do contato</td>
 </tr>
 <tr>
-<td><code class="codehilite">codOferta</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">codOferta</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>Código de identificação externa da oferta de curso</td>
 </tr>
 <tr>
-<td><code class="codehilite">codCurso</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">codCurso</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>Código de identificação externa do curso</td>
 </tr>
 <tr>
-<td><code class="codehilite">dataVerificacao</code></td>
-<td><code class="codehilite">dateTime</code></td>
+<td><code class="codehilite"><span class="n">dataVerificacao</span></code></td>
+<td><code class="codehilite"><span class="n">dateTime</span></code></td>
 <td>Não</td>
 <td>Data enviada no cadastro de evento</td>
 </tr>
 <tr>
-<td><code class="codehilite">tipoData</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">tipoData</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
 <td>Tipo da data enviada no cadastro de evento</td>
 </tr>
 <tr>
-<td><code class="codehilite">tipoEvento</code></td>
-<td><code class="codehilite">integer</code></td>
+<td><code class="codehilite"><span class="n">tipoEvento</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Condicional</td>
-<td>Identificação do tipo de evento<br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code class="codehilite">id</code></td>
+<td>Identificação do tipo de evento<br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code class="codehilite"><span class="n">id</span></code></td>
 </tr>
 <tr>
-<td><code class="codehilite">codTipoEvento</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">codTipoEvento</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Condicional</td>
-<td>Código de identificação externa do tipo de evento<br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code class="codehilite">codigo</code></td>
+<td>Código de identificação externa do tipo de evento<br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code class="codehilite"><span class="n">codigo</span></code></td>
 </tr>
 <tr>
-<td><code class="codehilite">origem</code></td>
-<td><code class="codehilite">integer</code></td>
+<td><code class="codehilite"><span class="n">origem</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite">token</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">token</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>

@@ -594,7 +594,7 @@
                 
                 
                 <h1 id="tracking-multidominio">Tracking multidomínio<a class="headerlink" href="#tracking-multidominio" title="Permanent link">&para;</a></h1>
-<p>Utilizando a função <code class="codehilite">getHash()</code> é possível obter o <code class="codehilite">hash</code> armazenado no dispositivo, e posteriormente, usar para identificar o usuário em outro domínio, passando o hash obtido pela a url que irá para a próxima página e nela é necessário também ter instalado o script de monitoramento para se obter os dados passados e assim obter relatórios mais sólidos.</p>
+<p>Utilizando a função <code class="codehilite"><span class="n">getHash</span><span class="p">()</span></code> é possível obter o <code class="codehilite"><span class="n">hash</span></code> armazenado no dispositivo, e posteriormente, usar para identificar o usuário em outro domínio, passando o hash obtido pela a url que irá para a próxima página e nela é necessário também ter instalado o script de monitoramento para se obter os dados passados e assim obter relatórios mais sólidos.</p>
 <h2 id="estrutura">Estrutura<a class="headerlink" href="#estrutura" title="Permanent link">&para;</a></h2>
 <h3 id="parametros">Parâmetros<a class="headerlink" href="#parametros" title="Permanent link">&para;</a></h3>
 <table>
@@ -608,10 +608,10 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite">link</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">link</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
-<td>Passa o <code class="codehilite">hash</code> por GET utilizando o <code class="codehilite">link</code> e redirecionando logo em seguida.</td>
+<td>Passa o <code class="codehilite"><span class="n">hash</span></code> por GET utilizando o <code class="codehilite"><span class="n">link</span></code> e redirecionando logo em seguida.</td>
 </tr>
 </tbody>
 </table>
@@ -626,20 +626,20 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite">Sucesso</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">Sucesso</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Retorna uma string contendo o hash do usuário caso a operação seja efetuada com sucesso.</td>
 </tr>
 <tr>
-<td><code class="codehilite">Falha</code></td>
-<td><code class="codehilite">string</code></td>
+<td><code class="codehilite"><span class="n">Falha</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Retorna uma string vazia.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="aplicacao-no-uso">Aplicação no uso<a class="headerlink" href="#aplicacao-no-uso" title="Permanent link">&para;</a></h2>
 <p>Tendo como exemplo a situação de ter uma página para a captação de alunos, chamado de <em><a href="https://captacao.exemplounivesidade.com.br">https://captacao.exemplounivesidade.com.br</a></em>, e outra para a inscrição <em><a href="https://inscricao.uniexemplo.edu.br">https://inscricao.uniexemplo.edu.br</a></em> em domínios diferentes.</p>
-<p>Ná página de captação, o aluno escolhe um curso e preenche alguns dados e clica em um botão que irá direcioná-lo à página de inscrição, esses dados precisam ser enviados pelo método <a href="http://enviando-eventos.md">sendEvent()</a> primeiro, no envio dos dados terá que ser passado um segundo parâmetro, que nesse caso é um <code class="codehilite">callback</code> contendo o link para qual o usuário será redirecionado, nesse link carrega o hash atual da máquina para haver a comunicação da API com outro domínio.</p>
+<p>Ná página de captação, o aluno escolhe um curso e preenche alguns dados e clica em um botão que irá direcioná-lo à página de inscrição, esses dados precisam ser enviados pelo método <a href="http://enviando-eventos.md">sendEvent()</a> primeiro, no envio dos dados terá que ser passado um segundo parâmetro, que nesse caso é um <code class="codehilite"><span class="n">callback</span></code> contendo o link para qual o usuário será redirecionado, nesse link carrega o hash atual da máquina para haver a comunicação da API com outro domínio.</p>
 <h3 id="codigo-exemplo">Código Exemplo<a class="headerlink" href="#codigo-exemplo" title="Permanent link">&para;</a></h3>
 <h4 id="exemplo-1">Exemplo 1<a class="headerlink" href="#exemplo-1" title="Permanent link">&para;</a></h4>
 <div class="superfences-tabs">
