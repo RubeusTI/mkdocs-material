@@ -170,11 +170,14 @@ O cadastro de contatos no CRM Rubeus é realizado através de um método bem sim
 }
 ```
 
+
 ## Excluir contato
+
 
 !!! done ""
 
-    <strong  class='REST DELETE>DELETE</strong><strong class="MIME">application/json</strong> /api/Contato/excluirPessoa
+    <strong class='REST DELETE'>DELETE</strong><strong class="MIME">application/json</strong> /api/Contato/excluirPessoa
+
 
 | Atributos | Tipo | Obrigatoriedade | Descrição |
 | --- | --- | --- | --- |
@@ -182,12 +185,14 @@ O cadastro de contatos no CRM Rubeus é realizado através de um método bem sim
 | `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). |
 | `token` | `string` | Sim | Chave de acesso única referente ao canal. |
 
+
 ``` JSON tab="Resposta com um id"
 {
     "success": true,
     "id": 9
 }
 ```
+
 ``` JSON tab="Resposta com mais id’s"
 {
     "success": true,
