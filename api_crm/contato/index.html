@@ -310,6 +310,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#excluir-contato" title="Excluir contato" class="md-nav__link">
+    Excluir contato
+  </a>
+  
+</li>
+      
       
       
       
@@ -572,6 +579,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#excluir-contato" title="Excluir contato" class="md-nav__link">
+    Excluir contato
+  </a>
+  
+</li>
+      
       
       
       
@@ -598,7 +612,7 @@
                 
                 <h1 id="contato">Contato<a class="headerlink" href="#contato" title="Permanent link">&para;</a></h1>
 <h2 id="cadastro-de-contato">Cadastro de contato<a class="headerlink" href="#cadastro-de-contato" title="Permanent link">&para;</a></h2>
-<p>Método para cadastro de contatos no CRM Rubeus. Segue abaixo os dados necessários para o cadastro.</p>
+<p>O cadastro de contatos no CRM Rubeus é realizado através de um método bem simples e, para isso, será necessário apenas alguns dados. Confira, abaixo, estes dados:</p>
 <div class="admonition done">
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/cadastro</p>
 </div>
@@ -628,13 +642,13 @@
 <td><code class="codehilite"><span class="n">nomeSocial</span></code></td>
 <td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
-<td>Nome social</td>
+<td>Nome Social.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">dataNascimento</span></code></td>
 <td><code class="codehilite"><span class="nb">date</span></code></td>
 <td>Não</td>
-<td>Data de nascimento.<br><strong>Padrão: YYYY-MM-DD</strong></td>
+<td>Data de Nascimento.<br><strong>Padrão: YYYY-MM-DD</strong></td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">telefonePrincipal</span></code></td>
@@ -658,7 +672,7 @@
 <td><code class="codehilite"><span class="n">email</span></code></td>
 <td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
 <td>Não</td>
-<td>É possível enviar uma lista de telefones secundários para o cadastro de contato.</td>
+<td>É possível enviar uma lista de emails secundários para o cadastro de contato.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">cpf</span></code></td>
@@ -670,13 +684,13 @@
 <td><code class="codehilite"><span class="n">endereco</span></code></td>
 <td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
-<td>Endereço. Limite de caracteres: 255.</td>
+<td>Endereço (limite de caracteres: 255).</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">cep</span></code></td>
 <td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
-<td>CEP<br><strong>Padrão:xxxxx-xxx</strong></td>
+<td>CEP.<br><strong>Padrão:xxxxx-xxx</strong></td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">numero</span></code></td>
@@ -688,25 +702,25 @@
 <td><code class="codehilite"><span class="n">bairro</span></code></td>
 <td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
-<td>Bairro. Limite de caracteres: 45.</td>
+<td>Bairro (limite de caracteres: 45).</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">sexo</span></code></td>
 <td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
-<td>Para informar o Sexo utilize:1 para Masculino. 2 para Feminino.</td>
+<td>Para informar o sexo utilize: <strong>1</strong> para Masculino e <strong>2</strong> para Feminino.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">imagemUrl</span></code></td>
 <td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
-<td>URL para foto de perfil do contato.<br><strong>Em alguns casos o contato pode já estar cadastrado em um sistema e ter uma foto de perfil. Caso esteja disponível para acesso externo basta informar a url de acesso.</strong></td>
+<td>URL para foto de perfil do contato.<br><strong>Em alguns casos, o contato pode já estar cadastrado em um sistema e ter uma foto de perfil. Caso esteja disponível para acesso externo, basta informar a URL de acesso.</strong></td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">estadoCidade</span></code></td>
 <td><code class="codehilite"><span class="k">object</span></code></td>
 <td>Não</td>
-<td>Deve ser informado um objeto com os dados necessários para vincular o contato a uma <a href="/api_crm/metodosdelistagem/#listar-cidades">cidade</a>.<br><strong>Se não for encontrada uma cidade com esse nome nessa UF o contato não será vinculada a uma cidade.</strong></td>
+<td>Deve ser informado um objeto com os dados necessários para vincular o contato a uma <a href="/api_crm/metodosdelistagem/#listar-cidades">cidade</a>.<br><strong>Se não for encontrada uma cidade com esse nome nessa UF, o contato não será vinculado a uma cidade.</strong></td>
 </tr>
 <tr>
 <td>↳ <code class="codehilite"><span class="n">cidade</span></code></td>
@@ -724,37 +738,43 @@
 <td><code class="codehilite"><span class="n">canhoto</span></code></td>
 <td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
-<td>Campo para informar se o contato é ou não canhoto.<br><strong>Padrão: 1 para</strong> <code class="codehilite"><span class="n">sim</span></code> <strong>ou 0 para</strong> <code class="codehilite"><span class="n">n</span><span class="err">ã</span><span class="n">o</span></code></td>
+<td>Campo para informar se o contato é ou não canhoto.<br><strong>Padrão: 1 para</strong> <code class="codehilite"><span class="n">sim</span></code> <strong>ou 0 para</strong> <code class="codehilite"><span class="n">n</span><span class="err">ã</span><span class="n">o</span></code>.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">profissao</span></code></td>
 <td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
-<td>Profissão</td>
+<td>Profissão.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">aluno</span></code></td>
 <td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
-<td>Se o contato é ou não aluno<br><strong>Padrão: 1 para quando for aluno ou 0 para quando não for aluno.</strong></td>
+<td>Se o contato é ou não aluno.<br><strong>Padrão: 1 para quando for aluno e 0 para quando não for aluno.</strong></td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">exaluno</span></code></td>
 <td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
-<td>Se o contato é ex-aluno ou não<br><strong>Padrão: 1 se já foi aluno ou 0 se nunca foi aluno.</strong></td>
+<td>Se o contato é ex-aluno ou não.<br><strong>Padrão: 1 se já foi aluno e 0 se nunca foi aluno.</strong></td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">escolaOrigem</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Não</td>
+<td>Escola de origem do contato</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">anoFormacao</span></code></td>
 <td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Não</td>
-<td>Ano de formação do contato<br><strong>Padrão: YYYY</strong></td>
+<td>Ano de formação do contato.<br><strong>Padrão: YYYY</strong></td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">deficiencias</span></code></td>
 <td><code class="codehilite"><span class="k">object</span></code></td>
 <td>Não</td>
-<td>Usado para informar a deficiência(s) do contato.<hr>Usar os dados da tabela de <a href="/tabelasauxiliares/#deficiencias">deficiências</a></td>
+<td>Usado para informar a(s) deficiência(s) do contato.<hr><strong>Usar os dados da tabela de</strong> <a href="/tabelasauxiliares/#deficiencias">deficiências</a>.</td>
 </tr>
 <tr>
 <td>↳ <code class="codehilite"><span class="n">id</span></code></td>
@@ -778,31 +798,31 @@
 <td><code class="codehilite"><span class="n">estadoCivil</span></code></td>
 <td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
-<td>Utilizar os dados da tabela <a href="/tabelasauxiliares/#estado-civil">estado civil</a></td>
+<td>Utilizar os dados da tabela <a href="/tabelasauxiliares/#estado-civil">estado civil</a>.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">cor</span></code></td>
 <td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
-<td>Utilizar os dados da tabela <a href="/tabelasauxiliares/#cor">cor</a></td>
+<td>Utilizar os dados da tabela <a href="/tabelasauxiliares/#cor">cor</a>.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">grauInstrucao</span></code></td>
 <td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
-<td>Utilizar os dados da tabela <a href="/tabelasauxiliares/#grau-de-instrucao">grau de instrucao</a></td>
+<td>Utilizar os dados da tabela <a href="/tabelasauxiliares/#grau-de-instrucao">grau de instrução</a>.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">tags</span></code></td>
 <td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
 <td>Não</td>
-<td>Utilizado para enviar as tags do contato</td>
+<td>Utilizado para enviar as tags do contato.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">tagsRemovidas</span></code></td>
 <td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
 <td>Não</td>
-<td>Utilizado para remover as tags do contato</td>
+<td>Utilizado para remover as tags do contato.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">evento</span></code></td>
@@ -826,19 +846,19 @@
 <td>↳ <code class="codehilite"><span class="n">codOferta</span></code></td>
 <td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
-<td>Para vincular o evento a uma oferta de curso informar este campo junto com o <code class="codehilite"><span class="n">codCurso</span></code> correspondente.</td>
+<td>Para vincular o evento a uma oferta de curso é preciso informar este campo junto com o <code class="codehilite"><span class="n">codCurso</span></code>  correspondente.</td>
 </tr>
 <tr>
 <td>↳ <code class="codehilite"><span class="n">codCurso</span></code></td>
 <td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Não</td>
-<td>Para vincular o evento a uma oferta de curso informar este campo junto com o codOferta correspondente.</td>
+<td>Para vincular o evento a uma oferta de curso, é preciso informar este campo junto com o codOferta correspondente.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">camposPersonalizados</span></code></td>
 <td><code class="codehilite"><span class="k">object</span></code></td>
 <td>Não</td>
-<td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="codehilite"><span class="err">camposPersonalizados</span> <span class="err">:</span> <span class="p">{</span> <span class="err">coluna:</span> <span class="nt">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">Instituicao/campoPersonalizado</a>, o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado</td>
+<td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="codehilite"><span class="err">camposPersonalizados</span> <span class="err">:</span> <span class="p">{</span> <span class="err">coluna:</span> <span class="nt">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">Instituicao/campoPersonalizado</a>, e o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">origem</span></code></td>
@@ -855,8 +875,7 @@
 </tbody>
 </table>
 <div class="admonition info">
-<p class="admonition-title">Informação</p>
-<p>O valor do campo <code class="codehilite"><span class="n">dados</span></code> no exemplo de retorno abaixo é o <code class="codehilite"><span class="n">id</span></code> da pessoa que foi criada no processo.</p>
+<p>O valor do campo <code class="codehilite"><span class="n">dados</span></code> no exemplo de retorno abaixo é o <code class="codehilite"><span class="n">id</span></code> que foi criado no processo.</p>
 </div>
 <div class="superfences-tabs">
 <input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
@@ -889,7 +908,7 @@
 <td><code class="codehilite"><span class="n">codigo</span></code></td>
 <td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Condicional</td>
-<td>Chave única de identificação externa do contato enviada.</td>
+<td>Chave única de identificação externa do contato enviado.</td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">id</span></code></td>
@@ -1072,13 +1091,13 @@
 <td><code class="codehilite"><span class="n">id</span></code></td>
 <td><code class="codehilite"><span class="nb">integer</span></code></td>
 <td>Condicional</td>
-<td>Id do contato<hr><strong>Passar se o</strong> <code class="codehilite"><span class="n">codigoAntigo</span></code> <strong>não for passado.</strong></td>
+<td>Id do contato.<hr><strong>Será passado se o</strong> <code class="codehilite"><span class="n">codigoAntigo</span></code> <strong>não for passado.</strong></td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">codigoAntigo</span></code></td>
 <td><code class="codehilite"><span class="n">string</span></code></td>
 <td>Condicional</td>
-<td>Código enviado no cadastro do contato.<hr><strong>Passar se o</strong> <code class="codehilite"><span class="n">id</span></code> <strong>não for passado.</strong></td>
+<td>Código enviado no cadastro do contato.<hr><strong>Será passado se**</strong> o** <code class="codehilite"><span class="n">id</span></code> <strong>não for passado.</strong></td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">codigoNovo</span></code></td>
@@ -1109,6 +1128,64 @@
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;9&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<h2 id="excluir-contato">Excluir contato<a class="headerlink" href="#excluir-contato" title="Permanent link">&para;</a></h2>
+<div class="admonition done">
+<p><strong  class='REST DELETE>DELETE</strong><strong class="MIME">application/json</strong> /api/Contato/excluirPessoa</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Atributos</th>
+<th>Tipo</th>
+<th>Obrigatoriedade</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="codehilite"><span class="n">id</span></code></td>
+<td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code> ou <code class="codehilite"><span class="nb">integer</span></code></td>
+<td>obrigatório</td>
+<td>id dos contatos que devem ser excluídos..<br><strong>Os id’s deverão ser informados da seguinte forma:</strong><br>Um único id: 1<br>Vários id’s: [1, 2, 3]</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">origem</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td>Sim</td>
+<td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">token</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Sim</td>
+<td>Chave de acesso única referente ao canal.</td>
+</tr>
+</tbody>
+</table>
+<div class="superfences-tabs">
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">Resposta com um id</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">9</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div></superfences>
+<superfences><input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">Resposta com mais id’s</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1633</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
