@@ -14,7 +14,7 @@
         <meta name="description" content="Página de documentações da Rubeus">
       
       
-        <link rel="canonical" href="https://docs.rubeus.com.br/monitoramento/apresentacao/">
+        <link rel="canonical" href="https://docs.rubeus.com.br/monitoramento/integracao-api/">
       
       
         <meta name="author" content="Rubeus">
@@ -43,7 +43,7 @@
     
     
       
-        <title>Apresentação - Rubeus Developers</title>
+        <title>Integração via API - Rubeus Developers</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#apresentacao" tabindex="1" class="md-skip">
+      <a href="#integracao-via-api" tabindex="1" class="md-skip">
         Ir para o conteúdo
       </a>
     
@@ -115,7 +115,7 @@
                 Rubeus Developers
               </span>
               <span class="md-header-nav__topic">
-                Apresentação
+                Integração via API
               </span>
             
           
@@ -163,9 +163,7 @@
       
         <!-- 
 
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<nav class="md-tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -191,7 +189,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" title="Monitoramento de páginas" class="md-tabs__link md-tabs__link--active">
+        <a href="../apresentacao/" title="Monitoramento de páginas" class="md-tabs__link">
           Monitoramento de páginas
         </a>
       
@@ -396,12 +394,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Monitoramento de páginas
@@ -417,20 +413,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Apresentação" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../apresentacao/" title="Apresentação" class="md-nav__link">
       Apresentação
     </a>
-    
   </li>
 
         
@@ -505,6 +492,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enviando-contato-ao-rubeus" title="Enviando contato ao Rubeus" class="md-nav__link">
+    Enviando contato ao Rubeus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enviando-evento-ao-rubeus" title="Enviando evento ao Rubeus" class="md-nav__link">
+    Enviando evento ao Rubeus
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -523,19 +533,118 @@
                 </div>
                 
                 
-                <h1 id="apresentacao">Apresentação<a class="headerlink" href="#apresentacao" title="Permanent link">&para;</a></h1>
-<p>Bem-vindo à biblioteca de monitoramento da Rubeus. Nosso objetivo é auxiliar sua equipe de Tecnologia de Informação a registrar dados e informações importantes de acesso dos seus usuários, criando assim, uma base de dados estratégica.</p>
-<p>De posse dessas informações é factível, por exemplo, a otimização das suas páginas a fim de oferecer a melhor experiência de navegação possível aos usuários do website da sua instituição de ensino.</p>
-<p>Para facilitar a compreensão dos dados dessa ferramenta, através de um eficiente processo de integração com o CRM Rubeus, oferece a possibilidade de gerar relatórios, visualizar em forma de gráficos e gerenciar campanhas.</p>
-<p>Como padrão esta biblioteca tem a responsabilidade de armazenar vários dados dos potenciais alunos, a saber:</p>
-<ul>
-<li>nome do aparelho (válido para smartphones, tablets e consoles);</li>
-<li>nome do sistema operacional;</li>
-<li>nome e versão do navegador;</li>
-<li>URL de origem;</li>
-<li>data e hora do momento de acesso;</li>
-<li>eventos personalizados;</li>
-</ul>
+                <h1 id="integracao-via-api">Integração via API<a class="headerlink" href="#integracao-via-api" title="Permanent link">&para;</a></h1>
+<p>Para realizar a integração com o Monitoramento de página via API no backend de sua aplicação utilizando os métodos de evento e contato é necessário obter alguns dados antes no cliente disponível via JavaScript através dos métodos <code class="codehilite"><span class="n">getHash</span></code> para obter o id da sessão atual, <code class="codehilite"><span class="n">getHostClient</span></code> para obter o id do Rubeus no tracking e o <code class="codehilite"><span class="n">idGenerator</span></code> que por sua vez não obrigatoriamente precisa ser esse gerador de id, desde que seja passado algo como identificação nos campos que requisitam um identificador.</p>
+<p>Os atributos adicionais devem estar dispostos da seguinte maneira ao realizar o envio de dados para o backend de sua aplicação.</p>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">JavaScript</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">dados</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * conteúdo do formulário</span>
+<span class="cm">     */</span>
+    <span class="nx">session_id</span><span class="o">:</span> <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">getHash</span><span class="p">(),</span>
+    <span class="nx">hostClient</span><span class="o">:</span> <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">getHostClient</span><span class="p">(),</span>
+    <span class="nx">substitute_id</span><span class="o">:</span> <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">idGenerator</span><span class="p">()</span>
+<span class="p">};</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<h2 id="enviando-contato-ao-rubeus">Enviando contato ao Rubeus<a class="headerlink" href="#enviando-contato-ao-rubeus" title="Permanent link">&para;</a></h2>
+<div class="admonition done">
+<p><strong class='REST PATCH'>PATCH</strong><strong class="MIME">application/json</strong> https://<span>tracki</span>ng.apprubeus.com.br/api/identify</p>
+</div>
+<p>No POST que sua página faz para o backend da sua aplicação, deverá conter os dados adicionais do tracking, que por sua vez, são obtidos executando os métodos descritos acima.</p>
+<p>O envio deverá ser um JSON, tal como no cabeçalho deste tópico e a estrutura é semelhante ao <a href="https://docs.rubeus.com.br/api_crm/contato/">cadastro de contato ao Rubeus</a> nativo, mas com os campos adicionais inclusos com o mesmo molde apresentado acima.</p>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">PHP</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// ...</span>
+<span class="nv">$dados</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;hostClient&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;aSLhOBjZV5wD7YEpppb3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nome&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;João Silva&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;origem&quot;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;session_id&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;663303050524637653063286663526141567525958427&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;substitute_id&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;068615868786813623018786600516031567525965972&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;token&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;a1264cc5b581cc6bfbad3faee2c54a99&quot;</span>
+<span class="p">];</span>
+
+<span class="nv">$dadosJson</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$dados</span><span class="p">);</span>
+<span class="c1">// ...</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<h2 id="enviando-evento-ao-rubeus">Enviando evento ao Rubeus<a class="headerlink" href="#enviando-evento-ao-rubeus" title="Permanent link">&para;</a></h2>
+<div class="admonition done">
+<p><strong class='REST PATCH'>PATCH</strong><strong class="MIME">application/json</strong> https://<span>tracki</span>ng.apprubeus.com.br/api/sendEvent</p>
+</div>
+<p>Assim como o exemplo anterior, neste caso também devemos ter presente no corpo da requisição os campos adicionais, porém, a estrutura é relativamente diferente ao <a href="https://docs.rubeus.com.br/api_crm/evento/#cadastro-de-eventos">cadastro de eventos do Rubeus</a>, apresentando o conteúdo do evento dentro de um objeto chamado <code class="codehilite"><span class="n">eventData</span></code> e o <code class="codehilite"><span class="n">eventType</span></code> ou <code class="codehilite"><span class="n">codEventType</span></code> no mesmo nivel, que por sua vez são alocados em um array de objetos <code class="codehilite"><span class="n">event</span></code>.</p>
+<p>No mesmo nível de <code class="codehilite"><span class="n">event</span></code> temos a presença dos dados adicionais do tracking.</p>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">PHP</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// ...</span>
+<span class="nv">$evento</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;event&quot;</span> <span class="o">=&gt;</span> <span class="p">[[</span>
+        <span class="s2">&quot;eventType&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;29&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;eventData&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s2">&quot;codCurso&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;codOferta&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;codLocalOferta&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;3-5&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;origem&quot;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;token&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;a1264cc5b581cc6bfbad3faee2c54a99&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+    <span class="p">]],</span>
+    <span class="s2">&quot;hostClient&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;aSLhOBjZV5wD7YEpppb3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;session_id&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;663303050524637653063286663526141567525958427&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;event_id&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;333333007367155333780632635331011566925997662&quot;</span><span class="p">,</span>
+<span class="p">];</span>
+
+<span class="nv">$eventoJson</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$evento</span><span class="p">);</span>
+<span class="c1">// ...</span>
+</pre></div>
+</td></tr></table></div>
+</div>
                 
                   
                 
@@ -552,41 +661,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../../endpoint/" title="Endpoint" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Anterior
-                </span>
-                Endpoint
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../instalacao/" title="Instalação" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Próximo
-                </span>
-                Instalação
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
