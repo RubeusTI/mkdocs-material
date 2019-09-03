@@ -7,9 +7,9 @@ Utilizando a função `sendData()` para enviar os dados do contato ao CRM Rubeus
 
 ### Parâmetros
 
-| Parâmetros | Tipo | Obrigatoriedade | Descrição | 
+| Parâmetros | Tipo | Obrigatoriedade | Descrição |
 | --- | --- | --- | --- |
-| `data` | `object` | Sim | Objeto que contém os dados à serem enviados ao CRM.<hr>A estrutura do parâmetro segue a mesma do método de [cadastrar contato](/api_crm/contato/#cadastro-de-contato).<br>**Obs.: o campo “codigo” deve ser ignorado já que é enviado automaticamente.** | 
+| `data` | `object` | Sim | Objeto que contém os dados à serem enviados ao CRM.<hr>A estrutura do parâmetro segue a mesma do método de [cadastrar contato](/api_crm/contato/#cadastro-de-contato).<br>**Obs.: o campo “codigo” deve ser ignorado já que é enviado automaticamente.** |
 
 ### Retorno
 ``` JSON tab="Return"

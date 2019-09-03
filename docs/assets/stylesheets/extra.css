@@ -16,6 +16,10 @@
   background-color: #FF9800 !important;
 }
 
+.PATCH {
+  background-color: rgb(203, 223, 23) !important;
+}
+
 .DELETE {
   background-color: #D32F2F !important;
 }
@@ -60,7 +64,7 @@
 /* -------------------- */
 
 /*.imgAmpli{
-  width: 80%  
+  width: 80%
 } */
 
 .image {

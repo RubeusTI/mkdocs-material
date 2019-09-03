@@ -1,7 +1,7 @@
 
 # Apresentação
 
-Bem-vindo à biblioteca de monitoramento da Rubeus. Nosso objetivo é auxiliar sua equipe de Tecnologia de Informação a registrar dados e informações importantes de acesso dos seus usuários, criando assim, uma base de dados estratégica. 
+Bem-vindo à biblioteca de monitoramento da Rubeus. Nosso objetivo é auxiliar sua equipe de Tecnologia de Informação a registrar dados e informações importantes de acesso dos seus usuários, criando assim, uma base de dados estratégica.
 
 De posse dessas informações é factível, por exemplo, a otimização das suas páginas a fim de oferecer a melhor experiência de navegação possível aos usuários do website da sua instituição de ensino.
 
@@ -15,4 +15,3 @@ Como padrão esta biblioteca tem a responsabilidade de armazenar vários dados d
 - URL de origem;
 - data e hora do momento de acesso;
 - eventos personalizados;
-
