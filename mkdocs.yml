@@ -132,7 +132,7 @@ nav:
     - Instalação: monitoramento/instalacao.md
     - Enviando eventos: monitoramento/enviando-eventos.md
     - Enviando dados ao CRM: monitoramento/enviando-data.md
-    # - Boas práticas: monitoramento/boas-praticas.md
+    - Boas práticas: monitoramento/boas-praticas.md
     # - Integração via API: monitoramento/integracao-api.md
     # - Exemplos de códigos: monitoramento/exemplos-codigos.md
     # - Recuperando informações: monitoramento/recuperando-informacoes.md

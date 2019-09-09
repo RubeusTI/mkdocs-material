@@ -1,7 +1,11 @@
 
 # Exemplos de códigos
 
+Nesta parte da documentação apresentamos alguns exemplos de códigos prontos que auxiliam na integração.
+
 ## Enviar contato com envio de evento
+
+Este exemplo é utilizado para enviar os dados coletados no formulário e com um envio de evento.
 
 ``` javascript tab="JavaScript"
 function enviarContatoRubeus() {
