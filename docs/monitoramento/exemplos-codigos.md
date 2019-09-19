@@ -3,6 +3,10 @@
 
 Nesta parte da documentação apresentamos alguns exemplos de códigos prontos que auxiliam na integração.
 
+## Página para testes
+
+Para realizar testes no monitoramento de páginas da Rubeus, nós disponibilizamos um repositório no GitHub, para fazer o download clique [aqui](https://github.com/RubeusTI/teste-tracking-rubeus).
+
 ## Enviar contato com envio de evento
 
 Este exemplo é utilizado para enviar os dados coletados no formulário e com um envio de evento.
