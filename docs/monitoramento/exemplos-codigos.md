@@ -25,7 +25,7 @@ function enviarContatoRubeus() {
         /**
          * Os campos origem e token podem ser passados
          * para o monitoramento de páginas se passar
-         * como a laddingpage.
+         * como a landing page.
          */
         origem: 3,
         token: "a1264cc5b581cc6bfbad3faee2c54a99"
