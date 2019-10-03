@@ -118,3 +118,36 @@ function buttonOnOff() {
     document.getElementById('buttonSubmit').disabled = false;
   }
 }
+
+function genUrl() {
+  var url = document.getElementById('URL').value;
+  if (url.indexOf('http') === -1 && url !== '') {
+    url = 'https://'+url;
+    document.getElementById('URL').value = url;
+  }
+
+  var source = document.getElementById('source').value;
+  var medium = document.getElementById('medium').value;
+  var campaign = document.getElementById('campaign').value;
+  var content = document.getElementById('content').value;
+  var term = document.getElementById('term').value;
+
+  if (url !== '' && source !== '' && medium !== '' && campaign !== '') {
+    url += '?';
+
+    url += 'utm_source=' + source;
+
+    url += '&utm_medium=' + medium;
+
+    url += '&utm_campaign=' + campaign;
+
+    if (term !== '') {
+      url += '&utm_term=' + term.replace(' ', '+');
+    }
+
+    if (content !== '') {
+      url += '&utm_content=' + content;
+    }
+    document.getElementById('url_gerada').value = url;
+  }
+}
