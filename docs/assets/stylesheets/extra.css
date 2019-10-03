@@ -224,9 +224,36 @@
   background-color: #006e5b;
 }
 
-.conteudo {
+.borderLine {
+  border: 0.1rem solid #a8a8a8;
+  border-radius: 0.2em;
+  padding: 8px;
+}
+
+.container {
+  display: flex;
+}
+
+.w-100 {
   width: 100%
 }
+
+.input {
+  background-color: white;
+  height: auto;
+}
+
+.inputBox {
+  margin: 5px 0px;
+}
+
+.textarea {
+  min-height: 100px;
+  max-width: -webkit-fill-available;
+  min-width: -webkit-fill-available;
+  outline: 0px;
+}
+
 
 .inputSelect {
   display: flex;
