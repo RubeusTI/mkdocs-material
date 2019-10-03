@@ -46,6 +46,7 @@ O cadastro de contatos no CRM Rubeus é realizado através de um método bem sim
 | `tagsRemovidas` | `array[]` | Não | Utilizado para remover as tags do contato. |
 | `evento` | `object` | Não | Utilizado para criar um evento ao realizar o cadastro do contato. |
 | ↳ `tipo` | `integer` | Não | Id do tipo de evento. |
+| ↳ `codTipo` | `string` | Não | código do tipo de evento. |
 | ↳ `descricao` | `string` | Não | Texto HTML personalizado para agregar informações na exibição do evento. |
 | ↳ `codOferta` | `integer` | Não | Para vincular o evento a uma oferta de curso é preciso informar este campo junto com o `codCurso`  correspondente. |
 | ↳ `codCurso` | `integer` | Não | Para vincular o evento a uma oferta de curso, é preciso informar este campo junto com o codOferta correspondente. |
@@ -170,21 +171,17 @@ O cadastro de contatos no CRM Rubeus é realizado através de um método bem sim
 }
 ```
 
-
 ## Excluir contato
-
 
 !!! done ""
 
-    <strong class='REST DELETE'>DELETE</strong><strong class="MIME">application/json</strong> /api/Contato/excluirPessoa
-
+    <strong  class='REST DELETE'>DELETE</strong><strong class="MIME">application/json</strong> /api/Contato/excluirPessoa
 
 | Atributos | Tipo | Obrigatoriedade | Descrição |
 | --- | --- | --- | --- |
 | `id` | `array[]` ou `integer` | obrigatório | id dos contatos que devem ser excluídos..<br>**Os id’s deverão ser informados da seguinte forma:**<br>Um único id: 1<br>Vários id’s: [1, 2, 3] |
 | `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). |
 | `token` | `string` | Sim | Chave de acesso única referente ao canal. |
-
 
 ``` JSON tab="Resposta com um id"
 {
