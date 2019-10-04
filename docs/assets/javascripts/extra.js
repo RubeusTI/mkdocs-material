@@ -122,7 +122,7 @@ function buttonOnOff() {
 function genUrl() {
   var url = document.getElementById('URL').value;
   if (url.indexOf('http') === -1 && url !== '') {
-    url = 'https://'+url;
+    url = 'https://' + url;
     document.getElementById('URL').value = url;
   }
 
@@ -148,6 +148,28 @@ function genUrl() {
     if (content !== '') {
       url += '&utm_content=' + content;
     }
-    document.getElementById('url_gerada').value = url;
+    var textArea = document.getElementById('url_gerada');
+    textArea.value = url;
+    // document.getElementById("url_gerada_hidden").value = url;
+  } else {
+    document.getElementById('url_gerada').value = null;
+    // document.getElementById("url_gerada_hidden").value = null;
   }
+}
+
+function copyFunction() {
+  const el = document.createElement('textarea');
+  el.value = document.getElementById('url_gerada').value;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+
+  var tooltip = document.getElementById("tooltip");
+  tooltip.innerHTML = "URL Copiada!";
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("tooltip");
+  tooltip.innerHTML = "Copiar para a área de transferência";
 }
