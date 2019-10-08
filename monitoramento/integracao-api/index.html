@@ -453,8 +453,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../enviando-data/" title="Enviando dados ao CRM" class="md-nav__link">
-      Enviando dados ao CRM
+    <a href="../enviando-data/" title="Enviando dados de contato" class="md-nav__link">
+      Enviando dados de contato
     </a>
   </li>
 
@@ -597,13 +597,49 @@
 </div>
 <h2 id="enviando-contato-ao-rubeus">Enviando contato ao Rubeus<a class="headerlink" href="#enviando-contato-ao-rubeus" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
-<p><strong class='REST PATCH'>PATCH</strong><strong class="MIME">application/json</strong> https://<span>tracki</span>ng.apprubeus.com.br/api/identify</p>
+<p><strong class='REST PATCH'>PATCH</strong><strong class="MIME">application/json</strong> https://<span>tracki</span>ng.apprubeus.com.br/api/v2/sendData</p>
 </div>
-<p>No POST que sua página faz para o backend da sua aplicação, deverá conter os dados adicionais do tracking, que por sua vez, são obtidos executando os métodos descritos acima.</p>
+<p>Na requisição que sua página faz para o backend de sua aplicação, deverá conter os dados adicionais do tracking, que por sua vez, são obtidos executando os métodos descritos acima.</p>
+<table>
+<thead>
+<tr>
+<th>Atributos</th>
+<th>Tipo</th>
+<th>Obrigatoriedade</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="codehilite"><span class="n">session_id</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Sim</td>
+<td>Código da sessão do tracking no navegador.<hr><strong>Adquirido no método</strong> <code class="codehilite"><span class="n">RBTracking</span><span class="p">.</span><span class="n">getHash</span><span class="p">()</span></code>.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">substitute_id</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Sim</td>
+<td>Código gerado que serve de identificação secudária do contato no CRM Rubeus.<hr><strong>Adquirido no método</strong> <code class="codehilite"><span class="n">RBTracking</span><span class="p">.</span><span class="n">idGenerator</span><span class="p">()</span></code>.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">hostClient</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Sim</td>
+<td>Código de identificação do Rubeus.<hr><strong>Adquirido no método</strong> <code class="codehilite"><span class="n">RBTracking</span><span class="p">.</span><span class="n">getHostClient</span><span class="p">()</span></code>.</td>
+</tr>
+<tr>
+<td>Dados do contato</td>
+<td></td>
+<td></td>
+<td>Os dados do <a href="/api_crm/contato/#cadastro-de-contato">contato</a> deverão estar mesclados no objeto de envio.</td>
+</tr>
+</tbody>
+</table>
 <p>O envio deverá ser um JSON, tal como no cabeçalho deste tópico e a estrutura é semelhante ao <a href="https://docs.rubeus.com.br/api_crm/contato/">cadastro de contato ao Rubeus</a> nativo, mas com os campos adicionais inclusos com o mesmo molde apresentado acima.</p>
 <div class="superfences-tabs">
 <input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">PHP</label>
+<label for="__tab_2_0">PHP de envio</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -616,19 +652,40 @@
 10
 11
 12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
 <span class="c1">// ...</span>
+<span class="sd">/**</span>
+<span class="sd"> * Dados meramente ilustrativos</span>
+<span class="sd"> */</span>
 <span class="nv">$dados</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;hostClient&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;aSLhOBjZV5wD7YEpppb3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hostClient&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;hostclientexemplo&quot;</span><span class="p">,</span>
     <span class="s2">&quot;nome&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;João Silva&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;origem&quot;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="s2">&quot;session_id&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;663303050524637653063286663526141567525958427&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;substitute_id&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;068615868786813623018786600516031567525965972&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;token&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;a1264cc5b581cc6bfbad3faee2c54a99&quot;</span>
+    <span class="s2">&quot;origem&quot;</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;session_id&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;sessaoexemplo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;substitute_id&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;substituteexemplo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;token&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;tokenexemplo&quot;</span>
 <span class="p">];</span>
 
 <span class="nv">$dadosJson</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$dados</span><span class="p">);</span>
 <span class="c1">// ...</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_2" type="radio" id="__tab_2_1" />
+<label for="__tab_2_1">JSON de resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;155&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -636,11 +693,48 @@
 <div class="admonition done">
 <p><strong class='REST PATCH'>PATCH</strong><strong class="MIME">application/json</strong> https://<span>tracki</span>ng.apprubeus.com.br/api/sendEvent</p>
 </div>
-<p>Assim como o exemplo anterior, neste caso também devemos ter presente no corpo da requisição os campos adicionais, porém, a estrutura é relativamente diferente ao <a href="https://docs.rubeus.com.br/api_crm/evento/#cadastro-de-eventos">cadastro de eventos do Rubeus</a>, apresentando o conteúdo do evento dentro de um objeto chamado <code class="codehilite"><span class="n">eventData</span></code> e o <code class="codehilite"><span class="n">eventType</span></code> ou <code class="codehilite"><span class="n">codEventType</span></code> no mesmo nivel, que por sua vez são alocados em um array de objetos <code class="codehilite"><span class="n">event</span></code>.</p>
+<p>Assim como o exemplo anterior, neste caso também devemos ter presente no corpo da requisição os campos adicionais.</p>
+<p>A estrutura referente ao <a href="https://docs.rubeus.com.br/api_crm/evento/#cadastro-de-eventos">cadastro de eventos do Rubeus</a>, tem o conteúdo do evento alocados no objeto <code class="codehilite"><span class="n">event</span></code>.</p>
+<table>
+<thead>
+<tr>
+<th>Atributos</th>
+<th>Tipo</th>
+<th>Obrigatoriedade</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="codehilite"><span class="n">event</span></code></td>
+<td><code class="codehilite"><span class="k">object</span></code></td>
+<td>Sim</td>
+<td>Objeto com os dados do <a href="/api_crm/evento/#cadastro-de-eventos">evento</a>.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">session_id</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Sim</td>
+<td>Código da sessão do tracking no navegador.<hr><strong>Adquirido no método</strong> <code class="codehilite"><span class="n">RBTracking</span><span class="p">.</span><span class="n">getHash</span><span class="p">()</span></code>.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">hostClient</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Sim</td>
+<td>Código de identificação do Rubeus.<hr><strong>Adquirido no método</strong> <code class="codehilite"><span class="n">RBTracking</span><span class="p">.</span><span class="n">getHostClient</span><span class="p">()</span></code>.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">pageTitle</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Não</td>
+<td>Título da página atual em que o visitante está..</td>
+</tr>
+</tbody>
+</table>
 <p>No mesmo nível de <code class="codehilite"><span class="n">event</span></code> temos a presença dos dados adicionais do tracking.</p>
 <div class="superfences-tabs">
 <input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
-<label for="__tab_3_0">PHP</label>
+<label for="__tab_3_0">PHP de envio</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -662,24 +756,35 @@
 19
 20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
 <span class="c1">// ...</span>
+<span class="sd">/**</span>
+<span class="sd"> * Dados meramente ilustrativos</span>
+<span class="sd"> */</span>
 <span class="nv">$evento</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;event&quot;</span> <span class="o">=&gt;</span> <span class="p">[[</span>
-        <span class="s2">&quot;eventType&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;29&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;eventData&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-            <span class="s2">&quot;codCurso&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;codOferta&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;codLocalOferta&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;3-5&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;origem&quot;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span>
-            <span class="s2">&quot;token&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;a1264cc5b581cc6bfbad3faee2c54a99&quot;</span><span class="p">,</span>
-        <span class="p">]</span>
-    <span class="p">]],</span>
-    <span class="s2">&quot;hostClient&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;aSLhOBjZV5wD7YEpppb3&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;session_id&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;663303050524637653063286663526141567525958427&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;event_id&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;333333007367155333780632635331011566925997662&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;event&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s2">&quot;codCurso&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;codOferta&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;codLocalOferta&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;1-2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tipo&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;origem&quot;</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;token&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;tokenexemplo&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;hostClient&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;hostclientexemplo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;session_id&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;sessaoexemplo&quot;</span><span class="p">,</span>
 <span class="p">];</span>
 
 <span class="nv">$eventoJson</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$evento</span><span class="p">);</span>
 <span class="c1">// ...</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_3" type="radio" id="__tab_3_1" />
+<label for="__tab_3_1">JSON de resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
