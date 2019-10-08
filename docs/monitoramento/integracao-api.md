@@ -20,26 +20,45 @@ var dados = {
 
 !!! done ""
 
-    <strong class='REST PATCH'>PATCH</strong><strong class="MIME">application/json</strong> https://<span>tracki</span>ng.apprubeus.com.br/api/identify
+    <strong class='REST PATCH'>PATCH</strong><strong class="MIME">application/json</strong> https://<span>tracki</span>ng.apprubeus.com.br/api/v2/sendData
 
-No POST que sua página faz para o backend da sua aplicação, deverá conter os dados adicionais do tracking, que por sua vez, são obtidos executando os métodos descritos acima.
+Na requisição que sua página faz para o backend de sua aplicação, deverá conter os dados adicionais do tracking, que por sua vez, são obtidos executando os métodos descritos acima.
+
+| Atributos | Tipo | Obrigatoriedade | Descrição |
+| --- | --- | --- | --- |
+| `session_id` | `string` | Sim | Código da sessão do tracking no navegador.<hr>**Adquirido no método** `RBTracking.getHash()`. |
+| `substitute_id` | `string` | Sim | Código gerado que serve de identificação secudária do contato no CRM Rubeus.<hr>**Adquirido no método** `RBTracking.idGenerator()`. |
+| `hostClient` | `string` | Sim | Código de identificação do Rubeus.<hr>**Adquirido no método** `RBTracking.getHostClient()`. |
+| Dados do contato |  |  | Os dados do [contato](/api_crm/contato/#cadastro-de-contato) deverão estar mesclados no objeto de envio. |
 
 O envio deverá ser um JSON, tal como no cabeçalho deste tópico e a estrutura é semelhante ao [cadastro de contato ao Rubeus](https://docs.rubeus.com.br/api_crm/contato/) nativo, mas com os campos adicionais inclusos com o mesmo molde apresentado acima.
 
-``` php tab="PHP"
+``` php tab="PHP de envio"
 <?php
 // ...
+/**
+ * Dados meramente ilustrativos
+ */
 $dados = [
-    "hostClient" => "aSLhOBjZV5wD7YEpppb3",
+    "hostClient" => "hostclientexemplo",
     "nome" => "João Silva",
-    "origem" => 3,
-    "session_id" => "663303050524637653063286663526141567525958427",
-    "substitute_id" => "068615868786813623018786600516031567525965972",
-    "token" => "a1264cc5b581cc6bfbad3faee2c54a99"
+    "origem" => 0,
+    "session_id" => "sessaoexemplo",
+    "substitute_id" => "substituteexemplo",
+    "token" => "tokenexemplo"
 ];
 
 $dadosJson = json_encode($dados);
 // ...
+```
+
+``` JSON tab="JSON de resposta"
+{
+	"success": true,
+	"dados": {
+		"id": "155"
+	}
+}
 ```
 
 ## Enviando evento ao Rubeus
@@ -48,29 +67,45 @@ $dadosJson = json_encode($dados);
 
     <strong class='REST PATCH'>PATCH</strong><strong class="MIME">application/json</strong> https://<span>tracki</span>ng.apprubeus.com.br/api/sendEvent
 
-Assim como o exemplo anterior, neste caso também devemos ter presente no corpo da requisição os campos adicionais, porém, a estrutura é relativamente diferente ao [cadastro de eventos do Rubeus](https://docs.rubeus.com.br/api_crm/evento/#cadastro-de-eventos), apresentando o conteúdo do evento dentro de um objeto chamado `eventData` e o `eventType` ou `codEventType` no mesmo nivel, que por sua vez são alocados em um array de objetos `event`.
+Assim como o exemplo anterior, neste caso também devemos ter presente no corpo da requisição os campos adicionais.
+
+A estrutura referente ao [cadastro de eventos do Rubeus](https://docs.rubeus.com.br/api_crm/evento/#cadastro-de-eventos), tem o conteúdo do evento alocados no objeto `event`.
+
+| Atributos | Tipo | Obrigatoriedade | Descrição |
+| --- | --- | --- | --- |
+| `event` | `object` | Sim | Objeto com os dados do [evento](/api_crm/evento/#cadastro-de-eventos). |
+| `session_id` | `string` | Sim | Código da sessão do tracking no navegador.<hr>**Adquirido no método** `RBTracking.getHash()`. |
+| `hostClient` | `string` | Sim | Código de identificação do Rubeus.<hr>**Adquirido no método** `RBTracking.getHostClient()`. |
+| `pageTitle` | `string` | Não | Título da página atual em que o visitante está.. |
 
 No mesmo nível de `event` temos a presença dos dados adicionais do tracking.
 
-``` php tab="PHP"
+``` php tab="PHP de envio"
 <?php
 // ...
+/**
+ * Dados meramente ilustrativos
+ */
 $evento = [
-    "event" => [[
-        "eventType" => "29",
-        "eventData" => [
-            "codCurso" => "1",
-            "codOferta" => "3",
-            "codLocalOferta" => "3-5",
-            "origem" => 3,
-            "token" => "a1264cc5b581cc6bfbad3faee2c54a99",
-        ]
-    ]],
-    "hostClient" => "aSLhOBjZV5wD7YEpppb3",
-    "session_id" => "663303050524637653063286663526141567525958427",
-    "event_id" => "333333007367155333780632635331011566925997662",
+    "event" => [
+        "codCurso" => "1",
+        "codOferta" => "1",
+        "codLocalOferta" => "1-2",
+        "tipo" => "1",
+        "origem" => 0,
+        "token" => "tokenexemplo",
+    ],
+    "hostClient" => "hostclientexemplo",
+    "session_id" => "sessaoexemplo",
 ];
 
 $eventoJson = json_encode($evento);
 // ...
+```
+
+``` JSON tab="JSON de resposta"
+{
+	"success": true,
+	"dados": 1
+}
 ```
