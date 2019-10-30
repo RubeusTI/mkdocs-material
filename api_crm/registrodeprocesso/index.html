@@ -610,7 +610,7 @@
 <h2 id="alterar-contato">Alterar contato<a class="headerlink" href="#alterar-contato" title="Permanent link">&para;</a></h2>
 <p>Este método tem a função de vincular ou remover contatos secundários de um registro de processo.</p>
 <div class="admonition done">
-<p><strong class='REST PUT'>PUT</strong><strong class="MIME">application/json</strong> /api/Registro/alterarContatosVinculados</p>
+<p><strong class='REST PUT'>PUT</strong><strong class="MIME">application/json</strong> /api/Registro/alterarPessoasOportunidade</p>
 </div>
 <table>
 <thead>
@@ -622,6 +622,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code class="codehilite"><span class="n">codRegistro</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Sim</td>
+<td>Código da oportunidade.</td>
+</tr>
 <tr>
 <td><code class="codehilite"><span class="n">codContato</span></code></td>
 <td><code class="codehilite"><span class="n">string</span></code></td>

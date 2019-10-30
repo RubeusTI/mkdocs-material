@@ -608,7 +608,7 @@
                 
                 <h1 id="processo-seletivo">Processo seletivo<a class="headerlink" href="#processo-seletivo" title="Permanent link">&para;</a></h1>
 <h2 id="cadastro-de-processo-seletivo">Cadastro de processo seletivo<a class="headerlink" href="#cadastro-de-processo-seletivo" title="Permanent link">&para;</a></h2>
-<p>Os processos seletivos são entidades de controle que podem ser vinculadas a ofertas. </p>
+<p>Os processos seletivos são entidades de controle que podem ser vinculadas a ofertas.</p>
 <div class="admonition done">
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/ProcessoSeletivo/cadastro</p>
 </div>
@@ -673,8 +673,14 @@
 <tr>
 <td><code class="codehilite"><span class="n">codNivelEnsino</span></code></td>
 <td><code class="codehilite"><span class="nb">integer</span></code></td>
-<td>Sim</td>
-<td>Código único de identificação do nível de ensino.<br><br><a href="/api_crm/metodosdelistagem/#listar-niveis-de-ensino">Listar niveis de ensino</a><br><strong>Enviar o campo</strong> <code class="codehilite"><span class="n">codigo</span></code></td>
+<td>Condicional</td>
+<td>Código único de identificação do nível de ensino.<br><br><a href="/api_crm/metodosdelistagem/#listar-niveis-de-ensino">Listar niveis de ensino</a><br><strong>Enviar o campo</strong> <code class="codehilite"><span class="n">codigo</span></code> <hr> <strong>Caso não seja enviado deverá ser o utilizado o campo</strong> <code class="codehilite"><span class="n">nivelEnsino</span></code><strong>.</strong></td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">nivelEnsino</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td>Condicional</td>
+<td>Identificação do nível de ensino.<br><br><a href="/api_crm/metodosdelistagem/#listar-niveis-de-ensino">Listar niveis de ensino</a><br><strong>Enviar o campo</strong> <code class="codehilite"><span class="n">id</span></code> <hr> <strong>Caso não seja enviado deverá ser o utilizado o campo</strong> <code class="codehilite"><span class="n">codNivelEnsino</span></code><strong>.</strong></td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">origem</span></code></td>
