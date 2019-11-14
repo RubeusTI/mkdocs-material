@@ -48,8 +48,8 @@ O cadastro de contatos no CRM Rubeus é realizado através de um método bem sim
 | ↳ `tipo` | `integer` | Não | Id do tipo de evento. |
 | ↳ `codTipo` | `string` | Não | código do tipo de evento. |
 | ↳ `descricao` | `string` | Não | Texto HTML personalizado para agregar informações na exibição do evento. |
-| ↳ `codOferta` | `integer` | Não | Para vincular o evento a uma oferta de curso é preciso informar este campo junto com o `codCurso`  correspondente. |
-| ↳ `codCurso` | `integer` | Não | Para vincular o evento a uma oferta de curso, é preciso informar este campo junto com o codOferta correspondente. |
+| ↳ `codOferta` | `string` | Não | Para vincular o evento a uma oferta de curso é preciso informar este campo junto com o `codCurso`  correspondente. |
+| ↳ `codCurso` | `string` | Não | Para vincular o evento a uma oferta de curso, é preciso informar este campo junto com o codOferta correspondente. |
 | `camposPersonalizados` | `object` | Não | Usado para atribuir algum campo específico que não está presente no escopo da API.<hr>**Os campos devem ser informados como no exemplo abaixo**:<br><br>`#!json camposPersonalizados : { coluna: "valor" }`<hr>Os nomes das colunas dos campos personalizados são informados no método [Instituicao/campoPersonalizado](/api_crm/campopersonalizados/#listar-campos-personalizados), e o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado. |
 | `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). |
 | `token` | `string` | Sim | Chave de acesso única referente ao canal. |
