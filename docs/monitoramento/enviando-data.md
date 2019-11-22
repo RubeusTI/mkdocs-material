@@ -18,8 +18,7 @@ Utilizando a função `sendData()` para enviar os dados do contato ao CRM Rubeus
 {
 	"success": true,
 	"data": {
-		"id": "50",
-		"codigo": "431152741414362671071974718362671574428181405"
+		"id": "50"
 	}
 }
 ```
