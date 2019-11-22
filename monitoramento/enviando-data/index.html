@@ -680,6 +680,18 @@
 <td>Sim</td>
 <td>Objeto que contém os dados à serem enviados ao CRM.<hr>A estrutura do parâmetro segue a mesma do método de <a href="/api_crm/contato/#cadastro-de-contato">cadastrar contato</a>.<br><strong>Obs.: o campo “codigo” deve ser ignorado já que é enviado automaticamente.</strong></td>
 </tr>
+<tr>
+<td><code class="codehilite"><span class="n">callbackSuccess</span></code></td>
+<td><code class="codehilite"><span class="k">function</span></code></td>
+<td>Não</td>
+<td>Função que irá ser executada quando a requisição retornar com o status como <strong>sucesso</strong>.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">callbackError</span></code></td>
+<td><code class="codehilite"><span class="k">function</span></code></td>
+<td>Não</td>
+<td>Função que irá ser executada quando a requisição retornar com o status como <strong>erro</strong>.</td>
+</tr>
 </tbody>
 </table>
 <h3 id="retorno">Retorno<a class="headerlink" href="#retorno" title="Permanent link">&para;</a></h3>
@@ -692,13 +704,11 @@
 4
 5
 6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success!&quot;</span><span class="p">,</span>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;João da Silva&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;emailPrincipal&quot;</span><span class="p">:</span> <span class="s2">&quot;joãosilva@rubeus.com&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;dataNascimento&quot;</span><span class="p">:</span> <span class="s2">&quot;1998-12-31&quot;</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="err">“</span><span class="mi">50</span><span class="err">”</span><span class="p">,</span>
+        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;431152741414362671071974718362671574428181405&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -715,7 +725,7 @@
 5
 6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">nome</span><span class="o">:</span> <span class="s2">&quot;João da Silva&quot;</span><span class="p">,</span>
-    <span class="nx">emailPrincipal</span><span class="o">:</span> <span class="s2">&quot;joaosilva@rubeus.com&quot;</span><span class="p">,</span>
+    <span class="nx">emailPrincipal</span><span class="o">:</span> <span class="s2">&quot;joãosilva@rubeus.com&quot;</span><span class="p">,</span>
     <span class="nx">dataNascimento</span><span class="o">:</span> <span class="s2">&quot;1998-12-31&quot;</span>
 <span class="p">};</span>
 <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendData</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
