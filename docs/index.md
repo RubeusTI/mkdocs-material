@@ -1,6 +1,6 @@
 # Rubeus Developers
 
-Bem-vindo à documentação da Rubeus para os desenvolvedores. Nosso objetivo é auxiliar sua equipe de tecnologia de informação no processo de integração com o CRM Rubeus e os outros produtos para que vocês possam tiram o máximo das possibilidades que esses sistemas oferecem.
+Bem-vindo à documentação da Rubeus para os desenvolvedores. Nosso objetivo é auxiliar sua equipe de tecnologia de informação no processo de integração com o CRM Rubeus e os outros produtos para que possam aproveitar ao máximo todas as possibilidades que nossos sistemas podem oferecer.
 
 Atualmente dispomos de integração via:
 
