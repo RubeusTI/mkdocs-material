@@ -163,7 +163,9 @@
       
         <!-- 
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -189,7 +191,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../apresentacao/" title="Monitoramento de páginas" class="md-tabs__link">
+        <a href="../apresentacao/" title="Monitoramento de páginas" class="md-tabs__link md-tabs__link--active">
           Monitoramento de páginas
         </a>
       
@@ -396,10 +398,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Monitoramento de páginas
@@ -480,6 +484,70 @@
     <a href="../exemplos-codigos/" title="Exemplos de códigos" class="md-nav__link">
       Exemplos de códigos
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Integração via API
+      </label>
+    
+    <a href="./" title="Integração via API" class="md-nav__link md-nav__link--active">
+      Integração via API
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enviando-contato-ao-rubeus" title="Enviando contato ao Rubeus" class="md-nav__link">
+    Enviando contato ao Rubeus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enviando-evento-ao-rubeus" title="Enviando evento ao Rubeus" class="md-nav__link">
+    Enviando evento ao Rubeus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rbtrackingclearsession" title="RBTracking.clearSession()" class="md-nav__link">
+    RBTracking.clearSession()
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -579,7 +647,12 @@
                 
                 
                 <h1 id="integracao-via-api">Integração via API<a class="headerlink" href="#integracao-via-api" title="Permanent link">&para;</a></h1>
-<p>Para realizar a integração com o Monitoramento de página via API no backend de sua aplicação utilizando os métodos de evento e contato é necessário obter alguns dados antes no cliente disponível via JavaScript através dos métodos <code class="codehilite"><span class="n">getHash</span></code> para obter o id da sessão atual, <code class="codehilite"><span class="n">getHostClient</span></code> para obter o id do Rubeus no tracking e o <code class="codehilite"><span class="n">idGenerator</span></code> que gera uma identificação para os campos que requisitam um identificador.</p>
+<p>Para realizar a integração com o Monitoramento de página via API no backend de sua aplicação utilizando os métodos de evento e contato é necessário obter alguns dados antes no cliente disponível via JavaScript através dos métodos:</p>
+<ul>
+<li><code class="codehilite"><span class="n">getHash</span></code> para obter o id da sessão atual.</li>
+<li><code class="codehilite"><span class="n">getHostClient</span></code> para obter o id do Rubeus no tracking.</li>
+<li><code class="codehilite"><span class="n">idGenerator</span></code> que gera uma identificação para os campos que requisitam um identificador.</li>
+</ul>
 <p>Os atributos adicionais devem estar dispostos da seguinte maneira ao realizar o envio de dados para o backend de sua aplicação.</p>
 <div class="superfences-tabs">
 <input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
@@ -817,6 +890,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../exemplos-codigos/" title="Exemplos de códigos" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Exemplos de códigos
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../tabelasauxiliares/" title="Tabelas auxiliares" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Próximo
+                </span>
+                Tabelas auxiliares
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
