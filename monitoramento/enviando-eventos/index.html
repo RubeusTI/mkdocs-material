@@ -528,15 +528,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exemplo-1" title="Exemplo 1" class="md-nav__link">
-    Exemplo 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exemplo-2" title="Exemplo 2" class="md-nav__link">
-    Exemplo 2
+  <a href="#exemplo" title="Exemplo" class="md-nav__link">
+    Exemplo
   </a>
   
 </li>
@@ -724,15 +717,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exemplo-1" title="Exemplo 1" class="md-nav__link">
-    Exemplo 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exemplo-2" title="Exemplo 2" class="md-nav__link">
-    Exemplo 2
+  <a href="#exemplo" title="Exemplo" class="md-nav__link">
+    Exemplo
   </a>
   
 </li>
@@ -797,7 +783,7 @@
 <td><code class="codehilite"><span class="n">eventParameters</span></code></td>
 <td><code class="codehilite"><span class="k">object</span></code></td>
 <td>Sim</td>
-<td>Objeto que contém os dados do evento a ser enviado.</td>
+<td>Objeto que contenha quaisquer dados presentes na lista de dados que o método <a href="/api_crm/evento/#cadastro-de-eventos">cadastrar eventos</a> que se deseja enviar para o CRM Rubeus.<br><strong>Obs.: o campo</strong> <code class="codehilite"><span class="n">pessoa</span></code> <strong>pode ser ignorado já que é enviado automaticamente, porém, se enviado tem que se respeitar a mesma origem entre evento e contato caso seja passado o campo</strong> <code class="codehilite"><span class="n">codigo</span></code><strong>, caso seja o campo</strong> <code class="codehilite"><span class="n">id</span></code><strong>, o mesmo não ocorre podendo assim enviar eventos e contato com origem diferentes.</strong></td>
 </tr>
 <tr>
 <td><code class="codehilite"><span class="n">callbackSuccess</span></code></td>
@@ -814,58 +800,14 @@
 </tbody>
 </table>
 <h4 id="campo-eventparameters">Campo “eventParameters”<a class="headerlink" href="#campo-eventparameters" title="Permanent link">&para;</a></h4>
-<div class="admonition info">
-<p class="admonition-title">Parâmetros</p>
-<ul>
-<li><strong>Os tipos aceitos no <code class="codehilite"><span class="n">eventType</span></code> e/ou <code class="codehilite"><span class="n">codEventType</span></code>são fixos.</strong></li>
-<li><strong>Deverá ser passado dentro de um <code class="codehilite"><span class="k">object</span></code> ou <code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code>.</strong></li>
-</ul>
-</div>
-<table>
-<thead>
-<tr>
-<th>Atributos</th>
-<th>Tipo</th>
-<th>Obrigatoriedade</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code class="codehilite"><span class="n">eventData</span></code></td>
-<td><code class="codehilite"><span class="k">object</span></code></td>
-<td>Sim</td>
-<td>Objeto que contenha quaisquer dados presentes na lista de dados que o método <a href="/api_crm/evento/#cadastro-de-eventos">cadastrar eventos</a> que se deseja enviar para o CRM Rubeus.<br><strong>Obs.: o campo</strong> <code class="codehilite"><span class="n">pessoa</span></code> <strong>pode ser ignorado já que é enviado automaticamente, porém, se enviado tem que se respeitar a mesma origem entre evento e contato caso seja passado o campo</strong> <code class="codehilite"><span class="n">codigo</span></code><strong>, caso seja o campo</strong> <code class="codehilite"><span class="n">id</span></code><strong>, o mesmo não ocorre podendo assim enviar eventos e contato com origem diferentes.</strong></td>
-</tr>
-</tbody>
-</table>
 <h5 id="tipos-de-eventos">Tipos de eventos<a class="headerlink" href="#tipos-de-eventos" title="Permanent link">&para;</a></h5>
 <p>Os tipos de eventos que serão enviados, devem ser gerados pelo meio que o CRM disponibiliza, que é através do menu “Cadastros” e depois na opção “Tipos de eventos”, lá haverá um botão verde escrito “Adicionar tipo de evento” na parte superior esquerda da página.</p>
 <p>Logo após, será necessário recuperar o código do tipo de evento criado utilizando-se da API para a <a href="/api_crm/evento/#listar-tipos-de-eventos">listagem dos tipos de evento</a> do CRM, podendo-se utilizar a página de <a href="/methodstest">testes</a> disponível na própria documentação.</p>
 <h3 id="codigo-exemplo">Código Exemplo<a class="headerlink" href="#codigo-exemplo" title="Permanent link">&para;</a></h3>
-<h4 id="exemplo-1">Exemplo 1<a class="headerlink" href="#exemplo-1" title="Permanent link">&para;</a></h4>
+<h4 id="exemplo">Exemplo<a class="headerlink" href="#exemplo" title="Permanent link">&para;</a></h4>
 <div class="superfences-tabs">
 <input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
 <label for="__tab_1_0">JavaScript</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="nx">evento</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">descricao</span><span class="o">:</span> <span class="s1">&#39;&lt;p&gt;&lt;b style=&quot;padding-top: 10px”&gt;Exemplo: &lt;/b&gt;AAA&lt;br&gt;&lt;b style=”padding-top: 10px”&gt;Dispositivo: &lt;/b&gt;Desktop&lt;br&gt;&lt;/p&gt;&#39;</span><span class="p">,</span>
-    <span class="nx">tipo</span><span class="o">:</span> <span class="s1">&#39;123&#39;</span>
-<span class="p">};</span>
-
-<span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">);</span>
-</pre></div>
-</td></tr></table></div>
-</div>
-<p>Nesse exemplo, temos o envio de um objeto com o código de usuário dentro do <code class="codehilite"><span class="n">eventData</span></code>, e no mesmo nível temos o <code class="codehilite"><span class="n">eventType</span></code> carregando o tipo correto do evento.</p>
-<h4 id="exemplo-2">Exemplo 2<a class="headerlink" href="#exemplo-2" title="Permanent link">&para;</a></h4>
-<div class="superfences-tabs">
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">JavaScript</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -877,14 +819,14 @@
  9
 10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="nx">evento</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">descricao</span><span class="o">:</span> <span class="s1">&#39;&lt;p&gt;&lt;b style=&quot;padding-top: 10px”&gt;Exemplo: &lt;/b&gt;AAA&lt;br&gt;&lt;b style=”padding-top: 10px”&gt;Dispositivo: &lt;/b&gt;Desktop&lt;br&gt;&lt;/p&gt;&#39;</span><span class="p">,</span>
-    <span class="nx">eventType</span><span class="o">:</span> <span class="s1">&#39;312&#39;</span>
+    <span class="nx">tipo</span><span class="o">:</span> <span class="s1">&#39;123&#39;</span>
 <span class="p">};</span>
 
 <span class="kr">const</span> <span class="nx">callback</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">resposta</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">resposta</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
 <span class="p">};</span>
 
-<span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+<span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">);</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -911,8 +853,8 @@
 </tbody>
 </table>
 <div class="superfences-tabs">
-<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
-<label for="__tab_3_0">Sucesso</label>
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Sucesso</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
@@ -920,8 +862,8 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<input name="__tabs_3" type="radio" id="__tab_3_1" />
-<label for="__tab_3_1">Falha</label>
+<input name="__tabs_2" type="radio" id="__tab_2_1" />
+<label for="__tab_2_1">Falha</label>
 <div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
