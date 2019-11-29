@@ -1,7 +1,11 @@
 
 # Integração via API
 
-Para realizar a integração com o Monitoramento de página via API no backend de sua aplicação utilizando os métodos de evento e contato é necessário obter alguns dados antes no cliente disponível via JavaScript através dos métodos `getHash` para obter o id da sessão atual, `getHostClient` para obter o id do Rubeus no tracking e o `idGenerator` que gera uma identificação para os campos que requisitam um identificador.
+Para realizar a integração com o Monitoramento de página via API no backend de sua aplicação utilizando os métodos de evento e contato é necessário obter alguns dados antes no cliente disponível via JavaScript através dos métodos:
+
+*  `getHash` para obter o id da sessão atual.
+* `getHostClient` para obter o id do Rubeus no tracking.
+* `idGenerator` que gera uma identificação para os campos que requisitam um identificador.
 
 Os atributos adicionais devem estar dispostos da seguinte maneira ao realizar o envio de dados para o backend de sua aplicação.
 
