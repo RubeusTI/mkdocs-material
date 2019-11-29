@@ -10,20 +10,11 @@ O método `sendEvent()` é utilizado para o envio de dados relevantes ao servido
 #### Função
 | Parâmetros | Tipo | Obrigatoriedade | Descrição |
 | --- | --- | --- | --- |
-| `eventParameters` | `object` | Sim | Objeto que contém os dados do evento a ser enviado. |
+| `eventParameters` | `object` | Sim | Objeto que contenha quaisquer dados presentes na lista de dados que o método [cadastrar eventos](/api_crm/evento/#cadastro-de-eventos) que se deseja enviar para o CRM Rubeus.<br>**Obs.: o campo** `pessoa` **pode ser ignorado já que é enviado automaticamente, porém, se enviado tem que se respeitar a mesma origem entre evento e contato caso seja passado o campo** `codigo`**, caso seja o campo** `id`**, o mesmo não ocorre podendo assim enviar eventos e contato com origem diferentes.** |
 | `callbackSuccess` | `function` | Não | Função que será executada após o retorno do evento.  |
 | `callbackError` | `function` | Não | Função que será executada após um retorno falho do evento.  |
 
 #### Campo “eventParameters”
-
-!!! info "Parâmetros"
-
-    * **Os tipos aceitos no `eventType` e/ou `codEventType`são fixos.**
-    * **Deverá ser passado dentro de um `object` ou `array[]`.**
-
-| Atributos | Tipo | Obrigatoriedade | Descrição |
-| --- | --- | --- | --- |
-| `eventData` | `object` | Sim | Objeto que contenha quaisquer dados presentes na lista de dados que o método [cadastrar eventos](/api_crm/evento/#cadastro-de-eventos) que se deseja enviar para o CRM Rubeus.<br>**Obs.: o campo** `pessoa` **pode ser ignorado já que é enviado automaticamente, porém, se enviado tem que se respeitar a mesma origem entre evento e contato caso seja passado o campo** `codigo`**, caso seja o campo** `id`**, o mesmo não ocorre podendo assim enviar eventos e contato com origem diferentes.** |
 
 ##### Tipos de eventos
 
@@ -33,7 +24,7 @@ Logo após, será necessário recuperar o código do tipo de evento criado utili
 
 ### Código Exemplo
 
-#### Exemplo 1
+#### Exemplo
 
 ``` javascript tab="JavaScript"
 const evento = {
@@ -41,26 +32,11 @@ const evento = {
     tipo: '123'
 };
 
-RBTracking.sendEvent(evento);
-
-```
-
-Nesse exemplo, temos o envio de um objeto com o código de usuário dentro do `eventData`, e no mesmo nível temos o `eventType` carregando o tipo correto do evento.
-
-#### Exemplo 2
-
-
-``` javascript tab="JavaScript"
-const evento = {
-    descricao: '<p><b style="padding-top: 10px”>Exemplo: </b>AAA<br><b style=”padding-top: 10px”>Dispositivo: </b>Desktop<br></p>',
-    eventType: '312'
-};
-
 const callback = function (resposta) {
     return resposta.responseText;
 };
 
-RBTracking.sendEvent(evento, callback);
+RBTracking.sendEvent(evento);
 
 ```
 
@@ -85,3 +61,4 @@ RBTracking.sendEvent(evento, callback);
 }
 
 ```
+
