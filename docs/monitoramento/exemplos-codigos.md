@@ -3,10 +3,6 @@
 
 Nesta parte da documentação apresentamos alguns exemplos de códigos prontos que auxiliam na integração.
 
-## Página para testes
-
-Para realizar testes no monitoramento de páginas da Rubeus, nós disponibilizamos um repositório no GitHub, para fazer o download clique [aqui](https://github.com/RubeusTI/teste-tracking-rubeus).
-
 ## Enviar contato com envio de evento
 
 Este exemplo é utilizado para enviar os dados coletados no formulário e com um envio de evento.
@@ -25,7 +21,7 @@ function enviarContatoRubeus() {
         /**
          * Os campos origem e token podem ser passados
          * para o monitoramento de páginas se passar
-         * como a landing page.
+         * como a laddingpage.
          */
         origem: 3,
         token: "a1264cc5b581cc6bfbad3faee2c54a99"
@@ -38,23 +34,15 @@ function callbackPessoa(resposta) {
     var codPessoa = resposta.data.id;
 
     var evento = {
-        eventData: {
-            codCurso: document.getElementById("codCurso").value,
-            codOferta: document.getElementById("codOferta").value,
-            codLocalOferta: document.getElementById("codLocalOferta").value,
-            pessoa: {
-                id: codPessoa
-            },
-            origem: 3,
-            token: "a1264cc5b581cc6bfbad3faee2c54a99"
+        codCurso: document.getElementById("codCurso").value,
+        codOferta: document.getElementById("codOferta").value,
+        codLocalOferta: document.getElementById("codLocalOferta").value,
+        pessoa: {
+            id: codPessoa
         },
-        /**
-         * o campo eventType é para ser passado o id do evento
-         * já o codEventType é para o código, caso seja utilizado
-         * deverá ser passado a origem e o token
-         * respectivos ao tipo do evento.
-         */
-        eventType: "29"
+        origem: 3,
+        token: "a1264cc5b581cc6bfbad3faee2c54a99",
+        tipo: "29"
     };
 
     RBTracking.sendEvent(evento, callbackEvento);
@@ -71,4 +59,6 @@ function callbackEvento() {
 function callbackError() {
     console.error("alguma coisa deu errado!");
 }
+
 ```
+
