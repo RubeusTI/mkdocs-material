@@ -303,6 +303,19 @@
     Dados do contato
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buscar-por-nome-email-telefone-ou-cpf" title="Buscar por nome, email, telefone ou CPF" class="md-nav__link">
+    Buscar por nome, email, telefone ou CPF
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -619,6 +632,19 @@
   <a href="#dados-do-contato" title="Dados do contato" class="md-nav__link">
     Dados do contato
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buscar-por-nome-email-telefone-ou-cpf" title="Buscar por nome, email, telefone ou CPF" class="md-nav__link">
+    Buscar por nome, email, telefone ou CPF
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1129,6 +1155,63 @@
 </pre></div>
 </td></tr></table></div>
 </div>
+<h4 id="buscar-por-nome-email-telefone-ou-cpf">Buscar por nome, email, telefone ou CPF<a class="headerlink" href="#buscar-por-nome-email-telefone-ou-cpf" title="Permanent link">&para;</a></h4>
+<p>Semelhante ao método acima, este também faz a consulta de contatos no Rubeus, mas, os parâmetros são <code class="codehilite"><span class="n">nome</span></code>, <code class="codehilite"><span class="n">email</span></code>, <code class="codehilite"><span class="n">telefone</span></code> e/ou <code class="codehilite"><span class="n">cpf</span></code>.
+Todos os campos deverão ser buscados com o operador <code class="codehilite"><span class="k">LIKE</span></code>, portanto, acentos e letras maiúsculas/minúsculas deverão ser ignoradas, por exemplo, uma busca feita por nome <code class="codehilite"><span class="ss">&quot;Carl&quot;</span></code> deverá retornar os dados dos contatos que possuem <code class="codehilite"><span class="ss">&quot;carl&quot;</span></code> em alguma parte de seu nome.
+O operador utilizado entre as entidades de busca é <code class="codehilite"><span class="k">AND</span></code>, por isso se for buscado <code class="codehilite"><span class="n">nome</span> <span class="o">=</span> <span class="ss">&quot;carls&quot;</span></code> e <code class="codehilite"><span class="n">cpf</span> <span class="o">=</span> <span class="ss">&quot;781&quot;</span></code>, o método retornará todos os dados dos contatos que possuem <code class="codehilite"><span class="n">nome</span> <span class="k">like</span> <span class="ss">&quot;%carls%&quot;</span> <span class="k">AND</span> <span class="n">cpf</span> <span class="k">like</span> <span class="ss">&quot;%781%&quot;</span></code>. Todas as entidades trabalharão desta maneira.
+Nas entidades de telefone e e-mail, será validada através de todos os e-mails/telefone que um contato possa ter, sendo considerados os principais e secundários na hora da busca.
+Os dados retornados estarão disponíveis dentro de um array, estruturados exatamente igual ao método da API Pessoa/dadosPessoa.</p>
+<div class="admonition done">
+<p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/dadosPessoas</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Atributos</th>
+<th>Tipo</th>
+<th>Obrigatoriedade</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="codehilite"><span class="n">nome</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Condicional</td>
+<td>Campo para informar o nome do contato.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">email</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Condicional</td>
+<td>Campo para informar o email do contato.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">telefone</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Condicional</td>
+<td>Campo para informar o telefone do contato.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">cpf</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Condicional</td>
+<td>Campo para informar o CPF do contato.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">origem</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td>Sim</td>
+<td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a> utilizado na integração.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">token</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Sim</td>
+<td>Chave de acesso única referente ao canal utilizado na integração.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="alterar-codigo-do-contato">Alterar código do contato<a class="headerlink" href="#alterar-codigo-do-contato" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
 <p><strong  class='REST PUT'>PUT</strong><strong class="MIME">application/json</strong> /api/Contato/alterarCodigo</p>
