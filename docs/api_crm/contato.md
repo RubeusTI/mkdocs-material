@@ -154,7 +154,7 @@ O cadastro de contatos no CRM Rubeus é realizado através de um método bem sim
 
 Semelhante ao método acima, este também faz a consulta de contatos no Rubeus, mas, os parâmetros são `nome`, `email`, `telefone` e/ou `cpf`.
 Todos os campos deverão ser buscados com o operador `#!sql LIKE`, portanto, acentos e letras maiúsculas/minúsculas deverão ser ignoradas, por exemplo, uma busca feita por nome `#!sql "Carl"` deverá retornar os dados dos contatos que possuem `#!sql "carl"` em alguma parte de seu nome.
-O operador utilizado entre as entidades de busca é `#!sql AND`, por isso se for buscado `#!sql nome = "carls"` e `#!sql cpf = "781"`, o método retornará todos os dados dos contatos que possuem `#!sql nome like "%carls%" AND cpf like "%781%"`. Todas as entidades trabalharão desta maneira.
+O operador utilizado entre as entidades de busca é `#!sql AND`, por isso se for buscado `#!sql nome = "carls"` e `#!sql cpf = "781"`, o método retornará todos os dados dos contatos que possuem `#!sql nome LIKE "%carls%" AND cpf LIKE "%781%"`. Todas as entidades trabalharão desta maneira.
 Nas entidades de telefone e e-mail, será validada através de todos os e-mails/telefone que um contato possa ter, sendo considerados os principais e secundários na hora da busca.
 Os dados retornados estarão disponíveis dentro de um array, estruturados exatamente igual ao método da API Pessoa/dadosPessoa.
 
