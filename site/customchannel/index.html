@@ -14,7 +14,7 @@
         <meta name="description" content="Página de documentações da Rubeus">
       
       
-        <link rel="canonical" href="https://docs.rubeus.com.br/urlbuilder/">
+        <link rel="canonical" href="https://docs.rubeus.com.br/customchannel/">
       
       
         <meta name="author" content="Rubeus">
@@ -43,7 +43,7 @@
     
     
       
-        <title>Gerador de URL's - Rubeus Developers</title>
+        <title>Modelos de formulários - Rubeus Developers</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#gerador-de-urls-para-campanhas-de-marketing" tabindex="1" class="md-skip">
+      <a href="#modelos-de-formularios" tabindex="1" class="md-skip">
         Ir para o conteúdo
       </a>
     
@@ -115,7 +115,7 @@
                 Rubeus Developers
               </span>
               <span class="md-header-nav__topic">
-                Gerador de URL's
+                Modelos de formulários
               </span>
             
           
@@ -516,20 +516,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Gerador de URL's" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../urlbuilder/" title="Gerador de URL's" class="md-nav__link">
       Gerador de URL's
     </a>
-    
   </li>
 
     
@@ -551,6 +542,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-wildcard-para-exibicao-de-paginas-especificas" title="Configurando wildcard para exibição de páginas específicas" class="md-nav__link">
+    Configurando wildcard para exibição de páginas específicas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-um-popup-gatilho-personalizado" title="Configurando um popup gatilho personalizado" class="md-nav__link">
+    Configurando um popup gatilho personalizado
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -569,58 +583,13 @@
                 </div>
                 
                 
-                <h1 id="gerador-de-urls-para-campanhas-de-marketing">Gerador de URL's para campanhas de marketing<a class="headerlink" href="#gerador-de-urls-para-campanhas-de-marketing" title="Permanent link">&para;</a></h1>
-<p>Para auxiliar a criação de campanhas de marketing com os parâmetros de UTM corretamente utilizados nas URL's veiculadas.
-<div>
-  <form>
-    <div class="container">
-        <div class="w-100" onkeyup="genUrl()">
-            <div class="inputBox">
-                <label for="URL">Url *</label>
-                <input id="URL" class="w-100 input borderLine" type="text" placeholder="https://www.uniexemplo.edu.br">
-                <small>Domínio da página</small>
-            </div>
-            <hr>
-            <div class="inputBox">
-                <label for="source">Source *</label>
-                <input id="source" class="w-100 input borderLine" type="text" placeholder="facebook">
-                <small>Origem à qual a URL foi destinada. Exemplo: facebook, twitter </small>
-            </div>
-            <div class="inputBox">
-                <label for="medium">Medium *</label>
-                <input id="medium" class="w-100 input borderLine" type="text" placeholder="cpc">
-                <small>Tipo de veiculação. Exemplo: cpc, display, banner</small>
-            </div>
-            <div class="inputBox">
-                <label for="campaign">Campaign *</label>
-                <input id="campaign" class="w-100 input borderLine" type="text" placeholder="captacao2019">
-                <small>Campanha utilizada na URL. Exemplo: bolsa, vestibular</small>
-            </div>
-            <div class="inputBox">
-                <label for="content">Content</label>
-                <input id="content" class="w-100 input borderLine" type="text" placeholder="banner">
-                <small>Conteudo no qual foi vinculado a URL. Exemplo: banner, cta, popup</small>
-            </div>
-            <div class="inputBox">
-                <label for="term">Term</label>
-                <input id="term" class="w-100 input borderLine" type="text" placeholder="captacao+2019">
-                <small>Termos de pesquisa ou palavras chaves. Exemplo: bolsa+2019+uniexemplo</small>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div class="inputBox">
-        <label for="url_gerada">Url gerada</label>
-        <div class="tooltip">
-            <small class="spanTooltip" onclick="copyFunction()" onmouseout="outFunc()">copiar</small>
-            <span class="tooltiptext" id="tooltip">Copiar para a área de transferência</span>
-        </div>
-        <textarea id="url_gerada" class="textarea borderLine"
-            placeholder="https://www.uniexemplo.edu.br?utm_source=facebook&utm_medium=cpc&utm_campaign=captacao2019&utm_content=banner&utm_term=captacao+2019" disabled
-            ></textarea>
-    </div>
-  </form>
-</div></p>
+                <h1 id="modelos-de-formularios">Modelos de formulários<a class="headerlink" href="#modelos-de-formularios" title="Permanent link">&para;</a></h1>
+<h2 id="configurando-wildcard-para-exibicao-de-paginas-especificas">Configurando wildcard para exibição de páginas específicas<a class="headerlink" href="#configurando-wildcard-para-exibicao-de-paginas-especificas" title="Permanent link">&para;</a></h2>
+<p>Para se configurar um caractere coringa (<em>wildcard</em>) na configuração de “Exibir em páginas específicas” basta utilizar o “*” na frente da URI.
+Por exemplo, pegamos a seguinte URL, “https://<span>doc</span>s.rubeus.com.br/monitoramento/instalacao/” o popup só aparecerá nesta página, agora se adicionarmos o “*” deste modo “https://<span>doc</span>s.rubeus.com.br/monitoramento/*”, irá funcionar em todas as páginas com “https://<span>doc</span>s.rubeus.com.br/monitoramento/” presente na URL.</p>
+<h2 id="configurando-um-popup-gatilho-personalizado">Configurando um popup gatilho personalizado<a class="headerlink" href="#configurando-um-popup-gatilho-personalizado" title="Permanent link">&para;</a></h2>
+<p>Para configurar um gatilho personalizado deve-se primeiro verificar se o popup está configurado adequadamente para ser exibido na página atual.
+Depois será necessário pegar o id do popup criado, que por sua vez é disponível após a ultima barra na URL do editor “https://<span>crmuni</span>exemplo.apprubeus.com.br/editar-modelo-de-formulario/<strong>16</strong>”, já sabendo o id do popup, podemos adicionar o gatilho no local desejado adicionando a função <code class="codehilite"><span class="n">CustomChannel</span><span class="p">.</span><span class="n">showPopup</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span></code>.</p>
                 
                   
                 
@@ -637,27 +606,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../tabelasauxiliares/" title="Tabelas auxiliares" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Anterior
-                </span>
-                Tabelas auxiliares
-              </span>
-            </div>
-          </a>
-        
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
