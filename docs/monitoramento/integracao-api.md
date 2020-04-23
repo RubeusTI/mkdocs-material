@@ -69,7 +69,7 @@ $dadosJson = json_encode($dados);
 
 !!! done ""
 
-    <strong class='REST PATCH'>PATCH</strong><strong class="MIME">application/json</strong> https://<span>tracki</span>ng.apprubeus.com.br/api/sendEvent
+    <strong class='REST PATCH'>PATCH</strong><strong class="MIME">application/json</strong> https://<span>tracki</span>ng.apprubeus.com.br/api/v2/sendEvent
 
 Assim como o exemplo anterior, neste caso também devemos ter presente no corpo da requisição os campos adicionais.
 
