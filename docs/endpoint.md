@@ -12,12 +12,12 @@ Essa configuração permite consumir dados disponibilizados em um *endpoint* no 
 ## Passo a passo para realizar a integração
 
 * No CRM Rubeus, clique na engrenagem (configurações no canto superior direito) e selecione **Integrações**;
-* Em **Serviços**, clique em **Adicionar**. Na tela seguinte, você vai ver uma nova tela com alguns campos a serem preenchidos:    
-**Nome:** defina um nome para sua integração. O ideal é criar um nome que identifique qual *endpoint* será responsável por enviar as informações. Exemplo: Envio dos egressos;  
-**URL base:** cole a URL que será utilizada como base de autenticação para o *endpoint* que que irá disponibilizar os dados;  
-**Autenticação:** escolha qual forma de autenticação será utilizada para a disponibilização dos dados, você pode escolher entre *basic*, *Bearer* ou nenhuma;  
-**Tipos de eventos:** será possível definir se os dados enviados serão com a estrutura de contato ou evento;  
-**URL por tipo de evento:** defina qual o endereço completo para ter acesso aos dados que irão popular a informação referênte ao tipo de evento configurado;  
+* Em **Serviços**, clique em **Adicionar**. Na tela seguinte, você vai ver uma nova tela com alguns campos a serem preenchidos:
+**Nome:** defina um nome para sua integração. O ideal é criar um nome que identifique qual *endpoint* será responsável por enviar as informações. Exemplo: Envio dos egressos;
+**URL base:** cole a URL que será utilizada como base de autenticação para o *endpoint* que que irá disponibilizar os dados;
+**Autenticação:** escolha qual forma de autenticação será utilizada para a disponibilização dos dados, você pode escolher entre *basic*, *Bearer* ou nenhuma;
+**Tipos de eventos:** será possível definir se os dados enviados serão com a estrutura de contato ou evento;
+**URL por tipo de evento:** defina qual o endereço completo para ter acesso aos dados que irão popular a informação referênte ao tipo de evento configurado;
 **Validar <i>endpoint</i> por tipo de evento:** você pode validar se a integração com o serviço funcionou. Para isso, clique no botão no menu de configurações e selecione a opção **Validar**.
 
 !!! note "Nota"
@@ -30,47 +30,47 @@ Se a integração estiver funcionando corretamente, você vai receber uma respos
 ## Estruturas de dados
 
 Os dados devem ser disponibilizados seguindo a estrutura abaixo, que é a de um JSON padrão:
-	
+
 
 #### Contato
 
 Utilize essa estrutura quando quiser sincronizar os contatos de uma aplicação com o CRM Rubeus.
 
-| **Atributo** | **Tipo** | **Obrigatoriedade** | **Descrição** | 
+| **Atributo** | **Tipo** | **Obrigatoriedade** | **Descrição** |
 | --- | --- | --- | --- |
-| `codigo` | `string` | Sim. | Usado para atribuir o “Código” do contato. | 
-| `nome` | `string` | Sim. | Usado para atribuir o “Nome” ao contato. | 
-| `nomeSocial` | `string` | Não. | Usado para atribuir o “Nome Social” ao contato. | 
-| `dataNascimento` | `date` | Não. | Usado para atribuir a “Data de Nascimento” ao contato. <br>**Padrão: YYYY-MM-DD** | 
-| `telefonePrincipal` | `string` | Condicional. | Usado para atribuir um “Telefone Principal” ao contato. <br>**Caso não haja um e-mail torna-se obrigatório.** <br>**Padrão: xx(xx) xxxxxxxxx**| 
-| `emailPrincipal` | `string` | Condicional. | Usado para atribuir um “Email” ao contato. <br>**Caso não haja um telefone torna-se obrigatório.** | 
+| `codigo` | `string` | Sim. | Usado para atribuir o “Código” do contato. |
+| `nome` | `string` | Sim. | Usado para atribuir o “Nome” ao contato. |
+| `nomeSocial` | `string` | Não. | Usado para atribuir o “Nome Social” ao contato. |
+| `dataNascimento` | `date` | Não. | Usado para atribuir a “Data de Nascimento” ao contato. <br>**Padrão: YYYY-MM-DD** |
+| `telefonePrincipal` | `string` | Condicional. | Usado para atribuir um “Telefone Principal” ao contato. <br>**Caso não haja um e-mail torna-se obrigatório.** <br>**Padrão: xx(xx) xxxxxxxxx**|
+| `emailPrincipal` | `string` | Condicional. | Usado para atribuir um “Email” ao contato. <br>**Caso não haja um telefone torna-se obrigatório.** |
 | `emails` | `array[]` | Não |  Utilizado para enviar mais de um “Email” para o contato, sendo passado por meio de um `array[]` de `strings`.  |
-| `telefones` | `array[]` | Não. | Utilizado para enviar mais de um “Telefone” para o contato, sendo passado por meio de um `array[]` de `strings` seguindo o mesmo padrão de escrita do `telefonePrincipal`.  | 
-| `cpf` | `string` | Não. | Usado para atribuir o “CPF” ao contato. <br>**Padrão: xxxxxxxxxxxx** | 
-| `endereco` | `string` | Não. | Usado para atribuir o “Endereço” ao contato. | 
-| `cep` | `string` | Não. | Usado para atribuir o “CEP” ao contato. <br>**Padrão: xxxxx-xxx**| 
-| `numero` | `integer` | Não. | Usado para atribuir o “Número da residência” ao contato. | 
-| `bairro` | `string` | Não. | Usado para atribuir o “Bairro” ao contato. | 
-| `cidade` | `string` | Não. | Usado para atribuir a “Cidade” ao contato. | 
-| `uf` | `string` | Não. | Usado para atribuir o “Estado” ao contato. | 
-| `genero` | `string` | Não. | Usado para atribuir o “gênero” ao contato. | 
-| `canhoto` | `boolean` | Não. | Usado para atribuir se o contato é  canhoto. | 
-| `profissao` | `string` | Não. | Usado para atribuir a “Profissão” ao contato. | 
-| `aluno` | `boolean` | Não. | Usado para atribuir se o contato é aluno. | 
-| `exaluno` | `boolean` | Não. | Usado para atribuir se o contato é ex-aluno. | 
-| `anoFormacao` | `integer` | Não. | Usado para atribuir ao contato o último ano sendo aluno. <br>**Padrão: xxxx** | 
-| `deficiencias` | `array[]` | Não. | Usado para informar se o contato possui alguma deficiência. | 
-|   ˪ `id` | `integer` | Condicional. | - | 
-|   ˪ `tipos` | `array[]` | Condicional. | - | 
-| `outrasDeficiencias` | `string` | Não. | Usado para descrever qual a deficiência. | 
-| `estadoCivil` | `integer` | Não. | Usado para informar o estado civil. | 
-| `cor` | `integer` | Não. | Usado para informar a cor da pele do contato. | 
-| `grauInstrucao` | `integer` | Não. | Usado para informar o nível de escolaridade do contato. | 
-| `camposPersonalizados` | `object` | Não. | Usado para atribuir algum campo específico que não está presente no escopo da API. | 
-| `origem` | `integer` | Não. | Usado para especificar de onde o contato se originou. <br>**Caso não especificado, a origem padrão será o CRM.** | 
+| `telefones` | `array[]` | Não. | Utilizado para enviar mais de um “Telefone” para o contato, sendo passado por meio de um `array[]` de `strings` seguindo o mesmo padrão de escrita do `telefonePrincipal`.  |
+| `cpf` | `string` | Não. | Usado para atribuir o “CPF” ao contato. <br>**Padrão: xxxxxxxxxxxx** |
+| `endereco` | `string` | Não. | Usado para atribuir o “Endereço” ao contato. |
+| `cep` | `string` | Não. | Usado para atribuir o “CEP” ao contato. <br>**Padrão: xxxxx-xxx**|
+| `numero` | `integer` | Não. | Usado para atribuir o “Número da residência” ao contato. |
+| `bairro` | `string` | Não. | Usado para atribuir o “Bairro” ao contato. |
+| `cidade` | `string` | Não. | Usado para atribuir a “Cidade” ao contato. |
+| `uf` | `string` | Não. | Usado para atribuir o “Estado” ao contato. |
+| `genero` | `string` | Não. | Usado para atribuir o “gênero” ao contato. |
+| `canhoto` | `boolean` | Não. | Usado para atribuir se o contato é  canhoto. |
+| `profissao` | `string` | Não. | Usado para atribuir a “Profissão” ao contato. |
+| `aluno` | `boolean` | Não. | Usado para atribuir se o contato é aluno. |
+| `exaluno` | `boolean` | Não. | Usado para atribuir se o contato é ex-aluno. |
+| `anoFormacao` | `integer` | Não. | Usado para atribuir ao contato o último ano sendo aluno. <br>**Padrão: xxxx** |
+| `deficiencias` | `array[]` | Não. | Usado para informar se o contato possui alguma deficiência. |
+|   ˪ `id` | `integer` | Condicional. | - |
+|   ˪ `tipos` | `array[]` | Condicional. | - |
+| `outrasDeficiencias` | `string` | Não. | Usado para descrever qual a deficiência. |
+| `estadoCivil` | `integer` | Não. | Usado para informar o estado civil. |
+| `cor` | `integer` | Não. | Usado para informar a cor da pele do contato. |
+| `grauInstrucao` | `integer` | Não. | Usado para informar o nível de escolaridade do contato. |
+| `camposPersonalizados` | `object` | Não. | Usado para atribuir algum campo específico que não está presente no escopo da API. |
+| `origem` | `integer` | Não. | Usado para especificar de onde o contato se originou. <br>**Caso não especificado, a origem padrão será o CRM.** |
 
 ``` JSON tab="JSON"
-contatos: [{
+[{
 	"codigo": "34985761",
 	"nome": "Luís Arthur Roberto Souza",
 	"nomeSocial": "",
@@ -105,12 +105,12 @@ contatos: [{
 	},
 	"origem": "2"
 }]
-``` 
+```
 
 
 #### Evento
 
-Utilize essa estrutura quando quiser enviar informações relacionadas a um contato já existente no CRM Rubeus.	
+Utilize essa estrutura quando quiser enviar informações relacionadas a um contato já existente no CRM Rubeus.
 
 | **Atributo** | **Tipo** | **Obrigatoriedade** | **Descrição** |
 | --- | --- | --- | --- |
@@ -129,21 +129,21 @@ Utilize essa estrutura quando quiser enviar informações relacionadas a um cont
 |   ˪ `selecionouAgendamento` | `integer` | Não | - |
 
 ``` JSON tab="JSON"
-eventos: [{
-	"descricao": "<b>Completou a primeira etapa</b>", 
-	"data": "", 
-	"tipoData": "", 
-	"compareceuAtividade": "", 
-	"notaEnem": "", 
-	"formaIngresso": "", 
-	"dataVencimento": "", 
-	"codContato": "34985761", 
-	"codOferta": "ADM_3", 
-	"codCurso": "ADM", 
-	"codLocalOferta": "SEDE", 
+[{
+	"descricao": "<b>Completou a primeira etapa</b>",
+	"data": "",
+	"tipoData": "",
+	"compareceuAtividade": "",
+	"notaEnem": "",
+	"formaIngresso": "",
+	"dataVencimento": "",
+	"codContato": "34985761",
+	"codOferta": "ADM_3",
+	"codCurso": "ADM",
+	"codLocalOferta": "SEDE",
 	"camposPersonalizados": {
 		"selecionouAgendamento": "0"
-	} 
+	}
 }]
 ```
 
@@ -153,7 +153,7 @@ eventos: [{
 
 **Quantidade de registros:** a quantidade de registros que será permitido enviar por chamada do serviço será 1000 ou um tempo de resposta máximo de 3 minutos, caso essas regras não sejam respeitadas a requisição será cancelada e o status desta configuração de serviço será marcado como “falha”. Não temos garantia de disponibilidade de serviços que ultrapasse o limite estabelecido.
 
-**Estrutura de envio:** a estrutura de envio definida neste documento deve ser seguida de forma rigorosa, estrutura fora do padrão pode ocasionar erros na execução do serviço. Os dados que serão atualizados são de total responsabilidade do cliente.  
+**Estrutura de envio:** a estrutura de envio definida neste documento deve ser seguida de forma rigorosa, estrutura fora do padrão pode ocasionar erros na execução do serviço. Os dados que serão atualizados são de total responsabilidade do cliente.
 
 
 
