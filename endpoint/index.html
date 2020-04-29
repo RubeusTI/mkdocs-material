@@ -734,12 +734,12 @@
 <h2 id="passo-a-passo-para-realizar-a-integracao">Passo a passo para realizar a integração<a class="headerlink" href="#passo-a-passo-para-realizar-a-integracao" title="Permanent link">&para;</a></h2>
 <ul>
 <li>No CRM Rubeus, clique na engrenagem (configurações no canto superior direito) e selecione <strong>Integrações</strong>;</li>
-<li>Em <strong>Serviços</strong>, clique em <strong>Adicionar</strong>. Na tela seguinte, você vai ver uma nova tela com alguns campos a serem preenchidos:  <br />
-<strong>Nome:</strong> defina um nome para sua integração. O ideal é criar um nome que identifique qual <em>endpoint</em> será responsável por enviar as informações. Exemplo: Envio dos egressos;<br />
-<strong>URL base:</strong> cole a URL que será utilizada como base de autenticação para o <em>endpoint</em> que que irá disponibilizar os dados;<br />
-<strong>Autenticação:</strong> escolha qual forma de autenticação será utilizada para a disponibilização dos dados, você pode escolher entre <em>basic</em>, <em>Bearer</em> ou nenhuma;<br />
-<strong>Tipos de eventos:</strong> será possível definir se os dados enviados serão com a estrutura de contato ou evento;<br />
-<strong>URL por tipo de evento:</strong> defina qual o endereço completo para ter acesso aos dados que irão popular a informação referênte ao tipo de evento configurado;<br />
+<li>Em <strong>Serviços</strong>, clique em <strong>Adicionar</strong>. Na tela seguinte, você vai ver uma nova tela com alguns campos a serem preenchidos:
+<strong>Nome:</strong> defina um nome para sua integração. O ideal é criar um nome que identifique qual <em>endpoint</em> será responsável por enviar as informações. Exemplo: Envio dos egressos;
+<strong>URL base:</strong> cole a URL que será utilizada como base de autenticação para o <em>endpoint</em> que que irá disponibilizar os dados;
+<strong>Autenticação:</strong> escolha qual forma de autenticação será utilizada para a disponibilização dos dados, você pode escolher entre <em>basic</em>, <em>Bearer</em> ou nenhuma;
+<strong>Tipos de eventos:</strong> será possível definir se os dados enviados serão com a estrutura de contato ou evento;
+<strong>URL por tipo de evento:</strong> defina qual o endereço completo para ter acesso aos dados que irão popular a informação referênte ao tipo de evento configurado;
 <strong>Validar <i>endpoint</i> por tipo de evento:</strong> você pode validar se a integração com o serviço funcionou. Para isso, clique no botão no menu de configurações e selecione a opção <strong>Validar</strong>.</li>
 </ul>
 <div class="admonition note">
@@ -983,7 +983,7 @@
 32
 33
 34
-35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">contatos:</span> <span class="p">[{</span>
+35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">[{</span>
     <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;34985761&quot;</span><span class="p">,</span>
     <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Luís Arthur Roberto Souza&quot;</span><span class="p">,</span>
     <span class="nt">&quot;nomeSocial&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -1022,7 +1022,7 @@
 </td></tr></table></div>
 </div>
 <h4 id="evento">Evento<a class="headerlink" href="#evento" title="Permanent link">&para;</a></h4>
-<p>Utilize essa estrutura quando quiser enviar informações relacionadas a um contato já existente no CRM Rubeus.   </p>
+<p>Utilize essa estrutura quando quiser enviar informações relacionadas a um contato já existente no CRM Rubeus.</p>
 <table>
 <thead>
 <tr>
@@ -1131,21 +1131,21 @@
 13
 14
 15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">eventos:</span> <span class="p">[{</span>
-    <span class="nt">&quot;descricao&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;b&gt;Completou a primeira etapa&lt;/b&gt;&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;tipoData&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;compareceuAtividade&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;notaEnem&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;formaIngresso&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;dataVencimento&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;codContato&quot;</span><span class="p">:</span> <span class="s2">&quot;34985761&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;codOferta&quot;</span><span class="p">:</span> <span class="s2">&quot;ADM_3&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;codCurso&quot;</span><span class="p">:</span> <span class="s2">&quot;ADM&quot;</span><span class="p">,</span> 
-    <span class="nt">&quot;codLocalOferta&quot;</span><span class="p">:</span> <span class="s2">&quot;SEDE&quot;</span><span class="p">,</span> 
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">[{</span>
+    <span class="nt">&quot;descricao&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;b&gt;Completou a primeira etapa&lt;/b&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tipoData&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;compareceuAtividade&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;notaEnem&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;formaIngresso&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;dataVencimento&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;codContato&quot;</span><span class="p">:</span> <span class="s2">&quot;34985761&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;codOferta&quot;</span><span class="p">:</span> <span class="s2">&quot;ADM_3&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;codCurso&quot;</span><span class="p">:</span> <span class="s2">&quot;ADM&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;codLocalOferta&quot;</span><span class="p">:</span> <span class="s2">&quot;SEDE&quot;</span><span class="p">,</span>
     <span class="nt">&quot;camposPersonalizados&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;selecionouAgendamento&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
-    <span class="p">}</span> 
+    <span class="p">}</span>
 <span class="p">}]</span>
 </pre></div>
 </td></tr></table></div>
@@ -1153,7 +1153,7 @@
 <h2 id="observacoes-importantes">Observações importantes<a class="headerlink" href="#observacoes-importantes" title="Permanent link">&para;</a></h2>
 <p><strong>Limite de serviços:</strong> a quantidade de serviços que poderão ser criados é limitada e definida por contrato para cada cliente.</p>
 <p><strong>Quantidade de registros:</strong> a quantidade de registros que será permitido enviar por chamada do serviço será 1000 ou um tempo de resposta máximo de 3 minutos, caso essas regras não sejam respeitadas a requisição será cancelada e o status desta configuração de serviço será marcado como “falha”. Não temos garantia de disponibilidade de serviços que ultrapasse o limite estabelecido.</p>
-<p><strong>Estrutura de envio:</strong> a estrutura de envio definida neste documento deve ser seguida de forma rigorosa, estrutura fora do padrão pode ocasionar erros na execução do serviço. Os dados que serão atualizados são de total responsabilidade do cliente.  </p>
+<p><strong>Estrutura de envio:</strong> a estrutura de envio definida neste documento deve ser seguida de forma rigorosa, estrutura fora do padrão pode ocasionar erros na execução do serviço. Os dados que serão atualizados são de total responsabilidade do cliente.</p>
                 
                   
                 
