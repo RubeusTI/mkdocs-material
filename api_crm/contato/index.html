@@ -332,6 +332,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#listar-oportunidades" title="Listar Oportunidades" class="md-nav__link">
+    Listar Oportunidades
+  </a>
+  
+</li>
+      
       
       
       
@@ -658,6 +665,13 @@
         <li class="md-nav__item">
   <a href="#excluir-contato" title="Excluir contato" class="md-nav__link">
     Excluir contato
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listar-oportunidades" title="Listar Oportunidades" class="md-nav__link">
+    Listar Oportunidades
   </a>
   
 </li>
@@ -1325,6 +1339,139 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1633</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<h2 id="listar-oportunidades">Listar Oportunidades<a class="headerlink" href="#listar-oportunidades" title="Permanent link">&para;</a></h2>
+<div class="admonition done">
+<p><strong  class='REST POST>POST</strong><strong class="MIME">application/json</strong> /api/Contato/listarOportunidades</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Atributos</th>
+<th>Tipo</th>
+<th>Obrigatoriedade</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="codehilite"><span class="n">id</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td>Condicional</td>
+<td>Id do contato.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">codigo</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Condicional</td>
+<td>Código do contato</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">origem</span></code></td>
+<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td>Sim</td>
+<td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
+</tr>
+<tr>
+<td><code class="codehilite"><span class="n">token</span></code></td>
+<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>Sim</td>
+<td>Chave de acesso única referente ao canal.</td>
+</tr>
+</tbody>
+</table>
+<div class="superfences-tabs">
+<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
+<label for="__tab_5_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;resultado&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;63&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;curso&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;cursoNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Oferta de Curso&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;origem&quot;</span><span class="p">:</span> <span class="s2">&quot;13&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;origemNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Oportunidade&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;etapa&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;etapaNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Confirmado&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;statusNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Em andamento&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;processo&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;razaoOportunidade&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;razaoOportunidadeNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Não contactado&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;processoNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Captação&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;localOferta&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;localOfertaNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Local de oferta&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;processoSeletivo&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;processoSeletivoNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Processo&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;modalidadeNome&quot;</span><span class="p">:</span> <span class="s2">&quot;EaD&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;unidade&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;unidadeNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Unidade&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;responsavelNome&quot;</span><span class="p">:</span> <span class="s2">&quot;João&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;responsavel&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;notaEnem&quot;</span><span class="p">:</span> <span class="s2">&quot;900&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;valorCurso&quot;</span><span class="p">:</span> <span class="s2">&quot;5000&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;ofertaCursoNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Oferta de Curso&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;objecao_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;objecaoNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Objecao&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;dataProva&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-07-21 15:16:00&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;momento&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-05-29 13:05:05&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;minutosEtapa&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;agendamento&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;agendamentoNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Sem Agendar&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;camposPersonalizados&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;campo_compl_proc&quot;</span><span class="p">:</span> <span class="s2">&quot;campo&quot;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
