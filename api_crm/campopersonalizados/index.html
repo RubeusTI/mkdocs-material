@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
     
     
       
@@ -649,47 +649,42 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">nome</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>nome</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Nome do campo personalizado. Limite de caracteres: 75.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">tipo</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>tipo</code></td>
+<td><code>integer</code></td>
 <td>Não</td>
-<td>Informa o tipo do campo que você está criando.<hr>1 para <code class="codehilite"><span class="n">string</span></code>.<br>2 para <code class="codehilite"><span class="n">longtext</span></code>.<br>3 para <code class="codehilite"><span class="nb">integer</span></code>.<br>4 para <code class="codehilite"><span class="nb">date</span></code>.<br>5 para <code class="codehilite"><span class="nb">boolean</span></code>.</td>
+<td>Informa o tipo do campo que você está criando.<hr>1 para <code>string</code>.<br>2 para <code>longtext</code>.<br>3 para <code>integer</code>.<br>4 para <code>date</code>.<br>5 para <code>boolean</code>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">tipoLocal</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>tipoLocal</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Informa o tipo do local<hr>1 para contato<br>2 para registro de processo.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
-<label for="__tab_1_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="1:1">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="kc">true</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="listar-campos-personalizados">Listar campos personalizados<a class="headerlink" href="#listar-campos-personalizados" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -706,34 +701,21 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="2:1">
+<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -745,8 +727,7 @@
         <span class="nt">&quot;tipoLocalNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Contato&quot;</span>
     <span class="p">}]</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
                 
                   
@@ -857,7 +838,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

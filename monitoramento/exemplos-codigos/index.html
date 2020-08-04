@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
     
     
       
@@ -622,60 +622,8 @@
 <p>Nesta parte da documentação apresentamos alguns exemplos de códigos prontos que auxiliam na integração.</p>
 <h2 id="enviar-contato-com-envio-de-evento">Enviar contato com envio de evento<a class="headerlink" href="#enviar-contato-com-envio-de-evento" title="Permanent link">&para;</a></h2>
 <p>Este exemplo é utilizado para enviar os dados coletados no formulário e com um envio de evento.</p>
-<div class="superfences-tabs">
-<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
-<label for="__tab_1_0">JavaScript</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">enviarContatoRubeus</span><span class="p">()</span> <span class="p">{</span>
+<div class="tabbed-set" data-tabs="1:1">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">JavaScript</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">enviarContatoRubeus</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
         <span class="nx">nome</span><span class="o">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;nome&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">,</span>
         <span class="nx">dataNascimento</span><span class="o">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;dataNascimento&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">,</span>
@@ -726,8 +674,7 @@
 <span class="kd">function</span> <span class="nx">callbackError</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;alguma coisa deu errado!&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
                 
                   
@@ -838,7 +785,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

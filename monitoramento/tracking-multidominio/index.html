@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
     
     
       
@@ -644,7 +644,7 @@
                 
                 
                 <h1 id="tracking-multidominio">Tracking multidomínio<a class="headerlink" href="#tracking-multidominio" title="Permanent link">&para;</a></h1>
-<p>Utilizando a função <code class="codehilite"><span class="n">getHash</span><span class="p">()</span></code> é possível obter o <code class="codehilite"><span class="n">hash</span></code> armazenado no dispositivo, e posteriormente, usar para identificar o usuário em outro domínio, passando o hash obtido pela a url que irá para a próxima página e nela é necessário também ter instalado o script de monitoramento para se obter os dados passados e assim obter relatórios mais sólidos.</p>
+<p>Utilizando a função <code>getHash()</code> é possível obter o <code>hash</code> armazenado no dispositivo, e posteriormente, usar para identificar o usuário em outro domínio, passando o hash obtido pela a url que irá para a próxima página e nela é necessário também ter instalado o script de monitoramento para se obter os dados passados e assim obter relatórios mais sólidos.</p>
 <h2 id="estrutura">Estrutura<a class="headerlink" href="#estrutura" title="Permanent link">&para;</a></h2>
 <h3 id="parametros">Parâmetros<a class="headerlink" href="#parametros" title="Permanent link">&para;</a></h3>
 <table>
@@ -658,10 +658,10 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">link</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>link</code></td>
+<td><code>string</code></td>
 <td>Não</td>
-<td>Passa o <code class="codehilite"><span class="n">hash</span></code> por GET utilizando o <code class="codehilite"><span class="n">link</span></code> e redirecionando logo em seguida.</td>
+<td>Passa o <code>hash</code> por GET utilizando o <code>link</code> e redirecionando logo em seguida.</td>
 </tr>
 </tbody>
 </table>
@@ -676,42 +676,30 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">Sucesso</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>Sucesso</code></td>
+<td><code>string</code></td>
 <td>Retorna uma string contendo o hash do usuário caso a operação seja efetuada com sucesso.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">Falha</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>Falha</code></td>
+<td><code>string</code></td>
 <td>Retorna uma string vazia.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="aplicacao-no-uso">Aplicação no uso<a class="headerlink" href="#aplicacao-no-uso" title="Permanent link">&para;</a></h2>
 <p>Tendo como exemplo a situação de ter uma página para a captação de alunos, chamado de <em><a href="https://captacao.exemplounivesidade.com.br">https://captacao.exemplounivesidade.com.br</a></em>, e outra para a inscrição <em><a href="https://inscricao.uniexemplo.edu.br">https://inscricao.uniexemplo.edu.br</a></em> em domínios diferentes.</p>
-<p>Ná página de captação, o aluno escolhe um curso e preenche alguns dados e clica em um botão que irá direcioná-lo à página de inscrição, esses dados precisam ser enviados pelo método <a href="http://enviando-eventos.md">sendEvent()</a> primeiro, no envio dos dados terá que ser passado um segundo parâmetro, que nesse caso é um <code class="codehilite"><span class="n">callback</span></code> contendo o link para qual o usuário será redirecionado, nesse link carrega o hash atual da máquina para haver a comunicação da API com outro domínio.</p>
+<p>Ná página de captação, o aluno escolhe um curso e preenche alguns dados e clica em um botão que irá direcioná-lo à página de inscrição, esses dados precisam ser enviados pelo método <a href="http://enviando-eventos.md">sendEvent()</a> primeiro, no envio dos dados terá que ser passado um segundo parâmetro, que nesse caso é um <code>callback</code> contendo o link para qual o usuário será redirecionado, nesse link carrega o hash atual da máquina para haver a comunicação da API com outro domínio.</p>
 <h3 id="codigo-exemplo">Código Exemplo<a class="headerlink" href="#codigo-exemplo" title="Permanent link">&para;</a></h3>
 <h4 id="exemplo-1">Exemplo 1<a class="headerlink" href="#exemplo-1" title="Permanent link">&para;</a></h4>
-<div class="superfences-tabs">
-<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
-<label for="__tab_1_0">Pegar apenas o hash</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">RBTracking</span><span class="p">.</span><span class="nx">getHash</span><span class="p">();</span>
-</pre></div>
-</td></tr></table></div>
+<div class="tabbed-set" data-tabs="1:1">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Pegar apenas o hash</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="nx">RBTracking</span><span class="p">.</span><span class="nx">getHash</span><span class="p">();</span>
+</code></pre></div></div>
 </div>
 <hr />
 <h4 id="exemplo-2">Exemplo 2<a class="headerlink" href="#exemplo-2" title="Permanent link">&para;</a></h4>
-<div class="superfences-tabs">
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">HTML</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+<div class="tabbed-set" data-tabs="2:2">
+<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">HTML</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;curso&quot;</span> <span class="na">onchange</span><span class="o">=</span><span class="s">&quot;javascript:myFunction()&quot;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>SELECIONAR<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1-123-001&quot;</span><span class="p">&gt;</span>ADMINISTRAÇÃO<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
@@ -719,29 +707,8 @@
         <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1-123-003&quot;</span><span class="p">&gt;</span>DIREITO<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-</pre></div>
-</td></tr></table></div>
-<input name="__tabs_2" type="radio" id="__tab_2_1" />
-<label for="__tab_2_1">Função JavaScript</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+</code></pre></div></div>
+<input name="__tabbed_2" type="radio" id="__tabbed_2_2" /><label for="__tabbed_2_2">Função JavaScript</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">curso</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;curso&#39;</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="p">{</span>
         <span class="nx">eventData</span><span class="o">:</span> <span class="p">{</span>
@@ -760,8 +727,7 @@
         <span class="p">}</span>
     <span class="p">);</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="proximo-passo">Próximo passo<a class="headerlink" href="#proximo-passo" title="Permanent link">&para;</a></h2>
 <p>Já na página seguinte tendo o serviço de monitoramento já instalado e com a comunicação ter sido efetuada com sucesso, o algoritmo será iniciado com o hash que foi passado pela URL e assim identificando que é o mesmo usuário. Para fazer o reprocessamento dos dados que foram previamente passados, é necessário adicionar um <a href="../recuperando-informacoes/">getData()</a> para recuperar as informações e adicioná-las ao fluxo de sua aplicação.</p>
@@ -839,7 +805,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

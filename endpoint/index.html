@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
     
     
       
@@ -765,225 +765,189 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">codigo</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codigo</code></td>
+<td><code>string</code></td>
 <td>Sim.</td>
 <td>Usado para atribuir o “Código” do contato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">nome</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>nome</code></td>
+<td><code>string</code></td>
 <td>Sim.</td>
 <td>Usado para atribuir o “Nome” ao contato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">nomeSocial</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>nomeSocial</code></td>
+<td><code>string</code></td>
 <td>Não.</td>
 <td>Usado para atribuir o “Nome Social” ao contato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">dataNascimento</span></code></td>
-<td><code class="codehilite"><span class="nb">date</span></code></td>
+<td><code>dataNascimento</code></td>
+<td><code>date</code></td>
 <td>Não.</td>
 <td>Usado para atribuir a “Data de Nascimento” ao contato. <br><strong>Padrão: YYYY-MM-DD</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">telefonePrincipal</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>telefonePrincipal</code></td>
+<td><code>string</code></td>
 <td>Condicional.</td>
 <td>Usado para atribuir um “Telefone Principal” ao contato. <br><strong>Caso não haja um e-mail torna-se obrigatório.</strong> <br><strong>Padrão: xx(xx) xxxxxxxxx</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">emailPrincipal</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>emailPrincipal</code></td>
+<td><code>string</code></td>
 <td>Condicional.</td>
 <td>Usado para atribuir um “Email” ao contato. <br><strong>Caso não haja um telefone torna-se obrigatório.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">emails</span></code></td>
-<td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
+<td><code>emails</code></td>
+<td><code>array[]</code></td>
 <td>Não</td>
-<td>Utilizado para enviar mais de um “Email” para o contato, sendo passado por meio de um <code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code> de <code class="codehilite"><span class="n">strings</span></code>.</td>
+<td>Utilizado para enviar mais de um “Email” para o contato, sendo passado por meio de um <code>array[]</code> de <code>strings</code>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">telefones</span></code></td>
-<td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
+<td><code>telefones</code></td>
+<td><code>array[]</code></td>
 <td>Não.</td>
-<td>Utilizado para enviar mais de um “Telefone” para o contato, sendo passado por meio de um <code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code> de <code class="codehilite"><span class="n">strings</span></code> seguindo o mesmo padrão de escrita do <code class="codehilite"><span class="n">telefonePrincipal</span></code>.</td>
+<td>Utilizado para enviar mais de um “Telefone” para o contato, sendo passado por meio de um <code>array[]</code> de <code>strings</code> seguindo o mesmo padrão de escrita do <code>telefonePrincipal</code>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">cpf</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>cpf</code></td>
+<td><code>string</code></td>
 <td>Não.</td>
 <td>Usado para atribuir o “CPF” ao contato. <br><strong>Padrão: xxxxxxxxxxxx</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">endereco</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>endereco</code></td>
+<td><code>string</code></td>
 <td>Não.</td>
 <td>Usado para atribuir o “Endereço” ao contato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">cep</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>cep</code></td>
+<td><code>string</code></td>
 <td>Não.</td>
 <td>Usado para atribuir o “CEP” ao contato. <br><strong>Padrão: xxxxx-xxx</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">numero</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>numero</code></td>
+<td><code>integer</code></td>
 <td>Não.</td>
 <td>Usado para atribuir o “Número da residência” ao contato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">bairro</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>bairro</code></td>
+<td><code>string</code></td>
 <td>Não.</td>
 <td>Usado para atribuir o “Bairro” ao contato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">cidade</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>cidade</code></td>
+<td><code>string</code></td>
 <td>Não.</td>
 <td>Usado para atribuir a “Cidade” ao contato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">uf</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>uf</code></td>
+<td><code>string</code></td>
 <td>Não.</td>
 <td>Usado para atribuir o “Estado” ao contato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">genero</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>genero</code></td>
+<td><code>string</code></td>
 <td>Não.</td>
 <td>Usado para atribuir o “gênero” ao contato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">canhoto</span></code></td>
-<td><code class="codehilite"><span class="nb">boolean</span></code></td>
+<td><code>canhoto</code></td>
+<td><code>boolean</code></td>
 <td>Não.</td>
 <td>Usado para atribuir se o contato é  canhoto.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">profissao</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>profissao</code></td>
+<td><code>string</code></td>
 <td>Não.</td>
 <td>Usado para atribuir a “Profissão” ao contato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">aluno</span></code></td>
-<td><code class="codehilite"><span class="nb">boolean</span></code></td>
+<td><code>aluno</code></td>
+<td><code>boolean</code></td>
 <td>Não.</td>
 <td>Usado para atribuir se o contato é aluno.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">exaluno</span></code></td>
-<td><code class="codehilite"><span class="nb">boolean</span></code></td>
+<td><code>exaluno</code></td>
+<td><code>boolean</code></td>
 <td>Não.</td>
 <td>Usado para atribuir se o contato é ex-aluno.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">anoFormacao</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>anoFormacao</code></td>
+<td><code>integer</code></td>
 <td>Não.</td>
 <td>Usado para atribuir ao contato o último ano sendo aluno. <br><strong>Padrão: xxxx</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">deficiencias</span></code></td>
-<td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
+<td><code>deficiencias</code></td>
+<td><code>array[]</code></td>
 <td>Não.</td>
 <td>Usado para informar se o contato possui alguma deficiência.</td>
 </tr>
 <tr>
-<td>˪ <code class="codehilite"><span class="n">id</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td>˪ <code>id</code></td>
+<td><code>integer</code></td>
 <td>Condicional.</td>
 <td>-</td>
 </tr>
 <tr>
-<td>˪ <code class="codehilite"><span class="n">tipos</span></code></td>
-<td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
+<td>˪ <code>tipos</code></td>
+<td><code>array[]</code></td>
 <td>Condicional.</td>
 <td>-</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">outrasDeficiencias</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>outrasDeficiencias</code></td>
+<td><code>string</code></td>
 <td>Não.</td>
 <td>Usado para descrever qual a deficiência.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">estadoCivil</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>estadoCivil</code></td>
+<td><code>integer</code></td>
 <td>Não.</td>
 <td>Usado para informar o estado civil.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">cor</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>cor</code></td>
+<td><code>integer</code></td>
 <td>Não.</td>
 <td>Usado para informar a cor da pele do contato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">grauInstrucao</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>grauInstrucao</code></td>
+<td><code>integer</code></td>
 <td>Não.</td>
 <td>Usado para informar o nível de escolaridade do contato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">camposPersonalizados</span></code></td>
-<td><code class="codehilite"><span class="k">object</span></code></td>
+<td><code>camposPersonalizados</code></td>
+<td><code>object</code></td>
 <td>Não.</td>
 <td>Usado para atribuir algum campo específico que não está presente no escopo da API.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Não.</td>
 <td>Usado para especificar de onde o contato se originou. <br><strong>Caso não especificado, a origem padrão será o CRM.</strong></td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
-<label for="__tab_1_0">JSON</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">[{</span>
+<div class="tabbed-set" data-tabs="1:1">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">JSON</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">[{</span>
     <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;34985761&quot;</span><span class="p">,</span>
     <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Luís Arthur Roberto Souza&quot;</span><span class="p">,</span>
     <span class="nt">&quot;nomeSocial&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -1018,8 +982,7 @@
     <span class="p">},</span>
     <span class="nt">&quot;origem&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span>
 <span class="p">}]</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h4 id="evento">Evento<a class="headerlink" href="#evento" title="Permanent link">&para;</a></h4>
 <p>Utilize essa estrutura quando quiser enviar informações relacionadas a um contato já existente no CRM Rubeus.</p>
@@ -1034,104 +997,87 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">descricao</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>descricao</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Campo que contem um trecho HTML.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="k">data</span></code></td>
-<td><code class="codehilite"><span class="n">dateTime</span></code></td>
+<td><code>data</code></td>
+<td><code>dateTime</code></td>
 <td>Não</td>
 <td>Data é um campo do tipo data que espera uma data de referência do evento como por exemplo: data da prova, data da entrevista e data de vencimento do boleto.  <br><strong>Padrão: YYYY-MM-DD hh:mm:ss</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">tipoData</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>tipoData</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Campo para se informar a qual conjunto de evento pertence.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">compareceuAtividade</span></code></td>
-<td><code class="codehilite"><span class="nb">boolean</span></code></td>
+<td><code>compareceuAtividade</code></td>
+<td><code>boolean</code></td>
 <td>Não</td>
 <td>Campo para informar o comparecimento do candidato à atividade.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">notaEnem</span></code></td>
-<td><code class="codehilite"><span class="n">inteiro</span></code></td>
+<td><code>notaEnem</code></td>
+<td><code>inteiro</code></td>
 <td>Não</td>
 <td>Campo para informar a nota do ENEM do candidato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">formaIngresso</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>formaIngresso</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Campo para informar o tipo de ingresso na instituição.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">dataVencimento</span></code></td>
-<td><code class="codehilite"><span class="n">dateTime</span></code></td>
+<td><code>dataVencimento</code></td>
+<td><code>dateTime</code></td>
 <td>Não</td>
 <td>DataVencimento é um campo utilizado para definir a data de vencimento de uma atividade caso seja gerada através desse evento.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">codContato</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codContato</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Usado para informar o código do contrato do candidato.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">codOferta</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codOferta</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Usado para informar o código de oferta.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">codCurso</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codCurso</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Usado para informar o código do curso.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">codLocalOferta</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codLocalOferta</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Usado para informar o Local Oferta</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">camposPersonalizados</span></code></td>
-<td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
+<td><code>camposPersonalizados</code></td>
+<td><code>array[]</code></td>
 <td>Não</td>
 <td>Utilizado para informar campos adicionais que não estejam no escopo da API.</td>
 </tr>
 <tr>
-<td>˪ <code class="codehilite"><span class="n">selecionouAgendamento</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td>˪ <code>selecionouAgendamento</code></td>
+<td><code>integer</code></td>
 <td>Não</td>
 <td>-</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">JSON</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">[{</span>
+<div class="tabbed-set" data-tabs="2:1">
+<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">JSON</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">[{</span>
     <span class="nt">&quot;descricao&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;b&gt;Completou a primeira etapa&lt;/b&gt;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;tipoData&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -1147,8 +1093,7 @@
         <span class="nt">&quot;selecionouAgendamento&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
     <span class="p">}</span>
 <span class="p">}]</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="observacoes-importantes">Observações importantes<a class="headerlink" href="#observacoes-importantes" title="Permanent link">&para;</a></h2>
 <p><strong>Limite de serviços:</strong> a quantidade de serviços que poderão ser criados é limitada e definida por contrato para cada cliente.</p>
@@ -1263,7 +1208,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
       
         <script src="../assets/javascripts/extra.js"></script>
       

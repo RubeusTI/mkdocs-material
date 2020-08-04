@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
     
     
       
@@ -689,7 +689,7 @@
                 
                 
                 <h1 id="metodos-de-listagem">Métodos de listagem<a class="headerlink" href="#metodos-de-listagem" title="Permanent link">&para;</a></h1>
-<p>Assim como descrito na seção de <a href="/api_crm/apresentacao/#autenticacao">autenticação</a>, os métodos de listagem também utilizam os atributos <code class="codehilite"><span class="n">origem</span></code> e <code class="codehilite"><span class="n">token</span></code> para a autenticação do usuário no sistema.</p>
+<p>Assim como descrito na seção de <a href="/api_crm/apresentacao/#autenticacao">autenticação</a>, os métodos de listagem também utilizam os atributos <code>origem</code> e <code>token</code> para a autenticação do usuário no sistema.</p>
 <table>
 <thead>
 <tr>
@@ -701,14 +701,14 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
@@ -719,17 +719,8 @@
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Registro/listarNiveisEnsino</p>
 </div>
 <p>Método utilizado para listar os níveis de ensino para posteriormente utilizar como parâmetro em outro método.</p>
-<div class="superfences-tabs">
-<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
-<label for="__tab_1_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="1:1">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -737,8 +728,7 @@
         <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Graduação&quot;</span>
     <span class="p">}]</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <hr />
 <h2 id="listar-tipos-do-contato">Listar tipos do contato<a class="headerlink" href="#listar-tipos-do-contato" title="Permanent link">&para;</a></h2>
@@ -746,24 +736,15 @@
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Registro/listarTiposContato</p>
 </div>
 <p>Método utilizado para listar os tipos de contatos para posteriormente utilizar como parâmetro em outro método.</p>
-<div class="superfences-tabs">
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="2:1">
+<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
         <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Aluno&quot;</span>
     <span class="p">}]</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <hr />
 <h2 id="listar-deficiencias">Listar deficiências<a class="headerlink" href="#listar-deficiencias" title="Permanent link">&para;</a></h2>
@@ -771,38 +752,8 @@
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/listarDeficiencias</p>
 </div>
 <p>Método utilizado para listar os tipos de deficiências para posteriormente utilizar como parâmetro em outro método.</p>
-<div class="superfences-tabs">
-<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
-<label for="__tab_3_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="3:1">
+<input name="__tabbed_3" type="radio" id="__tabbed_3_1" checked="checked" /><label for="__tabbed_3_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -831,8 +782,7 @@
         <span class="p">}]</span>
     <span class="p">}]</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <hr />
 <h2 id="listar-usuarios">Listar usuários<a class="headerlink" href="#listar-usuarios" title="Permanent link">&para;</a></h2>
@@ -850,45 +800,33 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">ids</span></code></td>
-<td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
+<td><code>ids</code></td>
+<td><code>array[]</code></td>
 <td>Não</td>
 <td>Filtrar por id para retornar somente os usuários enviados, se o campo for enviado vazio, todos serão considerados.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">retornarPermissoes</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>retornarPermissoes</code></td>
+<td><code>integer</code></td>
 <td>Não</td>
 <td>Campo passado para se ter o retorno das permissões detalhadas dos usuários.<hr><strong>Padrão: 0 ou 1</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
-<label for="__tab_4_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="4:1">
+<input name="__tabbed_4" type="radio" id="__tabbed_4_1" checked="checked" /><label for="__tabbed_4_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -899,8 +837,7 @@
         <span class="nt">&quot;vendedor&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
     <span class="p">}]</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <hr />
 <h2 id="listar-logs-da-api">Listar logs da API<a class="headerlink" href="#listar-logs-da-api" title="Permanent link">&para;</a></h2>
@@ -918,58 +855,45 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">metodo</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>metodo</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Retornar os logs somente do método enviado, caso não seja enviado nenhum, todos serão considerados.<hr><strong>Exemplo:</strong> "Contato/cadastro"</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">de</span></code></td>
-<td><code class="codehilite"><span class="nb">date</span></code></td>
+<td><code>de</code></td>
+<td><code>date</code></td>
 <td>Condicional</td>
 <td>Data inicial de retorno, deve ser enviado caso seja enviado o campo "ate"</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">ate</span></code></td>
-<td><code class="codehilite"><span class="nb">date</span></code></td>
+<td><code>ate</code></td>
+<td><code>date</code></td>
 <td>Condicional</td>
 <td>Data final de retorno, deve ser enviado caso seja enviado o campo "de"</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origemFiltro</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origemFiltro</code></td>
+<td><code>integer</code></td>
 <td>Não</td>
 <td>Retornar os logs somente da origem enviada, caso não seja enviado nenhuma, todas serão consideradas</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
-<label for="__tab_5_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="5:1">
+<input name="__tabbed_5" type="radio" id="__tabbed_5_1" checked="checked" /><label for="__tabbed_5_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="s2">&quot;JSON com os dados enviados&quot;</span><span class="p">,</span>
@@ -981,26 +905,15 @@
         <span class="nt">&quot;momento&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-12-04 15:14:14&quot;</span>
     <span class="p">}]</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="listar-cidades">Listar cidades<a class="headerlink" href="#listar-cidades" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/listarCidade</p>
 </div>
 <p>Método utilizado para listar as cidades para posteriormente utilizar como parâmetro em outro método.</p>
-<div class="superfences-tabs">
-<input name="__tabs_6" type="radio" id="__tab_6_0" checked="checked" />
-<label for="__tab_6_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="6:1">
+<input name="__tabbed_6" type="radio" id="__tabbed_6_1" checked="checked" /><label for="__tabbed_6_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;resultado&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
@@ -1009,8 +922,7 @@
         <span class="p">}]</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
                 
                   
@@ -1121,7 +1033,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

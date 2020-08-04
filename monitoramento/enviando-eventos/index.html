@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
     
     
       
@@ -765,7 +765,7 @@
                 
                 
                 <h1 id="enviando-eventos">Enviando eventos<a class="headerlink" href="#enviando-eventos" title="Permanent link">&para;</a></h1>
-<p>O método <code class="codehilite"><span class="n">sendEvent</span><span class="p">()</span></code> é utilizado para o envio de dados relevantes ao servidor por meio de eventos.</p>
+<p>O método <code>sendEvent()</code> é utilizado para o envio de dados relevantes ao servidor por meio de eventos.</p>
 <h2 id="estrutura">Estrutura<a class="headerlink" href="#estrutura" title="Permanent link">&para;</a></h2>
 <h3 id="objeto-do-evento">Objeto do evento<a class="headerlink" href="#objeto-do-evento" title="Permanent link">&para;</a></h3>
 <h4 id="funcao">Função<a class="headerlink" href="#funcao" title="Permanent link">&para;</a></h4>
@@ -780,20 +780,20 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">eventParameters</span></code></td>
-<td><code class="codehilite"><span class="k">object</span></code></td>
+<td><code>eventParameters</code></td>
+<td><code>object</code></td>
 <td>Sim</td>
-<td>Objeto que contenha quaisquer dados presentes na lista de dados que o método <a href="/api_crm/evento/#cadastro-de-eventos">cadastrar eventos</a> que se deseja enviar para o CRM Rubeus.<br><strong>Obs.: o campo</strong> <code class="codehilite"><span class="n">pessoa</span></code> <strong>pode ser ignorado já que é enviado automaticamente, porém, se enviado tem que se respeitar a mesma origem entre evento e contato caso seja passado o campo</strong> <code class="codehilite"><span class="n">codigo</span></code><strong>, caso seja o campo</strong> <code class="codehilite"><span class="n">id</span></code><strong>, o mesmo não ocorre podendo assim enviar eventos e contato com origem diferentes.</strong></td>
+<td>Objeto que contenha quaisquer dados presentes na lista de dados que o método <a href="/api_crm/evento/#cadastro-de-eventos">cadastrar eventos</a> que se deseja enviar para o CRM Rubeus.<br><strong>Obs.: o campo</strong> <code>pessoa</code> <strong>pode ser ignorado já que é enviado automaticamente, porém, se enviado tem que se respeitar a mesma origem entre evento e contato caso seja passado o campo</strong> <code>codigo</code><strong>, caso seja o campo</strong> <code>id</code><strong>, o mesmo não ocorre podendo assim enviar eventos e contato com origem diferentes.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">callbackSuccess</span></code></td>
-<td><code class="codehilite"><span class="k">function</span></code></td>
+<td><code>callbackSuccess</code></td>
+<td><code>function</code></td>
 <td>Não</td>
 <td>Função que será executada após o retorno do evento.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">callbackError</span></code></td>
-<td><code class="codehilite"><span class="k">function</span></code></td>
+<td><code>callbackError</code></td>
+<td><code>function</code></td>
 <td>Não</td>
 <td>Função que será executada após um retorno falho do evento.</td>
 </tr>
@@ -805,19 +805,8 @@
 <p>Logo após, será necessário recuperar o código do tipo de evento criado utilizando-se da API para a <a href="/api_crm/evento/#listar-tipos-de-eventos">listagem dos tipos de evento</a> do CRM, podendo-se utilizar a página de <a href="/methodstest">testes</a> disponível na própria documentação.</p>
 <h3 id="codigo-exemplo">Código Exemplo<a class="headerlink" href="#codigo-exemplo" title="Permanent link">&para;</a></h3>
 <h4 id="exemplo">Exemplo<a class="headerlink" href="#exemplo" title="Permanent link">&para;</a></h4>
-<div class="superfences-tabs">
-<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
-<label for="__tab_1_0">JavaScript</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="nx">evento</span> <span class="o">=</span> <span class="p">{</span>
+<div class="tabbed-set" data-tabs="1:1">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">JavaScript</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">evento</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">descricao</span><span class="o">:</span> <span class="s1">&#39;&lt;p&gt;&lt;b style=&quot;padding-top: 10px”&gt;Exemplo: &lt;/b&gt;AAA&lt;br&gt;&lt;b style=”padding-top: 10px”&gt;Dispositivo: &lt;/b&gt;Desktop&lt;br&gt;&lt;/p&gt;&#39;</span><span class="p">,</span>
     <span class="nx">tipo</span><span class="o">:</span> <span class="s1">&#39;123&#39;</span>
 <span class="p">};</span>
@@ -827,8 +816,7 @@
 <span class="p">};</span>
 
 <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendEvent</span><span class="p">(</span><span class="nx">evento</span><span class="p">);</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="retorno">Retorno<a class="headerlink" href="#retorno" title="Permanent link">&para;</a></h2>
 <table>
@@ -841,38 +829,27 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">Sucesso</span></code></td>
-<td><code class="codehilite"><span class="nb">boolean</span></code></td>
-<td>Retorna um JSON contendo os dados do <code class="codehilite"><span class="n">eventData</span></code> enviados caso a operação seja efetuada com sucesso.</td>
+<td><code>Sucesso</code></td>
+<td><code>boolean</code></td>
+<td>Retorna um JSON contendo os dados do <code>eventData</code> enviados caso a operação seja efetuada com sucesso.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">Falha</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>Falha</code></td>
+<td><code>string</code></td>
 <td>Retorna um JSON contendo o erro encontrado no processo.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">Sucesso</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="2:2">
+<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Sucesso</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="err">”</span><span class="nx">success</span><span class="err">”</span> <span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
-<input name="__tabs_2" type="radio" id="__tab_2_1" />
-<label for="__tab_2_1">Falha</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+</code></pre></div></div>
+<input name="__tabbed_2" type="radio" id="__tabbed_2_2" /><label for="__tabbed_2_2">Falha</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="err">”</span><span class="nx">success</span><span class="err">”</span> <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="err">”</span><span class="nx">error</span><span class="err">”</span> <span class="o">:</span> <span class="err">”</span><span class="nx">event</span> <span class="nx">without</span> <span class="nx">type</span><span class="err">”</span><span class="p">,</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
                 
                   
@@ -983,7 +960,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

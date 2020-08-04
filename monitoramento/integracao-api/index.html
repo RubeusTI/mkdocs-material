@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
     
     
       
@@ -649,22 +649,13 @@
                 <h1 id="integracao-via-api">Integração via API<a class="headerlink" href="#integracao-via-api" title="Permanent link">&para;</a></h1>
 <p>Para realizar a integração com o Monitoramento de página via API no backend de sua aplicação utilizando os métodos de evento e contato é necessário obter alguns dados antes no cliente disponível via JavaScript através dos métodos:</p>
 <ul>
-<li><code class="codehilite"><span class="n">getHash</span></code> para obter o id da sessão atual.</li>
-<li><code class="codehilite"><span class="n">getHostClient</span></code> para obter o id do Rubeus no tracking.</li>
-<li><code class="codehilite"><span class="n">idGenerator</span></code> que gera uma identificação para os campos que requisitam um identificador.</li>
+<li><code>getHash</code> para obter o id da sessão atual.</li>
+<li><code>getHostClient</code> para obter o id do Rubeus no tracking.</li>
+<li><code>idGenerator</code> que gera uma identificação para os campos que requisitam um identificador.</li>
 </ul>
 <p>Os atributos adicionais devem estar dispostos da seguinte maneira ao realizar o envio de dados para o backend de sua aplicação.</p>
-<div class="superfences-tabs">
-<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
-<label for="__tab_1_0">JavaScript</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">dados</span> <span class="o">=</span> <span class="p">{</span>
+<div class="tabbed-set" data-tabs="1:1">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">JavaScript</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">dados</span> <span class="o">=</span> <span class="p">{</span>
     <span class="cm">/**</span>
 <span class="cm">     * conteúdo do formulário</span>
 <span class="cm">     */</span>
@@ -672,8 +663,7 @@
     <span class="nx">hostClient</span><span class="o">:</span> <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">getHostClient</span><span class="p">(),</span>
     <span class="nx">substitute_id</span><span class="o">:</span> <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">idGenerator</span><span class="p">()</span>
 <span class="p">};</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="enviando-contato-ao-rubeus">Enviando contato ao Rubeus<a class="headerlink" href="#enviando-contato-ao-rubeus" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -691,22 +681,22 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">session_id</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>session_id</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
-<td>Código da sessão do tracking no navegador.<hr><strong>Adquirido no método</strong> <code class="codehilite"><span class="n">RBTracking</span><span class="p">.</span><span class="n">getHash</span><span class="p">()</span></code>.</td>
+<td>Código da sessão do tracking no navegador.<hr><strong>Adquirido no método</strong> <code>RBTracking.getHash()</code>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">substitute_id</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>substitute_id</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
-<td>Código gerado que serve de identificação secudária do contato no CRM Rubeus.<hr><strong>Adquirido no método</strong> <code class="codehilite"><span class="n">RBTracking</span><span class="p">.</span><span class="n">idGenerator</span><span class="p">()</span></code>.</td>
+<td>Código gerado que serve de identificação secudária do contato no CRM Rubeus.<hr><strong>Adquirido no método</strong> <code>RBTracking.idGenerator()</code>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">hostClient</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>hostClient</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
-<td>Código de identificação do Rubeus.<hr><strong>Adquirido no método</strong> <code class="codehilite"><span class="n">RBTracking</span><span class="p">.</span><span class="n">getHostClient</span><span class="p">()</span></code>.</td>
+<td>Código de identificação do Rubeus.<hr><strong>Adquirido no método</strong> <code>RBTracking.getHostClient()</code>.</td>
 </tr>
 <tr>
 <td>Dados do contato</td>
@@ -717,25 +707,8 @@
 </tbody>
 </table>
 <p>O envio deverá ser um JSON, tal como no cabeçalho deste tópico e a estrutura é semelhante ao <a href="https://docs.rubeus.com.br/api_crm/contato/">cadastro de contato ao Rubeus</a> nativo, mas com os campos adicionais inclusos com o mesmo molde apresentado acima.</p>
-<div class="superfences-tabs">
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">PHP de envio</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="tabbed-set" data-tabs="2:2">
+<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">PHP de envio</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// ...</span>
 <span class="sd">/**</span>
 <span class="sd"> * Dados meramente ilustrativos</span>
@@ -751,30 +724,21 @@
 
 <span class="nv">$dadosJson</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$dados</span><span class="p">);</span>
 <span class="c1">// ...</span>
-</pre></div>
-</td></tr></table></div>
-<input name="__tabs_2" type="radio" id="__tab_2_1" />
-<label for="__tab_2_1">JSON de resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+</code></pre></div></div>
+<input name="__tabbed_2" type="radio" id="__tabbed_2_2" /><label for="__tabbed_2_2">JSON de resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;155&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="enviando-evento-ao-rubeus">Enviando evento ao Rubeus<a class="headerlink" href="#enviando-evento-ao-rubeus" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
 <p><strong class='REST PATCH'>PATCH</strong><strong class="MIME">application/json</strong> https://<span>tracki</span>ng.apprubeus.com.br/api/v2/sendEvent</p>
 </div>
 <p>Assim como o exemplo anterior, neste caso também devemos ter presente no corpo da requisição os campos adicionais.</p>
-<p>A estrutura referente ao <a href="https://docs.rubeus.com.br/api_crm/evento/#cadastro-de-eventos">cadastro de eventos do Rubeus</a>, tem o conteúdo do evento alocados no objeto <code class="codehilite"><span class="n">event</span></code>.</p>
+<p>A estrutura referente ao <a href="https://docs.rubeus.com.br/api_crm/evento/#cadastro-de-eventos">cadastro de eventos do Rubeus</a>, tem o conteúdo do evento alocados no objeto <code>event</code>.</p>
 <table>
 <thead>
 <tr>
@@ -786,55 +750,34 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">event</span></code></td>
-<td><code class="codehilite"><span class="k">object</span></code></td>
+<td><code>event</code></td>
+<td><code>object</code></td>
 <td>Sim</td>
 <td>Objeto com os dados do <a href="/api_crm/evento/#cadastro-de-eventos">evento</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">session_id</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>session_id</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
-<td>Código da sessão do tracking no navegador.<hr><strong>Adquirido no método</strong> <code class="codehilite"><span class="n">RBTracking</span><span class="p">.</span><span class="n">getHash</span><span class="p">()</span></code>.</td>
+<td>Código da sessão do tracking no navegador.<hr><strong>Adquirido no método</strong> <code>RBTracking.getHash()</code>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">hostClient</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>hostClient</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
-<td>Código de identificação do Rubeus.<hr><strong>Adquirido no método</strong> <code class="codehilite"><span class="n">RBTracking</span><span class="p">.</span><span class="n">getHostClient</span><span class="p">()</span></code>.</td>
+<td>Código de identificação do Rubeus.<hr><strong>Adquirido no método</strong> <code>RBTracking.getHostClient()</code>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">pageTitle</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>pageTitle</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Título da página atual em que o visitante está..</td>
 </tr>
 </tbody>
 </table>
-<p>No mesmo nível de <code class="codehilite"><span class="n">event</span></code> temos a presença dos dados adicionais do tracking.</p>
-<div class="superfences-tabs">
-<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
-<label for="__tab_3_0">PHP de envio</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<p>No mesmo nível de <code>event</code> temos a presença dos dados adicionais do tracking.</p>
+<div class="tabbed-set" data-tabs="3:2">
+<input name="__tabbed_3" type="radio" id="__tabbed_3_1" checked="checked" /><label for="__tabbed_3_1">PHP de envio</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// ...</span>
 <span class="sd">/**</span>
 <span class="sd"> * Dados meramente ilustrativos</span>
@@ -854,19 +797,12 @@
 
 <span class="nv">$eventoJson</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$evento</span><span class="p">);</span>
 <span class="c1">// ...</span>
-</pre></div>
-</td></tr></table></div>
-<input name="__tabs_3" type="radio" id="__tab_3_1" />
-<label for="__tab_3_1">JSON de resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+</code></pre></div></div>
+<input name="__tabbed_3" type="radio" id="__tabbed_3_2" /><label for="__tabbed_3_2">JSON de resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="mi">1</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="rbtrackingclearsession">RBTracking.clearSession()<a class="headerlink" href="#rbtrackingclearsession" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
@@ -983,7 +919,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

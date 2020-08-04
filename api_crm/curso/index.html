@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
     
     
       
@@ -705,49 +705,43 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">codigo</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codigo</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Código de identificação externa.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">nome</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>nome</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Nome do curso. Limite de caracteres: 255.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">descricao</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>descricao</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Descrição do curso. Limite de caracteres: 500.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
-<label for="__tab_1_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="1:1">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="cadastro-de-oferta-de-curso">Cadastro de oferta de curso<a class="headerlink" href="#cadastro-de-oferta-de-curso" title="Permanent link">&para;</a></h2>
 <p>Após realizar o cadastro do curso, você pode cadastrar suas ofertas. É a oferta de curso que fica vinculada a um registro de processo.</p>
@@ -765,157 +759,151 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">codOferta</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codOferta</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Código de identificação externa.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">nome</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>nome</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Nome do curso. Limite de caracteres: 255.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">complemento</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>complemento</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Limite de caracteres: 255.<br>Este campo é para diferenciar de forma rápida as ofertas do mesmo curso. Por exemplo: “Como falar em público –** Intensivo**” ou “Como falar em público – <strong>Final de Semana</strong>”.<br><strong>Seja qual for o complemento que queira usar, lembre que a equipe comercial vai ver ele quando tiver duas ofertas com o mesmo nome do curso.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">valor</span></code></td>
+<td><code>valor</code></td>
 <td>float</td>
 <td>Não</td>
 <td>Valor referente ao que a registro de processo gerado a partir deste curso representa (valor do contrato).</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">vagasMinimas</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>vagasMinimas</code></td>
+<td><code>integer</code></td>
 <td>Não</td>
 <td>Mínimo de vagas que deverão ser preenchidas do curso.<br><strong>Esses dados podem ser utilizados nos fluxos de automação para configurar comportamentos automatizados a partir do preenchimento das vagas.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">vagasMaximas</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>vagasMaximas</code></td>
+<td><code>integer</code></td>
 <td>Não</td>
 <td>Máximo de vagas que poderão ser preenchidas do curso.<br><strong>Esses dados podem ser utilizados nos fluxos de automação para configurar comportamentos automatizados a partir do preenchimento das vagas.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">inicioInscricao</span></code></td>
-<td><code class="codehilite"><span class="nb">date</span></code></td>
+<td><code>inicioInscricao</code></td>
+<td><code>date</code></td>
 <td>Não</td>
 <td>Data de início das inscrições.<br><strong>Padrão: YYYY-MM-DD</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">terminoInscricao</span></code></td>
-<td><code class="codehilite"><span class="nb">date</span></code></td>
+<td><code>terminoInscricao</code></td>
+<td><code>date</code></td>
 <td>Não</td>
 <td>Data de término das inscrições.<br><strong>Padrão: YYYY-MM-DD</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">inicioMatricula</span></code></td>
-<td><code class="codehilite"><span class="nb">date</span></code></td>
+<td><code>inicioMatricula</code></td>
+<td><code>date</code></td>
 <td>Não</td>
 <td>Data de início das matrículas.<br><strong>Padrão: YYYY-MM-DD</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">terminoMatricula</span></code></td>
-<td><code class="codehilite"><span class="nb">date</span></code></td>
+<td><code>terminoMatricula</code></td>
+<td><code>date</code></td>
 <td>Não</td>
 <td>Data de término das matrículas.<br><strong>Padrão: YYYY-MM-DD</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">inicioCurso</span></code></td>
-<td><code class="codehilite"><span class="nb">date</span></code></td>
+<td><code>inicioCurso</code></td>
+<td><code>date</code></td>
 <td>Não</td>
 <td>Data de início do curso.<br><strong>Padrão: YYYY-MM-DD</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">terminoCurso</span></code></td>
-<td><code class="codehilite"><span class="nb">date</span></code></td>
+<td><code>terminoCurso</code></td>
+<td><code>date</code></td>
 <td>Não</td>
 <td>Data de término do curso.<br><strong>Padrão: YYYY-MM-DD</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">modalidade</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>modalidade</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código único de identificação da modalidade, que pode ser obtido através do método abaixo no CRM Rubeus.<br><br><a href="#listar-modalidades">Consulta modalidades</a></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">codCurso</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codCurso</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
-<td>O curso pai pode ser adicionado no momento do cadastro da oferta caso ele já não tenha sido cadastrado pelo método <a href="/api_crm/curso/#cadastro-de-curso">cadastro curso</a>.<br><br>Para cadastrar ele basta informar também os campos <code class="codehilite"><span class="n">nomeCurso</span></code> e <code class="codehilite"><span class="n">descricaoCurso</span></code>.<br><br>Caso já tenha cadastrado o curso pai, basta informar o <code class="codehilite"><span class="n">codCurso</span></code> com o código definido no cadastro.<br><br><strong>É obrigatório estar vinculado a um curso pai.</strong></td>
+<td>O curso pai pode ser adicionado no momento do cadastro da oferta caso ele já não tenha sido cadastrado pelo método <a href="/api_crm/curso/#cadastro-de-curso">cadastro curso</a>.<br><br>Para cadastrar ele basta informar também os campos <code>nomeCurso</code> e <code>descricaoCurso</code>.<br><br>Caso já tenha cadastrado o curso pai, basta informar o <code>codCurso</code> com o código definido no cadastro.<br><br><strong>É obrigatório estar vinculado a um curso pai.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">nomeCurso</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>nomeCurso</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Nome do curso pai.<br><strong>Deve ser informado caso queira adicionar o curso pai junto com o cadastro da oferta. Caso já tenha cadastrado o curso pai basta informar o codCurso.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">descricaoCurso</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>descricaoCurso</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Descrição do curso pai.<br><strong>Deve ser informado caso queira adicionar o curso pai junto com o cadastro da oferta. Caso já tenha cadastrado o curso pai basta informar o codCurso.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">codUnidade</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codUnidade</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
-<td>Código único para identificação da unidade que está ofertando o curso atual.<br><br><a href="/api_crm/unidade/#listar-unidades">Listar Unidades</a><br><em>Enviar o campo</em> <code class="codehilite"><span class="n">codigo</span></code></td>
+<td>Código único para identificação da unidade que está ofertando o curso atual.<br><br><a href="/api_crm/unidade/#listar-unidades">Listar Unidades</a><br><em>Enviar o campo</em> <code>codigo</code></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">codLocalOferta</span></code></td>
-<td><code class="codehilite"><span class="nb">array</span><span class="p">[]</span></code></td>
+<td><code>codLocalOferta</code></td>
+<td><code>array[]</code></td>
 <td>Sim</td>
-<td>Array com os códigos externos de identificação do local de oferta cadastrado.<hr><em>Veja abaixo um exemplo do formato para envio.</em><br><code class="codehilite"><span class="p">[</span><span class="mi">1</span><span class="p">]</span></code></td>
+<td>Array com os códigos externos de identificação do local de oferta cadastrado.<hr><em>Veja abaixo um exemplo do formato para envio.</em><br><code class="highlight"><span class="p">[</span><span class="mi">1</span><span class="p">]</span></code></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">codNivelEnsino</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>codNivelEnsino</code></td>
+<td><code>integer</code></td>
 <td>Condicional</td>
-<td>Código único de identificação do nível de ensino.<br><br><a href="/api_crm/metodosdelistagem/#listar-niveis-de-ensino">Listar niveis de ensino</a><br><strong>Enviar o campo</strong> <code class="codehilite"><span class="n">codigo</span></code> <hr> <strong>Caso não seja enviado deverá ser o utilizado o campo</strong> <code class="codehilite"><span class="n">nivelEnsino</span></code><strong>.</strong></td>
+<td>Código único de identificação do nível de ensino.<br><br><a href="/api_crm/metodosdelistagem/#listar-niveis-de-ensino">Listar niveis de ensino</a><br><strong>Enviar o campo</strong> <code>codigo</code> <hr> <strong>Caso não seja enviado deverá ser o utilizado o campo</strong> <code>nivelEnsino</code><strong>.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">nivelEnsino</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>nivelEnsino</code></td>
+<td><code>integer</code></td>
 <td>Condicional</td>
-<td>Identificação do nível de ensino.<br><br><a href="/api_crm/metodosdelistagem/#listar-niveis-de-ensino">Listar niveis de ensino</a><br><strong>Enviar o campo</strong> <code class="codehilite"><span class="n">id</span></code> <hr> <strong>Caso não seja enviado deverá ser o utilizado o campo</strong> <code class="codehilite"><span class="n">codNivelEnsino</span></code><strong>.</strong></td>
+<td>Identificação do nível de ensino.<br><br><a href="/api_crm/metodosdelistagem/#listar-niveis-de-ensino">Listar niveis de ensino</a><br><strong>Enviar o campo</strong> <code>id</code> <hr> <strong>Caso não seja enviado deverá ser o utilizado o campo</strong> <code>codNivelEnsino</code><strong>.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">codProcessoSeletivo</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codProcessoSeletivo</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Código único de identificação do processo seletivo.<br><strong>Para visualizar os códigos dos processos seletivos utilize a aplicação.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="2:1">
+<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="listar-cursos">Listar cursos<a class="headerlink" href="#listar-cursos" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -932,39 +920,27 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">codCurso</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codCurso</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Caso o código do curso seja informado será retornado apenas o curso desejado.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
-<label for="__tab_3_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="3:1">
+<input name="__tabbed_3" type="radio" id="__tabbed_3_1" checked="checked" /><label for="__tabbed_3_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -975,8 +951,7 @@
         <span class="nt">&quot;origemNome&quot;</span><span class="p">:</span> <span class="s2">&quot;CRM&quot;</span>
     <span class="p">}]</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="listar-ofertas">Listar ofertas<a class="headerlink" href="#listar-ofertas" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -993,60 +968,33 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">codOferta</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codOferta</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Caso o codOferta seja informado juntamento com o codCurso será retornado apenas a oferta desejada.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">codCurso</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codCurso</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Caso o codCurso seja informado juntamento com a codOferta será retornado apenas a oferta desejada.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
-<label for="__tab_4_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="4:1">
+<input name="__tabbed_4" type="radio" id="__tabbed_4_1" checked="checked" /><label for="__tabbed_4_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -1072,8 +1020,7 @@
         <span class="nt">&quot;processoSeletivoNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Nome do processo seletivo&quot;</span>
     <span class="p">}]</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="dados-da-oferta-de-curso">Dados da oferta de curso<a class="headerlink" href="#dados-da-oferta-de-curso" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -1090,59 +1037,33 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">codOferta</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codOferta</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Código de identificação externa da oferta de curso</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origemOferta</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origemOferta</code></td>
+<td><code>integer</code></td>
 <td></td>
 <td>Identificação da origem da oferta de curso</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
-<label for="__tab_5_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="5:1">
+<input name="__tabbed_5" type="radio" id="__tabbed_5_1" checked="checked" /><label for="__tabbed_5_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -1167,8 +1088,7 @@
         <span class="nt">&quot;localOferta&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">]</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="listar-modalidades">Listar modalidades<a class="headerlink" href="#listar-modalidades" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -1185,37 +1105,28 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_6" type="radio" id="__tab_6_0" checked="checked" />
-<label for="__tab_6_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="6:1">
+<input name="__tabbed_6" type="radio" id="__tabbed_6_1" checked="checked" /><label for="__tabbed_6_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
         <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Presencial&quot;</span>
     <span class="p">}]</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
                 
                   
@@ -1326,7 +1237,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

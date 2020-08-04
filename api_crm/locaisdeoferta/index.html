@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
     
     
       
@@ -676,101 +676,96 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">codigo</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codigo</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Código de identificação externa.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">titulo</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>titulo</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Título para o tipo do evento. Limite de caracteres: 255.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">descricao</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>descricao</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>A Descrição pode ser enviada no formato HTML para deixar a apresentação dos dados do evento na linha do tempo mais organizados.<br><br>É opcional o envio com as tags HTML.<hr><strong>Limite de caracteres: 255.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">telefone</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>telefone</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>É possível cadastrar um telefone por local de oferta.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">email</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>email</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>É possível cadastrar um email por local de oferta.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">endereco</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>endereco</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Endereço.<hr><strong>Limite de caracteres: 255.</strong></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">numero</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>numero</code></td>
+<td><code>integer</code></td>
 <td>Não</td>
 <td>Número (endereço).</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">bairro</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>bairro</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Bairro. Limite de caracteres: 255.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">cep</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>cep</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>CEP do endereço.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">estadoCidade</span></code></td>
-<td><code class="codehilite"><span class="k">object</span></code></td>
+<td><code>estadoCidade</code></td>
+<td><code>object</code></td>
 <td>Não</td>
 <td>Deve ser informado um objeto com os dados necessários para vincular o contato a uma cidade.<br><strong>Se não for encontrada uma cidade com esse nome nessa UF o contato não será vinculada a uma cidade.</strong></td>
 </tr>
 <tr>
-<td>↳ <code class="codehilite"><span class="n">cidade</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>↳ <code>cidade</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>-</td>
 </tr>
 <tr>
-<td>↳ <code class="codehilite"><span class="n">estado</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td>↳ <code>estado</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>-</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
-<label for="__tab_1_0">Retorno</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="1:1">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Retorno</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="dados-do-local-da-oferta">Dados do local da oferta<a class="headerlink" href="#dados-do-local-da-oferta" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -787,44 +782,27 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">id</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>id</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Identificação retornada no cadastro do local de oferta.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">Retorno</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="2:1">
+<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Retorno</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
@@ -840,8 +818,7 @@
         <span class="nt">&quot;cidade&quot;</span><span class="p">:</span> <span class="kc">null</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="excluir-local-de-oferta">Excluir local de oferta<a class="headerlink" href="#excluir-local-de-oferta" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -858,35 +835,30 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">id</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>id</code></td>
+<td><code>integer</code></td>
 <td>Não</td>
 <td>Identificação retornada no cadastro do local de oferta.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
-<label for="__tab_3_0">Retorno</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="3:1">
+<input name="__tabbed_3" type="radio" id="__tabbed_3_1" checked="checked" /><label for="__tabbed_3_1">Retorno</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
 <h2 id="listar-local-de-oferta">Listar local de oferta<a class="headerlink" href="#listar-local-de-oferta" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -903,39 +875,27 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite"><span class="n">codOferta</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>codOferta</code></td>
+<td><code>string</code></td>
 <td>Não</td>
 <td>Código de identificação externa da oferta de curso.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">origem</span></code></td>
-<td><code class="codehilite"><span class="nb">integer</span></code></td>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="n">token</span></code></td>
-<td><code class="codehilite"><span class="n">string</span></code></td>
+<td><code>token</code></td>
+<td><code>string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs">
-<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
-<label for="__tab_4_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="tabbed-set" data-tabs="4:1">
+<input name="__tabbed_4" type="radio" id="__tabbed_4_1" checked="checked" /><label for="__tabbed_4_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -946,8 +906,7 @@
     <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="kc">null</span>
 <span class="p">}]</span>
 <span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
+</code></pre></div></div>
 </div>
                 
                   
@@ -1058,7 +1017,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

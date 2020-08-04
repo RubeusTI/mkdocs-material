@@ -135,18 +135,18 @@ function genUrl() {
   if (url !== '' && source !== '' && medium !== '' && campaign !== '') {
     url += '?';
 
-    url += 'utm_source=' + source;
+    url += 'utm_source=' + encodeURIComponent(source);
 
-    url += '&utm_medium=' + medium;
+    url += '&utm_medium=' + encodeURIComponent(medium);
 
-    url += '&utm_campaign=' + campaign;
+    url += '&utm_campaign=' + encodeURIComponent(campaign);
 
     if (term !== '') {
-      url += '&utm_term=' + term.replace(' ', '+');
+      url += '&utm_term=' + encodeURIComponent(term).replace(' ', '+');
     }
 
     if (content !== '') {
-      url += '&utm_content=' + content;
+      url += '&utm_content=' + encodeURIComponent(content);
     }
     var textArea = document.getElementById('url_gerada');
     textArea.value = url;
