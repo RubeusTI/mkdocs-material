@@ -1,4 +1,4 @@
-#!bin/bash
+#!bin/zsh
 git add .
 git commit -a -m 'Update site'
 git push
