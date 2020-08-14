@@ -20,10 +20,10 @@ Método para cadastro de eventos no CRM Rubeus.
 | `pessoa` | `object` | Sim | Vincule o contato ao evento. <hr>*Veja abaixo um exemplo do formato para envio.*<br>`#!json { "codigo": “1” }` (O mesmo código enviado no cadastro do contato) ou `#!json { "id": 1 }` (O id retornado no cadastro do contato.) |
 | `codOferta` | `string` | Não | Código de identificação da oferta do curso.<br>**O código da oferta do curso e o código do curso são obrigatórios para vincular o evento ao um curso no CRM Rubeus.** |
 | `codCurso` | `string` | Não | Código de identificação do curso. |
-| `codRegistro` | `string` | Não | Possibilita a criação de mais registros por oferta. |
+| `codRegistro` | `string` | Não | Habilita a criação de mais registros por oferta, sempre criando um novo registro independente dos dados, desde que, o código passado seja único. |
 | `cursosSecundarios` | `array[]` | Não | O campo serve para definir os cursos secundários do registro de processo. |
-| ↳`codOferta` | `string` | Não | - |
-| ↳`codCurso` | `string` | Não | - |
+| ↳ - `codOferta` | `string` | Não | - |
+| ↳ - `codCurso` | `string` | Não | - |
 | `codLocalOferta` | `string` | Não | Código de identificação do local da oferta. |
 | `data` | `dateTime` | Não | A data do evento é utilizada para configurar gatilhos na persona que são disparados X (tempo) antes da data enviada.<br>Essa data é muito utilizada para atividades como data da prova, entrevista e visitas dos candidatos.<br>**Padrão: YYYY-MM-DD hh:mm:ss** |
 | `tipoData` | `string` | Não | O tipo da data tem o propósito de diferenciar os eventos com datas um do outro caso seja usado mais de uma atividade. Para a data da atividade funcionar corretamente este campo é necessário. |
