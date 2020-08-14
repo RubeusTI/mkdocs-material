@@ -723,6 +723,12 @@
 <td>Descrição do curso. Limite de caracteres: 500.</td>
 </tr>
 <tr>
+<td><code>camposPersonalizados</code></td>
+<td><code>object</code></td>
+<td>Não</td>
+<td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="highlight"><span class="err">camposPersonalizados</span> <span class="err">:</span> <span class="p">{</span> <span class="err">coluna:</span> <span class="nt">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">cadastro de campo personalizado</a>, o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado.</td>
+</tr>
+<tr>
 <td><code>origem</code></td>
 <td><code>integer</code></td>
 <td>Sim</td>
