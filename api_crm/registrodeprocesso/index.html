@@ -624,6 +624,10 @@
 <div class="admonition done">
 <p><strong class='REST PUT'>PUT</strong><strong class="MIME">application/json</strong> /api/Registro/alterarPessoasOportunidade</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Obrigatoriedade condicional</p>
+<p>Neste caso, se for passado o <code>codRegistro</code>, não serão necessário os outros parâmetros condicionais, caso contrário os demais deverão ser passados.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -637,31 +641,37 @@
 <tr>
 <td><code>codRegistro</code></td>
 <td><code>string</code></td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>Código da oportunidade.</td>
 </tr>
 <tr>
-<td><code>codContato</code></td>
+<td><code>codPessoa</code></td>
 <td><code>string</code></td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>Código do contato principal</td>
 </tr>
 <tr>
 <td><code>codCurso</code></td>
 <td><code>string</code></td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>Código do curso principal</td>
 </tr>
 <tr>
 <td><code>codOferta</code></td>
 <td><code>string</code></td>
-<td>Sim</td>
+<td>Condicional</td>
 <td>Código da oferta do curso principal.</td>
 </tr>
 <tr>
-<td><code>contatos</code></td>
+<td><code>processo</code></td>
+<td><code>integer</code></td>
+<td>Sim</td>
+<td>Processo no qual o registro é pertencente.</td>
+</tr>
+<tr>
+<td><code>pessoas</code></td>
 <td><code>array[]</code></td>
-<td>Não</td>
+<td>Sim</td>
 <td>Neste modelo com os contatos secundários que vão ser vinculadas a um registro de processo.</td>
 </tr>
 <tr>
@@ -690,8 +700,8 @@
 </tr>
 </tbody>
 </table>
-<div class="tabbed-set" data-tabs="1:1">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs" data-tabs="1:1">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </code></pre></div></div>

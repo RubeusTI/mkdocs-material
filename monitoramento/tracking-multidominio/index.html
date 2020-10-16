@@ -692,14 +692,14 @@
 <p>Ná página de captação, o aluno escolhe um curso e preenche alguns dados e clica em um botão que irá direcioná-lo à página de inscrição, esses dados precisam ser enviados pelo método <a href="http://enviando-eventos.md">sendEvent()</a> primeiro, no envio dos dados terá que ser passado um segundo parâmetro, que nesse caso é um <code>callback</code> contendo o link para qual o usuário será redirecionado, nesse link carrega o hash atual da máquina para haver a comunicação da API com outro domínio.</p>
 <h3 id="codigo-exemplo">Código Exemplo<a class="headerlink" href="#codigo-exemplo" title="Permanent link">&para;</a></h3>
 <h4 id="exemplo-1">Exemplo 1<a class="headerlink" href="#exemplo-1" title="Permanent link">&para;</a></h4>
-<div class="tabbed-set" data-tabs="1:1">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Pegar apenas o hash</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="nx">RBTracking</span><span class="p">.</span><span class="nx">getHash</span><span class="p">();</span>
+<div class="superfences-tabs" data-tabs="1:1">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Pegar apenas o hash</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="nx">RBTracking</span><span class="p">.</span><span class="nx">getHash</span><span class="p">();</span>
 </code></pre></div></div>
 </div>
 <hr />
 <h4 id="exemplo-2">Exemplo 2<a class="headerlink" href="#exemplo-2" title="Permanent link">&para;</a></h4>
-<div class="tabbed-set" data-tabs="2:2">
-<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">HTML</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+<div class="superfences-tabs" data-tabs="2:2">
+<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">HTML</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;curso&quot;</span> <span class="na">onchange</span><span class="o">=</span><span class="s">&quot;javascript:myFunction()&quot;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>SELECIONAR<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1-123-001&quot;</span><span class="p">&gt;</span>ADMINISTRAÇÃO<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
@@ -708,7 +708,7 @@
 <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div></div>
-<input name="__tabbed_2" type="radio" id="__tabbed_2_2" /><label for="__tabbed_2_2">Função JavaScript</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+<input name="__tabbed_2" type="radio" id="__tabbed_2_2" /><label for="__tabbed_2_2">Função JavaScript</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">curso</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;curso&#39;</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="p">{</span>
         <span class="nx">eventData</span><span class="o">:</span> <span class="p">{</span>

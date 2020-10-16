@@ -654,8 +654,8 @@
 <li><code>idGenerator</code> que gera uma identificação para os campos que requisitam um identificador.</li>
 </ul>
 <p>Os atributos adicionais devem estar dispostos da seguinte maneira ao realizar o envio de dados para o backend de sua aplicação.</p>
-<div class="tabbed-set" data-tabs="1:1">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">JavaScript</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">dados</span> <span class="o">=</span> <span class="p">{</span>
+<div class="superfences-tabs" data-tabs="1:1">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">JavaScript</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">dados</span> <span class="o">=</span> <span class="p">{</span>
     <span class="cm">/**</span>
 <span class="cm">     * conteúdo do formulário</span>
 <span class="cm">     */</span>
@@ -707,8 +707,8 @@
 </tbody>
 </table>
 <p>O envio deverá ser um JSON, tal como no cabeçalho deste tópico e a estrutura é semelhante ao <a href="https://docs.rubeus.com.br/api_crm/contato/">cadastro de contato ao Rubeus</a> nativo, mas com os campos adicionais inclusos com o mesmo molde apresentado acima.</p>
-<div class="tabbed-set" data-tabs="2:2">
-<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">PHP de envio</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="superfences-tabs" data-tabs="2:2">
+<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">PHP de envio</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// ...</span>
 <span class="sd">/**</span>
 <span class="sd"> * Dados meramente ilustrativos</span>
@@ -725,7 +725,7 @@
 <span class="nv">$dadosJson</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$dados</span><span class="p">);</span>
 <span class="c1">// ...</span>
 </code></pre></div></div>
-<input name="__tabbed_2" type="radio" id="__tabbed_2_2" /><label for="__tabbed_2_2">JSON de resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<input name="__tabbed_2" type="radio" id="__tabbed_2_2" /><label for="__tabbed_2_2">JSON de resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;155&quot;</span>
@@ -776,8 +776,8 @@
 </tbody>
 </table>
 <p>No mesmo nível de <code>event</code> temos a presença dos dados adicionais do tracking.</p>
-<div class="tabbed-set" data-tabs="3:2">
-<input name="__tabbed_3" type="radio" id="__tabbed_3_1" checked="checked" /><label for="__tabbed_3_1">PHP de envio</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<div class="superfences-tabs" data-tabs="3:2">
+<input name="__tabbed_3" type="radio" id="__tabbed_3_1" checked="checked" /><label for="__tabbed_3_1">PHP de envio</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// ...</span>
 <span class="sd">/**</span>
 <span class="sd"> * Dados meramente ilustrativos</span>
@@ -798,7 +798,7 @@
 <span class="nv">$eventoJson</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$evento</span><span class="p">);</span>
 <span class="c1">// ...</span>
 </code></pre></div></div>
-<input name="__tabbed_3" type="radio" id="__tabbed_3_2" /><label for="__tabbed_3_2">JSON de resposta</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<input name="__tabbed_3" type="radio" id="__tabbed_3_2" /><label for="__tabbed_3_2">JSON de resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="mi">1</span>
 <span class="p">}</span>
