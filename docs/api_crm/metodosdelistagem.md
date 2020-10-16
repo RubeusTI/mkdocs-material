@@ -33,7 +33,7 @@ Método utilizado para listar os níveis de ensino para posteriormente utilizar 
 
 !!! done ""
     
-    <strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Registro/listarTiposContato
+    <strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Registro/listarTiposPessoa
 
 Método utilizado para listar os tipos de contatos para posteriormente utilizar como parâmetro em outro método.
 
