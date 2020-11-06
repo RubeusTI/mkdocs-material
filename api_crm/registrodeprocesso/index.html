@@ -370,6 +370,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#alterar-codigo-de-registro" title="Alterar código de registro" class="md-nav__link">
+    Alterar código de registro
+  </a>
+  
+</li>
+      
       
       
       
@@ -594,6 +601,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#alterar-codigo-de-registro" title="Alterar código de registro" class="md-nav__link">
+    Alterar código de registro
+  </a>
+  
+</li>
+      
       
       
       
@@ -677,13 +691,13 @@
 <tr>
 <td>↳ <code>codigo</code></td>
 <td><code>string</code></td>
-<td>Sim</td>
+<td>Não</td>
 <td>Código de identificação externa do contato.</td>
 </tr>
 <tr>
 <td>↳ <code>tipo</code></td>
 <td><code>integer</code></td>
-<td>Sim</td>
+<td>Não</td>
 <td>Código de identificação do tipo do contato. <br><br><a href="/api_crm/metodosdelistagem/#listar-tipos-do-contato">Listar tipos do contato</a><br><strong>Enviar o campo</strong> <code>id</code></td>
 </tr>
 <tr>
@@ -702,7 +716,54 @@
 </table>
 <div class="superfences-tabs" data-tabs="1:1">
 <input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div></div>
+</div>
+<h2 id="alterar-codigo-de-registro">Alterar código de registro<a class="headerlink" href="#alterar-codigo-de-registro" title="Permanent link">&para;</a></h2>
+<p>Este método tem a função de alterar o código de um registro de processo passando o código novo e o antigo para referência.</p>
+<div class="admonition done">
+<p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Registro/alterarCodigo</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Atributos</th>
+<th>Tipo</th>
+<th>Obrigatoriedade</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>codigoAntigo</code></td>
+<td><code>string</code></td>
+<td>Sim</td>
+<td>Código atual do registro de processo.</td>
+</tr>
+<tr>
+<td><code>codigoNovo</code></td>
+<td><code>string</code></td>
+<td>Sim</td>
+<td>Código novo para o registro de processo.</td>
+</tr>
+<tr>
+<td><code>origem</code></td>
+<td><code>integer</code></td>
+<td>Sim</td>
+<td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
+</tr>
+<tr>
+<td><code>token</code></td>
+<td><code>string</code></td>
+<td>Sim</td>
+<td>Chave de acesso única referente ao canal.</td>
+</tr>
+</tbody>
+</table>
+<div class="superfences-tabs" data-tabs="2:1">
+<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </code></pre></div></div>
 </div>
