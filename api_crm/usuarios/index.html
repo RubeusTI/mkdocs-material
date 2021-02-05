@@ -163,7 +163,9 @@
       
         <!-- 
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -172,7 +174,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../apresentacao/" title="API CRM" class="md-tabs__link">
+        <a href="../apresentacao/" title="API CRM" class="md-tabs__link md-tabs__link--active">
           API CRM
         </a>
       
@@ -228,10 +230,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       API CRM
@@ -360,6 +364,84 @@
     <a href="../metodosdelistagem/" title="Métodos de listagem" class="md-nav__link">
       Métodos de listagem
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Usuários
+      </label>
+    
+    <a href="./" title="Usuários" class="md-nav__link md-nav__link--active">
+      Usuários
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cadastro-de-usuarios" title="Cadastro de usuários" class="md-nav__link">
+    Cadastro de usuários
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editar-dados-de-usuarios" title="Editar dados de usuários" class="md-nav__link">
+    Editar dados de usuários
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excluir-usuario" title="Excluir usuário" class="md-nav__link">
+    Excluir usuário
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ativardesativar-usuario" title="Ativar/desativar usuário" class="md-nav__link">
+    Ativar/desativar usuário
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listar-usuario" title="Listar usuário" class="md-nav__link">
+    Listar usuário
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1105,6 +1187,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../metodosdelistagem/" title="Métodos de listagem" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Métodos de listagem
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../webhook/" title="Webhook" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Próximo
+                </span>
+                Webhook
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
