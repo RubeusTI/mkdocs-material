@@ -28,7 +28,9 @@
 | `perfil` | `array` | Sim | Campo destinado aos [perfis](https://docs.rubeus.com.br/api_crm/metodosdelistagem/#listar-perfis-de-usuarios) que o usuário possuirá. | 
 | `grupoUsuario` | `array` | Não | Utilizado para passar os grupos aos quais este usuário pertencerá. | 
 | `permissao` | `array` | Sim | Vincula os [locais de oferta](https://docs.rubeus.com.br/api_crm/locaisdeoferta/#listar-local-de-oferta) e os [níveis de ensino](https://docs.rubeus.com.br/api_crm/metodosdelistagem/#listar-niveis-de-ensino) ao usuário. | 
-| `processo` | `array` | Sim | Informa em quais processos esse usuário possuirá acesso. | 
+| `processo` | `array` | Sim | Informa em quais processos esse usuário possuirá acesso. |
+| `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
+| `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
 
 ``` JSON tab="Envio"
 {
@@ -66,7 +68,9 @@
         1,
         2,
         3
-    ]
+    ],
+    "origem": 1,
+    "token": "tokendevalidacao"
 }
 ```
 
@@ -101,7 +105,9 @@
 | `perfil` | `array` | Sim | Campo destinado aos [perfis](https://docs.rubeus.com.br/api_crm/metodosdelistagem/#listar-perfis-de-usuarios) que o usuário possuirá. | 
 | `grupoUsuario` | `array` | Não | Utilizado para passar os grupos aos quais este usuário pertencerá. | 
 | `permissao` | `array` | Sim | Vincula os [locais de oferta](https://docs.rubeus.com.br/api_crm/locaisdeoferta/#listar-local-de-oferta) e os [níveis de ensino](https://docs.rubeus.com.br/api_crm/metodosdelistagem/#listar-niveis-de-ensino) ao usuário. | 
-| `processo` | `array` | Sim | Informa em quais processos esse usuário possuirá acesso. | 
+| `processo` | `array` | Sim | Informa em quais processos esse usuário possuirá acesso. |
+| `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
+| `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
 
 ``` JSON tab="Resposta"
 {
@@ -118,7 +124,9 @@
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
-| `id` | `integer` | Sim | A identificação do usuário a ser excluído. | 
+| `id` | `integer` | Sim | A identificação do usuário a ser excluído. |
+| `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
+| `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
 
 ``` JSON tab="Resposta"
 {
@@ -137,6 +145,8 @@
 | --- | --- | --- | --- |
 | `id` | `integer` | Sim | A identificação do usuário a ser desativado. | 
 | `status` | `integer` | Sim | Indica se o usuário será ativado ou desátivado. | 
+| `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
+| `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
 
 ``` JSON tab="Resposta"
 {
