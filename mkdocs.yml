@@ -126,7 +126,6 @@ nav:
     - Registro de processo: api_crm/registrodeprocesso.md
     - Unidade: api_crm/unidade.md
     - Métodos de listagem: api_crm/metodosdelistagem.md
-    # - Usuários: api_crm/usuarios.md
   - Webhook: webhook.md
   - Endpoint: endpoint.md
   - Monitoramento de páginas:
