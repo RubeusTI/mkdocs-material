@@ -6,9 +6,9 @@ O cadastro de contatos no CRM Rubeus é realizado através de um método bem sim
 
 !!! done ""
 
-<strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/cadastro
+	<strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/cadastro
 
-#### 
+
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
 | `codigo` | `string` | Não | Código de identificação externa. | 
@@ -57,7 +57,7 @@ O cadastro de contatos no CRM Rubeus é realizado através de um método bem sim
 
 !!! info ""
 
-O valor do campo `dados` no exemplo de retorno abaixo é o `id` que foi criado no processo.
+	O valor do campo `dados` no exemplo de retorno abaixo é o `id` que foi criado no processo.
 
 ``` JSON tab="Resposta"
 {
@@ -66,15 +66,13 @@ O valor do campo `dados` no exemplo de retorno abaixo é o `id` que foi criado n
 }
 ```
 
-### 
-
 ## Dados do contato
 
 !!! done ""
 
-<strong  class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/dadosPessoa
+	<strong  class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/dadosPessoa
 
-#### 
+
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
 | `codigo` | `string` | Condicional | Chave única de identificação externa do contato enviado. | 
@@ -172,9 +170,9 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 
 !!! done ""
 
-<strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/dadosPessoas
+	<strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/dadosPessoas
 
-#### 
+
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
 | `nome` | `string` | Condicional | Campo para informar o nome do contato. | 
@@ -188,9 +186,9 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 
 !!! done ""
 
-<strong  class='REST PUT'>PUT</strong><strong class="MIME">application/json</strong> /api/Contato/alterarCodigo
+	<strong  class='REST PUT'>PUT</strong><strong class="MIME">application/json</strong> /api/Contato/alterarCodigo
 
-#### 
+
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
 | `id` | `integer` | Condicional | Id do contato.<hr>**Será passado se o** `codigoAntigo` **não for passado.** | 
@@ -210,9 +208,9 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 
 !!! done ""
 
-<strong  class='REST DELETE'>DELETE</strong><strong class="MIME">application/json</strong> /api/Contato/excluirPessoa
+	<strong  class='REST DELETE'>DELETE</strong><strong class="MIME">application/json</strong> /api/Contato/excluirPessoa
 
-#### 
+
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
 | `id` | `array[]` ou `integer` | obrigatório | id dos contatos que devem ser excluídos..<br>**Os id’s deverão ser informados da seguinte forma:**<br>Um único id: 1<br>Vários id’s: [1, 2, 3] | 
@@ -237,7 +235,7 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 
 !!! done ""
 
-<strong  class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/listarOportunidades
+	<strong  class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/listarOportunidades
 
 
 
