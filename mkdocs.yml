@@ -108,7 +108,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences:
-      legacy_tab_classes: true
+      # legacy_tab_classes: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
