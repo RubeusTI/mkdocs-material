@@ -34,26 +34,26 @@ Método para cadastro de eventos no CRM Rubeus.
 | `dataVencimento` | `dateTime` | Não | Data de vencimento da atividade que será criada caso seja configurado no fluxo de automação. | 
 | `camposPersonalizados` | `object` | Não | Usado para atribuir algum campo específico que não está presente no escopo da API.<hr>**Os campos devem ser informados como no exemplo abaixo**:<br><br>`#!json camposPersonalizados : { coluna: "valor" }`<hr>Os nomes das colunas dos campos personalizados são informados no método [cadastro de campo personalizado](/api_crm/campopersonalizados/#listar-campos-personalizados), o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado. | 
 | `dadosOportunidade` | `object` | Não | Serve para poder enviar os dados do registro de processo caso queira alterá-la. | 
-| ↳ `codOferta` | `string` | Não | - | 
-| ↳ `codCurso` | `string` | Não | - | 
-| ↳ `codPessoa` | `string` | Não | - | 
+| ↳ `codOferta` | `string` | Condicional | Informação obrigatória caso seja enviado o dadosOportunidade | 
+| ↳ `codCurso` | `string` | Condicional | Informação obrigatória caso seja enviado o dadosOportunidade | 
+| ↳ `codPessoa` | `string` | Condicional | Informação obrigatória caso seja enviado o dadosOportunidade | 
 | `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
 | `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
 
 ``` JSON tab="Resposta"
 {
-	"success": true,
-	"dados": {
-		"id": "14",
-		"descricao": "<p><b style=\"padding-top:10px\">Descri\u00e7\u00e3o: <\/b>EXEMPLO<br><b style=\"padding-top:10px\">Respons\u00e1vel: <\/b>Matheus Amaral<\/p>",
-		"momento": "2019-02-22 11:12:28",
-		"pessoa": "9",
-		"tipo": "1",
-		"tipoNome": "Foi cadastrado",
-		"imagem": null,
-		"origem": "1",
-		"origemNome": "CRM"
-	}
+    "success": true,
+    "dados": {
+        "id": "14",
+        "descricao": "<p><b style=\"padding-top:10px\">Descri\u00e7\u00e3o: <\/b>EXEMPLO<br><b style=\"padding-top:10px\">Respons\u00e1vel: <\/b>Matheus Amaral<\/p>",
+        "momento": "2019-02-22 11:12:28",
+        "pessoa": "9",
+        "tipo": "1",
+        "tipoNome": "Foi cadastrado",
+        "imagem": null,
+        "origem": "1",
+        "origemNome": "CRM"
+    }
 }
 ```
 
@@ -115,13 +115,15 @@ Método utilizado para listar os tipos de evento para posteriormente utilizar co
 
 ``` JSON tab="Resposta"
 {
-	"success": true,
-	"dados": [{
-		"id": "1",
-		"titulo": "Cadastrou-se",
-		"codigo": "CADASTRO",
-		"origem": "1",
-		"origemNome": "CRM"
-	}]
+    "success": true,
+    "dados": [
+        {
+            "id": "1",
+            "titulo": "Cadastrou-se",
+            "codigo": "CADASTRO",
+            "origem": "1",
+            "origemNome": "CRM"
+        }
+    ]
 }
 ```
