@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.1.0">
     
     
       
@@ -737,27 +737,38 @@
                 
                 
                 <h1 id="modo-manual">Modo manual<a class="headerlink" href="#modo-manual" title="Permanent link">&para;</a></h1>
-<p>Para a ativação do modo manual é necessário alterar o link da biblioteca antes de incluir o script na página desejada, adicionando o parâmetro <code>mm</code> com valor 1 na URL do link da biblioteca, após concluído, a função modo manual da API já estará implementada.</p>
+<p>Para a ativação do modo manual é necessário alterar o link da biblioteca antes de incluir o script na página desejada, adicionando o parâmetro <code class="codehilite">mm</code> com valor 1 na URL do link da biblioteca, após concluído, a função modo manual da API já estará implementada.</p>
 <h2 id="codigo-exemplo">Código Exemplo<a class="headerlink" href="#codigo-exemplo" title="Permanent link">&para;</a></h2>
-<div class="superfences-tabs" data-tabs="1:1">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">HTML/JavaScript</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">HTML/JavaScript</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span>
     <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span>
     <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://tracking.apprubeus.com.br/libs/RBTracking.min.js?rbclicod=aSLhOBjZV5wD7YEpppb3&amp;mm=1&quot;</span>
 <span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="utilizacao">Utilização<a class="headerlink" href="#utilizacao" title="Permanent link">&para;</a></h2>
 <h3 id="iniciar-o-tracking">Iniciar o tracking<a class="headerlink" href="#iniciar-o-tracking" title="Permanent link">&para;</a></h3>
-<p>O método <code>RBTracking.start()</code> deve ser inserido logo após a execução das tarefas desejadas, e logo assim que chamado, ele inicializará.</p>
+<p>O método <code class="codehilite">RBTracking.start()</code> deve ser inserido logo após a execução das tarefas desejadas, e logo assim que chamado, ele inicializará.</p>
 <h4 id="codigo-exemplo_1">Código Exemplo<a class="headerlink" href="#codigo-exemplo_1" title="Permanent link">&para;</a></h4>
-<div class="superfences-tabs" data-tabs="2:1">
-<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">JavaScript</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="c1">// code...</span>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">JavaScript</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// code...</span>
 <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
 <span class="c1">// ...code</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h3 id="enviar-o-evento-de-navegacao">Enviar o evento de navegação<a class="headerlink" href="#enviar-o-evento-de-navegacao" title="Permanent link">&para;</a></h3>
-<p>O método <code>RBTracking.navigate()</code> deve ser chamado para enviar um evento de navegação, tendo como parâmetro uma função de callback que irá retornar no momento que os dados de navegação forem enviados para o servidor.</p>
+<p>O método <code class="codehilite">RBTracking.navigate()</code> deve ser chamado para enviar um evento de navegação, tendo como parâmetro uma função de callback que irá retornar no momento que os dados de navegação forem enviados para o servidor.</p>
 <table>
 <thead>
 <tr>
@@ -769,19 +780,24 @@
 </thead>
 <tbody>
 <tr>
-<td><code>callback</code></td>
-<td><code>function</code></td>
+<td><code class="codehilite">callback</code></td>
+<td><code class="codehilite"><span class="k">function</span></code></td>
 <td>Não</td>
 <td>Função que será executada após o envio dos dados de navegação para o servidor.</td>
 </tr>
 </tbody>
 </table>
 <h4 id="codigo-exemplo_2">Código Exemplo<a class="headerlink" href="#codigo-exemplo_2" title="Permanent link">&para;</a></h4>
-<div class="superfences-tabs" data-tabs="3:1">
-<input name="__tabbed_3" type="radio" id="__tabbed_3_1" checked="checked" /><label for="__tabbed_3_1">JavaScript</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="c1">// code...</span>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">JavaScript</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// code...</span>
 <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">navigate</span><span class="p">(</span><span class="nx">callback</span><span class="p">);</span>
 <span class="c1">// ...code</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
                 
                   
@@ -892,7 +908,7 @@
           
         
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

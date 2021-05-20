@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.1.0">
     
     
       
@@ -623,8 +623,8 @@
                 
                 
                 <h1 id="recuperando-informacoes">Recuperando informações<a class="headerlink" href="#recuperando-informacoes" title="Permanent link">&para;</a></h1>
-<p>Durante o fluxo do script foram coletadas diversas informações sobre o usuário, vide <a href="../apresentacao/">apresentação</a>, parte desses dados, tais como os dados base da campanha e dados passados por evento, podem ser retornados utilizando um método disponível denominado de <code>getData()</code>.<br />
-Para fazer o requerimento dos dados dos eventos atribuídos previamente à um usuário específico. utiliza-se a função <code>getData()</code>, ela espera 2 funções como parâmetros, uma para sucesso e outra para erro. Apenas são retornado eventos mais atuais que tenha o <code>eventType</code> definido como <code>data</code>, vide <a href="../enviando-eventos/">Enviando Eventos</a>, ou seja, apenas eventos relacionados à usuários, os dados originais da campanha serão retornados juntos no documento.</p>
+<p>Durante o fluxo do script foram coletadas diversas informações sobre o usuário, vide <a href="../apresentacao/">apresentação</a>, parte desses dados, tais como os dados base da campanha e dados passados por evento, podem ser retornados utilizando um método disponível denominado de <code class="codehilite">getData()</code>.<br />
+Para fazer o requerimento dos dados dos eventos atribuídos previamente à um usuário específico. utiliza-se a função <code class="codehilite">getData()</code>, ela espera 2 funções como parâmetros, uma para sucesso e outra para erro. Apenas são retornado eventos mais atuais que tenha o <code class="codehilite">eventType</code> definido como <code class="codehilite">data</code>, vide <a href="../enviando-eventos/">Enviando Eventos</a>, ou seja, apenas eventos relacionados à usuários, os dados originais da campanha serão retornados juntos no documento.</p>
 <h2 id="estrutura">Estrutura<a class="headerlink" href="#estrutura" title="Permanent link">&para;</a></h2>
 <h3 id="parametros">Parâmetros<a class="headerlink" href="#parametros" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
@@ -642,22 +642,31 @@ Para fazer o requerimento dos dados dos eventos atribuídos previamente à um us
 </thead>
 <tbody>
 <tr>
-<td><code>callbackSuccess</code></td>
-<td><code>function</code></td>
+<td><code class="codehilite">callbackSuccess</code></td>
+<td><code class="codehilite"><span class="k">function</span></code></td>
 <td>Não</td>
 <td>Callback que será responsável por entregar a resposta do servidor ao cliente</td>
 </tr>
 <tr>
-<td><code>callbackError</code></td>
-<td><code>function</code></td>
+<td><code class="codehilite">callbackError</code></td>
+<td><code class="codehilite"><span class="k">function</span></code></td>
 <td>Não</td>
 <td>Callback que será responsável por entregar a resposta contendo o erro do  servidor ao cliente</td>
 </tr>
 </tbody>
 </table>
 <h3 id="codigo-exemplo">Código Exemplo<a class="headerlink" href="#codigo-exemplo" title="Permanent link">&para;</a></h3>
-<div class="superfences-tabs" data-tabs="1:1">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">JavaScript</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="nx">callbackSuccess</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">JavaScript</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">callbackSuccess</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">(</span><span class="nx">r</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="nx">callbackError</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
@@ -665,7 +674,8 @@ Para fazer o requerimento dos dados dos eventos atribuídos previamente à um us
 <span class="p">}</span>
 
 <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">getData</span><span class="p">(</span><span class="nx">callbackSuccess</span><span class="p">,</span> <span class="nx">callbackError</span><span class="p">);</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h3 id="retorno">Retorno<a class="headerlink" href="#retorno" title="Permanent link">&para;</a></h3>
 <table>
@@ -678,28 +688,40 @@ Para fazer o requerimento dos dados dos eventos atribuídos previamente à um us
 </thead>
 <tbody>
 <tr>
-<td><code>Sucesso</code></td>
-<td><code>array[]</code></td>
+<td><code class="codehilite">Sucesso</code></td>
+<td><code class="codehilite">array[]</code></td>
 <td>Retorna um array contendo os dados de evento do usuário caso a operação seja efetuada com sucesso.</td>
 </tr>
 <tr>
-<td><code>Falha</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">Falha</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Retorna uma string contendo o erro encontrado no processo.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="2:2">
-<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Sucesso</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="err">&#39;agrupamento&#39;:</span> <span class="err">34,</span>
-    <span class="err">&#39;codeUser&#39;:</span> <span class="err">&#39;USUARIO20837420&#39;</span>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Sucesso</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="err">&#39;agrupame</span><span class="kc">nt</span><span class="err">o&#39;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
+    <span class="err">&#39;codeUser&#39;</span><span class="p">:</span> <span class="err">&#39;USUARIO</span><span class="mi">20837420</span><span class="err">&#39;</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<input name="__tabbed_2" type="radio" id="__tabbed_2_2" /><label for="__tabbed_2_2">Falha</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="err">&#39;error&#39;:</span> <span class="err">&#39;Hash</span> <span class="err">não</span> <span class="err">enviado&#39;,</span>
-    <span class="err">&#39;status&#39;:</span> <span class="err">&#39;fail&#39;</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_2" type="radio" id="__tab_2_1" />
+<label for="__tab_2_1">Falha</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="err">&#39;error&#39;</span><span class="p">:</span> <span class="err">&#39;Hash</span> <span class="kc">n</span><span class="err">ão</span> <span class="err">e</span><span class="kc">n</span><span class="err">viado&#39;</span><span class="p">,</span>
+    <span class="err">&#39;s</span><span class="kc">tatus</span><span class="err">&#39;</span><span class="p">:</span> <span class="err">&#39;</span><span class="kc">fa</span><span class="err">il&#39;</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="aplicacao-no-uso">Aplicação no uso<a class="headerlink" href="#aplicacao-no-uso" title="Permanent link">&para;</a></h2>
 <p>Ter uma lista de eventos com os dados originais da campanha pode ser útil na hora de fazer uma integração com outro sistema.</p>
@@ -777,7 +799,7 @@ Para fazer o requerimento dos dados dos eventos atribuídos previamente à um us
           
         
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

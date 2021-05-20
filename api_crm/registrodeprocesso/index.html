@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.1.0">
     
     
       
@@ -652,7 +652,7 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Obrigatoriedade condicional</p>
-<p>Neste caso, se for passado o <code>codRegistro</code>, não serão necessário os outros parâmetros condicionais, caso contrário os demais deverão ser passados.</p>
+<p>Neste caso, se for passado o <code class="codehilite">codRegistro</code>, não serão necessário os outros parâmetros condicionais, caso contrário os demais deverão ser passados.</p>
 </div>
 <table>
 <thead>
@@ -665,72 +665,77 @@
 </thead>
 <tbody>
 <tr>
-<td><code>codRegistro</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codRegistro</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
 <td>Código da oportunidade.</td>
 </tr>
 <tr>
-<td><code>codPessoa</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codPessoa</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
 <td>Código do contato principal</td>
 </tr>
 <tr>
-<td><code>codCurso</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codCurso</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
 <td>Código do curso principal</td>
 </tr>
 <tr>
-<td><code>codOferta</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codOferta</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
 <td>Código da oferta do curso principal.</td>
 </tr>
 <tr>
-<td><code>processo</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite"><span class="k">proc</span><span class="nb">es</span><span class="nv">so</span></code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Processo no qual o registro é pertencente.</td>
 </tr>
 <tr>
-<td><code>pessoas</code></td>
-<td><code>array[]</code></td>
+<td><code class="codehilite">pessoas</code></td>
+<td><code class="codehilite">array[]</code></td>
 <td>Sim</td>
 <td>Neste modelo com os contatos secundários que vão ser vinculadas a um registro de processo.</td>
 </tr>
 <tr>
-<td>↳ <code>codigo</code></td>
-<td><code>string</code></td>
+<td>↳ <code class="codehilite">codigo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Código de identificação externa do contato.</td>
 </tr>
 <tr>
-<td>↳ <code>tipo</code></td>
-<td><code>integer</code></td>
+<td>↳ <code class="codehilite">tipo</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
-<td>Código de identificação do tipo do contato. <br><br><a href="/api_crm/metodosdelistagem/#listar-tipos-do-contato">Listar tipos do contato</a><br><strong>Enviar o campo</strong> <code>id</code></td>
+<td>Código de identificação do tipo do contato. <br><br><a href="/api_crm/metodosdelistagem/#listar-tipos-do-contato">Listar tipos do contato</a><br><strong>Enviar o campo</strong> <code class="codehilite">id</code></td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="1:1">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="alterar-codigo-de-registro">Alterar código de registro<a class="headerlink" href="#alterar-codigo-de-registro" title="Permanent link">&para;</a></h2>
 <p>Este método tem a função de alterar o código de um registro de processo passando o código novo e o antigo para referência.</p>
@@ -748,36 +753,41 @@
 </thead>
 <tbody>
 <tr>
-<td><code>codigoAntigo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codigoAntigo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Código atual do registro de processo.</td>
 </tr>
 <tr>
-<td><code>codigoNovo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codigoNovo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Código novo para o registro de processo.</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="2:1">
-<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
                 
                   
@@ -888,7 +898,7 @@
           
         
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

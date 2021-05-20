@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.1.0">
     
     
       
@@ -701,7 +701,7 @@
                 
                 
                 <h1 id="metodos-de-listagem">Métodos de listagem<a class="headerlink" href="#metodos-de-listagem" title="Permanent link">&para;</a></h1>
-<p>Assim como descrito na seção de <a href="/api_crm/apresentacao/#autenticacao">autenticação</a>, os métodos de listagem também utilizam os atributos <code>origem</code> e <code>token</code> para a autenticação do usuário no sistema.</p>
+<p>Assim como descrito na seção de <a href="/api_crm/apresentacao/#autenticacao">autenticação</a>, os métodos de listagem também utilizam os atributos <code class="codehilite">origem</code> e <code class="codehilite">token</code> para a autenticação do usuário no sistema.</p>
 <table>
 <thead>
 <tr>
@@ -713,14 +713,14 @@
 </thead>
 <tbody>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
@@ -730,8 +730,17 @@
 <div class="admonition done"></div>
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Registro/listarNiveisEnsino</p>
 <p>Método utilizado para listar os níveis de ensino para posteriormente utilizar como parâmetro em outro método.</p>
-<div class="superfences-tabs" data-tabs="1:1">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
 <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
 <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
 <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -739,30 +748,70 @@
 <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Graduação&quot;</span>
 <span class="p">}]</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <hr />
 <h2 id="listar-tipos-do-contato">Listar tipos do contato<a class="headerlink" href="#listar-tipos-do-contato" title="Permanent link">&para;</a></h2>
 <div class="admonition done"></div>
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Registro/listarTiposPessoa</p>
 <p>Método utilizado para listar os tipos de contatos para posteriormente utilizar como parâmetro em outro método.</p>
-<div class="superfences-tabs" data-tabs="2:1">
-<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
 <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
 <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
 <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
 <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Aluno&quot;</span>
 <span class="p">}]</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <hr />
 <h2 id="listar-deficiencias">Listar deficiências<a class="headerlink" href="#listar-deficiencias" title="Permanent link">&para;</a></h2>
 <div class="admonition done"></div>
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/listarDeficiencias</p>
 <p>Método utilizado para listar os tipos de deficiências para posteriormente utilizar como parâmetro em outro método.</p>
-<div class="superfences-tabs" data-tabs="3:1">
-<input name="__tabbed_3" type="radio" id="__tabbed_3_1" checked="checked" /><label for="__tabbed_3_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -791,7 +840,8 @@
         <span class="p">}]</span>
     <span class="p">}]</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <hr />
 <h2 id="listar-perfis-de-usuarios">Listar perfis de usuários<a class="headerlink" href="#listar-perfis-de-usuarios" title="Permanent link">&para;</a></h2>
@@ -809,15 +859,54 @@
 </thead>
 <tbody>
 <tr>
-<td><code>retornarUsuarios</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">retornarUsuarios</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Retorna os usuários que contêm o perfil perfil.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="4:1">
-<input name="__tabbed_4" type="radio" id="__tabbed_4_1" checked="checked" /><label for="__tabbed_4_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
@@ -855,7 +944,8 @@
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <hr />
 <h2 id="listar-logs-da-api">Listar logs da API<a class="headerlink" href="#listar-logs-da-api" title="Permanent link">&para;</a></h2>
@@ -873,45 +963,58 @@
 </thead>
 <tbody>
 <tr>
-<td><code>metodo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">metodo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Retornar os logs somente do método enviado, caso não seja enviado nenhum, todos serão considerados.<hr><strong>Exemplo:</strong> "Contato/cadastro"</td>
 </tr>
 <tr>
-<td><code>de</code></td>
-<td><code>date</code></td>
+<td><code class="codehilite">de</code></td>
+<td><code class="codehilite">date</code></td>
 <td>Condicional</td>
 <td>Data inicial de retorno, deve ser enviado caso seja enviado o campo "ate"</td>
 </tr>
 <tr>
-<td><code>ate</code></td>
-<td><code>date</code></td>
+<td><code class="codehilite">ate</code></td>
+<td><code class="codehilite">date</code></td>
 <td>Condicional</td>
 <td>Data final de retorno, deve ser enviado caso seja enviado o campo "de"</td>
 </tr>
 <tr>
-<td><code>origemFiltro</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origemFiltro</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Retornar os logs somente da origem enviada, caso não seja enviado nenhuma, todas serão consideradas</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="5:1">
-<input name="__tabbed_5" type="radio" id="__tabbed_5_1" checked="checked" /><label for="__tabbed_5_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
+<label for="__tab_5_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="s2">&quot;JSON com os dados enviados&quot;</span><span class="p">,</span>
@@ -923,14 +1026,25 @@
         <span class="nt">&quot;momento&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-12-04 15:14:14&quot;</span>
     <span class="p">}]</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="listar-cidades">Listar cidades<a class="headerlink" href="#listar-cidades" title="Permanent link">&para;</a></h2>
 <div class="admonition done"></div>
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/listarCidade</p>
 <p>Método utilizado para listar as cidades para posteriormente utilizar como parâmetro em outro método.</p>
-<div class="superfences-tabs" data-tabs="6:1">
-<input name="__tabbed_6" type="radio" id="__tabbed_6_1" checked="checked" /><label for="__tabbed_6_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_6" type="radio" id="__tab_6_0" checked="checked" />
+<label for="__tab_6_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;resultado&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
@@ -939,7 +1053,8 @@
         <span class="p">}]</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
                 
                   
@@ -1050,7 +1165,7 @@
           
         
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

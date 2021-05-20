@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.1.0">
     
     
       
@@ -623,7 +623,7 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Obrigatoriedade condicional</p>
-<p>Os campos do tipo <code>integer</code>, devem ser passados <code>1</code> ou <code>0</code> para representação booleana.</p>
+<p>Os campos do tipo <code class="codehilite">integer</code>, devem ser passados <code class="codehilite"><span class="mf">1</span></code> ou <code class="codehilite"><span class="mf">0</span></code> para representação booleana.</p>
 </div>
 <table>
 <thead>
@@ -636,117 +636,157 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nome</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">nome</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Nome que o usuário terá no sistema.</td>
 </tr>
 <tr>
-<td><code>email</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">email</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Email que o usuário terá no sistema.</td>
 </tr>
 <tr>
-<td><code>permissaoContato</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">permissaoContato</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se o usuário terá ou não a permissão de visualizar todos os  contatos, independente do local de oferta dele.</td>
 </tr>
 <tr>
-<td><code>exportarContato</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite"><span class="n">exportarContato</span></code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se o usuário terá ou não a permissão de exportar contatos.</td>
 </tr>
 <tr>
-<td><code>verOportunidadesDeOutrosUsuarios</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">verOportunidadesDeOutrosUsuarios</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se terá ou não a permissão de ver oportunidades de outros usuários no sistema.</td>
 </tr>
 <tr>
-<td><code>verAgendamentosDeOutrosUsuarios</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">verAgendamentosDeOutrosUsuarios</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se terá ou não a permissão de ver as atividades de outros usuários no sistema.</td>
 </tr>
 <tr>
-<td><code>vincularAgendamentosAOutrosUsuarios</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">vincularAgendamentosAOutrosUsuarios</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se terá ou não a permissão de atribuir agendamentos para outros usuários.</td>
 </tr>
 <tr>
-<td><code>vincularNovosProcessos</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">vincularNovosProcessos</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se terá ou não a permissão em novos processos adicionados.</td>
 </tr>
 <tr>
-<td><code>vincularNovosLocaisOferta</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">vincularNovosLocaisOferta</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se terá ou não a permissão em novos locais de ofertas adicionados.</td>
 </tr>
 <tr>
-<td><code>permitirSerResponsavel</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">permitirSerResponsavel</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Permite o usuário ser responsável em registros/atividades.</td>
 </tr>
 <tr>
-<td><code>superAdmin</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">superAdmin</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Indica se o usuário vai ter permissões de super administrador no sistema.</td>
 </tr>
 <tr>
-<td><code>ativado</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">ativado</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Indica se o usuário poderá ser utilizado para realizar login no sistema.</td>
 </tr>
 <tr>
-<td><code>perfil</code></td>
-<td><code>array</code></td>
+<td><code class="codehilite">perfil</code></td>
+<td><code class="codehilite">array</code></td>
 <td>Sim</td>
 <td>Campo destinado aos <a href="https://docs.rubeus.com.br/api_crm/metodosdelistagem/#listar-perfis-de-usuarios">perfis</a> que o usuário possuirá.</td>
 </tr>
 <tr>
-<td><code>grupoUsuario</code></td>
-<td><code>array</code></td>
+<td><code class="codehilite">grupoUsuario</code></td>
+<td><code class="codehilite">array</code></td>
 <td>Não</td>
 <td>Utilizado para passar os grupos aos quais este usuário pertencerá.</td>
 </tr>
 <tr>
-<td><code>permissao</code></td>
-<td><code>array</code></td>
+<td><code class="codehilite">permissao</code></td>
+<td><code class="codehilite">array</code></td>
 <td>Sim</td>
 <td>Vincula os <a href="https://docs.rubeus.com.br/api_crm/locaisdeoferta/#listar-local-de-oferta">locais de oferta</a> e os <a href="https://docs.rubeus.com.br/api_crm/metodosdelistagem/#listar-niveis-de-ensino">níveis de ensino</a> ao usuário.</td>
 </tr>
 <tr>
-<td><code>processo</code></td>
-<td><code>array</code></td>
+<td><code class="codehilite"><span class="k">proc</span><span class="nb">es</span><span class="nv">so</span></code></td>
+<td><code class="codehilite">array</code></td>
 <td>Sim</td>
 <td>Informa em quais processos esse usuário possuirá acesso.</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="1:2">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Envio</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Envio</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;João Ferreira&quot;</span><span class="p">,</span>
     <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;joe@teste.com&quot;</span><span class="p">,</span>
     <span class="nt">&quot;permissao&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -785,12 +825,19 @@
     <span class="nt">&quot;origem&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
     <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;tokendevalidacao&quot;</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<input name="__tabbed_1" type="radio" id="__tabbed_1_2" /><label for="__tabbed_1_2">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_1" type="radio" id="__tab_1_1" />
+<label for="__tab_1_1">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">16</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="editar-dados-de-usuarios">Editar dados de usuários<a class="headerlink" href="#editar-dados-de-usuarios" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -807,127 +854,133 @@
 </thead>
 <tbody>
 <tr>
-<td><code>id</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">id</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>A identificação do usuário a ser modificado.</td>
 </tr>
 <tr>
-<td><code>nome</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">nome</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Nome que o usuário terá no sistema.</td>
 </tr>
 <tr>
-<td><code>email</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">email</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Email que o usuário terá no sistema.</td>
 </tr>
 <tr>
-<td><code>permissaoContato</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">permissaoContato</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se o usuário terá ou não a permissão de visualizar todos os  contatos, independente do local de oferta dele.</td>
 </tr>
 <tr>
-<td><code>exportarContato</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite"><span class="n">exportarContato</span></code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se o usuário terá ou não a permissão de exportar contatos.</td>
 </tr>
 <tr>
-<td><code>verOportunidadesDeOutrosUsuarios</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">verOportunidadesDeOutrosUsuarios</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se terá ou não a permissão de ver oportunidades de outros usuários no sistema.</td>
 </tr>
 <tr>
-<td><code>verAgendamentosDeOutrosUsuarios</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">verAgendamentosDeOutrosUsuarios</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se terá ou não a permissão de ver as atividades de outros usuários no sistema.</td>
 </tr>
 <tr>
-<td><code>vincularAgendamentosAOutrosUsuarios</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">vincularAgendamentosAOutrosUsuarios</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se terá ou não a permissão de atribuir agendamentos para outros usuários.</td>
 </tr>
 <tr>
-<td><code>vincularNovosProcessos</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">vincularNovosProcessos</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se terá ou não a permissão em novos processos adicionados.</td>
 </tr>
 <tr>
-<td><code>vincularNovosLocaisOferta</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">vincularNovosLocaisOferta</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizado para informar se terá ou não a permissão em novos locais de ofertas adicionados.</td>
 </tr>
 <tr>
-<td><code>permitirSerResponsavel</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">permitirSerResponsavel</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Permite o usuário ser responsável em registros/atividades.</td>
 </tr>
 <tr>
-<td><code>superAdmin</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">superAdmin</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Indica se o usuário vai ter permissões de super administrador no sistema.</td>
 </tr>
 <tr>
-<td><code>ativado</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">ativado</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Indica se o usuário poderá ser utilizado para realizar login no sistema.</td>
 </tr>
 <tr>
-<td><code>perfil</code></td>
-<td><code>array</code></td>
+<td><code class="codehilite">perfil</code></td>
+<td><code class="codehilite">array</code></td>
 <td>Sim</td>
 <td>Campo destinado aos <a href="https://docs.rubeus.com.br/api_crm/metodosdelistagem/#listar-perfis-de-usuarios">perfis</a> que o usuário possuirá.</td>
 </tr>
 <tr>
-<td><code>grupoUsuario</code></td>
-<td><code>array</code></td>
+<td><code class="codehilite">grupoUsuario</code></td>
+<td><code class="codehilite">array</code></td>
 <td>Não</td>
 <td>Utilizado para passar os grupos aos quais este usuário pertencerá.</td>
 </tr>
 <tr>
-<td><code>permissao</code></td>
-<td><code>array</code></td>
+<td><code class="codehilite">permissao</code></td>
+<td><code class="codehilite">array</code></td>
 <td>Sim</td>
 <td>Vincula os <a href="https://docs.rubeus.com.br/api_crm/locaisdeoferta/#listar-local-de-oferta">locais de oferta</a> e os <a href="https://docs.rubeus.com.br/api_crm/metodosdelistagem/#listar-niveis-de-ensino">níveis de ensino</a> ao usuário.</td>
 </tr>
 <tr>
-<td><code>processo</code></td>
-<td><code>array</code></td>
+<td><code class="codehilite"><span class="k">proc</span><span class="nb">es</span><span class="nv">so</span></code></td>
+<td><code class="codehilite">array</code></td>
 <td>Sim</td>
 <td>Informa em quais processos esse usuário possuirá acesso.</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="2:1">
-<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">16</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="excluir-usuario">Excluir usuário<a class="headerlink" href="#excluir-usuario" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -944,31 +997,37 @@
 </thead>
 <tbody>
 <tr>
-<td><code>id</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">id</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>A identificação do usuário a ser excluído.</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="3:1">
-<input name="__tabbed_3" type="radio" id="__tabbed_3_1" checked="checked" /><label for="__tabbed_3_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">16</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="ativardesativar-usuario">Ativar/desativar usuário<a class="headerlink" href="#ativardesativar-usuario" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -985,37 +1044,43 @@
 </thead>
 <tbody>
 <tr>
-<td><code>id</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">id</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>A identificação do usuário a ser desativado.</td>
 </tr>
 <tr>
-<td><code>status</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">status</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Indica se o usuário será ativado ou desátivado.</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="4:1">
-<input name="__tabbed_4" type="radio" id="__tabbed_4_1" checked="checked" /><label for="__tabbed_4_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="listar-usuario">Listar usuário<a class="headerlink" href="#listar-usuario" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -1032,33 +1097,113 @@
 </thead>
 <tbody>
 <tr>
-<td><code>id</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">id</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>A identificação do usuário a ser retornado.</td>
 </tr>
 <tr>
-<td><code>retornarPermissoes</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">retornarPermissoes</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Ao ser ativado, habilita o servidor para retornar também as permissões do usuário.</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="5:1">
-<input name="__tabbed_5" type="radio" id="__tabbed_5_1" checked="checked" /><label for="__tabbed_5_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
+<label for="__tab_5_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
@@ -1137,7 +1282,8 @@
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
                 
                   
@@ -1213,7 +1359,7 @@
           
         
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

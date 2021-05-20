@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.1.0">
     
     
       
@@ -685,7 +685,7 @@
                 
                 
                 <h1 id="enviar-dados-ao-crm">Enviar dados ao CRM<a class="headerlink" href="#enviar-dados-ao-crm" title="Permanent link">&para;</a></h1>
-<p>Utilizando a função <code>sendData()</code> para enviar os dados do contato ao CRM Rubeus, assim transformando os visitantes em leads.</p>
+<p>Utilizando a função <code class="codehilite">sendData()</code> para enviar os dados do contato ao CRM Rubeus, assim transformando os visitantes em leads.</p>
 <h2 id="estrutura">Estrutura<a class="headerlink" href="#estrutura" title="Permanent link">&para;</a></h2>
 <h3 id="parametros">Parâmetros<a class="headerlink" href="#parametros" title="Permanent link">&para;</a></h3>
 <table>
@@ -699,44 +699,60 @@
 </thead>
 <tbody>
 <tr>
-<td><code>data</code></td>
-<td><code>object</code></td>
+<td><code class="codehilite">data</code></td>
+<td><code class="codehilite">object</code></td>
 <td>Sim</td>
 <td>Objeto que contém os dados à serem enviados ao CRM.<hr>A estrutura do parâmetro segue a mesma do método de <a href="/api_crm/contato/#cadastro-de-contato">cadastrar contato</a>.<br><strong>Obs.: o campo “codigo” deve ser ignorado já que é enviado automaticamente.</strong></td>
 </tr>
 <tr>
-<td><code>callbackSuccess</code></td>
-<td><code>function</code></td>
+<td><code class="codehilite">callbackSuccess</code></td>
+<td><code class="codehilite"><span class="k">function</span></code></td>
 <td>Não</td>
 <td>Função que irá ser executada quando a requisição retornar com o status como <strong>sucesso</strong>.</td>
 </tr>
 <tr>
-<td><code>callbackError</code></td>
-<td><code>function</code></td>
+<td><code class="codehilite">callbackError</code></td>
+<td><code class="codehilite"><span class="k">function</span></code></td>
 <td>Não</td>
 <td>Função que irá ser executada quando a requisição retornar com o status como <strong>erro</strong>.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="retorno">Retorno<a class="headerlink" href="#retorno" title="Permanent link">&para;</a></h3>
-<div class="superfences-tabs" data-tabs="1:1">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Return</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Return</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;50&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h3 id="codigo-exemplo">Código Exemplo<a class="headerlink" href="#codigo-exemplo" title="Permanent link">&para;</a></h3>
-<div class="superfences-tabs" data-tabs="2:1">
-<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">JavaScript</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">JavaScript</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">nome</span><span class="o">:</span> <span class="s2">&quot;João da Silva&quot;</span><span class="p">,</span>
     <span class="nx">emailPrincipal</span><span class="o">:</span> <span class="s2">&quot;joãosilva@rubeus.com&quot;</span><span class="p">,</span>
     <span class="nx">dataNascimento</span><span class="o">:</span> <span class="s2">&quot;1998-12-31&quot;</span>
 <span class="p">};</span>
 <span class="nx">RBTracking</span><span class="p">.</span><span class="nx">sendData</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
                 
                   
@@ -847,7 +863,7 @@
           
         
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

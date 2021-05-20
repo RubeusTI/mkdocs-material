@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.1.0">
     
     
       
@@ -660,42 +660,47 @@
 </thead>
 <tbody>
 <tr>
-<td><code>nome</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">nome</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Nome da unidade</td>
 </tr>
 <tr>
-<td><code>descricao</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">descricao</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Descrição da unidade</td>
 </tr>
 <tr>
-<td><code>codigo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codigo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Código de identificação externa</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="1:1">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="listar-unidades">Listar unidades<a class="headerlink" href="#listar-unidades" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -712,21 +717,31 @@
 </thead>
 <tbody>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="2:1">
-<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -735,7 +750,8 @@
         <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;000&quot;</span>
     <span class="p">}]</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
                 
                   
@@ -846,7 +862,7 @@
           
         
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

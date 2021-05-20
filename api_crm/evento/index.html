@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.1.0">
     
     
       
@@ -690,171 +690,186 @@
 </thead>
 <tbody>
 <tr>
-<td><code>codigo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codigo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Chave única de identificação do evento enviado. <br><strong>Caso queira editar um evento criado basta informar o código do evento criado.</strong></td>
 </tr>
 <tr>
-<td><code>tipo</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">tipo</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Condicional</td>
-<td>Código de identificação do tipo do evento. <br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code>id</code><br><br><a href="#cadastro-de-tipos-de-evento">Cadastrar Tipos de Eventos</a></td>
+<td>Código de identificação do tipo do evento. <br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code class="codehilite">id</code><br><br><a href="#cadastro-de-tipos-de-evento">Cadastrar Tipos de Eventos</a></td>
 </tr>
 <tr>
-<td><code>codTipo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codTipo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
-<td>Código externo enviado no cadastro do tipo de evento.<br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code>codigo</code><br><br><a href="#cadastro-de-tipos-de-evento">Cadastrar Tipos de Eventos</a></td>
+<td>Código externo enviado no cadastro do tipo de evento.<br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code class="codehilite">codigo</code><br><br><a href="#cadastro-de-tipos-de-evento">Cadastrar Tipos de Eventos</a></td>
 </tr>
 <tr>
-<td><code>descricao</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">descricao</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>A Descrição pode ser enviada no formato HTML para deixar a apresentação dos dados do evento na linha do tempo mais organizados.<br><i><strong>É opcional o envio com as tags HTML.</strong></i></td>
 </tr>
 <tr>
-<td><code>pessoa</code></td>
-<td><code>object</code></td>
+<td><code class="codehilite">pessoa</code></td>
+<td><code class="codehilite">object</code></td>
 <td>Sim</td>
-<td>Vincule o contato ao evento. <hr><em>Veja abaixo um exemplo do formato para envio.</em><br><code class="highlight"><span class="p">{</span> <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span> <span class="p">}</span></code> (O mesmo código enviado no cadastro do contato) ou <code class="highlight"><span class="p">{</span> <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span></code> (O id retornado no cadastro do contato.)</td>
+<td>Vincule o contato ao evento. <hr><em>Veja abaixo um exemplo do formato para envio.</em><br><code class="codehilite"><span class="p">{</span> <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span> <span class="p">}</span></code> (O mesmo código enviado no cadastro do contato) ou <code class="codehilite"><span class="p">{</span> <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span></code> (O id retornado no cadastro do contato.)</td>
 </tr>
 <tr>
-<td><code>pessoasSecundarias</code></td>
-<td><code>array</code></td>
+<td><code class="codehilite">pessoasSecundarias</code></td>
+<td><code class="codehilite">array</code></td>
 <td>Não</td>
-<td>Vincule um ou mais contatos secundários à um registro de processo. <hr><em>Veja abaixo um exemplo do formato para envio.</em><br><code class="highlight"><span class="p">[{</span> <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span> <span class="p">}]</span></code> (O mesmo código enviado no cadastro do contato).</td>
+<td>Vincule um ou mais contatos secundários à um registro de processo. <hr><em>Veja abaixo um exemplo do formato para envio.</em><br><code class="codehilite"><span class="p">[{</span> <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span> <span class="p">}]</span></code> (O mesmo código enviado no cadastro do contato).</td>
 </tr>
 <tr>
-<td><code>codOferta</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codOferta</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Código de identificação da oferta do curso.<br><strong>O código da oferta do curso e o código do curso são obrigatórios para vincular o evento ao um curso no CRM Rubeus.</strong></td>
 </tr>
 <tr>
-<td><code>codCurso</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codCurso</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Código de identificação do curso.</td>
 </tr>
 <tr>
-<td><code>codRegistro</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codRegistro</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Habilita a criação de mais registros por oferta, sempre ‘criando um <strong>novo registro</strong>  independente dos dados, desde que, o código passado seja único.</td>
 </tr>
 <tr>
-<td><code>cursosSecundarios</code></td>
-<td><code>array[]</code></td>
+<td><code class="codehilite">cursosSecundarios</code></td>
+<td><code class="codehilite">array[]</code></td>
 <td>Não</td>
 <td>O campo serve para definir os cursos secundários do registro de processo.</td>
 </tr>
 <tr>
-<td>↳<code>codOferta</code></td>
-<td><code>string</code></td>
+<td>↳<code class="codehilite">codOferta</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>-</td>
 </tr>
 <tr>
-<td>↳<code>codCurso</code></td>
-<td><code>string</code></td>
+<td>↳<code class="codehilite">codCurso</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>-</td>
 </tr>
 <tr>
-<td><code>codLocalOferta</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codLocalOferta</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Código de identificação do local da oferta.</td>
 </tr>
 <tr>
-<td><code>data</code></td>
-<td><code>dateTime</code></td>
+<td><code class="codehilite">data</code></td>
+<td><code class="codehilite">dateTime</code></td>
 <td>Não</td>
 <td>A data do evento é utilizada para configurar gatilhos de fluxo que são disparados X (tempo) antes da data enviada.<br>Essa data é muito utilizada para atividades como data da prova, entrevista e visitas dos candidatos.<br><strong>Padrão: YYYY-MM-DD hh:mm:ss</strong></td>
 </tr>
 <tr>
-<td><code>tipoData</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">tipoData</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>O tipo da data tem o propósito de diferenciar os eventos com datas um do outro caso seja usado mais de uma atividade. Para a data da atividade funcionar corretamente este campo é necessário.</td>
 </tr>
 <tr>
-<td><code>momento</code></td>
-<td><code>dateTime</code></td>
+<td><code class="codehilite">momento</code></td>
+<td><code class="codehilite">dateTime</code></td>
 <td>Não</td>
 <td>Momento no qual o evento ocorreu. Caso não seja informado o sistema irá informar a data e hora atual.<br><strong>Padrão: YYYY-MM-DD hh:mm:ss</strong></td>
 </tr>
 <tr>
-<td><code>notaEnem</code></td>
-<td><code>float</code></td>
+<td><code class="codehilite">notaEnem</code></td>
+<td><code class="codehilite">float</code></td>
 <td>Não</td>
 <td>A nota do enem é usada para ser vinculada a um registro de processo caso o evento esteja vinculado a um curso.</td>
 </tr>
 <tr>
-<td><code>compareceuAtividade</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">compareceuAtividade</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
-<td>Campo para informar se o contato compareceu à atividade<br><strong>Padrão: 1 para</strong> <code>sim</code> <strong>ou 0 para</strong> <code>não</code></td>
+<td>Campo para informar se o contato compareceu à atividade<br><strong>Padrão: 1 para</strong> <code class="codehilite">sim</code> <strong>ou 0 para</strong> <code class="codehilite">não</code></td>
 </tr>
 <tr>
-<td><code>formaIngresso</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">formaIngresso</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Forma de ingresso do registro de processo.</td>
 </tr>
 <tr>
-<td><code>dataVencimento</code></td>
-<td><code>dateTime</code></td>
+<td><code class="codehilite">dataVencimento</code></td>
+<td><code class="codehilite">dateTime</code></td>
 <td>Não</td>
 <td>Data de vencimento da atividade que será criada caso seja configurado no fluxo de automação.</td>
 </tr>
 <tr>
-<td><code>camposPersonalizados</code></td>
-<td><code>object</code></td>
+<td><code class="codehilite">camposPersonalizados</code></td>
+<td><code class="codehilite">object</code></td>
 <td>Não</td>
-<td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="highlight"><span class="err">camposPersonalizados</span> <span class="err">:</span> <span class="p">{</span> <span class="err">coluna:</span> <span class="nt">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">cadastro de campo personalizado</a>, o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado.</td>
+<td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="codehilite"><span class="err">camposPerso</span><span class="kc">nal</span><span class="err">izados</span> <span class="p">:</span> <span class="p">{</span> <span class="err">colu</span><span class="kc">na</span><span class="p">:</span> <span class="s2">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">cadastro de campo personalizado</a>, o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado.</td>
 </tr>
 <tr>
-<td><code>dadosOportunidade</code></td>
-<td><code>object</code></td>
+<td><code class="codehilite">dadosOportunidade</code></td>
+<td><code class="codehilite">object</code></td>
 <td>Não</td>
 <td>Serve para poder enviar os dados do registro de processo caso queira alterá-la.</td>
 </tr>
 <tr>
-<td>↳ <code>codOferta</code></td>
-<td><code>string</code></td>
-<td>Não</td>
-<td>-</td>
+<td>↳ <code class="codehilite">codOferta</code></td>
+<td><code class="codehilite">string</code></td>
+<td>Condicional</td>
+<td>Informação obrigatória caso seja enviado o dadosOportunidade</td>
 </tr>
 <tr>
-<td>↳ <code>codCurso</code></td>
-<td><code>string</code></td>
-<td>Não</td>
-<td>-</td>
+<td>↳ <code class="codehilite">codCurso</code></td>
+<td><code class="codehilite">string</code></td>
+<td>Condicional</td>
+<td>Informação obrigatória caso seja enviado o dadosOportunidade</td>
 </tr>
 <tr>
-<td>↳ <code>codPessoa</code></td>
-<td><code>string</code></td>
-<td>Não</td>
-<td>-</td>
+<td>↳ <code class="codehilite">codPessoa</code></td>
+<td><code class="codehilite">string</code></td>
+<td>Condicional</td>
+<td>Informação obrigatória caso seja enviado o dadosOportunidade</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="1:1">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;14&quot;</span><span class="p">,</span>
@@ -868,7 +883,8 @@
         <span class="nt">&quot;origemNome&quot;</span><span class="p">:</span> <span class="s2">&quot;CRM&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="cadastro-de-tipos-de-evento">Cadastro de tipos de evento<a class="headerlink" href="#cadastro-de-tipos-de-evento" title="Permanent link">&para;</a></h2>
 <p>Os tipos de eventos são utilizados para categorizar os eventos externos enviados por cada canal de captação.</p>
@@ -886,43 +902,49 @@
 </thead>
 <tbody>
 <tr>
-<td><code>codigo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codigo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Código de identificação externa.</td>
 </tr>
 <tr>
-<td><code>titulo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">titulo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Título para o tipo do evento. Limite de caracteres: 255.</td>
 </tr>
 <tr>
-<td><code>fluxo</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">fluxo</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Campo que identifica se o evento faz parte do fluxo de compra do cliente ou não. Caso faça, ele será respeitado na condição do fluxo que verifica a quanto tempo ele não avança no fluxo.<br><br><i><strong>1 para Sim, 0 para Não.</strong></i><br><br><strong>Padrão: 0.</strong></td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="2:1">
-<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">57</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="verificar-se-o-evento-ja-foi-cadastrado">Verificar se o evento já foi cadastrado<a class="headerlink" href="#verificar-se-o-evento-ja-foi-cadastrado" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -939,85 +961,107 @@
 </thead>
 <tbody>
 <tr>
-<td><code>codPessoa</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codPessoa</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Código de identificação externa do contato</td>
 </tr>
 <tr>
-<td><code>codOferta</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codOferta</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Código de identificação externa da oferta de curso</td>
 </tr>
 <tr>
-<td><code>codCurso</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codCurso</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Código de identificação externa do curso</td>
 </tr>
 <tr>
-<td><code>dataVerificacao</code></td>
-<td><code>dateTime</code></td>
+<td><code class="codehilite">dataVerificacao</code></td>
+<td><code class="codehilite">dateTime</code></td>
 <td>Não</td>
 <td>Data enviada no cadastro de evento</td>
 </tr>
 <tr>
-<td><code>tipoData</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">tipoData</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Tipo da data enviada no cadastro de evento</td>
 </tr>
 <tr>
-<td><code>tipoEvento</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">tipoEvento</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Condicional</td>
-<td>Identificação do tipo de evento<br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code>id</code></td>
+<td>Identificação do tipo de evento<br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code class="codehilite">id</code></td>
 </tr>
 <tr>
-<td><code>codTipoEvento</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codTipoEvento</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
-<td>Código de identificação externa do tipo de evento<br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code>codigo</code></td>
+<td>Código de identificação externa do tipo de evento<br><br><a href="#listar-tipos-de-eventos">Listar Tipos de Eventos</a><br><em>Enviar o campo</em> <code class="codehilite">codigo</code></td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="3:1">
-<input name="__tabbed_3" type="radio" id="__tabbed_3_1" checked="checked" /><label for="__tabbed_3_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="mi">11</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="listar-tipos-de-eventos">Listar tipos de eventos<a class="headerlink" href="#listar-tipos-de-eventos" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Evento/listarTipoEvento</p>
 </div>
 <p>Método utilizado para listar os tipos de evento para posteriormente utilizar como parâmetro em outro método.</p>
-<div class="superfences-tabs" data-tabs="4:1">
-<input name="__tabbed_4" type="radio" id="__tabbed_4_1" checked="checked" /><label for="__tabbed_4_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Cadastrou-se&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;CADASTRO&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;origem&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;origemNome&quot;</span><span class="p">:</span> <span class="s2">&quot;CRM&quot;</span>
-    <span class="p">}]</span>
+    <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Cadastrou-se&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;CADASTRO&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;origem&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;origemNome&quot;</span><span class="p">:</span> <span class="s2">&quot;CRM&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
                 
                   
@@ -1128,7 +1172,7 @@
           
         
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       

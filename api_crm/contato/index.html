@@ -39,7 +39,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.1.0">
     
     
       
@@ -729,268 +729,280 @@
 </thead>
 <tbody>
 <tr>
-<td><code>codigo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codigo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Código de identificação externa.</td>
 </tr>
 <tr>
-<td><code>nome</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">id</code></td>
+<td><code class="codehilite">integer</code></td>
+<td>Não</td>
+<td>Código de identificação do contato no CRM</td>
+</tr>
+<tr>
+<td><code class="codehilite">nome</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Nome.</td>
 </tr>
 <tr>
-<td><code>nomeSocial</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">nomeSocial</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Nome Social.</td>
 </tr>
 <tr>
-<td><code>dataNascimento</code></td>
-<td><code>date</code></td>
+<td><code class="codehilite">dataNascimento</code></td>
+<td><code class="codehilite">date</code></td>
 <td>Não</td>
 <td>Data de Nascimento.<br><strong>Padrão: YYYY-MM-DD</strong></td>
 </tr>
 <tr>
-<td><code>telefonePrincipal</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">telefonePrincipal</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
 <td>Telefone principal de contato.<br><strong>No cadastro de contato é obrigatório informar o e-mail principal ou o telefone principal.</strong></td>
 </tr>
 <tr>
-<td><code>emailPrincipal</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">emailPrincipal</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
 <td>E-mail principal de contato.<br><strong>No cadastro de contato é obrigatório informar o e-mail principal ou o telefone principal.</strong></td>
 </tr>
 <tr>
-<td><code>telefone</code></td>
-<td><code>array[]</code></td>
+<td><code class="codehilite">telefone</code></td>
+<td><code class="codehilite">array[]</code></td>
 <td>Não</td>
 <td>É possível enviar uma lista de telefones secundários para o cadastro de contato.</td>
 </tr>
 <tr>
-<td><code>email</code></td>
-<td><code>array[]</code></td>
+<td><code class="codehilite">email</code></td>
+<td><code class="codehilite">array[]</code></td>
 <td>Não</td>
 <td>É possível enviar uma lista de emails secundários para o cadastro de contato.</td>
 </tr>
 <tr>
-<td><code>cpf</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">cpf</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>CPF do contato.<br><strong>Padrão: xxxxxxxxxxx</strong></td>
 </tr>
 <tr>
-<td><code>endereco</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">endereco</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Endereço (limite de caracteres: 255).</td>
 </tr>
 <tr>
-<td><code>cep</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">cep</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>CEP.<br><strong>Padrão:xxxxx-xxx</strong></td>
 </tr>
 <tr>
-<td><code>numero</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">numero</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Número (endereço).</td>
 </tr>
 <tr>
-<td><code>bairro</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">bairro</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Bairro (limite de caracteres: 45).</td>
 </tr>
 <tr>
-<td><code>sexo</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">sexo</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Para informar o sexo utilize: <strong>1</strong> para Masculino e <strong>2</strong> para Feminino.</td>
 </tr>
 <tr>
-<td><code>imagemUrl</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">imagemUrl</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>URL para foto de perfil do contato.<br><strong>Em alguns casos, o contato pode já estar cadastrado em um sistema e ter uma foto de perfil. Caso esteja disponível para acesso externo, basta informar a URL de acesso.</strong></td>
 </tr>
 <tr>
-<td><code>estadoCidade</code></td>
-<td><code>object</code></td>
+<td><code class="codehilite">estadoCidade</code></td>
+<td><code class="codehilite">object</code></td>
 <td>Não</td>
 <td>Deve ser informado um objeto com os dados necessários para vincular o contato a uma <a href="/api_crm/metodosdelistagem/#listar-cidades">cidade</a>.<br><strong>Se não for encontrada uma cidade com esse nome nessa UF, o contato não será vinculado a uma cidade.</strong></td>
 </tr>
 <tr>
-<td>↳ <code>cidade</code></td>
-<td><code>string</code></td>
+<td>↳ <code class="codehilite">cidade</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>-</td>
 </tr>
 <tr>
-<td>↳ <code>estado</code></td>
-<td><code>string</code></td>
+<td>↳ <code class="codehilite">estado</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>-</td>
 </tr>
 <tr>
-<td><code>canhoto</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">canhoto</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
-<td>Campo para informar se o contato é ou não canhoto.<br><strong>Padrão: 1 para</strong> <code>sim</code> <strong>ou 0 para</strong> <code>não</code>.</td>
+<td>Campo para informar se o contato é ou não canhoto.<br><strong>Padrão: 1 para</strong> <code class="codehilite">sim</code> <strong>ou 0 para</strong> <code class="codehilite">não</code>.</td>
 </tr>
 <tr>
-<td><code>profissao</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">profissao</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Profissão.</td>
 </tr>
 <tr>
-<td><code>aluno</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">aluno</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Se o contato é ou não aluno.<br><strong>Padrão: 1 para quando for aluno e 0 para quando não for aluno.</strong></td>
 </tr>
 <tr>
-<td><code>exaluno</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">exaluno</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Se o contato é ex-aluno ou não.<br><strong>Padrão: 1 se já foi aluno e 0 se nunca foi aluno.</strong></td>
 </tr>
 <tr>
-<td><code>escolaOrigem</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">escolaOrigem</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Escola de origem do contato</td>
 </tr>
 <tr>
-<td><code>anoFormacao</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">anoFormacao</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Ano de formação do contato.<br><strong>Padrão: YYYY</strong></td>
 </tr>
 <tr>
-<td><code>deficiencias</code></td>
-<td><code>object</code></td>
+<td><code class="codehilite">deficiencias</code></td>
+<td><code class="codehilite">object</code></td>
 <td>Não</td>
 <td>Usado para informar a(s) deficiência(s) do contato.<hr><strong>Usar os dados da tabela de</strong> <a href="/tabelasauxiliares/#deficiencias">deficiências</a>.</td>
 </tr>
 <tr>
-<td>↳ <code>id</code></td>
-<td><code>integer</code></td>
+<td>↳ <code class="codehilite">id</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Identificação da deficiência.</td>
 </tr>
 <tr>
-<td>↳ <code>tipos</code></td>
-<td><code>array[]</code></td>
+<td>↳ <code class="codehilite">tipos</code></td>
+<td><code class="codehilite">array[]</code></td>
 <td>Não</td>
-<td>Usar o método listarDeficiencias para obter o campo <code>id</code> para a passagem de parâmetro.</td>
+<td>Usar o método listarDeficiencias para obter o campo <code class="codehilite">id</code> para a passagem de parâmetro.</td>
 </tr>
 <tr>
-<td><code>outrasDeficiencias</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">outrasDeficiencias</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Campo destinado à descrição da deficiência do contato se ela não existir nas opções pré-definidas.</td>
 </tr>
 <tr>
-<td><code>estadoCivil</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">estadoCivil</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizar os dados da tabela <a href="/tabelasauxiliares/#estado-civil">estado civil</a>.</td>
 </tr>
 <tr>
-<td><code>cor</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">cor</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizar os dados da tabela <a href="/tabelasauxiliares/#cor">cor</a>.</td>
 </tr>
 <tr>
-<td><code>grauInstrucao</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">grauInstrucao</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Utilizar os dados da tabela <a href="/tabelasauxiliares/#grau-de-instrucao">grau de instrução</a>.</td>
 </tr>
 <tr>
-<td><code>tags</code></td>
-<td><code>array[]</code></td>
+<td><code class="codehilite">tags</code></td>
+<td><code class="codehilite">array[]</code></td>
 <td>Não</td>
 <td>Utilizado para enviar as tags do contato.</td>
 </tr>
 <tr>
-<td><code>tagsRemovidas</code></td>
-<td><code>array[]</code></td>
+<td><code class="codehilite">tagsRemovidas</code></td>
+<td><code class="codehilite">array[]</code></td>
 <td>Não</td>
 <td>Utilizado para remover as tags do contato.</td>
 </tr>
 <tr>
-<td><code>evento</code></td>
-<td><code>object</code></td>
+<td><code class="codehilite">evento</code></td>
+<td><code class="codehilite">object</code></td>
 <td>Não</td>
 <td>Utilizado para criar um evento ao realizar o cadastro do contato.</td>
 </tr>
 <tr>
-<td>↳ <code>tipo</code></td>
-<td><code>integer</code></td>
+<td>↳ <code class="codehilite">tipo</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Não</td>
 <td>Id do tipo de evento.</td>
 </tr>
 <tr>
-<td>↳ <code>codTipo</code></td>
-<td><code>string</code></td>
+<td>↳ <code class="codehilite">codTipo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>código do tipo de evento.</td>
 </tr>
 <tr>
-<td>↳ <code>descricao</code></td>
-<td><code>string</code></td>
+<td>↳ <code class="codehilite">descricao</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Texto HTML personalizado para agregar informações na exibição do evento.</td>
 </tr>
 <tr>
-<td>↳ <code>codOferta</code></td>
-<td><code>string</code></td>
+<td>↳ <code class="codehilite">codOferta</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
-<td>Para vincular o evento a uma oferta de curso é preciso informar este campo junto com o <code>codCurso</code>  correspondente.</td>
+<td>Para vincular o evento a uma oferta de curso é preciso informar este campo junto com o <code class="codehilite">codCurso</code>  correspondente.</td>
 </tr>
 <tr>
-<td>↳ <code>codCurso</code></td>
-<td><code>string</code></td>
+<td>↳ <code class="codehilite">codCurso</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Não</td>
 <td>Para vincular o evento a uma oferta de curso, é preciso informar este campo junto com o codOferta correspondente.</td>
 </tr>
 <tr>
-<td><code>camposPersonalizados</code></td>
-<td><code>object</code></td>
+<td><code class="codehilite">camposPersonalizados</code></td>
+<td><code class="codehilite">object</code></td>
 <td>Não</td>
-<td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="highlight"><span class="err">camposPersonalizados</span> <span class="err">:</span> <span class="p">{</span> <span class="err">coluna:</span> <span class="nt">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">Instituicao/campoPersonalizado</a>, e o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado.</td>
+<td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="codehilite"><span class="err">camposPerso</span><span class="kc">nal</span><span class="err">izados</span> <span class="p">:</span> <span class="p">{</span> <span class="err">colu</span><span class="kc">na</span><span class="p">:</span> <span class="s2">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">Instituicao/campoPersonalizado</a>, e o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado.</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition info">
-<p>O valor do campo <code>dados</code> no exemplo de retorno abaixo é o <code>id</code> que foi criado no processo.</p>
+<p>O valor do campo <code class="codehilite">dados</code> no exemplo de retorno abaixo é o <code class="codehilite">id</code> que foi criado no processo.</p>
 </div>
-<div class="superfences-tabs" data-tabs="1:1">
-<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="mi">10</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="dados-do-contato">Dados do contato<a class="headerlink" href="#dados-do-contato" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -1007,33 +1019,111 @@
 </thead>
 <tbody>
 <tr>
-<td><code>codigo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codigo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
 <td>Chave única de identificação externa do contato enviado.</td>
 </tr>
 <tr>
-<td><code>id</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">id</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Condicional</td>
 <td>Código de identificação do contato no CRM.</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="2:1">
-<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;155&quot;</span><span class="p">,</span>
@@ -1069,45 +1159,54 @@
         <span class="nt">&quot;mesclada&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
         <span class="nt">&quot;verificada&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
         <span class="nt">&quot;desinscreveu&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;camposPersonalizados&quot;</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Campo Personalizado&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;coluna&quot;</span><span class="p">:</span> <span class="s2">&quot;campopersonalizado&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;valor&quot;</span><span class="p">:</span> <span class="s2">&quot;valor&quot;</span>
-        <span class="p">}],</span>
+        <span class="nt">&quot;camposPersonalizados&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Campo Personalizado&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;coluna&quot;</span><span class="p">:</span> <span class="s2">&quot;campopersonalizado&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;tipo&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;valor&quot;</span><span class="p">:</span> <span class="s2">&quot;valor&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
         <span class="nt">&quot;pessoasRelacionadas&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="nt">&quot;telefones&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;principal&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1534&quot;</span><span class="p">,</span>
                 <span class="nt">&quot;telefone&quot;</span><span class="p">:</span> <span class="s2">&quot;(31)154689835&quot;</span>
             <span class="p">},</span>
-            <span class="nt">&quot;secundarios&quot;</span><span class="p">:</span> <span class="p">[{}]</span>
+            <span class="nt">&quot;secundarios&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{}</span>
+            <span class="p">]</span>
         <span class="p">},</span>
         <span class="nt">&quot;emails&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;principal&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1598&quot;</span><span class="p">,</span>
                 <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email@email.com&quot;</span>
             <span class="p">},</span>
-            <span class="nt">&quot;secundarios&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1600&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email2@email.com&quot;</span>
-            <span class="p">}]</span>
+            <span class="nt">&quot;secundarios&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1600&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;email2@email.com&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
         <span class="p">},</span>
         <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="nt">&quot;origemCanal&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;origens&quot;</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;CRM&quot;</span>
-        <span class="p">}],</span>
+        <span class="nt">&quot;origens&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;CRM&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
         <span class="nt">&quot;deficiencias&quot;</span><span class="p">:</span> <span class="kc">false</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h4 id="buscar-por-nome-email-telefone-ou-cpf">Buscar por nome, email, telefone ou CPF<a class="headerlink" href="#buscar-por-nome-email-telefone-ou-cpf" title="Permanent link">&para;</a></h4>
-<p>Semelhante ao método acima, este também faz a consulta de contatos no Rubeus, mas, os parâmetros são <code>nome</code>, <code>email</code>, <code>telefone</code> e/ou <code>cpf</code>.
-Todos os campos deverão ser buscados com o operador <code class="highlight"><span class="k">LIKE</span></code>, portanto, acentos e letras maiúsculas/minúsculas deverão ser ignoradas, por exemplo, uma busca feita por nome <code class="highlight"><span class="ss">&quot;Carl&quot;</span></code> deverá retornar os dados dos contatos que possuem <code class="highlight"><span class="ss">&quot;carl&quot;</span></code> em alguma parte de seu nome.
-O operador utilizado entre as entidades de busca é <code class="highlight"><span class="k">AND</span></code>, por isso se for buscado <code class="highlight"><span class="n">nome</span> <span class="o">=</span> <span class="ss">&quot;carls&quot;</span></code> e <code class="highlight"><span class="n">cpf</span> <span class="o">=</span> <span class="ss">&quot;781&quot;</span></code>, o método retornará todos os dados dos contatos que possuem <code class="highlight"><span class="n">nome</span> <span class="k">LIKE</span> <span class="ss">&quot;%carls%&quot;</span> <span class="k">AND</span> <span class="n">cpf</span> <span class="k">LIKE</span> <span class="ss">&quot;%781%&quot;</span></code>. Todas as entidades trabalharão desta maneira.
+<p>Semelhante ao método acima, este também faz a consulta de contatos no Rubeus, mas, os parâmetros são <code class="codehilite">nome</code>, <code class="codehilite">email</code>, <code class="codehilite">telefone</code> e/ou <code class="codehilite">cpf</code>.
+Todos os campos deverão ser buscados com o operador <code class="codehilite"><span class="k">LIKE</span></code>, portanto, acentos e letras maiúsculas/minúsculas deverão ser ignoradas, por exemplo, uma busca feita por nome <code class="codehilite"><span class="ss">&quot;Carl&quot;</span></code> deverá retornar os dados dos contatos que possuem <code class="codehilite"><span class="ss">&quot;carl&quot;</span></code> em alguma parte de seu nome.
+O operador utilizado entre as entidades de busca é <code class="codehilite"><span class="k">AND</span></code>, por isso se for buscado <code class="codehilite"><span class="n">nome</span> <span class="o">=</span> <span class="ss">&quot;carls&quot;</span></code> e <code class="codehilite"><span class="n">cpf</span> <span class="o">=</span> <span class="ss">&quot;781&quot;</span></code>, o método retornará todos os dados dos contatos que possuem <code class="codehilite"><span class="n">nome</span> <span class="k">LIKE</span> <span class="ss">&quot;%carls%&quot;</span> <span class="k">AND</span> <span class="n">cpf</span> <span class="k">LIKE</span> <span class="ss">&quot;%781%&quot;</span></code>. Todas as entidades trabalharão desta maneira.
 Nas entidades de telefone e e-mail, será validada através de todos os e-mails/telefone que um contato possa ter, sendo considerados os principais e secundários na hora da busca.
 Os dados retornados estarão disponíveis dentro de um array, estruturados exatamente igual ao método da API Pessoa/dadosPessoa.</p>
 <div class="admonition done">
@@ -1124,38 +1223,38 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 </thead>
 <tbody>
 <tr>
-<td><code>nome</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">nome</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
 <td>Campo para informar o nome do contato.</td>
 </tr>
 <tr>
-<td><code>email</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">email</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
 <td>Campo para informar o email do contato.</td>
 </tr>
 <tr>
-<td><code>telefone</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">telefone</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
 <td>Campo para informar o telefone do contato.</td>
 </tr>
 <tr>
-<td><code>cpf</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">cpf</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
 <td>Campo para informar o CPF do contato.</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a> utilizado na integração.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal utilizado na integração.</td>
 </tr>
@@ -1176,43 +1275,49 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 </thead>
 <tbody>
 <tr>
-<td><code>id</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">id</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Condicional</td>
-<td>Id do contato.<hr><strong>Será passado se o</strong> <code>codigoAntigo</code> <strong>não for passado.</strong></td>
+<td>Id do contato.<hr><strong>Será passado se o</strong> <code class="codehilite">codigoAntigo</code> <strong>não for passado.</strong></td>
 </tr>
 <tr>
-<td><code>codigoAntigo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codigoAntigo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
-<td>Código enviado no cadastro do contato.<hr><strong>Será passado se**</strong> o** <code>id</code> <strong>não for passado.</strong></td>
+<td>Código enviado no cadastro do contato.<hr><strong>Será passado se**</strong> o** <code class="codehilite">id</code> <strong>não for passado.</strong></td>
 </tr>
 <tr>
-<td><code>codigoNovo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codigoNovo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Código que será substituído com base no código antigo enviado.</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="3:1">
-<input name="__tabbed_3" type="radio" id="__tabbed_3_1" checked="checked" /><label for="__tabbed_3_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;9&quot;</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="excluir-contato">Excluir contato<a class="headerlink" href="#excluir-contato" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -1229,36 +1334,48 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 </thead>
 <tbody>
 <tr>
-<td><code>id</code></td>
-<td><code>array[]</code> ou <code>integer</code></td>
+<td><code class="codehilite">id</code></td>
+<td><code class="codehilite">array[]</code> ou <code class="codehilite">integer</code></td>
 <td>obrigatório</td>
 <td>id dos contatos que devem ser excluídos..<br><strong>Os id’s deverão ser informados da seguinte forma:</strong><br>Um único id: 1<br>Vários id’s: [1, 2, 3]</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="4:2">
-<input name="__tabbed_4" type="radio" id="__tabbed_4_1" checked="checked" /><label for="__tabbed_4_1">Resposta com um id</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">Resposta com um id</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">9</span>
 <span class="p">}</span>
-</code></pre></div></div>
-<input name="__tabbed_4" type="radio" id="__tabbed_4_2" /><label for="__tabbed_4_2">Resposta com mais id’s</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+</pre></div>
+</td></tr></table></div>
+<input name="__tabs_4" type="radio" id="__tab_4_1" />
+<label for="__tab_4_1">Resposta com mais id’s</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1633</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
 <h2 id="listar-oportunidades">Listar Oportunidades<a class="headerlink" href="#listar-oportunidades" title="Permanent link">&para;</a></h2>
 <div class="admonition done">
@@ -1275,33 +1392,79 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 </thead>
 <tbody>
 <tr>
-<td><code>id</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">id</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Condicional</td>
 <td>Id do contato.</td>
 </tr>
 <tr>
-<td><code>codigo</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">codigo</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Condicional</td>
 <td>Código do contato</td>
 </tr>
 <tr>
-<td><code>origem</code></td>
-<td><code>integer</code></td>
+<td><code class="codehilite">origem</code></td>
+<td><code class="codehilite">integer</code></td>
 <td>Sim</td>
 <td>Código de identificação do <a href="/api_crm/apresentacao/#autenticacao">canal</a>.</td>
 </tr>
 <tr>
-<td><code>token</code></td>
-<td><code>string</code></td>
+<td><code class="codehilite">token</code></td>
+<td><code class="codehilite">string</code></td>
 <td>Sim</td>
 <td>Chave de acesso única referente ao canal.</td>
 </tr>
 </tbody>
 </table>
-<div class="superfences-tabs" data-tabs="5:1">
-<input name="__tabbed_5" type="radio" id="__tabbed_5_1" checked="checked" /><label for="__tabbed_5_1">Resposta</label><div class="superfences-content"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="superfences-tabs">
+<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
+<label for="__tab_5_0">Resposta com mais id’s</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;resultado&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1346,7 +1509,8 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
         <span class="p">]</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></div>
+</td></tr></table></div>
 </div>
                 
                   
@@ -1457,7 +1621,7 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
           
         
       
-      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
       
         <script src="../../assets/javascripts/extra.js"></script>
       
