@@ -1,19 +1,18 @@
-
 # Curso e ofertas
 O sistema entende que um curso pode ser ofertado em diversos momentos e com variações. Para isso é preciso primeiro cadastrar o curso para depois cadastrar suas ofertas.
 
 ## Cadastro de curso
 
 !!! done ""
-    
-    <strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Curso/cadastroCurso
+
+	<strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Curso/cadastroCurso
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
 | --- | --- | --- | --- |
 | `codigo` | `string` | Não | Código de identificação externa. | 
 | `nome` | `string` | Sim | Nome do curso. Limite de caracteres: 255. | 
 | `descricao` | `string` | Não | Descrição do curso. Limite de caracteres: 500. | 
-| `camposPersonalizados` | `object` | Não | Usado para atribuir algum campo específico que não está presente no escopo da API.<hr>**Os campos devem ser informados como no exemplo abaixo**:<br><br>`#!json camposPersonalizados : { coluna: "valor" }`<hr>Os nomes das colunas dos campos personalizados são informados no método [cadastro de campo personalizado](/api_crm/campopersonalizados/#listar-campos-personalizados), o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado. | 
+| `camposPersonalizados` | `object` | Não | Usado para atribuir algum campo específico que não está presente no escopo da API.<hr>**Os campos devem ser informados como no exemplo abaixo**:<br><br>`#!json "camposPersonalizados" : { coluna: "valor" }`<hr>Os nomes das colunas dos campos personalizados são informados no método [cadastro de campo personalizado](/api_crm/campopersonalizados/#listar-campos-personalizados), o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado. | 
 | `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
 | `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
 
@@ -51,7 +50,7 @@ Após realizar o cadastro do curso, você pode cadastrar suas ofertas. É a ofer
 | `nomeCurso` | `string` | Não | Nome do curso pai.<br>**Deve ser informado caso queira adicionar o curso pai junto com o cadastro da oferta. Caso já tenha cadastrado o curso pai basta informar o codCurso.** | 
 | `descricaoCurso` | `string` | Não | Descrição do curso pai.<br>**Deve ser informado caso queira adicionar o curso pai junto com o cadastro da oferta. Caso já tenha cadastrado o curso pai basta informar o codCurso.** | 
 | `codUnidade` | `string` | Sim | Código único para identificação da unidade que está ofertando o curso atual.<br><br>[Listar Unidades](/api_crm/unidade/#listar-unidades)<br>*Enviar o campo* `codigo` | 
-| `codLocalOferta` | `array[]` | Sim | Array com os códigos externos de identificação do local de oferta cadastrado.<hr>*Veja abaixo um exemplo do formato para envio.*<br>`#!json [1]` | 
+| `codLocalOferta` | `array[]` | Sim | Array com os códigos externos de identificação do local de oferta cadastrado.<hr>*Veja abaixo um exemplo do formato para envio.*<br>`#!json "codLocalOferta": ["codigo do local de oferta"]` | 
 | `codNivelEnsino` | `integer` | Condicional | Código único de identificação do nível de ensino.<br><br>[Listar niveis de ensino](/api_crm/metodosdelistagem/#listar-niveis-de-ensino)<br>**Enviar o campo** `codigo` <hr> **Caso não seja enviado deverá ser o utilizado o campo** `nivelEnsino`**.** | 
 | `nivelEnsino` | `integer` | Condicional | Identificação do nível de ensino.<br><br>[Listar niveis de ensino](/api_crm/metodosdelistagem/#listar-niveis-de-ensino)<br>**Enviar o campo** `id` <hr> **Caso não seja enviado deverá ser o utilizado o campo** `codNivelEnsino`**.** | 
 | `codProcessoSeletivo` | `string` | Não | Código único de identificação do processo seletivo.<br>**Para visualizar os códigos dos processos seletivos utilize a aplicação.** | 
@@ -60,8 +59,8 @@ Após realizar o cadastro do curso, você pode cadastrar suas ofertas. É a ofer
 
 ``` JSON tab="Resposta"
 {
-    "success":true,
-    "id":"1"
+	"success":true,
+	"id":"1"
 }
 ```
 
@@ -79,15 +78,17 @@ Após realizar o cadastro do curso, você pode cadastrar suas ofertas. É a ofer
 
 ``` JSON tab="Resposta"
 {
-	"success": true,
-	"dados": [{
-		"id": "1",
-		"nome": "Nome do curso",
-		"descricao": null,
-		"codigo": "000",
-		"origem": "1",
-		"origemNome": "CRM"
-	}]
+    "success": true,
+    "dados": [
+        {
+            "id": "1",
+            "nome": "Nome do curso",
+            "descricao": null,
+            "codigo": "000",
+            "origem": "1",
+            "origemNome": "CRM"
+        }
+    ]
 }
 ```
 
@@ -106,30 +107,32 @@ Após realizar o cadastro do curso, você pode cadastrar suas ofertas. É a ofer
 
 ``` JSON tab="Resposta"
 {
-	"success": true,
-	"dados": [{
-		"id": "1",
-		"nome": "Nome da oferta de curso",
-		"complemento": null,
-		"codigo": "000",
-		"codCurso": "000",
-		"inicioInscricao": null,
-		"terminoInscricao": null,
-		"inicioMatricula": null,
-		"terminoMatricula": null,
-		"inicioCurso": null,
-		"terminoCurso": null,
-		"unidade": "1",
-		"unidadeNome": "Unidade",
-		"nivelEnsino": "1",
-		"nivelEnsinoNome": "Graduação",
-		"modalidade": "1",
-		"modalidadeNome": "Presencial",
-		"origem": "1",
-		"origemNome": "CRM",
-		"processoSeletivo": "1",
-		"processoSeletivoNome": "Nome do processo seletivo"
-	}]
+    "success": true,
+    "dados": [
+        {
+            "id": "1",
+            "nome": "Nome da oferta de curso",
+            "complemento": null,
+            "codigo": "000",
+            "codCurso": "000",
+            "inicioInscricao": null,
+            "terminoInscricao": null,
+            "inicioMatricula": null,
+            "terminoMatricula": null,
+            "inicioCurso": null,
+            "terminoCurso": null,
+            "unidade": "1",
+            "unidadeNome": "Unidade",
+            "nivelEnsino": "1",
+            "nivelEnsinoNome": "Graduação",
+            "modalidade": "1",
+            "modalidadeNome": "Presencial",
+            "origem": "1",
+            "origemNome": "CRM",
+            "processoSeletivo": "1",
+            "processoSeletivoNome": "Nome do processo seletivo"
+        }
+    ]
 }
 ```
 
@@ -148,29 +151,31 @@ Após realizar o cadastro do curso, você pode cadastrar suas ofertas. É a ofer
 
 ``` JSON tab="Resposta"
 {
-	"success": true,
-	"dados": {
-		"id": "1",
-		"nome": "CURSO DE MEDICINA - IPATINGA",
-		"complemento": null,
-		"vagasMinimas": "1",
-		"vagasMaximas": "40",
-		"valor": "0",
-		"codigo": "ADM_3",
-		"inicioInscricao": null,
-		"terminoInscricao": null,
-		"inicioMatricula": "2018-01-01",
-		"terminoMatricula": "2018-01-31",
-		"inicioCurso": null,
-		"terminoCurso": null,
-		"curso": "1",
-		"unidade": "1",
-		"nivelEnsino": "1",
-		"modalidade": "1",
-		"processoSeletivo": "1",
-		"origem": "1",
-		"localOferta": ["1"]
-	}
+    "success": true,
+    "dados": {
+        "id": "1",
+        "nome": "CURSO DE MEDICINA - IPATINGA",
+        "complemento": null,
+        "vagasMinimas": "1",
+        "vagasMaximas": "40",
+        "valor": "0",
+        "codigo": "ADM_3",
+        "inicioInscricao": null,
+        "terminoInscricao": null,
+        "inicioMatricula": "2018-01-01",
+        "terminoMatricula": "2018-01-31",
+        "inicioCurso": null,
+        "terminoCurso": null,
+        "curso": "1",
+        "unidade": "1",
+        "nivelEnsino": "1",
+        "modalidade": "1",
+        "processoSeletivo": "1",
+        "origem": "1",
+        "localOferta": [
+            "1"
+        ]
+    }
 }
 ```
 
@@ -187,10 +192,12 @@ Após realizar o cadastro do curso, você pode cadastrar suas ofertas. É a ofer
 
 ``` JSON tab="Resposta"
 {
-	"success": true,
-	"dados": [{
-		"id": "1",
-		"titulo": "Presencial"
-	}]
+    "success": true,
+    "dados": [
+        {
+            "id": "1",
+            "titulo": "Presencial"
+        }
+    ]
 }
 ```
