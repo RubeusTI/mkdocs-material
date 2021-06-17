@@ -6,7 +6,7 @@ O cadastro de contatos no CRM Rubeus é realizado através de um método bem sim
 
 !!! done ""
 
-	<strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/cadastro
+    <strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/cadastro
 
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
@@ -52,12 +52,15 @@ O cadastro de contatos no CRM Rubeus é realizado através de um método bem sim
 | ↳ `codOferta` | `string` | Não | Para vincular o evento a uma oferta de curso é preciso informar este campo junto com o `codCurso`  correspondente. | 
 | ↳ `codCurso` | `string` | Não | Para vincular o evento a uma oferta de curso, é preciso informar este campo junto com o codOferta correspondente. | 
 | `camposPersonalizados` | `object` | Não | Usado para atribuir algum campo específico que não está presente no escopo da API.<hr>**Os campos devem ser informados como no exemplo abaixo**:<br><br>`#!json camposPersonalizados : { coluna: "valor" }`<hr>Os nomes das colunas dos campos personalizados são informados no método [Instituicao/campoPersonalizado](/api_crm/campopersonalizados/#listar-campos-personalizados), e o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado. | 
+| `baseLegal` | `integer` | Sim | Usado para atribuir uma [base legal](/api_crm/metodosdelistagem/#listar-bases-legais) ao contato. | 
+| `assinaturas` | `array[] of objects` | Não | Utilizado para atribuir as [assinaturas](/api_crm/metodosdelistagem/#listar-assinaturas-ativas) para o contato. | 
+| ↳ `id` | `integer` |  | Identificação da assinatura. | 
 | `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
 | `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
 
 !!! info ""
 
-	O valor do campo `dados` no exemplo de retorno abaixo é o `id` que foi criado no processo.
+O valor do campo `dados` no exemplo de retorno abaixo é o `id` que foi criado no processo.
 
 ``` JSON tab="Resposta"
 {
@@ -70,7 +73,7 @@ O cadastro de contatos no CRM Rubeus é realizado através de um método bem sim
 
 !!! done ""
 
-	<strong  class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/dadosPessoa
+    <strong  class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/dadosPessoa
 
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
@@ -78,7 +81,7 @@ O cadastro de contatos no CRM Rubeus é realizado através de um método bem sim
 | `codigo` | `string` | Condicional | Chave única de identificação externa do contato enviado. | 
 | `id` | `integer` | Condicional | Código de identificação do contato no CRM. | 
 | `origem` | `integer` | Sim | Código de identificação do [canal](/api_crm/apresentacao/#autenticacao). | 
-| `token` | `string` | Sim | Chave de acesso única referente ao canal. |
+| `token` | `string` | Sim | Chave de acesso única referente ao canal. | 
 
 ``` JSON tab="Resposta"
 {
@@ -170,7 +173,7 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 
 !!! done ""
 
-	<strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/dadosPessoas
+    <strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/dadosPessoas
 
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
@@ -186,7 +189,7 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 
 !!! done ""
 
-	<strong  class='REST PUT'>PUT</strong><strong class="MIME">application/json</strong> /api/Contato/alterarCodigo
+    <strong  class='REST PUT'>PUT</strong><strong class="MIME">application/json</strong> /api/Contato/alterarCodigo
 
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
@@ -199,8 +202,8 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 
 ``` JSON tab="Resposta"
 {
-	"success":true,
-	"id":"9"
+    "success": true,
+    "id": "9"
 }
 ```
 
@@ -208,7 +211,7 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 
 !!! done ""
 
-	<strong  class='REST DELETE'>DELETE</strong><strong class="MIME">application/json</strong> /api/Contato/excluirPessoa
+    <strong  class='REST DELETE'>DELETE</strong><strong class="MIME">application/json</strong> /api/Contato/excluirPessoa
 
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
@@ -219,15 +222,15 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 
 ``` JSON tab="Resposta com um id"
 {
-	"success": true,
-	"id": 9
+    "success": true,
+    "id": 9
 }
 ```
 
 ``` JSON tab="Resposta com mais id’s"
 {
-	"success": true,
-	"id": 1633
+    "success": true,
+    "id": 1633
 }
 ```
 
@@ -235,8 +238,7 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 
 !!! done ""
 
-	<strong  class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/listarOportunidades
-
+    <strong  class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/listarOportunidades
 
 
 | Atributos | Tipo | Obrigatoriedade | Descrição | 
