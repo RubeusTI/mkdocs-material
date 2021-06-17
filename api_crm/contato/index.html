@@ -975,6 +975,24 @@
 <td>Usado para atribuir algum campo específico que não está presente no escopo da API.<hr><strong>Os campos devem ser informados como no exemplo abaixo</strong>:<br><br><code class="codehilite"><span class="err">camposPerso</span><span class="kc">nal</span><span class="err">izados</span> <span class="p">:</span> <span class="p">{</span> <span class="err">colu</span><span class="kc">na</span><span class="p">:</span> <span class="s2">&quot;valor&quot;</span> <span class="p">}</span></code><hr>Os nomes das colunas dos campos personalizados são informados no método <a href="/api_crm/campopersonalizados/#listar-campos-personalizados">Instituicao/campoPersonalizado</a>, e o valor poderá ser uma string normal ou um array de strings caso o campo seja multi valorado.</td>
 </tr>
 <tr>
+<td><code class="codehilite">baseLegal</code></td>
+<td><code class="codehilite">integer</code></td>
+<td>Sim</td>
+<td>Usado para atribuir uma <a href="/api_crm/metodosdelistagem/#listar-bases-legais">base legal</a> ao contato.</td>
+</tr>
+<tr>
+<td><code class="codehilite">assinaturas</code></td>
+<td><code class="codehilite">array[] of objects</code></td>
+<td>Não</td>
+<td>Utilizado para atribuir as <a href="/api_crm/metodosdelistagem/#listar-assinaturas-ativas">assinaturas</a> para o contato.</td>
+</tr>
+<tr>
+<td>↳ <code class="codehilite">id</code></td>
+<td><code class="codehilite">integer</code></td>
+<td></td>
+<td>Identificação da assinatura.</td>
+</tr>
+<tr>
 <td><code class="codehilite">origem</code></td>
 <td><code class="codehilite">integer</code></td>
 <td>Sim</td>
@@ -988,9 +1006,8 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
+<div class="admonition info"></div>
 <p>O valor do campo <code class="codehilite">dados</code> no exemplo de retorno abaixo é o <code class="codehilite">id</code> que foi criado no processo.</p>
-</div>
 <div class="superfences-tabs">
 <input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
 <label for="__tab_1_0">Resposta</label>
@@ -1313,8 +1330,8 @@ Os dados retornados estarão disponíveis dentro de um array, estruturados exata
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;9&quot;</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>

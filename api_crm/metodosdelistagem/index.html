@@ -429,6 +429,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#listar-bases-legais" title="Listar bases legais" class="md-nav__link">
+    Listar bases legais
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listar-assinaturas-ativas" title="Listar assinaturas ativas" class="md-nav__link">
+    Listar assinaturas ativas
+  </a>
+  
+</li>
+      
       
       
       
@@ -676,6 +690,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#listar-bases-legais" title="Listar bases legais" class="md-nav__link">
+    Listar bases legais
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listar-assinaturas-ativas" title="Listar assinaturas ativas" class="md-nav__link">
+    Listar assinaturas ativas
+  </a>
+  
+</li>
+      
       
       
       
@@ -727,34 +755,40 @@
 </tbody>
 </table>
 <h2 id="listar-niveis-de-ensino">Listar níveis de ensino<a class="headerlink" href="#listar-niveis-de-ensino" title="Permanent link">&para;</a></h2>
-<div class="admonition done"></div>
+<div class="admonition done">
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Registro/listarNiveisEnsino</p>
+</div>
 <p>Método utilizado para listar os níveis de ensino para posteriormente utilizar como parâmetro em outro método.</p>
 <div class="superfences-tabs">
 <input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
 <label for="__tab_1_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
-<span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
-<span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-<span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-<span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Graduação&quot;</span>
-<span class="p">}]</span>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Graduação&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
 <hr />
 <h2 id="listar-tipos-do-contato">Listar tipos do contato<a class="headerlink" href="#listar-tipos-do-contato" title="Permanent link">&para;</a></h2>
-<div class="admonition done"></div>
+<div class="admonition done">
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Registro/listarTiposPessoa</p>
+</div>
 <p>Método utilizado para listar os tipos de contatos para posteriormente utilizar como parâmetro em outro método.</p>
 <div class="superfences-tabs">
 <input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
@@ -765,20 +799,25 @@
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
-<span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
-<span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-<span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Aluno&quot;</span>
-<span class="p">}]</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Aluno&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
 <hr />
 <h2 id="listar-deficiencias">Listar deficiências<a class="headerlink" href="#listar-deficiencias" title="Permanent link">&para;</a></h2>
-<div class="admonition done"></div>
+<div class="admonition done">
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/listarDeficiencias</p>
+</div>
 <p>Método utilizado para listar os tipos de deficiências para posteriormente utilizar como parâmetro em outro método.</p>
 <div class="superfences-tabs">
 <input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
@@ -811,34 +850,54 @@
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Deficiente F\u00edsico&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;tipos&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Paraplegia&quot;</span>
-            <span class="p">},</span> <span class="p">{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Tetraplegia&quot;</span>
-            <span class="p">},</span> <span class="p">{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Hemiplegia&quot;</span>
-            <span class="p">},</span> <span class="p">{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Paralisia Cerebral&quot;</span>
-            <span class="p">},</span> <span class="p">{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Amputa\u00e7\u00e3o&quot;</span>
-            <span class="p">},</span> <span class="p">{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Defici\u00eancia F\u00edsica&quot;</span>
-            <span class="p">},</span> <span class="p">{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Defici\u00eancia M\u00faltipla&quot;</span>
-        <span class="p">}]</span>
-    <span class="p">}]</span>
+    <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Deficiente F\u00edsico&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;tipos&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Paraplegia&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Tetraplegia&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Hemiplegia&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Paralisia Cerebral&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Amputa\u00e7\u00e3o&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Defici\u00eancia F\u00edsica&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Defici\u00eancia M\u00faltipla&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
@@ -1014,44 +1073,145 @@
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
-        <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="s2">&quot;JSON com os dados enviados&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;resposta&quot;</span><span class="p">:</span> <span class="s2">&quot;{\&quot;success\&quot;:true,\&quot;dados\&quot;:1}&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;metodo&quot;</span><span class="p">:</span> <span class="s2">&quot;Pessoa/cadastro&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;sucesso&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;origem&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;origemNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Ficha de inscrição&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;momento&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-12-04 15:14:14&quot;</span>
-    <span class="p">}]</span>
+    <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="s2">&quot;JSON com os dados enviados&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;resposta&quot;</span><span class="p">:</span> <span class="s2">&quot;{\&quot;success\&quot;:true,\&quot;dados\&quot;:1}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;metodo&quot;</span><span class="p">:</span> <span class="s2">&quot;Pessoa/cadastro&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;sucesso&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;origem&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;origemNome&quot;</span><span class="p">:</span> <span class="s2">&quot;Ficha de inscrição&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;momento&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-12-04 15:14:14&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 </div>
 <h2 id="listar-cidades">Listar cidades<a class="headerlink" href="#listar-cidades" title="Permanent link">&para;</a></h2>
-<div class="admonition done"></div>
+<div class="admonition done">
 <p><strong class='REST POST'>POST</strong><strong class="MIME">application/json</strong> /api/Contato/listarCidade</p>
+</div>
 <p>Método utilizado para listar as cidades para posteriormente utilizar como parâmetro em outro método.</p>
 <div class="superfences-tabs">
 <input name="__tabs_6" type="radio" id="__tab_6_0" checked="checked" />
 <label for="__tab_6_0">Resposta</label>
-<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;resultado&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;79&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Acrelândia - AC&quot;</span>
-        <span class="p">}]</span>
+        <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;79&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;titulo&quot;</span><span class="p">:</span> <span class="s2">&quot;Acrelândia - AC&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<h2 id="listar-bases-legais">Listar bases legais<a class="headerlink" href="#listar-bases-legais" title="Permanent link">&para;</a></h2>
+<div class="admonition done">
+<p><strong class='REST GET'>GET</strong><strong class="MIME">application/json</strong> /api/Lgpd/listarBasesLegais</p>
+</div>
+<p>Método utilizado para listar as bases legais disponíveis no Rubeus para posteriormente utilizar como parâmetro em outro método.</p>
+<div class="superfences-tabs">
+<input name="__tabs_7" type="radio" id="__tab_7_0" checked="checked" />
+<label for="__tab_7_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;Interesse legítimo - potencial cliente&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;Interesse legítimo - cliente existente&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;Obrigação contratual&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;Livre consentimento&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;Não aplicável&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<h2 id="listar-assinaturas-ativas">Listar assinaturas ativas<a class="headerlink" href="#listar-assinaturas-ativas" title="Permanent link">&para;</a></h2>
+<div class="admonition done">
+<p><strong class='REST GET'>GET</strong><strong class="MIME">application/json</strong> /api/Lgpd/listarAssinaturasAtivas</p>
+</div>
+<p>Método utilizado para listar as assinaturas disponíveis no Rubeus para posteriormente utilizar como parâmetro em outro método.</p>
+<div class="superfences-tabs">
+<input name="__tabs_8" type="radio" id="__tab_8_0" checked="checked" />
+<label for="__tab_8_0">Resposta</label>
+<div class="superfences-content"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;dados&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Comunicação de atendimento ao cliente&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;descricao&quot;</span><span class="p">:</span> <span class="s2">&quot;Receba solicitações de feedback e informações de atendimento ao cliente.&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;assinatura&quot;</span><span class="p">:</span> <span class="s2">&quot;Serviço E-mail | Comunicação de atendimento ao cliente&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
