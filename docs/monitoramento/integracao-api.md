@@ -116,7 +116,7 @@ $eventoJson = json_encode($evento);
 
 ## RBTracking.clearSession()
 
-!!! warning "ATENÇÂO!"
+!!! warning "ATENÇÃO!"
 
     Este método só deve ser utilizado caso tenha-se uma área administrativa acessível ao cliente e logo após ele realizar o *logout*.
 
