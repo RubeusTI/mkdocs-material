@@ -1,0 +1,998 @@
+
+
+
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="manifest" href="/assets/json/manifest.json">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Página de documentações da Rubeus">
+      
+      
+        <link rel="canonical" href="https://docs.rubeus.com.br/monitoramento/boas-praticas/">
+      
+      
+        <meta name="author" content="Rubeus">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar para área de transferência">
+      
+        <meta name="lang:clipboard.copied" content="Copiado para área de transferência">
+      
+        <meta name="lang:search.language" content="pt">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Nenhum resultado encontrado">
+      
+        <meta name="lang:search.result.one" content="1 resultado encontrado">
+      
+        <meta name="lang:search.result.other" content="# resultados encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>Boas práticas - Rubeus Developers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#boas-praticas-com-a-utilizacao-de-utm" tabindex="1" class="md-skip">
+        Ir para o conteúdo
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://docs.rubeus.com.br/" title="Rubeus Developers" class="md-header-nav__button md-logo">
+          
+            <img src="../../assets/images/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Rubeus Developers
+              </span>
+              <span class="md-header-nav__topic">
+                Boas práticas
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Digite para iniciar a busca
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        <!-- 
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../api_crm/apresentacao/" title="API CRM" class="md-tabs__link">
+          API CRM
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../apresentacao/" title="Monitoramento de páginas" class="md-tabs__link md-tabs__link--active">
+          Monitoramento de páginas
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav> -->
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://docs.rubeus.com.br/" title="Rubeus Developers" class="md-nav__button md-logo">
+      
+        <img src="../../assets/images/logo.svg" width="48" height="48">
+      
+    </a>
+    Rubeus Developers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      API CRM
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        API CRM
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api_crm/apresentacao/" title="Apresentação" class="md-nav__link">
+      Apresentação
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api_crm/contato/" title="Contato" class="md-nav__link">
+      Contato
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api_crm/evento/" title="Evento" class="md-nav__link">
+      Evento
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api_crm/campopersonalizados/" title="Campos personalizados" class="md-nav__link">
+      Campos personalizados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api_crm/processoseletivo/" title="Processo seletivo" class="md-nav__link">
+      Processo seletivo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api_crm/curso/" title="Curso" class="md-nav__link">
+      Curso
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api_crm/locaisdeoferta/" title="Locais de oferta" class="md-nav__link">
+      Locais de oferta
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api_crm/registrodeprocesso/" title="Registro de processo" class="md-nav__link">
+      Registro de processo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api_crm/unidade/" title="Unidade" class="md-nav__link">
+      Unidade
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api_crm/metodosdelistagem/" title="Métodos de listagem" class="md-nav__link">
+      Métodos de listagem
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../webhook/" title="Webhook" class="md-nav__link">
+      Webhook
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../endpoint/" title="Endpoint" class="md-nav__link">
+      Endpoint
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Monitoramento de páginas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Monitoramento de páginas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apresentacao/" title="Apresentação" class="md-nav__link">
+      Apresentação
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../instalacao/" title="Instalação" class="md-nav__link">
+      Instalação
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../enviando-eventos/" title="Enviando eventos" class="md-nav__link">
+      Enviando eventos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../enviando-data/" title="Enviando dados de contato" class="md-nav__link">
+      Enviando dados de contato
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Boas práticas
+      </label>
+    
+    <a href="./" title="Boas práticas" class="md-nav__link md-nav__link--active">
+      Boas práticas
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descricao" title="Descrição" class="md-nav__link">
+    Descrição
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilizacao" title="Utilização" class="md-nav__link">
+    Utilização
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametros-source-e-medium" title="Parâmetros source e medium" class="md-nav__link">
+    Parâmetros source e medium
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-campaign-terms-e-content" title="Parâmetros campaign, terms e content" class="md-nav__link">
+    Parâmetros campaign, terms e content
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utm_campaign" title="utm_campaign" class="md-nav__link">
+    utm_campaign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utm_terms" title="utm_terms" class="md-nav__link">
+    utm_terms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utm_content" title="utm_content" class="md-nav__link">
+    utm_content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criacao-dos-links" title="Criação dos links" class="md-nav__link">
+    Criação dos links
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exemplos-codigos/" title="Exemplos de códigos" class="md-nav__link">
+      Exemplos de códigos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../integracao-api/" title="Integração via API" class="md-nav__link">
+      Integração via API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../modo-manual/" title="Utilizando o modo manual" class="md-nav__link">
+      Utilizando o modo manual
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../tabelasauxiliares/" title="Tabelas auxiliares" class="md-nav__link">
+      Tabelas auxiliares
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../urlbuilder/" title="Gerador de URL's" class="md-nav__link">
+      Gerador de URL's
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descricao" title="Descrição" class="md-nav__link">
+    Descrição
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilizacao" title="Utilização" class="md-nav__link">
+    Utilização
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametros-source-e-medium" title="Parâmetros source e medium" class="md-nav__link">
+    Parâmetros source e medium
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-campaign-terms-e-content" title="Parâmetros campaign, terms e content" class="md-nav__link">
+    Parâmetros campaign, terms e content
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utm_campaign" title="utm_campaign" class="md-nav__link">
+    utm_campaign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utm_terms" title="utm_terms" class="md-nav__link">
+    utm_terms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utm_content" title="utm_content" class="md-nav__link">
+    utm_content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criacao-dos-links" title="Criação dos links" class="md-nav__link">
+    Criação dos links
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                <div id="modalImage" class="modal">
+                  <span class="close">
+                    <img src="/assets/images/baseline_clear_white_48dp.png" style="width: 32px">
+                  </span>
+                  <img class="modal-content" id="image">
+                  <div id="caption"></div>
+                </div>
+                
+                
+                <h1 id="boas-praticas-com-a-utilizacao-de-utm">Boas práticas com a utilização de UTM<a class="headerlink" href="#boas-praticas-com-a-utilizacao-de-utm" title="Permanent link">&para;</a></h1>
+<h2 id="descricao">Descrição<a class="headerlink" href="#descricao" title="Permanent link">&para;</a></h2>
+<p>Esta parte da documentação tem como o objetivo de auxiliar a configuração dos parâmetros UTM corretamente no Monitoramento de páginas do Rubeus.</p>
+<p>Primeiramente vamos entender o que são esses parâmetros.</p>
+<p>Eles basicamente servem para mapear à que esse link é destinado com a finalidade de auxiliar, seja para um banner no seu site ou uma campanha específica.</p>
+<p>O UTM são divididos em cinco parâmetros que são.</p>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>utm_source</td>
+<td>Utilizado para informar por onde o link foi veiculado (este por sua vez é obrigatório).</td>
+<td>utm_source=uniexemplo</td>
+</tr>
+<tr>
+<td>utm_medium</td>
+<td>Destinado à informar qual o tipo da campanha, se é uma campanha paga (cpc) ou uma campanha de e-mail (email).</td>
+<td>utm_medium=cpc</td>
+</tr>
+<tr>
+<td>utm_campaign</td>
+<td>Informa o nome ou o código da campanha veiculada.</td>
+<td>utm_campaign=vestibular_2019</td>
+</tr>
+<tr>
+<td>utm_term</td>
+<td>Guarda as palavras chaves da campanha</td>
+<td>utm_term=vestibular+uniexemplo+2019</td>
+</tr>
+<tr>
+<td>utm_content</td>
+<td>Serve para especificar qual conteúdo foi clicado para o acesso do link.</td>
+<td>utm_content=bannerlateral</td>
+</tr>
+</tbody>
+</table>
+<h2 id="utilizacao">Utilização<a class="headerlink" href="#utilizacao" title="Permanent link">&para;</a></h2>
+<h3 id="parametros-source-e-medium">Parâmetros source e medium<a class="headerlink" href="#parametros-source-e-medium" title="Permanent link">&para;</a></h3>
+<p>No serviço de monitoramento de páginas presente no CRM Rubeus, dá a possibilidade de rastrear esses parâmetros seguindo algumas recomendações de boas práticas para o funcionamento conciso da funcionalidade.</p>
+<p>Dentre as possibilidades dos tipos de origem já disponíveis na ferramenta  temos:</p>
+<table>
+<thead>
+<tr>
+<th>Nome</th>
+<th>Descrição</th>
+<th>Regra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Display</td>
+<td>Anúncios seja ele em banner ou um vídeo.</td>
+<td>Pode conter os identificadores de cliques do google (gclid) ou facebook (fbclid) e/ou os utm_medium cpm, video, display, banner.</td>
+</tr>
+<tr>
+<td>Outras publicidades</td>
+<td>São publicidades que ainda não possuem sua origem mapeada na base do Monitoramento de páginas do Rubeus</td>
+<td>É necessário ter o utm_medium com um dos tipos cpc, ppc, e não ter origem mapeada.</td>
+</tr>
+<tr>
+<td>Mídia Paga</td>
+<td>Publicidade com origem mapeada.</td>
+<td>É necessário ter o utm_medium com um dos tipos cpc ou ppc, e ter a origem já mapeada.</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Campanhas de email, seja ela disparada pelo Rubeus (no qual já é automático o rastreio) ou manualmente desde que atenda à regra.</td>
+<td>O link utilizado para a página final no qual o usuário acessa, deverá conter o utm_medium carregando o valor “email”.</td>
+</tr>
+<tr>
+<td>Busca Orgânica</td>
+<td>São os acessos à página que foram originados de algum site de busca.</td>
+<td>O link não deve conter nenhum parâmetro utm e ter sua origem vindo de algum site de busca já mapeado (google, bing, yahoo, ask e aol).</td>
+</tr>
+<tr>
+<td>Social</td>
+<td>Acessos vindo a partir de alguma rede social.</td>
+<td>O link deverá ter o utm_source com o valor igual a facebook, twitter instagram, youtube ou linkedin e utm_medium igual a cpp</td>
+</tr>
+<tr>
+<td>Referência</td>
+<td>Acessos que não são pagos mas vieram de um redireciona por algum site não mapeado.</td>
+<td>O utm_medium não pode ser igual a nenhum dos tipos pagos e sua origem é desconhecida</td>
+</tr>
+<tr>
+<td>Acesso Direto</td>
+<td>Acessos onde o usuário digitou o link do site diretamente no navegador.</td>
+<td>Não possui qualquer parâmetro no link.</td>
+</tr>
+<tr>
+<td>Outros</td>
+<td>Acessos não categorizado acima.</td>
+<td>Caso não se enquadre em nenhuma das regras acima, o tipo de origem será “Outros”</td>
+</tr>
+<tr>
+<td>Desconhecida</td>
+<td>Contatos cadastrados manualmente no Rubeus.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-campaign-terms-e-content">Parâmetros campaign, terms e content<a class="headerlink" href="#parametros-campaign-terms-e-content" title="Permanent link">&para;</a></h3>
+<h4 id="utm_campaign">utm_campaign<a class="headerlink" href="#utm_campaign" title="Permanent link">&para;</a></h4>
+<p>O valor especificado no parâmetro destinado à campanhas deve ser utilizado como uma espécie de etiqueta para a mesma, contendo um nome descritivo mas não muito longo.</p>
+<h4 id="utm_terms">utm_terms<a class="headerlink" href="#utm_terms" title="Permanent link">&para;</a></h4>
+<p>Esse campo pode ser passado mais de um valor, sendo separados por “+” já que são as palavras chaves da campanha, exemplo: utm_terms=vestibular+2019+uniexemplo.</p>
+<h4 id="utm_content">utm_content<a class="headerlink" href="#utm_content" title="Permanent link">&para;</a></h4>
+<p>Já esse campo serve para deixar explícito qual método foi utilizado para o clique do usuário, seja ele um link, banner um popup e demais.</p>
+<p>Cada parâmetro são salvos de maneira única no Rubeus possibilitando filtros específicos  por cada campo.</p>
+<h2 id="criacao-dos-links">Criação dos links<a class="headerlink" href="#criacao-dos-links" title="Permanent link">&para;</a></h2>
+<p>Para a criação desses links recomendamos o uso do <a href="https://ga-dev-tools.appspot.com/campaign-url-builder/">Campaign URL Builder</a> do Google Analytics, mas poderá ser o utilizado o de sua preferência ou até mesmo feitos de modo manual.</p>
+<p>No final será obtido um link parecendo o seguinte</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span>https://www.uniexemplo.com.br/?utm_source=twitter&amp;utm_medium=cpc&amp;utm_campaign=campanha_exemplo&amp;utm_term=vestibular+2019+uniexemplo&amp;utm_content=logolink
+</pre></div>
+</td></tr></table>
+
+<p>Os links gerados, de preferência devem ser curtos, sucintos e evitar redundância entre os parâmetros é de bom uso.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../enviando-data/" title="Enviando dados de contato" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Enviando dados de contato
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../exemplos-codigos/" title="Exemplos de códigos" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Próximo
+                </span>
+                Exemplos de códigos
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2020 Rubeus todos os direitos reservados
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://rubeus.com.br/" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://www.instagram.com/canalrubeus/" class="md-footer-social__link fa fa-instagram"></a>
+    
+      <a href="https://www.facebook.com/CanalRubeus/" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://www.linkedin.com/company/rubeus/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://twitter.com/CanalRubeus" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://github.com/RubeusTI" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.905597d0.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.pt.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
+      
+        <script src="../../assets/javascripts/extra.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
